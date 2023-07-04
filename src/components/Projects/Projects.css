@@ -1,0 +1,22 @@
+.projects {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.mini-title-projects {
+  font-size: 18px;
+  color: #888888;
+}
+
+.main-title-projects {
+  font-size: 32px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.cards-container-projects {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Estilos para o componente de Card serão definidos no Card.css */

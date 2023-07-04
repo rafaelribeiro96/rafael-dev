@@ -1,0 +1,10 @@
+.start-button {
+  display: inline-flex;
+  padding: 15px 34.16px 16.08px 35px;
+  align-items: flex-start;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #1B3385 0%, #25C5C9 100%);
+  color: white;
+  font-size: 16px;
+  border: none;
+}

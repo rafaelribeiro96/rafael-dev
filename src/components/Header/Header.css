@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+.left-section-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-header {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.subtitle-header {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.right-section-header {
+  display: flex;
+}
+
+.icon-header {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}

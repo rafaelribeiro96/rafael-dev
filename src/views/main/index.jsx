@@ -4,6 +4,13 @@ import uparrow from '../../assets/images/up-arrow.svg';
 import { Helmet } from 'react-helmet-async';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Header from '../../components/Header/Header';
+import HighlightedTitle from '../../components/TituloDestacado/HighlightedTitle';
+import Video from '../../components/Video/Video';
+import Services from '../../components/Services/Services';
+import Projects from '../../components/Projects/Projects';
+import Banner from '../../components/Banner/Banner';
+import Footer from '../../components/Footer/Footer';
 
 const Main = () => {
     const [showUp, setShowUp] = useState(false);
@@ -45,7 +52,13 @@ const Main = () => {
                 />
             </Helmet>
             <div className="container">
-                Home
+                <Header />
+                <HighlightedTitle />
+                <Video />
+                <Services />
+                <Projects />
+                <Banner />
+                <Footer />
                 {showUp && (
                     <button className="show-up-button" onClick={scrollToTop}>
                         <img src={uparrow} alt="arrow-up" className="arrow-up"/>

@@ -1,0 +1,34 @@
+.services {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.left-section-services {
+  flex: 1;
+}
+
+.service-image {
+  width: 100%;
+}
+
+.right-section-services {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.h3-services {
+  font-size: 18px;
+  color: #888888;
+}
+
+.h1-services {
+  font-size: 32px;
+  margin-top: 10px;
+}
+
+.p-services {
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
