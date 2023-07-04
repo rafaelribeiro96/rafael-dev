@@ -1,0 +1,50 @@
+# Arquivos de compilação
+*.class
+*.o
+*.obj
+
+# Arquivos executáveis
+*.exe
+*.out
+*.app
+
+# Arquivos de dependências e bibliotecas
+*.jar
+*.war
+*.ear
+*.dll
+*.so
+*.dylib
+
+# Arquivos de configuração de ambiente
+.env
+.env.*
+
+# Diretórios de saída de compilação e build
+/build/
+/dist/
+/out/
+/target/
+
+# Arquivos e diretórios de logs
+*.log
+logs/
+log/
+npm-debug.log*
+
+# Diretório de dependências do Node.js
+/node_modules/
+
+# Arquivos de cache
+*.cache
+.cached/
+
+# Arquivos de projeto específicos de IDEs
+.idea/
+.vscode/
+*.sublime-*
+*.swp
+
+# Outros
+.DS_Store
+Thumbs.db

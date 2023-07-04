@@ -1,0 +1,33 @@
+.show-up-button {
+  position: fixed;
+  bottom: 40px;
+  right: 49%;
+  background-color: hsla(0, 100%, 95%, 0.7);
+  color: #000;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 9999;
+}
+
+.show-up-button:hover {
+  opacity: 0.7;
+}
+
+.arrow-up {
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .show-up-button {
+    left: 45%;
+  }
+}
