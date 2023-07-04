@@ -4,7 +4,14 @@
   align-items: flex-start;
   border-radius: 30px;
   background: linear-gradient(90deg, #1B3385 0%, #25C5C9 100%);
-  color: white;
   font-size: 16px;
   border: none;
+  color: #FBFBFB;
+  text-align: center;
+  font-size: 18px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28.08px;
+  text-transform: capitalize;
 }
