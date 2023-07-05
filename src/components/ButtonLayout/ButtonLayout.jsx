@@ -1,9 +1,9 @@
 import React from 'react';
 import './ButtonLayout.css';
 
-const ButtonLayout = ({ textoBotao }) => {
+const ButtonLayout = ({ textoBotao, linkBotao }) => {
   return (
-      <button className="start-button">{textoBotao}</button>
+    <a href={linkBotao} title={textoBotao}><button className="start-button">{textoBotao}</button></a>
   );
 };
 

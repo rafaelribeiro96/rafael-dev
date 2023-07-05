@@ -55,9 +55,9 @@ const Main = () => {
                 <Header />
                 <HighlightedTitle />
                 <Video />
-                <Services />
+                <Services id="services"/>
                 <Projects />
-                <Banner />
+                <Banner id="banner"/>
                 <Footer />
                 {showUp && (
                     <button className="show-up-button" onClick={scrollToTop}>

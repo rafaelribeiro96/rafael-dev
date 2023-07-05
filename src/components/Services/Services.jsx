@@ -17,7 +17,7 @@ const Services = () => {
           elegantes, responsivos e funcionais. Utilizando tecnologias modernas, como React, Node.js e muito mais,
           entregamos soluções sob medida para atender às suas necessidades exclusivas.
         </p>
-        <ButtonLayout textoBotao="Começar" />
+        <ButtonLayout textoBotao="Começar" linkBotao="#banner"/>
       </div>
     </div>
   );
