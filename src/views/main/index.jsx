@@ -52,13 +52,13 @@ const Main = () => {
                 />
             </Helmet>
             <div className="container">
-                <Header />
-                <HighlightedTitle />
-                <Video />
+                <div id="header"><Header /></div>
+                <div id="highlightedTitle"><HighlightedTitle /></div>
+                <div id="video"><Video /></div>
                 <div id="services"><Services /></div>
-                <Projects />
+                <div id="projects"><Projects /></div>
                 <div id="banner"><Banner /></div>  
-                <Footer />
+                <div id="footer"><Footer /></div>
                 {showUp && (
                     <button className="show-up-button" onClick={scrollToTop}>
                         <img src={uparrow} alt="arrow-up" className="arrow-up"/>
