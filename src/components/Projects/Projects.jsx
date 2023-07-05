@@ -1,6 +1,9 @@
 import React from 'react';
 import './Projects.css';
 import Card from './Card';
+import image1 from '../../assets/images/modelo-site.png';
+import image2 from '../../assets/images/modelo-site.jpeg';
+import image3 from '../../assets/images/modelo-site.jpeg';
 
 const Projects = () => {
   return (
@@ -9,22 +12,25 @@ const Projects = () => {
       <h1 className="main-title-projects">Sites personalizados que amamos criar</h1>
       <div className="cards-container-projects">
         <Card
-          image="project1.jpg"
-          title="Projeto 1"
-          description="Descrição do projeto 1"
-          link="https://www.example.com/project1"
+          image={image1}
+          title="Confeitaria Glayde Ribeiro"
+          description="Desenvolvemos um site incrível para a Confeitaria Glayde Ribeiro, exibindo seus deliciosos produtos e serviços de maneira atrativa.
+          Confira como criamos uma presença online que reflete a essência única da marca."
+          link="https://www.glayderibeiro.com/"
         />
         <Card
-          image="project2.jpg"
-          title="Projeto 2"
-          description="Descrição do projeto 2"
-          link="https://www.example.com/project2"
+          image={image2}
+          title="Confeitaria Glayde Ribeiro"
+          description="Desenvolvemos um site incrível para a Confeitaria Glayde Ribeiro, exibindo seus deliciosos produtos e serviços de maneira atrativa.
+          Confira como criamos uma presença online que reflete a essência única da marca."
+          link="https://www.glayderibeiro.com/"
         />
         <Card
-          image="project3.jpg"
-          title="Projeto 3"
-          description="Descrição do projeto 3"
-          link="https://www.example.com/project3"
+          image={image3}
+          title="Confeitaria Glayde Ribeiro"
+          description="Desenvolvemos um site incrível para a Confeitaria Glayde Ribeiro, exibindo seus deliciosos produtos e serviços de maneira atrativa.
+          Confira como criamos uma presença online que reflete a essência única da marca."
+          link="https://www.glayderibeiro.com/"
         />
       </div>
     </div>
