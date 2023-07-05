@@ -1,6 +1,7 @@
 import React from 'react';
 import './Banner.css';
 import ButtonLayout from '../ButtonLayout/ButtonLayout';
+import backgroundbanner from '../../assets/images/background-banner.png';
 
 const Banner = () => {
   return (
