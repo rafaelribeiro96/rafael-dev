@@ -21,6 +21,11 @@
   line-height: normal;
 }
 
+.logo-header-img {
+  margin-top: 5px;
+  width: 50%;
+}
+
 .subtitle-header {
   color: #ABADB3;
   font-size: 12px;
@@ -35,7 +40,7 @@
 }
 
 .icon-header {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   margin-left: 10px;
 }
