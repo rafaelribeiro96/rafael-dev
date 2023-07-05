@@ -11,6 +11,7 @@ import Services from '../../components/Services/Services';
 import Projects from '../../components/Projects/Projects';
 import Banner from '../../components/Banner/Banner';
 import Footer from '../../components/Footer/Footer';
+import { Analytics } from '@vercel/analytics/react';
 
 const Main = () => {
     const [showUp, setShowUp] = useState(false);
@@ -44,6 +45,7 @@ const Main = () => {
 
     return (
         <div className="div__body">
+            <Analytics />
             <Helmet>
                 <title>Rafael Ribeiro Dev - Transformando ideias em realidade digital</title>
                 <meta
