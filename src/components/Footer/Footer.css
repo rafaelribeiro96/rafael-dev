@@ -1,9 +1,36 @@
 .footer {
-  background-color: #f2f2f2;
+  width: 100vw;
   padding: 20px;
   text-align: center;
+  border-top: 1px solid #323438;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-content {
-  /* Estilos para o conteúdo do rodapé */
+  width: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.copyright-content {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19.5px;
+  letter-spacing: 1px;
+  }
+
+.color-copyright {
+  color: #ABADB3;
+}
+
+.color-autor {
+  color: #FAFAFA;
+}
+
+.social-media-footer a {
+  padding: 0 10px;
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import './Header.css';
+import linkedinsvg from '../../assets/images/linkedin.svg';
 
 const Header = () => {
   return (
@@ -9,11 +10,8 @@ const Header = () => {
         <div className="subtitle-header">Construindo experiências digitais únicas e personalizadas</div>
       </div>
       <div className="right-section-header">
-        <a href="https://www.linkedin.com/">
-          <img src="linkedin-icon.png" alt="LinkedIn" className="icon-header" />
-        </a>
-        <a href="https://github.com/">
-          <img src="github-icon.png" alt="GitHub" className="icon-header" />
+        <a href="https://www.linkedin.com/in/rafaelfeliperibeiro/" target="_blank" rel="noreferrer">
+          <img src={linkedinsvg} alt="LinkedIn" className="icon-header" />
         </a>
       </div>
     </div>
