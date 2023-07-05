@@ -7,7 +7,7 @@ const Card = ({ image, title, description, link }) => {
       <img src={image} alt={title} className="card-image" />
       <h2 className="card-title">{title}</h2>
       <p className="card-description">{description}</p>
-      <a href={link} className="card-link">Ver mais</a>
+      <a href={link} className="card-link" target="_blank" rel="noreferrer">Ver mais</a>
     </div>
   );
 };
