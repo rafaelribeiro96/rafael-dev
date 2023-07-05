@@ -51,6 +51,7 @@
   .header {
     flex-direction: column;
     text-align: center;
+    padding: 10px 0;
   }
 
   .left-section-header {

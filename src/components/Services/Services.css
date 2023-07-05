@@ -58,6 +58,12 @@
 
   .left-section-services {
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .service-image {
+  width: 80%;
   }
 
   .right-section-services {

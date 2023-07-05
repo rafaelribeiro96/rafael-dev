@@ -45,19 +45,19 @@ const Main = () => {
     return (
         <div className="div__body">
             <Helmet>
-                <title>Rafael Ribeiro Dev - Transformando ideias em realidade digital </title>
+                <title>Rafael Ribeiro Dev - Transformando ideias em realidade digital</title>
                 <meta
                     name="description"
                     content="Desenvolvimento web personalizado utilizando React, Node.js e muito mais que há de mais moderno digitalmente"
                 />
             </Helmet>
             <div className="container">
-                <div id="header"><Header /></div>
-                <div id="highlightedTitle"><HighlightedTitle /></div>
-                <div id="video"><Video /></div>
-                <div id="services"><Services /></div>
-                <div id="projects"><Projects /></div>
-                <div id="banner"><Banner /></div>  
+                <div id="header" data-aos="fade-right"><Header /></div>
+                <HighlightedTitle />
+                <div id="video" data-aos="fade-up"><Video /></div>
+                <div id="services" data-aos="fade-up"><Services /></div>
+                <div id="projects" data-aos="fade-up"><Projects /></div>
+                <div id="banner" data-aos="fade-up"><Banner /></div>  
                 <div id="footer"><Footer /></div>
                 {showUp && (
                     <button className="show-up-button" onClick={scrollToTop}>

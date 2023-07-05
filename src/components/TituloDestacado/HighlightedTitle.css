@@ -33,11 +33,11 @@
 /* Adicionado para tornar o componente responsivo */
 @media screen and (max-width: 768px) {
   .highlighted-title {
-    width: 100%;
+    width: 95%;
   }
 
   .h1-highlighted {
-    font-size: 48px;
+    font-size: 44px;
     line-height: 68.8px;
     margin-bottom: 20px;
   }
