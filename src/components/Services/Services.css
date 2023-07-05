@@ -5,7 +5,7 @@
 }
 
 .left-section-services {
-  flex: 1;
+  flex: 2;
 }
 
 .service-image {
@@ -13,22 +13,38 @@
 }
 
 .right-section-services {
-  flex: 1;
+  flex: 3;
   padding-left: 20px;
 }
 
 .h3-services {
-  font-size: 18px;
-  color: #888888;
+  color: #ABADB3;
+  font-size: 16px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28.8px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
 }
 
 .h1-services {
-  font-size: 32px;
-  margin-top: 10px;
+  color: #FFF;
+  font-size: 49px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 63.21px;
+  text-transform: capitalize;
+  margin-bottom: 30px;
 }
 
 .p-services {
-  font-size: 16px;
-  margin-top: 20px;
+  color: #ABADB3;
+  font-size: 20px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px;
   margin-bottom: 30px;
 }
