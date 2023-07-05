@@ -48,3 +48,31 @@
   line-height: 35px;
   margin-bottom: 30px;
 }
+
+/* Adicionado para tornar o componente responsivo */
+@media screen and (max-width: 768px) {
+  .services {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .left-section-services {
+    margin-bottom: 20px;
+  }
+
+  .right-section-services {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .h1-services {
+    font-size: 30px;
+    line-height: 40.8px;
+  }
+
+  .p-services {
+    font-size: 18px;
+    line-height: 28.8px;
+  }
+
+}

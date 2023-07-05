@@ -37,10 +37,35 @@
 
 .right-section-header {
   display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .icon-header {
   width: 30px;
   height: 30px;
-  margin-left: 10px;
+}
+
+/* Adicionado para tornar o componente responsivo */
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left-section-header {
+    margin-bottom: 10px;
+  }
+
+  .logo-header {
+    font-size: 24px;
+  }
+
+  .logo-header-img {
+    width: 40%;
+  }
+
+  .subtitle-header {
+    font-size: 10px;
+  }
 }

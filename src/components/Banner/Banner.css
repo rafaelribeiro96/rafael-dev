@@ -39,3 +39,16 @@
   width: 70%;
   margin-bottom: 35px;
 }
+
+/* Adicionado para tornar o componente responsivo */
+@media screen and (max-width: 768px) {
+  .banner {
+    height: 400px;
+  }
+
+  .main-title-banner {
+    font-size: 30px;
+    line-height: 40.8px;
+    width: 90%;
+  }
+}

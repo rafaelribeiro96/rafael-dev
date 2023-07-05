@@ -23,3 +23,11 @@
   cursor: pointer;
   transition: color 0.5s ease;
 }
+
+/* Adicionado para tornar o componente responsivo */
+@media screen and (max-width: 768px) {
+  .start-button {
+    padding: 10px 24px 11px 25px;
+    font-size: 14px;
+  }
+}

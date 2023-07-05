@@ -34,3 +34,14 @@
 .social-media-footer a {
   padding: 0 10px;
 }
+
+@media screen and (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .social-media-footer {
+    margin-top: 10px;
+    order: -1;
+  }
+}
