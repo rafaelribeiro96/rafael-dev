@@ -32,6 +32,24 @@
   gap: 39px;
   justify-content: center;
   align-items: flex-start;
+  flex-wrap: wrap; /* Adicionado para lidar com o layout em telas menores */
 }
 
 /* Estilos para o componente de Card serão definidos no Card.css */
+
+/* Adicionado para tornar o componente responsivo */
+@media screen and (max-width: 768px) {
+  .projects {
+    margin-bottom: 50px;
+  }
+
+  .main-title-projects {
+    font-size: 32px;
+    line-height: 41.62px;
+    margin-bottom: 30px;
+  }
+
+  .cards-container-projects {
+    gap: 20px;
+  }
+}

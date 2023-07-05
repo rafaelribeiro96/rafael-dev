@@ -28,4 +28,23 @@
   font-weight: 300;
   line-height: 42px;
   margin-bottom: 30px;
+}
+
+/* Adicionado para tornar o componente responsivo */
+@media screen and (max-width: 768px) {
+  .highlighted-title {
+    width: 100%;
   }
+
+  .h1-highlighted {
+    font-size: 48px;
+    line-height: 68.8px;
+    margin-bottom: 20px;
+  }
+
+  .h2-highlighted {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+}
