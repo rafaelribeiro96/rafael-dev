@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React, { createContext, useContext } from 'react';
-import { AuthProvider } from './Context';
+import { AuthProvider } from './AuthContext';
 // Importe outros contextos que você criar aqui
 
 // Crie um novo contexto para o contexto global

@@ -1,0 +1,139 @@
+.post-suggestion-chat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.header-post-suggestion-chat {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+
+.content-post-suggestion-chat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-chat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  color: var(--color-3);
+}
+
+.text-chat {
+  color: var(--color-3);
+}
+
+.input-chat {
+  width: 50%;
+  height: 30px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.button-chat {
+  padding: 8px 16px;
+  background-color: var(--color-3);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.suggestion-chat {
+  border: 1px solid #ccc;
+  background-color: var(--color-5);
+  padding: 10px;
+  width: 90%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+
+}
+
+.suggestion-title-chat {
+  text-decoration: underline;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.suggestion-text-chat {
+  margin-bottom: 20px;
+}
+
+.default-image-chat {
+  width: 300px; /* Ajuste o tamanho da imagem conforme necessário */
+  height: 300px;
+  border-radius: 10px;
+  animation: slide 4s linear infinite; /* Adiciona a animação "slide" */
+}
+
+.default-image-container-chat {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-5px); /* Começa deslocada para a esquerda */
+  }
+  50% {
+    transform: translateX(5px); /* Alcança o deslocamento máximo para a direita */
+  }
+  100% {
+    transform: translateX(-5px); /* Retorna ao deslocamento inicial */
+  }
+}
+
+
+/* Media queries para dispositivos menores */
+@media screen and (max-width: 500px) {
+  .title-chat {
+    text-align: center;
+  }
+
+  .post-suggestion-chat {
+    padding: 10px;
+  }
+
+  .input-chat {
+    width: 95%;
+    margin-bottom: 10px;
+  }
+
+  .button-chat {
+    width: 100%;
+    padding: 8px 0px;
+    background-color: #4B637A;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .input-chat,
+  .button-chat {
+    width: 100%;
+  }
+}

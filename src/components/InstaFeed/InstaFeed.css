@@ -1,0 +1,35 @@
+.container-insta {
+  width: 100%;
+  text-align: center;
+  padding-top: 150px;
+  color: #4d4d4d;
+  padding-bottom: 100px;
+}
+
+.marquee-image {
+  height: 200px;
+  width: 200px;
+  border-radius: 0px;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border: 3px solid #FFE6E6;
+  transition: 0.4s;
+  margin-right: 10px;
+}
+
+.marquee-image:hover {
+  filter: brightness(1.2);
+  cursor: pointer; 
+}
+
+@media (max-width: 700px) {
+  .container-insta {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+
+  .container-insta-feed {
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr)); /* Alterado para 2 colunas em telas menores que 700px */
+  }
+}

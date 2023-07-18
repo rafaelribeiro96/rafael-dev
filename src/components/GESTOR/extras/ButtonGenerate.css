@@ -1,0 +1,56 @@
+.button-generate {
+  border: none;
+  width: 15em;
+  height: 4em;
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--color-3);
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.generate-button {
+  border: none;
+  width: 15em;
+  height: 4em;
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--color-3);
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.sparkle-button-generate {
+  fill: white;
+  transition: all 300ms ease;
+}
+
+.text-button-generate {
+  font-weight: 600;
+  color: white;
+  font-size: medium;
+}
+
+.button-generate:hover {
+  background: linear-gradient(0deg,var(--color-5),var(--color-2));
+  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
+  inset 0px 0px 0px 0px rgba(0, 0, 0, 0.2),
+  0px 0px 0px 0px rgba(255, 255, 255, 0.2),
+  0px 0px 90px 0px var(--color-3);
+  transform: translateY(-1px);
+}
+
+.button-generate:hover .text-button-generate {
+  color: var(--color-3);
+}
+
+.button-generate:hover .sparkle-button-generate {
+  fill: var(--color-3);
+  transform: scale(1.1);
+} 

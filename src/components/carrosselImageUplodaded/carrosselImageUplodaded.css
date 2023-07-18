@@ -1,0 +1,35 @@
+.container-carrosseljs {
+  max-width: 75vw;
+}
+
+.container-carrosseljs .carousel-carrosseljs {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.container-carrosseljs .carousel-carrosseljs::-webkit-scrollbar {
+  display: none;
+}
+
+.container-carrosseljs .buttons-carrosseljs {
+  width: 100%;
+  text-align: center;
+}
+
+.container-carrosseljs .buttons-carrosseljs button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.img-button-carrosseljs {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+.container-carrosseljs .buttons-carrosseljs button:first-child img {
+  transform: rotate(180deg);
+}
