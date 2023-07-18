@@ -67,6 +67,8 @@
   }
 
   .social-media-footer {
+    align-items: center;
+    justify-content: center;
     margin-top: 10px;
     order: -1;
   }

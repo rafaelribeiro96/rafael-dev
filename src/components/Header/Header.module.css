@@ -18,13 +18,12 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  height: 120px;
-  margin-top: -30px;
 }
 
 .logo-header-img {
   margin-top: 5px;
   width: 50%;
+  height: auto;
 }
 
 .subtitle-header {
@@ -52,6 +51,7 @@
     flex-direction: column;
     text-align: center;
     padding: 10px 0;
+    height: 60px;
   }
 
   .left-section-header {
@@ -63,10 +63,11 @@
   }
 
   .logo-header-img {
-    width: 40%;
+    width: 70%;
+    height: auto;
   }
 
   .subtitle-header {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
