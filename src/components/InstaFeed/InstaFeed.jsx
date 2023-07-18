@@ -34,7 +34,7 @@ export function InstaFeed() {
       
     return (
         <section className="container-insta" data-aos="zoom-in">
-            <h1 className="title-site"><span className="background-title">Acompanhe-nos nas redes sociais</span></h1>
+            <h2 className="title-insta-feed">INSTAGRAM</h2>
             <section className="container-insta-feed">
                 <Marquee
                     gradient={ false }

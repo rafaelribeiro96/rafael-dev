@@ -1,0 +1,16 @@
+/* .blog_container {
+  max-width: 1400px;
+  border: solid 1px red;
+} */
+
+
+.blog_container {
+  max-width: 1400px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
