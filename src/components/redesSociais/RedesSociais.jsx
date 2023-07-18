@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import whatsapp from '../../assets/images/whatsapp.png';
 import instagram from '../../assets/images/instagram.png';
-import ifood from '../../assets/images/ifood-vermelho.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Link from 'next/link';
@@ -22,9 +21,6 @@ function RedesSociais() {
                 
                 <li className="redes__item">
                     <Link target="_blank" title="link instagram glayde ribeiro" href="https://www.instagram.com/glayderibeiro/" className="redes__link" rel="noreferrer"><Image className="instagram__image" src={instagram} alt="botao instagram glayde ribeiro" width={120} height={120} /></Link>
-                </li>
-                <li className="redes__item">
-                    <Link target="_blank" title="link ifood glayde ribeiro" href="https://www.ifood.com.br/delivery/belo-horizonte-mg/confeitaria-glayde-ribeiro-doces--bolos-salgado-filho/0ccfe710-ac48-44f0-a2e6-86e298d060ad?utm_medium=share" className="redes__link" rel="noreferrer"><Image className="ifood__image" src={ifood} alt="botão ifood glayde ribeiro" width={120} height={120} /></Link>
                 </li>
             </ul>
         </div>
