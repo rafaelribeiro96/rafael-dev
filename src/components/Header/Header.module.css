@@ -1,4 +1,4 @@
-.header {
+.header_container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,9 +15,8 @@
 .logo-header {
   color: #fafafa;
   font-size: 32px;
-  font-family: Poppins;
   font-style: normal;
-  font-weight: 700;
+  font-weight: '700';
   line-height: normal;
 }
 
@@ -29,9 +28,8 @@
 .subtitle-header {
   color: #abadb3;
   font-size: 12px;
-  font-family: Poppins;
   font-style: normal;
-  font-weight: 300;
+  font-weight: '300';
   line-height: 21px;
 }
 

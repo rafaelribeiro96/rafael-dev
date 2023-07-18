@@ -1,4 +1,4 @@
-.footer {
+.footer_container {
   width: 100%;
   padding: 20px 0;
   text-align: center;
@@ -43,7 +43,7 @@
 .copyrigth-content {
   font-size: 13px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: '400';
   line-height: 19.5px;
   letter-spacing: 1px;
 }

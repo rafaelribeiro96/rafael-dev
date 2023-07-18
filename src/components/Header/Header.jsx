@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 const Header = () => {
   return (
-    <div className={styles.header}>
+    <div className={styles.header_container}>
       <div className={styles['left-section-header']}>
         <div className={styles['logo-header']}>
           <Image src={logoRafael} alt="Logo Rafael Ribeiro Dev" className={styles['logo-header-img']} />

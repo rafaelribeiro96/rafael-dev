@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer_container}>
       <div className={styles['footer-content']}>
         <span className={styles['copyright-content']}>
           <span className={styles['color-copyright']}>Copyright © 2023 </span>

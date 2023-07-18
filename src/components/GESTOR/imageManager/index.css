@@ -15,7 +15,7 @@
 }
 
 .up-container button:hover {
-  font-weight: 600;
+  font-weight: '600';
 }
 
 
@@ -353,11 +353,11 @@
 
 .up-show-more {
   color: #727272;
-  font-weight: 600;
+  font-weight: '600';
 }
 
 .image-title-uploaded {
-  font-weight: 600;
+  font-weight: '600';
 }
 
 .image-category-uploaded {

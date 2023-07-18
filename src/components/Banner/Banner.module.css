@@ -22,7 +22,7 @@
   text-align: center;
   font-size: 16px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: '600';
   line-height: 28.8px;
   text-transform: uppercase;
   margin-bottom: 27px;
@@ -33,7 +33,7 @@
   text-align: center;
   font-size: 49px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: '500';
   line-height: 63.21px;
   text-transform: capitalize;
   width: 70%;

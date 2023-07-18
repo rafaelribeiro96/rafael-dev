@@ -50,7 +50,7 @@
 .button-login:disabled {
   background-color: #ccc;
   color: #fff;
-  font-weight: 200;
+  font-weight: '200';
   cursor: not-allowed;
 }
 
