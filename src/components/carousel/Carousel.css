@@ -94,10 +94,6 @@ css carrousel
   height: 50px;
 }
 
-.svg__ifood {
-  width: 60px;
-  height: 40px;
-}
 
 @media (max-width: 1000px) {
   .carousel__image {
@@ -172,7 +168,7 @@ css carrousel
     transform: translateY(-400%);
   }
 
-  .svg__ifood, .svg__wpp {
+  .svg__wpp {
     display: none;
   }
 
