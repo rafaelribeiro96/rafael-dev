@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import './index.css';
-import uparrow from '../../assets/images/up-arrow.svg';
-import { Helmet } from 'react-helmet-async';
+import uparrow from '../assets/images/up-arrow.svg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Header from '../../components/Header/Header';
-import HighlightedTitle from '../../components/TituloDestacado/HighlightedTitle';
-import Video from '../../components/Video/Video';
-import Services from '../../components/Services/Services';
-import Projects from '../../components/Projects/Projects';
-import Banner from '../../components/Banner/Banner';
-import Footer from '../../components/Footer/Footer';
+import Header from '../components/Header/Header';
+import HighlightedTitle from '../components/TituloDestacado/HighlightedTitle';
+import Video from '../components/Video/Video';
+import Services from '../components/Services/Services';
+import Projects from '../components/Projects/Projects';
+import Banner from '../components/Banner/Banner';
+import Footer from '../components/Footer/Footer';
 import { Analytics } from '@vercel/analytics/react';
 import Image from 'next/image';
 
@@ -47,13 +45,6 @@ const Main = () => {
     return (
         <div className="div__body">
             <Analytics />
-            <Helmet>
-                <title>Rafael Ribeiro Dev - Transformando ideias em realidade digital</title>
-                <meta
-                    name="description"
-                    content="Desenvolvimento web personalizado utilizando React, Node.js e muito mais que há de mais moderno digitalmente"
-                />
-            </Helmet>
             <div className="container">
                 <div id="header" data-aos="fade-right"><Header /></div>
                 <HighlightedTitle />

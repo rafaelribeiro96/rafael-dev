@@ -22,8 +22,6 @@ import '../components/carrosselJs/carrosselJs.css'
 import '../components/carousel/Carousel.css'
 import '../components/carrosselImageUplodaded/carrosselImageUplodaded.css'
 import '../components/gallery/Gallery.css'
-import '../pages/gestor/index.css'
-import '../pages/index.css'
 import '../pages/login/index.css'
 import '../styles/global.css'
 

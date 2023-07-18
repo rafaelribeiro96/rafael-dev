@@ -1,0 +1,54 @@
+.banner {
+  width: 99vw;
+  height: 600px;
+  flex-shrink: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/images/background-banner.png') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.banner-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mini-title-banner {
+  color: #ABADB3;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28.8px;
+  text-transform: uppercase;
+  margin-bottom: 27px;
+}
+
+.main-title-banner {
+  color: #FFF;
+  text-align: center;
+  font-size: 49px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 63.21px;
+  text-transform: capitalize;
+  width: 70%;
+  margin-bottom: 35px;
+}
+
+/* Adicionado para tornar o componente responsivo */
+@media screen and (max-width: 768px) {
+  .banner {
+    height: 400px;
+  }
+
+  .main-title-banner {
+    font-size: 30px;
+    line-height: 40.8px;
+    width: 90%;
+  }
+}

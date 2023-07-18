@@ -1,0 +1,33 @@
+.start-button {
+  display: inline-flex;
+  padding: 15px 34.16px 16.08px 35px;
+  align-items: flex-start;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #1B3385 0%, #25C5C9 100%);
+  font-size: 16px;
+  border: none;
+  color: #FBFBFB;
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28.08px;
+  text-transform: capitalize;
+  transition: color 0.5s ease;
+}
+
+.start-button:hover {
+  background: white;
+  color: black;
+  cursor: pointer;
+  transition: color 0.5s ease;
+}
+
+/* Adicionado para tornar o componente responsivo */
+@media screen and (max-width: 768px) {
+  .start-button {
+    padding: 10px 24px 11px 25px;
+    font-size: 14px;
+  }
+}

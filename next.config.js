@@ -12,10 +12,18 @@ const nextConfig = {
     pagesBufferLength: 5,
   },
   webpack: (config, { dev, isServer }) => {
-    if (isServer) {
-      // Configurações específicas para o lado do servidor (Node.js)
-    } else {
-      // Configurações específicas para o lado do cliente (Browser)
+    if (!isServer) {
+      config.module.rules.push({
+        test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            publicPath: '/_next/static/videos/',
+            outputPath: 'static/videos/',
+            name: '[path][name].[hash:8].[ext]'
+          },
+        },
+      });
     }
 
     return config;
