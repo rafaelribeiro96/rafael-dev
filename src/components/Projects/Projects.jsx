@@ -8,9 +8,9 @@ import image3 from '../../assets/images/modelo-site.jpeg';
 const Projects = () => {
   return (
     <div className={styles.projects}>
-      <h3 className={styles['mini-title-projects']}>Nossos Projetos</h3>
-      <h1 className={styles['main-title-projects']}>Sites personalizados que amamos criar</h1>
-      <div className={styles['cards-container-projects']}>
+      <h3 className={styles.mini_title_projects}>Nossos Projetos</h3>
+      <h1 className={styles.main_title_projects}>Sites personalizados que amamos criar</h1>
+      <div className={styles.cards_container_projects}>
         <Card
           image={image1}
           title="Confeitaria Glayde Ribeiro"
