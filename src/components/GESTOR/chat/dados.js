@@ -1,2 +1,2 @@
-export const website = 'Confeitaria Glayde Ribeiro';
-export const ramo = 'Confeitaria';
+export const website = 'Rafael Dev';
+export const ramo = 'Desenvolvimento de Websites';
