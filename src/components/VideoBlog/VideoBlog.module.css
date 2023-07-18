@@ -1,7 +1,7 @@
 .video {
   position: relative;
   width: 98vw;
-  height: 600px;
+  height: 60vh; /* Mudança para se adaptar a diferentes alturas de tela */
   flex-shrink: 0;
   overflow: hidden;
   margin-bottom: 100px;
@@ -26,40 +26,44 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8); /* preto com 50% de opacidade */
+  background: rgba(0, 0, 0, 0.9); /* preto com 50% de opacidade */
   z-index: 0;
-
 }
 
 .video_content {
   text-align: center;
   color: white; /* A cor do texto, pode ajustar conforme a necessidade */
-  max-width: 80%; /* Controla a largura máxima do conteúdo do texto */
+  max-width: 90%; /* Controla a largura máxima do conteúdo do texto */
   z-index: 1;
 }
 
 .video_title {
   margin-bottom: 1rem;
-  font-size: 2rem; /* Tamanho do título, pode ajustar conforme a necessidade */
+  font-size: 2.5vh; /* Ajustando para se adaptar a diferentes tamanhos de tela */
   color: white;
   text-decoration: underline;
 }
 
 .video_description {
-  font-size: 1.2rem; /* Tamanho da descrição, pode ajustar conforme a necessidade */
+  font-size: 2vh; /* Ajustando para se adaptar a diferentes tamanhos de tela */
 }
 
 /* Adicionado para tornar o componente responsivo */
 @media screen and (max-width: 768px) {
   .video {
-    height: 250px;
+    height: 50vh;
+    margin-bottom: 50px;
+  }
+
+  .video_content {
+    max-width: 95%;
   }
 
   .video_title {
-    font-size: 1.2rem;
+    font-size: 3vh;
   }
 
   .video_description {
-    font-size: 1rem;
+    font-size: 2.5vh;
   }
 }

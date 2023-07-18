@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
   width: 100%;
   box-sizing: border-box;
 
@@ -49,19 +49,11 @@
 
 /* Adicionado para tornar o componente responsivo */
 @media screen and (max-width: 768px) {
-  .header {
+  .header_container {
     flex-direction: column;
     text-align: center;
     padding: 10px 0;
-    height: 60px;
-  }
-
-  .left-section-header {
-    margin-bottom: 10px;
-  }
-
-  .logo-header {
-    font-size: 24px;
+    height: 150px;
   }
 
   .logo-header-img {
@@ -70,6 +62,6 @@
   }
 
   .subtitle-header {
-    font-size: 12px;
+    display: none;
   }
 }

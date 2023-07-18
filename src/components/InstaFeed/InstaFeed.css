@@ -1,7 +1,7 @@
 .container-insta {
   width: 100%;
   text-align: center;
-  padding-top: 150px;
+  padding-top: 100px;
   color: #4d4d4d;
   padding-bottom: 100px;
 }
@@ -12,7 +12,7 @@
   border-radius: 0px;
   aspect-ratio: 1/1;
   overflow: hidden;
-  border: 3px solid #abadb3;
+  border: 1px solid #abadb33a;
   transition: 0.4s;
   margin-right: 50px;
 }
@@ -31,7 +31,7 @@
 
 @media (max-width: 700px) {
   .container-insta {
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: 50px;
   }
 

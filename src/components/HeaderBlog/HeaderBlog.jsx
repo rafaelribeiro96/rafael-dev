@@ -11,7 +11,9 @@ const HeaderBlog = () => {
     <div className={styles.header_container}>
       <div className={styles['left-section-header']}>
         <div className={styles['logo-header']}>
+        <Link href="/">
           <Image src={logoRafael} alt="Logo Rafael Ribeiro Dev" className={styles['logo-header-img']} />
+          </Link>
         </div>
         <div className={styles['subtitle-header']}>Construindo experiências digitais únicas e personalizadas</div>
       </div>

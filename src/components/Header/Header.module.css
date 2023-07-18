@@ -47,14 +47,20 @@
   height: 30px;
 }
 
+.link-header {
+  color: white;
+  text-decoration: underline;
+}
+
 /* Adicionado para tornar o componente responsivo */
 @media screen and (max-width: 768px) {
-  .header {
+  .header_container {
     flex-direction: column;
     text-align: center;
     padding: 10px 0;
     height: 60px;
   }
+  
 
   .left-section-header {
     margin-bottom: 10px;
@@ -70,6 +76,6 @@
   }
 
   .subtitle-header {
-    font-size: 12px;
+    display: none;
   }
 }

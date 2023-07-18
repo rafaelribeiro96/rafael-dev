@@ -11,11 +11,15 @@ const Header = () => {
     <div className={styles.header_container}>
       <div className={styles['left-section-header']}>
         <div className={styles['logo-header']}>
+          <Link href="/">
           <Image src={logoRafael} alt="Logo Rafael Ribeiro Dev" className={styles['logo-header-img']} />
+          </Link>
         </div>
         <div className={styles['subtitle-header']}>Construindo experiências digitais únicas e personalizadas</div>
       </div>
+      
       <div className={styles['right-section-header']}>
+      <Link href="/blog" className={styles['link-header']}>BLOG</Link>
         <Link href="https://www.linkedin.com/in/rafaelfeliperibeiro/" target="_blank" rel="noreferrer">
           <Image src={linkedinsvg} alt="LinkedIn" className={styles['icon-header']} />
         </Link>
