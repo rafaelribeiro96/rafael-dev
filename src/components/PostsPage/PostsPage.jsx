@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getPosts } from '../../../services/apiBlog';
+import { getPosts } from '../../services/apiBlog';
 import Image from 'next/image';
 import Link from 'next/link';
 import VideoBlog from 'src/components/VideoBlog/VideoBlog';

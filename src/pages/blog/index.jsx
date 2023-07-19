@@ -1,5 +1,5 @@
 import React from 'react';
-import PostsPage from '../../components/GESTOR/PostsPage/PostsPage';
+import PostsPage from '../../components/PostsPage/PostsPage';
 import style from './blog.module.css';
 import Head from 'next/head';
 
