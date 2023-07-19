@@ -58,16 +58,7 @@
     flex-direction: column;
     text-align: center;
     padding: 10px 0;
-    height: 60px;
-  }
-  
-
-  .left-section-header {
-    margin-bottom: 10px;
-  }
-
-  .logo-header {
-    font-size: 24px;
+    height: 100px;
   }
 
   .logo-header-img {

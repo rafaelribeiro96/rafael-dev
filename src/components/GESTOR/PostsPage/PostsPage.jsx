@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { getPosts } from '../../../services/apiBlog';
 import Image from 'next/image';
 import Link from 'next/link';
-import HeaderBlog from 'src/components/HeaderBlog/HeaderBlog';
 import VideoBlog from 'src/components/VideoBlog/VideoBlog';
 import Footer from 'src/components/Footer/Footer';
 import { InstaFeed } from 'src/components/InstaFeed/InstaFeed';
+import Header from 'src/components/Header/Header';
 
 const PostsPage = () => {
     const [posts, setPosts] = useState([]);
@@ -26,7 +26,7 @@ const PostsPage = () => {
 
     return (
         <>
-        <HeaderBlog />
+        <Header />
         {/* Passando o primeiro post como uma prop para o componente de vídeo */}
         {posts.length > 0 && <VideoBlog post={posts[0]} />}
         <div className="posts-page-blog-container">

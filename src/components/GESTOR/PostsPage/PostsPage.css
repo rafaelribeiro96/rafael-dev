@@ -17,7 +17,8 @@
   width: 47.5%;
   box-shadow: 0 5px 15px rgba(0,0,0,1);
   overflow: hidden;
-  height: 270px;
+  height: auto;
+  min-height: 270px;
 }
 
 
@@ -75,6 +76,22 @@
   background-color: #3D4ED6;
   border-color: #3D4ED6;
 }
+
+@media (max-width: 1300px) {
+.posts-page-blog-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .post-card-page-blog {
+    width: 100%;
+    height: auto; /* Permitir que a altura se ajuste automaticamente ao conteúdo */
+  }
+}
+
 
 @media (max-width: 768px) {
   .post-card-page-blog {

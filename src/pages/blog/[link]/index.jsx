@@ -1,5 +1,8 @@
 import Image from 'next/image';
 import { getPostLink } from '../../../services/apiBlog';
+import Footer from 'src/components/Footer/Footer';
+import Header from 'src/components/Header/Header';
+import styles from './index.module.css';
 
 export async function getServerSideProps({ params }) {
     const post = await getPostLink(params.link);
@@ -8,11 +11,15 @@ export async function getServerSideProps({ params }) {
 }
 
 const PostBlog = ({ post }) => (
-    <div>
-        <h2>{post.title}</h2>
-        <h4>{post.description}</h4>
-        <div dangerouslySetInnerHTML={{ __html: post.content }} />
-        <Image src={post.image} alt="Imagem do post" className="saved-post-image" width={1500} height={800} priority={true} />
+    <div className={styles.body_post_blog_page}>
+    <Header />
+    <div className={styles.container_post_blog_page}>
+        <h1 className={styles.h1_post_blog_page}>{post.title}</h1>
+        <h4 className={styles.h4_post_blog_page}>{post.description}</h4>
+        <Image src={post.image} alt="Imagem do post" className={styles.image_post_blog_page} width={1500} height={800} priority={true} />
+        <div className={styles.post_content_post_blog_page} dangerouslySetInnerHTML={{ __html: post.content }} />
+    </div>
+    <Footer />
     </div>
 );
 

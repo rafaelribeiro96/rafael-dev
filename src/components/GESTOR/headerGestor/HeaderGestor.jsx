@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import logoRafael from '../../../assets/images/logorafael.svg';
+import logoRafael from '../../../assets/images/logoRafael.svg';
 import logoutSvg from '../../../assets/images/logout.svg';
 import Image from 'next/image';
 
