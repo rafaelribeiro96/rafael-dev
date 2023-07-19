@@ -19,7 +19,8 @@ const Header = () => {
       </div>
       
       <div className={styles['right-section-header']}>
-      <Link href="/blog" className={styles['link-header']}>BLOG</Link>
+      <Link href="/" className={styles['link-header']}>HOME</Link>
+        <Link href="/blog" className={styles['link-header']}>BLOG</Link>
         <Link href="https://www.linkedin.com/in/rafaelfeliperibeiro/" target="_blank" rel="noreferrer">
           <Image src={linkedinsvg} alt="LinkedIn" className={styles['icon-header']} />
         </Link>

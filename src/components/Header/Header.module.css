@@ -50,6 +50,7 @@
 .link-header {
   color: white;
   text-decoration: underline;
+  font-weight: 600;
 }
 
 /* Adicionado para tornar o componente responsivo */
