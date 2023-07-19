@@ -4,6 +4,7 @@ import Footer from 'src/components/Footer/Footer';
 import Header from 'src/components/Header/Header';
 import styles from './index.module.css';
 import Link from 'next/link';
+import Head from 'next/head';
 
 export async function getServerSideProps({ params }) {
     const post = await getPostLink(params.link);
@@ -13,6 +14,9 @@ export async function getServerSideProps({ params }) {
 
 const PostBlog = ({ post }) => (
     <div className={styles.body_post_blog_page}>
+        <Head>
+                <title>Rafael Dev Blog - {post.title}</title>
+        </Head>
     <Header />
     <div className={styles.container_post_blog_page}>
         <Link href="/blog" className={styles.link_post_blog_page}>Voltar</Link>

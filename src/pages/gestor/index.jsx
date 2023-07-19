@@ -6,6 +6,7 @@ import ImageManager from '../../components/GESTOR/imageManager/imageManager';
 import GestorHome from '../../components/GESTOR/gestorHome/GestorHome';
 import GestorBlog from '../../components/GESTOR/gestorBlog/GestorBlog';
 import HeaderGestor from '../../components/GESTOR/headerGestor/HeaderGestor';
+import Head from 'next/head';
 
 const GestorPage = () => {
     const { user, isLoadingUser, setUser, logout } = useContext(AuthContext);
@@ -51,6 +52,9 @@ const GestorPage = () => {
 
     return (
         <div className="file-container">
+            <Head>
+                <title>Rafael Dev Gestor - Desenvolvimento Web Personalizado</title>
+            </Head>
             <div>
                 <HeaderGestor headerTitle={headerTitle} handleLogout={handleLogout} />
                 <div className="gestor-container container-gestor">

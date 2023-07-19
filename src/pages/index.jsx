@@ -11,6 +11,7 @@ import Banner from '../components/Banner/Banner';
 import Footer from '../components/Footer/Footer';
 import { Analytics } from '@vercel/analytics/react';
 import Image from 'next/image';
+import Head from 'next/head';
 
 const Main = () => {
     const [showUp, setShowUp] = useState(false);
@@ -45,6 +46,9 @@ const Main = () => {
     return (
         <div className="div__body">
             <Analytics />
+            <Head>
+                <title>Rafael Dev - Desenvolvimento Web Personalizado</title>
+            </Head>
             <div className="container">
                 <div id="header" data-aos="fade-right"><Header /></div>
                 <HighlightedTitle />

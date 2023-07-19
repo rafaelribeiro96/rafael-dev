@@ -11,7 +11,7 @@ const HighlightedTitle = () => {
         em realidade digital
       </h1>
       <h2 className={styles['h2-highlighted']}>
-        Desenvolvimento web personalizado utilizando React, Node.js e muito mais que há de mais moderno digitalmente
+        Desenvolvimento web personalizado utilizando React, NextJs, Node.js e muito mais que há de mais moderno digitalmente
       </h2>
       <ButtonLayout textoBotao="Começar" linkBotao="#services" />
     </div>
