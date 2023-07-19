@@ -23,6 +23,7 @@ import '../components/carousel/Carousel.css'
 import '../components/carrosselImageUplodaded/carrosselImageUplodaded.css'
 import '../components/gallery/Gallery.css'
 import '../pages/login/index.css'
+import '../pages/gestor/index.css'
 import '../styles/global.css'
 
 
