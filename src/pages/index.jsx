@@ -47,7 +47,7 @@ const Main = () => {
         <div className="div__body">
             <Analytics />
             <Head>
-                <title>Rafael Dev - Desenvolvimento Web Personalizado</title>
+                <title>Rafael Ribeiro Tech - Desenvolvimento Web Personalizado</title>
             </Head>
             <div className="container">
                 <div id="header" data-aos="fade-right"><Header /></div>

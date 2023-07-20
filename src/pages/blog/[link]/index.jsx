@@ -15,7 +15,7 @@ export async function getServerSideProps({ params }) {
 const PostBlog = ({ post }) => (
     <div className={styles.body_post_blog_page}>
         <Head>
-                <title>Rafael Dev Blog - {post.title}</title>
+                <title>Rafael Ribeiro Tech Blog - {post.title}</title>
         </Head>
     <Header />
     <div className={styles.container_post_blog_page}>

@@ -29,6 +29,11 @@
   margin-bottom: 30px;
 }
 
+.h2-highlighted-destaque {
+  color: white;
+  font-weight: '600';
+}
+
 /* Adicionado para tornar o componente responsivo */
 @media screen and (max-width: 768px) {
   .highlighted-title {

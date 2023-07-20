@@ -7,7 +7,7 @@ const BlogPage = () => {
     return (
         <div className={style.blog_container}>
             <Head>
-                <title>Rafael Dev Blog - Desenvolvimento Web Personalizado</title>
+                <title>Rafael Ribeiro Tech Blog - Desenvolvimento Web Personalizado</title>
             </Head>
             <PostsPage />
         </div>

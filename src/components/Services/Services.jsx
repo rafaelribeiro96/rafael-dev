@@ -16,7 +16,7 @@ const Services = () => {
         <p className={styles['p-services']}>
           Nosso serviço de desenvolvimento web altamente personalizado é projetado para transformar suas ideias em sites
           elegantes, responsivos e funcionais. Utilizando tecnologias modernas, como React, NextJs, Node.js e muito mais,
-          entregamos soluções sob medida para atender às suas necessidades exclusivas. Além de tudo oferecemos um gestor de conteúdo,
+          a Rafael Ribeiro Tech entrega soluções sob medida para atender às suas necessidades exclusivas. Além de tudo oferecemos um gestor de conteúdo,
           onde poderá gerenciar as imagens e os posts do seu site. E conta também com uma ferramenta de Inteligencia Artificial, que irá auxiliar na criação de conteúdo para seu site e Instagram.
         </p>
         <ButtonLayout textoBotao="Saiba mais" linkBotao="#banner" />

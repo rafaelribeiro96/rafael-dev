@@ -24,7 +24,7 @@ const Header = () => {
         <Link href="https://www.linkedin.com/in/rafaelfeliperibeiro/" target="_blank" rel="noreferrer">
           <Image src={linkedinsvg} alt="LinkedIn" className={styles['icon-header']} />
         </Link>
-        <Link href="https://www.instagram.com/rafaelribeirodev/" target="_blank" rel="noreferrer">
+        <Link href="https://www.instagram.com/rafaelribeirotech/" target="_blank" rel="noreferrer">
           <Image src={instasvg} alt="Instagram" className={styles['icon-header']} />
         </Link>
       </div>

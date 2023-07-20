@@ -8,7 +8,7 @@ export default function Banner() {
       <div className={styles['banner-content']}>
         <h3 className={styles['mini-title-banner']}>ENTRE EM CONTATO</h3>
         <h1 className={styles['main-title-banner']}>Pronto para iniciar o seu projeto digital?</h1>
-        <ButtonLayout textoBotao="Entre em contato" linkBotao="https://www.instagram.com/rafaelribeirodev/" />
+        <ButtonLayout textoBotao="Entre em contato" linkBotao="https://www.instagram.com/rafaelribeirotech/" />
       </div>
     </div>
   );
