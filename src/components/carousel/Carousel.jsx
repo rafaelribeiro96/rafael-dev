@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import wppsvg from '../../assets/images/wpp.svg';
@@ -17,7 +18,9 @@ const Carousel = ({ images, interval }) => {
   }, [images, interval]);
 
   const handlePrevClick = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+    );
   };
 
   const handleNextClick = () => {
@@ -27,19 +30,45 @@ const Carousel = ({ images, interval }) => {
   if (images.length === 0) {
     return (
       <div className="carousel">
-        <Image src={defaultImage} alt="Default" className="carousel__image active" priority={true} />
+        <Image
+          src={defaultImage}
+          alt="Default"
+          className="carousel__image active"
+          priority={true}
+        />
         <div className="carousel__nav">
           <div className="social-buttons">
-            <Link href="https://www.instagram.com/glayderibeiro/" target="_blank" rel="noreferrer" title="link instagram glayderibeiro">
-              <Image src={instasvg} alt="instagram botao" className="svgbtn svg__instagram" />
+            <Link
+              href="https://www.instagram.com/glayderibeiro/"
+              target="_blank"
+              rel="noreferrer"
+              title="link instagram glayderibeiro"
+            >
+              <Image
+                src={instasvg}
+                alt="instagram botao"
+                className="svgbtn svg__instagram"
+              />
             </Link>
-            <Link href="https://wa.me/5531991525735?text=Ol%C3%A1%20Glayde,%20te%20encontrei%20atrav%C3%A9s%20do%20seu%20site!" target="_blank" rel="noreferrer" title="link whatsapp glayde ribeiro">
-              <Image src={wppsvg} alt="whatsapp botao" className="svgbtn svg__wpp" />
+            <Link
+              href="https://wa.me/5531991525735?text=Ol%C3%A1%20Glayde,%20te%20encontrei%20atrav%C3%A9s%20do%20seu%20site!"
+              target="_blank"
+              rel="noreferrer"
+              title="link whatsapp glayde ribeiro"
+            >
+              <Image
+                src={wppsvg}
+                alt="whatsapp botao"
+                className="svgbtn svg__wpp"
+              />
             </Link>
-
           </div>
-          <button className="carousel__nav-button" onClick={handlePrevClick}>&lt;</button>
-          <button className="carousel__nav-button" onClick={handleNextClick}>&gt;</button>
+          <button className="carousel__nav-button" onClick={handlePrevClick}>
+            &lt;
+          </button>
+          <button className="carousel__nav-button" onClick={handleNextClick}>
+            &gt;
+          </button>
         </div>
       </div>
     );
@@ -52,7 +81,9 @@ const Carousel = ({ images, interval }) => {
           key={index}
           src={`${image.url}`}
           alt="imagem glayde ribeiro caroussel"
-          className={`carousel__image ${index === currentIndex ? 'active' : 'hidden'}`}
+          className={`carousel__image ${
+            index === currentIndex ? 'active' : 'hidden'
+          }`}
           width={1500}
           height={1000}
           priority={true}
@@ -61,16 +92,34 @@ const Carousel = ({ images, interval }) => {
 
       <div className="carousel__nav">
         <div className="social-buttons">
-          <Link href="https://www.instagram.com/glayderibeiro/" target="_blank" rel="noreferrer" title="link instagram glayderibeiro">
-            <Image src={instasvg} alt="insta icon" className="svgbtn svg__instagram" />
+          <Link
+            href="https://www.instagram.com/glayderibeiro/"
+            target="_blank"
+            rel="noreferrer"
+            title="link instagram glayderibeiro"
+          >
+            <Image
+              src={instasvg}
+              alt="insta icon"
+              className="svgbtn svg__instagram"
+            />
           </Link>
-          <Link href="https://wa.me/5531991525735?text=Ol%C3%A1%20Glayde,%20te%20encontrei%20atrav%C3%A9s%20do%20seu%20site!" title="link whatsapp glayde ribeiro" target="_blank" rel="noreferrer">
+          <Link
+            href="https://wa.me/5531991525735?text=Ol%C3%A1%20Glayde,%20te%20encontrei%20atrav%C3%A9s%20do%20seu%20site!"
+            title="link whatsapp glayde ribeiro"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Image src={wppsvg} alt="wpp icon" className="svgbtn svg__wpp" />
           </Link>
         </div>
 
-        <button className="carousel__nav-button" onClick={handlePrevClick}>&lt;</button>
-        <button className="carousel__nav-button" onClick={handleNextClick}>&gt;</button>
+        <button className="carousel__nav-button" onClick={handlePrevClick}>
+          &lt;
+        </button>
+        <button className="carousel__nav-button" onClick={handleNextClick}>
+          &gt;
+        </button>
       </div>
     </div>
   );

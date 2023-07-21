@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import styles from './VideoBlog.module.css';
 import Link from 'next/link';
@@ -11,8 +12,12 @@ const VideoBlog = ({ post }) => {
       </video>
       <div className={styles.video_overlay}></div>
       <div className={styles.video_content}>
-      <Link href={`/blog/${post.link}`} className=""><h1 className={styles.video_title}>{post.title}</h1></Link>
-      <Link href={`/blog/${post.link}`} className=""><p className={styles.video_description}>{post.description}</p></Link>
+        <Link href={`/blog/${post.link}`} className="">
+          <h1 className={styles.video_title}>{post.title}</h1>
+        </Link>
+        <Link href={`/blog/${post.link}`} className="">
+          <p className={styles.video_description}>{post.description}</p>
+        </Link>
       </div>
     </div>
   );
