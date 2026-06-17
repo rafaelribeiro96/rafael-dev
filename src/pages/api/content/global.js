@@ -1,6 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
-import { getFile, writeFile, isGitHubConfigured } from '../../../../lib/github';
+import { getFile, writeFile, isGitHubConfigured } from 'src/lib/github';
 
 const FILE_PATH = path.join(process.cwd(), 'content', 'global', 'site.json');
 const RELATIVE_PATH = 'content/global/site.json';

@@ -106,7 +106,7 @@ export async function getServerSideProps(ctx) {
 
   // 2. Load Content from GitHub (Production) or local FS (Local dev)
   const { isGitHubConfigured, getFile, readCollection } = await import(
-    '../lib/github'
+    'src/lib/github'
   );
   const useGitHub = isGitHubConfigured();
 
