@@ -1,14 +1,16 @@
 {
   "id": "plano-1781710500720",
   "order": 3,
-  "title": "Novo Plano",
-  "description": "",
+  "title": "Sistemas Personalizados para a sua empresa",
+  "description": "Sistemas totalmente personalizados para a sua demanda, adequando as necessidades da sua empresa, como CRM, Loja Virtual, Gerenciamento de Dados, e diversos outros serviçõs que possam ser necessários.",
   "setupPrice": 0,
   "maintenancePrice": 0,
   "highlighted": false,
-  "badge": null,
+  "badge": "Consultar disponibilidade",
   "features": [
-    ""
+    "Design exclusivo e focado em conversão",
+    "Adequação as suas necessidades",
+    "Produto altamente personalizável"
   ],
   "maintenanceNote": "Inclui hospedagem edge e atualizações de segurança automáticas."
 }
