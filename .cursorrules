@@ -15,11 +15,18 @@
    - Toda a UI de administração reside em `src/components/Admin/`.
    - O arquivo `ui.jsx` centraliza os design tokens (paleta Dark Studio), primitivos de inputs (`Input`, `Textarea`, `Toggle`, `DynamicList`, `SaveBtn`) e estilizações consistentes.
    - Cada seção do painel deve ter seu próprio componente (ex: `GlobalSEOSection.jsx`, `PricingSection.jsx`, `PortfolioSection.jsx`, `ProjectModal.jsx`).
+   - Veja o manual completo em [GIT-CMS.md](file:///c:/Users/rafaelRibeiro/Documents/Pessoal/Rafael%20Tech/GIT-CMS.md).
 
-4. **Estilo & Temas**:
+4. **Regras do Git-CMS & Fluxo Serverless**:
+   - As escritas em produção devem usar a API REST do GitHub via `src/lib/github.js`.
+   - O desenvolvimento local deve usar o fallback automático para o sistema de arquivos local (`fs/promises`).
+   - Sessões administrativas são protegidas por cookies HTTP-Only e `SameSite=Strict`. As APIs em `/api/content/*` e a página `/admin` devem fazer valer essa validação.
+   - **Scrollbar Fix**: Sempre desabilite o Lenis scroll em `src/pages/_app.js` para caminhos que comecem com `/admin` para evitar conflito com as barras de rolagem nativas dos painéis administrativos.
+
+5. **Estilo & Temas**:
    - Seguir fielmente a identidade Dark Studio. Tons de slate/zinc, contrastes suaves de bordas (`rgba(255,255,255,0.07)`), e acentuações em cyan/primary (`#06b6d4`).
    - Não misturar estilos ad-hoc inline que quebrem a consistência. Utilizar primitivos importados de `src/components/Admin/ui.jsx`.
 
-5. **Linting e Qualidade de Código**:
+6. **Linting e Qualidade de Código**:
    - Antes de finalizar qualquer alteração, rode `npx prettier --write <arquivo>` e `npx next lint` para assegurar conformidade total de sintaxe e estilo de código.
    - Nunca use `eslint-disable` sem necessidade ou para regras que não existam ou não estejam carregadas na configuração do ESLint do projeto.
