@@ -1,6 +1,6 @@
 import { exec } from 'child_process';
 import { promisify } from 'util';
-import { isGitHubConfigured } from '../../../lib/github';
+import { isGitHubConfigured } from '../../../../lib/github';
 
 const execAsync = promisify(exec);
 

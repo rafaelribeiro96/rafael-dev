@@ -1,6 +1,10 @@
 import fs from 'fs/promises';
 import path from 'path';
-import { writeFile, deleteFile, isGitHubConfigured } from '../../../lib/github';
+import {
+  writeFile,
+  deleteFile,
+  isGitHubConfigured
+} from '../../../../../lib/github';
 
 const DIR = path.join(process.cwd(), 'content', 'pricing');
 const RELATIVE_DIR = 'content/pricing';

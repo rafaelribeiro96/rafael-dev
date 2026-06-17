@@ -4,7 +4,7 @@ import {
   readCollection,
   writeFile,
   isGitHubConfigured
-} from '../../../lib/github';
+} from '../../../../lib/github';
 
 const DIR = path.join(process.cwd(), 'content', 'pricing');
 const RELATIVE_DIR = 'content/pricing';
