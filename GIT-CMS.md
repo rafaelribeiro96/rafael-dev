@@ -124,7 +124,24 @@ Para salvar ou excluir arquivos diretamente no GitHub através do servidor serve
    Implementado no arquivo [github.js](file:///c:/Users/rafaelRibeiro/Documents/Pessoal/Rafael%20Tech/src/lib/github.js):
    - `getFile(path)`: Retorna `{ content, sha }`.
    - `writeFile(path, content, message)`: Obtém o SHA atual (se existir) e envia o commit de escrita.
+   - `writeBinaryFile(path, base64Content, message)`: Obtém o SHA atual e envia o commit de escrita binária (base64).
    - `deleteFile(path, message)`: Obtém o SHA e envia a requisição de remoção.
+
+---
+
+## 🖼️ Tratamento e Upload de Imagens do Dispositivo
+
+Para permitir que o usuário faça o upload de fotos de seu próprio computador ou celular sem sobrecarregar o repositório Git com arquivos gigantes, implementamos uma pipeline de otimização no lado do cliente:
+
+1. **Otimização no Cliente ([imageOptimizer.js](file:///c:/Users/rafaelRibeiro/Documents/Pessoal/Rafael%20Tech/src/lib/imageOptimizer.js))**:
+   - Resolução máxima de largura/altura travada em `1200px` mantendo a proporção.
+   - Compressão de qualidade em `82%` e conversão automática para formato **WebP** (com fallback automático para JPEG se o navegador não for compatível).
+   - Sanitização de nome de arquivos (remove acentos, espaços e caracteres especiais) e adiciona um timestamp para evitar colisões no Git.
+
+2. **Segurança no Endpoint ([upload.js](file:///c:/Users/rafaelRibeiro/Documents/Pessoal/Rafael%20Tech/src/pages/api/admin/upload.js))**:
+   - Limitador rígido de tamanho: arquivos maiores que 1MB após compressão são rejeitados no backend.
+   - Route guard de cookie de sessão ativo.
+   - Validação contra ataques de *Path Traversal* (impede escrita fora da pasta `public/uploads`).
 
 ---
 

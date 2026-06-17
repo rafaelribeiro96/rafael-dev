@@ -104,6 +104,17 @@ Evite arquivos massivos. Crie componentes específicos e reutilizáveis na pasta
    - `PricingSection.jsx`: Master-Detail com barra lateral contendo os itens cadastrados e um formulário dinâmico.
    - `PortfolioSection.jsx`: Grade visual dos projetos com filtros e modal de inserção com visualizador de link de imagem ao vivo (thumbnail).
 
+### Passo 5: Pipeline de Upload e Otimização de Imagens
+Para suportar upload de fotos do dispositivo sem inchar o repositório Git com arquivos pesados:
+1. **Otimização Client-side com Canvas (`src/lib/imageOptimizer.js`)**:
+   Carregue o arquivo de imagem em um canvas do navegador, redimensione para um limite máximo (ex: 1200px) e exporte como `image/webp` com qualidade `0.82`. Retorne os dados codificados em Base64 e o nome do arquivo sanitizado.
+2. **Salvamento Binário no GitHub API (`src/lib/github.js`)**:
+   Implemente a função `writeBinaryFile` no cliente do GitHub para enviar o payload base64 diretamente via chamada `PUT` para a API de conteúdos do GitHub.
+3. **Endpoint Seguro de Upload (`src/pages/api/admin/upload.js`)**:
+   Valide a sessão administrativa e salve o arquivo base64 recebido (em `public/uploads/`) usando `writeBinaryFile` em produção ou `fs/promises` em desenvolvimento local.
+4. **Formulário de Entrada (`ProjectModal.jsx`)**:
+   Acrescente um input oculto `<input type="file" accept="image/*" />` e um botão customizado. Execute a otimização no `onChange` e faça o POST para a rota de upload. Defina o link resultante no campo de imagem do formulário.
+
 ### ⚠️ Erros Comuns e Como Evitá-los
 1. **Conflito de Scroll do Lenis (Scrollbar Travada)**:
    Se o projeto utilizar o Lenis globalmente, ele irá interceptar a rolagem da tela do admin (que é bloqueada com `overflow: hidden; height: 100vh`).
