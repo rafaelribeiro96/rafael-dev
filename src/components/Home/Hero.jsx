@@ -1,6 +1,16 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import Image from 'next/image';
+import Marquee from 'react-fast-marquee';
+
+const prototypeImages = [
+  '/uploads/screencapture-glayderibeiro-br-2026-06-17-12-38-12-1781714859760.webp',
+  '/uploads/screencapture-jsaadvogados-br-2026-06-17-12-41-04-1781714874632.webp',
+  '/uploads/screencapture-localhost-3000-2026-06-17-12-43-40-1781714887158.webp',
+  '/uploads/screencapture-glayderibeiro-br-2026-06-17-12-38-12-1781714859760.webp',
+  '/uploads/screencapture-jsaadvogados-br-2026-06-17-12-41-04-1781714874632.webp',
+  '/uploads/screencapture-localhost-3000-2026-06-17-12-43-40-1781714887158.webp'
+];
 
 const Hero = ({ ctaLink }) => {
   return (
@@ -90,15 +100,36 @@ const Hero = ({ ctaLink }) => {
         </div>
 
         <div
-          className="relative z-10 flex justify-center lg:justify-end mt-12 lg:mt-0"
+          className="relative z-10 flex justify-center lg:justify-end mt-12 lg:mt-0 w-full"
           data-aos="fade-left"
         >
-          <div className="relative w-full max-w-[450px]">
+          {/* Mobile Carousel (Horizontal Marquee) - Visible only on mobile/tablet */}
+          <div className="block lg:hidden w-[calc(100vw-10vw)] sm:w-full overflow-hidden py-4 -mx-[5vw] px-[5vw] sm:mx-0 sm:px-0">
+            <Marquee gradient={false} speed={30}>
+              {prototypeImages.map((src, index) => (
+                <div
+                  key={index}
+                  className="w-28 h-28 mx-3 rounded-2xl overflow-hidden border border-white/10 bg-surface-slate relative aspect-square shadow-lg flex-shrink-0"
+                >
+                  <Image
+                    src={src}
+                    alt={`Protótipo ${index + 1}`}
+                    layout="fill"
+                    objectFit="cover"
+                    className="opacity-90"
+                  />
+                </div>
+              ))}
+            </Marquee>
+          </div>
+
+          {/* Desktop Mockup - Visible only on lg screens and up */}
+          <div className="hidden lg:block relative w-full max-w-[450px]">
             <div className="absolute -inset-2 bg-gradient-to-b from-primary/30 to-transparent rounded-[2rem] blur-xl opacity-50 pointer-events-none"></div>
             <Image
               alt="Rafael Tech Dashboard and Mobile Mockup"
               className="w-full h-auto object-contain drop-shadow-[0_20px_50px_rgba(6,182,212,0.3)] hover:scale-105 transition-transform duration-700 rounded-2xl border border-primary/20 bg-surface/40 backdrop-blur-sm"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-iEpo0UQhz37g5XL4MLHc0zXqJ3sa1M3LvEMHSrYdOiq1N_R_kWQwdJ6HSi04QY5HOlupKJljgPnLwTtdWNboW5Pn_DKHmnhqWespAA-1jjOWmtA8ayRtuQXYZZH-Wl8-NK6ehhYRYayUN7Sc8HBHi475OdP318E6F0pdlWBtyG38GG8w0BaIP0oo-JANEdGk2bkeuHPdAU2yY4Iuiq7Grc9d8k9HcYXlB8h9nL5K9XuHe7R3wHKVMD3br9SGMQVDLf1Eh6VLlKPh"
+              src="/uploads/hero-professional.png"
               width={500}
               height={450}
               priority={true}

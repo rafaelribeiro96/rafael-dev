@@ -7,12 +7,14 @@ import Footer from 'src/components/Footer/Footer';
 
 // Subcomponents
 import Hero from 'src/components/Home/Hero';
+import Services from 'src/components/Home/Services';
 import DigitalEcosystem from 'src/components/Home/DigitalEcosystem';
 import ComparisonMatrix from 'src/components/Home/ComparisonMatrix';
 import Portfolio from 'src/components/Home/Portfolio';
 import Testimonials from 'src/components/Home/Testimonials';
 import Workflow from 'src/components/Home/Workflow';
 import Pricing from 'src/components/Home/Pricing';
+import FAQ from 'src/components/Home/FAQ';
 
 // Git-CMS: content helpers (server-side only)
 import { getPricingTiers, getPortfolioItems } from 'src/lib/content';
@@ -47,12 +49,14 @@ const Main = ({ pricingTiers, portfolioItems }) => {
 
       <main className="pt-20 overflow-x-hidden">
         <Hero ctaLink={ctaLink} />
+        <Services />
         <DigitalEcosystem />
         <ComparisonMatrix />
         <Portfolio ctaLink={ctaLink} items={portfolioItems} />
         <Testimonials />
         <Workflow />
         <Pricing ctaLink={ctaLink} tiers={pricingTiers} />
+        <FAQ />
       </main>
 
       <Footer />

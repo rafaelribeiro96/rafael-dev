@@ -2,10 +2,7 @@ import React from 'react';
 
 const DigitalEcosystem = () => {
   return (
-    <section
-      className="py-24 px-margin-page bg-surface-slate relative border-t border-white/5"
-      id="servicos"
-    >
+    <section className="py-24 px-margin-page bg-surface-slate relative border-t border-white/5">
       <div className="max-w-container-max mx-auto text-left">
         <div className="text-center mb-16" data-aos="fade-up">
           <span className="inline-block text-xs font-bold tracking-widest uppercase text-primary bg-primary/10 px-3 py-1 rounded-full mb-4">

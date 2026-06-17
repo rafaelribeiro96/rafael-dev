@@ -16,10 +16,10 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="flex md:grid md:grid-cols-3 gap-6 md:gap-8 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory scroll-smooth pb-6 -mx-[5vw] px-[5vw] md:mx-0 md:px-0 scrollbar-none">
           {/* Testimonial 1 */}
           <div
-            className="glass-panel rounded-3xl p-6 sm:p-8 border border-white/10 hover:border-primary/30 transition-all duration-300 flex flex-col"
+            className="w-[85vw] sm:w-[350px] md:w-auto shrink-0 snap-center md:shrink md:snap-none glass-panel rounded-3xl p-6 sm:p-8 border border-white/10 hover:border-primary/30 transition-all duration-300 flex flex-col"
             data-aos="fade-up"
             data-aos-delay="100"
           >
@@ -61,7 +61,7 @@ const Testimonials = () => {
 
           {/* Testimonial 2 */}
           <div
-            className="glass-panel rounded-3xl p-6 sm:p-8 border border-primary/30 shadow-[0_0_30px_rgba(6,182,212,0.1)] hover:border-primary/50 transition-all duration-300 flex flex-col"
+            className="w-[85vw] sm:w-[350px] md:w-auto shrink-0 snap-center md:shrink md:snap-none glass-panel rounded-3xl p-6 sm:p-8 border border-primary/30 shadow-[0_0_30px_rgba(6,182,212,0.1)] hover:border-primary/50 transition-all duration-300 flex flex-col"
             data-aos="fade-up"
             data-aos-delay="200"
           >
@@ -103,7 +103,7 @@ const Testimonials = () => {
 
           {/* Testimonial 3 */}
           <div
-            className="glass-panel rounded-3xl p-6 sm:p-8 border border-white/10 hover:border-primary/30 transition-all duration-300 flex flex-col"
+            className="w-[85vw] sm:w-[350px] md:w-auto shrink-0 snap-center md:shrink md:snap-none glass-panel rounded-3xl p-6 sm:p-8 border border-white/10 hover:border-primary/30 transition-all duration-300 flex flex-col"
             data-aos="fade-up"
             data-aos-delay="300"
           >

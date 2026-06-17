@@ -70,9 +70,9 @@ const Portfolio = ({ ctaLink, items = [] }) => {
           ))}
         </div>
 
-        {/* Project Grid */}
+        {/* Project Grid / Mobile Carousel */}
         <div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory scroll-smooth pb-6 -mx-[5vw] px-[5vw] md:mx-0 md:px-0 scrollbar-none"
           data-aos="fade-up"
         >
           {filteredProjects.map((project) => {
@@ -85,7 +85,7 @@ const Portfolio = ({ ctaLink, items = [] }) => {
             return (
               <div
                 key={project.id}
-                className="glass-panel rounded-3xl overflow-hidden border border-white/10 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(6,182,212,0.2)] transition-all duration-300 group flex flex-col h-full text-left"
+                className="w-[85vw] sm:w-[350px] md:w-auto shrink-0 snap-center md:shrink md:snap-none glass-panel rounded-3xl overflow-hidden border border-white/10 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(6,182,212,0.2)] transition-all duration-300 group flex flex-col h-full text-left"
               >
                 <div className="aspect-[4/3] relative overflow-hidden bg-surface-deep p-6">
                   <Image
