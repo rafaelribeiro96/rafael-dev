@@ -23,7 +23,7 @@ const Hero = ({ ctaLink, carouselImages = [] }) => {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/15 via-surface-deep to-surface-deep -z-10"></div>
       <div className="absolute inset-0 bg-grid-pattern opacity-20 pointer-events-none -z-10"></div>
 
-      <div className="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
+      <div className="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center w-full">
         <div
           className="space-y-8 z-10 text-center lg:text-left"
           data-aos="fade-right"
@@ -61,7 +61,7 @@ const Hero = ({ ctaLink, carouselImages = [] }) => {
               className="font-label-md text-label-md text-on-surface hover:text-primary transition-all duration-300 inline-flex items-center gap-1.5 underline underline-offset-4 decoration-white/20 hover:decoration-primary font-bold"
             >
               Ver Soluções
-              <span className="material-symbols-outlined text-sm animate-bounce">
+              <span className="material-symbols-outlined text-[14px]">
                 arrow_downward
               </span>
             </a>
@@ -104,7 +104,7 @@ const Hero = ({ ctaLink, carouselImages = [] }) => {
         </div>
 
         <div
-          className="relative z-10 flex justify-center lg:justify-end mt-12 lg:mt-0 w-full"
+          className="relative z-10 flex justify-center lg:justify-end mt-4 lg:mt-0 w-full"
           data-aos="fade-left"
         >
           {/* Mobile Carousel (Horizontal Marquee) - Visible only on mobile/tablet */}

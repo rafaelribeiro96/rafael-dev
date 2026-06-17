@@ -67,9 +67,16 @@ const Services = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {servicesList.map((service, index) => (
-            <div
+            <a
               key={index}
-              className="glass-panel rounded-3xl p-8 border border-white/10 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(6,182,212,0.15)] transition-all duration-300 flex flex-col justify-between group text-left relative overflow-hidden"
+              href="#planos"
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .getElementById('planos')
+                  ?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="glass-panel rounded-3xl p-8 border border-white/10 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(6,182,212,0.15)] transition-all duration-300 flex flex-col justify-between group text-left relative overflow-hidden cursor-pointer"
               data-aos="fade-up"
               data-aos-delay={100 * (index + 1)}
             >
@@ -113,7 +120,7 @@ const Services = () => {
                   ))}
                 </ul>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>

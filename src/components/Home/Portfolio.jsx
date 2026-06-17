@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useMemo } from 'react';
 import Image from 'next/image';
 
 const WHATSAPP_BASE = 'https://wa.me/5531991869943';
@@ -19,26 +19,43 @@ function buildWhatsappLink(whatsappMessage, fallbackLink) {
  * To add/edit projects, update the JSON files in /content/portfolio.
  */
 const Portfolio = ({ ctaLink, items = [] }) => {
-  const [selectedCategory, setSelectedCategory] = useState('Todos');
   const scrollerRef = useRef(null);
+  const [isHovered, setIsHovered] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+  const startX = useRef(0);
+  const scrollLeft = useRef(0);
+  const dragMoved = useRef(false);
 
-  // Derive categories dynamically from the loaded items - set to only 'Todos' for now
-  const categories = ['Todos'];
+  // Track viewport size dynamically
+  const [isDesktop, setIsDesktop] = useState(false);
+  useEffect(() => {
+    const checkScreen = () => setIsDesktop(window.innerWidth >= 1024);
+    checkScreen();
+    window.addEventListener('resize', checkScreen);
+    return () => window.removeEventListener('resize', checkScreen);
+  }, []);
 
-  const filteredProjects =
-    selectedCategory === 'Todos'
-      ? items
-      : items.filter((project) => project.category === selectedCategory);
+  const filteredProjects = useMemo(() => {
+    // Filter out target platforms based on viewport
+    return items.filter((project) => {
+      if (isDesktop) {
+        return project.displayOn !== 'carousel';
+      } else {
+        return project.displayOn !== 'desktop';
+      }
+    });
+  }, [items, isDesktop]);
 
   useEffect(() => {
     const container = scrollerRef.current;
-    if (!container) return;
+    if (!container || isHovered || isDragging) return;
 
     const handleAutoScroll = () => {
-      if (window.innerWidth >= 768) return; // Only on mobile
       const card = container.firstElementChild;
       if (!card) return;
-      const cardWidth = card.offsetWidth + 24; // width + gap
+      // Get standard gap (32px on desktop because of md:gap-8, 24px on mobile)
+      const gap = window.innerWidth >= 768 ? 32 : 24;
+      const cardWidth = card.offsetWidth + gap;
       const originalWidth = cardWidth * filteredProjects.length;
 
       if (container.scrollLeft >= originalWidth - 10) {
@@ -47,6 +64,7 @@ const Portfolio = ({ ctaLink, items = [] }) => {
         container.scrollLeft = 0;
         // Scroll to the next card smoothly on the next tick
         setTimeout(() => {
+          if (!scrollerRef.current) return;
           container.style.scrollBehavior = 'smooth';
           container.scrollBy({ left: cardWidth, behavior: 'smooth' });
         }, 50);
@@ -58,11 +76,49 @@ const Portfolio = ({ ctaLink, items = [] }) => {
 
     const interval = setInterval(handleAutoScroll, 4000);
     return () => clearInterval(interval);
+  }, [filteredProjects, isHovered, isDragging]);
+
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    dragMoved.current = false;
+    startX.current = e.pageX - scrollerRef.current.offsetLeft;
+    scrollLeft.current = scrollerRef.current.scrollLeft;
+    scrollerRef.current.style.scrollBehavior = 'auto';
+  };
+
+  const handleMouseLeaveOrUp = () => {
+    setIsDragging(false);
+    if (scrollerRef.current) {
+      scrollerRef.current.style.scrollBehavior = 'smooth';
+    }
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - scrollerRef.current.offsetLeft;
+    const walk = (x - startX.current) * 1.5; // Scroll speed
+    if (Math.abs(walk) > 5) {
+      dragMoved.current = true;
+    }
+    scrollerRef.current.scrollLeft = scrollLeft.current - walk;
+  };
+
+  const handleLinkClick = (e) => {
+    if (dragMoved.current) {
+      e.preventDefault();
+    }
+  };
+
+  // Triple the project array to ensure seamless infinite looping marquee
+  const loopList = useMemo(() => {
+    if (filteredProjects.length === 0) return [];
+    return [...filteredProjects, ...filteredProjects, ...filteredProjects];
   }, [filteredProjects]);
 
   return (
     <section
-      className="py-24 px-margin-page bg-surface-slate relative border-y border-white/5 overflow-hidden"
+      className="py-24 px-margin-page bg-surface-deep relative border-y border-white/5 overflow-hidden select-none"
       id="portfolio"
     >
       <div className="max-w-container-max mx-auto">
@@ -78,34 +134,21 @@ const Portfolio = ({ ctaLink, items = [] }) => {
           </p>
         </div>
 
-        {/* Filter Tabs — derived from JSON data */}
-        <div
-          className="flex overflow-x-auto md:flex-wrap justify-start md:justify-center gap-3 mb-12 pb-3 -mx-[5vw] px-[5vw] scrollbar-none w-[calc(100%+10vw)] md:w-auto md:mx-0 md:px-0 scroll-smooth"
-          data-aos="fade-up"
-        >
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-2.5 rounded-full font-label-md text-sm transition-all duration-300 border shrink-0 whitespace-nowrap ${
-                selectedCategory === category
-                  ? 'bg-primary/20 text-primary border-primary'
-                  : 'bg-transparent text-on-surface-variant border-white/10 hover:border-primary/55 hover:text-primary'
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-
-        {/* Project Grid / Mobile Carousel */}
+        {/* Project Infinite Drag Carousel */}
         <div
           ref={scrollerRef}
-          className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory scroll-smooth pb-6 -mx-[5vw] px-[5vw] md:mx-0 md:px-0 scrollbar-none"
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseLeaveOrUp}
+          onMouseLeave={() => {
+            setIsHovered(false);
+            handleMouseLeaveOrUp();
+          }}
+          onMouseEnter={() => setIsHovered(true)}
+          className="flex gap-6 md:gap-8 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-6 -mx-[5vw] px-[5vw] md:mx-0 md:px-0 scrollbar-none cursor-grab active:cursor-grabbing"
           data-aos="fade-up"
         >
-          {[...filteredProjects, ...filteredProjects].map((project, index) => {
-            const isDuplicate = index >= filteredProjects.length;
+          {loopList.map((project, index) => {
             const hasLiveUrl = project.liveUrl && project.liveUrl !== '#';
             const whatsappLink = buildWhatsappLink(
               project.whatsappMessage,
@@ -115,23 +158,16 @@ const Portfolio = ({ ctaLink, items = [] }) => {
             return (
               <div
                 key={`${project.id}-${index}`}
-                className={`w-[85vw] sm:w-[350px] md:w-auto shrink-0 snap-center md:shrink md:snap-none glass-panel rounded-3xl overflow-hidden border border-white/10 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(6,182,212,0.2)] transition-all duration-300 group flex-col h-full text-left ${
-                  isDuplicate
-                    ? 'flex md:hidden'
-                    : project.displayOn === 'carousel'
-                    ? 'flex md:hidden'
-                    : project.displayOn === 'desktop'
-                    ? 'hidden md:flex'
-                    : 'flex'
-                }`}
+                className="w-[85vw] sm:w-[350px] md:w-[380px] shrink-0 snap-center glass-panel rounded-3xl overflow-hidden border border-white/10 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(6,182,212,0.2)] transition-all duration-300 group flex flex-col h-full text-left"
               >
-                <div className="aspect-[4/3] relative overflow-hidden bg-surface-deep p-6">
+                <div className="aspect-[4/3] relative overflow-hidden bg-surface-deep">
                   <Image
                     alt={project.title}
-                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 drop-shadow-2xl"
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 drop-shadow-2xl"
                     src={project.image}
                     width={400}
                     height={300}
+                    draggable={false}
                   />
                 </div>
                 <div className="p-6 sm:p-8 flex flex-col flex-grow bg-surface-slate">
@@ -151,6 +187,7 @@ const Portfolio = ({ ctaLink, items = [] }) => {
                       href={hasLiveUrl ? project.liveUrl : ctaLink}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={handleLinkClick}
                       className="w-full text-center font-label-md text-sm bg-primary text-on-primary py-3.5 rounded-xl shadow-[0_0_15px_rgba(76,215,246,0.3)] hover:shadow-[0_0_25px_rgba(76,215,246,0.5)] transition-all font-bold uppercase tracking-wider"
                     >
                       {hasLiveUrl ? 'VISITAR SITE' : 'VISITAR MODELO'}
@@ -159,6 +196,7 @@ const Portfolio = ({ ctaLink, items = [] }) => {
                       href={whatsappLink}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={handleLinkClick}
                       className="w-full text-center font-label-md text-sm bg-transparent border border-white/20 text-on-surface py-3.5 rounded-xl hover:border-primary hover:text-primary transition-colors inline-block uppercase tracking-wider font-bold"
                     >
                       QUERO UM SITE ASSIM

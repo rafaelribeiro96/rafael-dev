@@ -50,7 +50,7 @@ const PricingCard = ({ tier, ctaLink, isSolo }) => {
         highlighted
           ? 'border-primary/50 shadow-[0_0_40px_rgba(6,182,212,0.15)] bg-gradient-to-b from-surface-slate to-surface-deep'
           : 'border-white/10 hover:border-primary/30'
-      } ${isSolo ? 'md:col-span-2 lg:col-span-1' : ''}`}
+      } ${isSolo ? 'md:col-span-2' : ''}`}
       data-aos="fade-up"
     >
       {badge && (
@@ -74,19 +74,17 @@ const PricingCard = ({ tier, ctaLink, isSolo }) => {
             <h3 className="font-headline-md text-2xl text-on-surface mb-3 font-bold">
               {title}
             </h3>
-            <div className="flex items-baseline gap-2 mb-2">
-              <span className="font-body-md text-sm text-text-muted">
+            <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1 mb-2">
+              <span className="font-body-md text-sm text-text-muted whitespace-nowrap">
                 A partir de
               </span>
-              <span className="font-headline-xl text-4xl text-primary font-bold">
+              <span className="font-headline-xl text-4xl text-primary font-bold whitespace-nowrap">
                 R$ {formattedSetupPrice}
               </span>
-              <span className="font-body-md text-sm text-text-muted">
-                (Setup)
-              </span>
             </div>
-            <p className="font-label-md text-secondary text-sm font-semibold">
-              + R$ {formattedMaintenancePrice}/mês
+            <p className="font-label-md text-secondary text-xs font-semibold leading-relaxed">
+              + R$ {formattedMaintenancePrice}/mês (manutenção e hospedagem
+              mensal)
             </p>
           </div>
 
@@ -174,10 +172,10 @@ const Pricing = ({ ctaLink, tiers = [] }) => {
     'grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto items-stretch';
   if (count === 3) {
     gridClasses =
-      'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch';
+      'grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto items-stretch';
   } else if (count === 4) {
     gridClasses =
-      'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 max-w-4xl mx-auto items-stretch';
+      'grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto items-stretch';
   } else if (count === 1) {
     gridClasses = 'grid grid-cols-1 gap-8 max-w-md mx-auto items-stretch';
   }

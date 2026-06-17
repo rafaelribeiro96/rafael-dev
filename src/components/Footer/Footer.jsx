@@ -11,8 +11,11 @@ const Footer = () => {
     <footer className="bg-[#050810] border-t border-white/10 w-full py-16 px-margin-page">
       <div className="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-left">
         {/* Brand & Socials Section */}
-        <div className="col-span-1 md:col-span-2 space-y-6">
-          <Link href="/" className="inline-flex items-center group h-12">
+        <div className="col-span-1 md:col-span-2 flex flex-col items-center md:items-start text-center md:text-left space-y-6">
+          <Link
+            href="/"
+            className="inline-flex items-center justify-center md:justify-start group h-12"
+          >
             <Image
               src={logoRafael1}
               alt="Rafael Tech"
@@ -23,7 +26,7 @@ const Footer = () => {
             Engenharia web de alta performance para negócios que não podem
             esperar. Tecnologia Edge-First para dominar o digital.
           </p>
-          <div className="flex gap-4 pt-2">
+          <div className="flex justify-center md:justify-start gap-4 pt-2">
             <a
               href="https://www.linkedin.com/in/rafaelfeliperibeiro/"
               target="_blank"
@@ -58,44 +61,44 @@ const Footer = () => {
         </div>
 
         {/* Navigation Section */}
-        <div className="flex flex-col space-y-4">
+        <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-4">
           <h4 className="font-label-md text-on-surface text-lg mb-2">
             Navegação
           </h4>
           <Link
             href="/"
-            className="font-body-md text-text-muted hover:text-primary transition-colors text-sm inline-block"
+            className="font-body-md text-text-muted hover:text-primary transition-colors text-sm"
           >
             Home
           </Link>
           <Link
             href="/#servicos"
-            className="font-body-md text-text-muted hover:text-primary transition-colors text-sm inline-block"
+            className="font-body-md text-text-muted hover:text-primary transition-colors text-sm"
           >
             Ecossistema
           </Link>
           <Link
             href="/#portfolio"
-            className="font-body-md text-text-muted hover:text-primary transition-colors text-sm inline-block"
+            className="font-body-md text-text-muted hover:text-primary transition-colors text-sm"
           >
             Portfólio
           </Link>
           <Link
             href="/#planos"
-            className="font-body-md text-text-muted hover:text-primary transition-colors text-sm inline-block"
+            className="font-body-md text-text-muted hover:text-primary transition-colors text-sm"
           >
             Planos
           </Link>
           <Link
             href="/blog"
-            className="font-body-md text-text-muted hover:text-primary transition-colors text-sm inline-block"
+            className="font-body-md text-text-muted hover:text-primary transition-colors text-sm"
           >
             Blog
           </Link>
         </div>
 
         {/* Contact & Location Section */}
-        <div className="flex flex-col space-y-4">
+        <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-4">
           <h4 className="font-label-md text-on-surface text-lg mb-2">
             Contato
           </h4>
@@ -108,7 +111,7 @@ const Footer = () => {
             <span className="material-symbols-outlined text-lg">chat</span>
             CHAMAR NO WHATSAPP
           </a>
-          <p className="font-body-md text-text-muted text-xs text-center flex items-center justify-center gap-1 mt-1">
+          <p className="font-body-md text-text-muted text-xs flex items-center justify-center md:justify-start gap-1 mt-1">
             <span className="material-symbols-outlined text-[14px]">
               location_on
             </span>

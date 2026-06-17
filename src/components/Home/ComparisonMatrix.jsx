@@ -3,7 +3,7 @@ import React from 'react';
 const ComparisonMatrix = () => {
   return (
     <section
-      className="py-24 px-margin-page bg-surface-deep relative"
+      className="py-24 px-margin-page bg-surface-slate relative"
       id="arquitetura"
     >
       <div className="max-w-container-max mx-auto text-left">
