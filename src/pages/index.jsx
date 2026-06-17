@@ -79,10 +79,10 @@ const Main = () => {
   return (
     <div className="bg-surface-deep text-on-surface font-body-lg min-h-screen">
       <Head>
-        <title>Rafael Tech - Presença Digital de Elite</title>
+        <title>Rafael Tech | Sites Profissionais de Alta Performance para Empresas</title>
         <meta
           name="description"
-          content="Tenha um site ultrarrápido que carrega em menos de 1 segundo. Atraia mais clientes com um design profissional e fácil de usar, onde você mesmo altera o conteúdo sem complicação."
+          content="Rafael Tech cria sites profissionais e landing pages de alta performance para empresas em Belo Horizonte e todo o Brasil. Sites que carregam em menos de 1s, dominam o Google e convertem visitantes em clientes. Orçamento gratuito."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
@@ -97,17 +97,21 @@ const Main = () => {
 
           <div className="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
             <div className="space-y-8 z-10 text-left" data-aos="fade-right">
+              <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-2">
+                <span className="material-symbols-outlined text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>location_on</span>
+                Belo Horizonte, MG — Atendemos todo o Brasil
+              </div>
               <h1 className="font-headline-xl text-4xl sm:text-5xl lg:text-headline-xl text-on-surface leading-tight font-extrabold tracking-tighter">
-                Sua Presença Digital com <br className="hidden md:block" />
+                Sites Profissionais que <br className="hidden md:block" />
                 <span className="text-gradient">
-                  Desempenho Máximo e Segurança de Elite.
+                  Vendem, Ranqueiam e Impressionam.
                 </span>
               </h1>
 
               <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
-                Desenvolvemos sites institucionais e landing pages exclusivas.
-                Performance otimizada para o Google, código limpo e autonomia
-                total para você atualizar seu conteúdo em segundos.
+                Criamos sites institucionais e landing pages com tecnologia de ponta.
+                Carregamento em menos de 1 segundo, design exclusivo que converte
+                e você mesmo atualiza o conteúdo — sem depender de ninguém.
               </p>
 
               <div className="flex flex-wrap gap-4 pt-4">
@@ -117,7 +121,7 @@ const Main = () => {
                   rel="noopener noreferrer"
                   className="font-label-md text-label-md bg-primary text-on-primary px-8 py-4 rounded-full shadow-[0_0_20px_rgba(76,215,246,0.4)] hover:shadow-[0_0_30px_rgba(76,215,246,0.6)] hover:-translate-y-1 transition-all duration-300 transform font-semibold text-center"
                 >
-                  Falar com Especialista
+                  Solicitar Orçamento Grátis
                 </a>
                 <a
                   href="#servicos"
@@ -129,8 +133,24 @@ const Main = () => {
                   }}
                   className="font-label-md text-label-md border border-white/20 text-on-surface px-8 py-4 rounded-full hover:border-primary hover:text-primary hover:bg-primary/5 transition-all duration-300 text-center"
                 >
-                  Conhecer Soluções
+                  Ver Soluções
                 </a>
+              </div>
+
+              {/* Trust Badges */}
+              <div className="flex flex-wrap items-center gap-6 pt-2">
+                <div className="flex items-center gap-2 text-on-surface-variant">
+                  <span className="material-symbols-outlined text-secondary text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
+                  <span className="text-sm font-medium">PageSpeed 100</span>
+                </div>
+                <div className="flex items-center gap-2 text-on-surface-variant">
+                  <span className="material-symbols-outlined text-secondary text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>schedule</span>
+                  <span className="text-sm font-medium">Entrega em 15 dias úteis</span>
+                </div>
+                <div className="flex items-center gap-2 text-on-surface-variant">
+                  <span className="material-symbols-outlined text-secondary text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>lock</span>
+                  <span className="text-sm font-medium">Você é dono do código</span>
+                </div>
               </div>
             </div>
 
@@ -177,12 +197,13 @@ const Main = () => {
         >
           <div className="max-w-container-max mx-auto text-left">
             <div className="text-center mb-16" data-aos="fade-up">
+              <span className="inline-block text-xs font-bold tracking-widest uppercase text-primary bg-primary/10 px-3 py-1 rounded-full mb-4">Por que nos escolher</span>
               <h2 className="font-headline-lg text-3xl sm:text-headline-lg text-white font-bold mb-4">
-                O Ecossistema Rafael Tech
+                Tudo que Seu Negócio Precisa para Dominar o Digital
               </h2>
               <p className="font-body-md text-on-surface-variant max-w-2xl mx-auto">
-                Tudo que você precisa para dominar o digital, integrado em uma
-                única solução premium.
+                Não entregamos apenas um site bonito. Entregamos uma máquina de
+                geração de clientes, integrada e pronta para crescer com você.
               </p>
             </div>
 
@@ -219,11 +240,10 @@ const Main = () => {
                   </span>
                 </div>
                 <h3 className="font-headline-md text-lg text-on-surface mb-2 font-bold">
-                  AI Search Ready
+                  Pronto para IA e ChatGPT
                 </h3>
                 <p className="font-body-md text-sm text-on-surface-variant">
-                  Posicione sua marca nas respostas das novas tecnologias de IA
-                  e saia na frente da concorrência.
+                  Seu negócio aparece nas respostas do ChatGPT, Gemini e novas buscas com IA — visibilidade onde a concorrência ainda não chegou.
                 </p>
               </div>
 
@@ -239,11 +259,10 @@ const Main = () => {
                   </span>
                 </div>
                 <h3 className="font-headline-md text-lg text-on-surface mb-2 font-bold">
-                  Desempenho Extremo
+                  Velocidade que Converte
                 </h3>
                 <p className="font-body-md text-sm text-on-surface-variant">
-                  Velocidade que converte. Não perca vendas com sites lentos que
-                  frustram os visitantes.
+                  Sites que carregam em menos de 1 segundo. O Google prioriza sites rápidos — e seus clientes também.
                 </p>
               </div>
 
@@ -262,8 +281,7 @@ const Main = () => {
                   Autonomia Total
                 </h3>
                 <p className="font-body-md text-sm text-on-surface-variant">
-                  Gestão na palma da sua mão. Atualize informações
-                  instantaneamente sem depender de terceiros.
+                  Você mesmo atualiza textos, fotos e preços pelo celular, em segundos, sem pagar ninguém para isso.
                 </p>
               </div>
             </div>
@@ -277,12 +295,13 @@ const Main = () => {
         >
           <div className="max-w-container-max mx-auto text-left">
             <div className="text-center mb-16" data-aos="fade-up">
+              <span className="inline-block text-xs font-bold tracking-widest uppercase text-primary bg-primary/10 px-3 py-1 rounded-full mb-4">Comparativo</span>
               <h2 className="font-headline-lg text-3xl sm:text-headline-lg text-on-surface font-bold mb-4">
-                Sites Antigos e Lentos x Sites Modernos Rafael Tech
+                WordPress Lento vs. Site Rafael Tech
               </h2>
               <p className="font-body-md text-body-md text-on-surface-variant max-w-3xl mx-auto">
-                A diferença tecnológica que define o sucesso do seu negócio
-                online.
+                Cada segundo de lentidão custa clientes. Veja a diferença que a
+                tecnologia certa faz para o seu negócio.
               </p>
             </div>
 
@@ -421,11 +440,12 @@ const Main = () => {
         >
           <div className="max-w-container-max mx-auto">
             <div className="text-center mb-16" data-aos="fade-up">
+              <span className="inline-block text-xs font-bold tracking-widest uppercase text-primary bg-primary/10 px-3 py-1 rounded-full mb-4">Projetos Reais</span>
               <h2 className="font-headline-lg text-3xl sm:text-headline-lg text-on-surface font-bold mb-4">
                 Portfólio de Projetos
               </h2>
               <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
-                Aplicações reais de alto impacto visual e performance extrema.
+                Sites entregues, online e gerando resultados para nossos clientes.
               </p>
             </div>
 
@@ -511,16 +531,97 @@ const Main = () => {
           </div>
         </section>
 
-        {/* WORKFLOW SECTION */}
-        <section className="py-24 px-margin-page bg-surface-deep relative">
+        {/* TESTIMONIALS SECTION */}
+        <section className="py-24 px-margin-page bg-surface-deep relative border-t border-white/5">
           <div className="max-w-container-max mx-auto">
             <div className="text-center mb-16" data-aos="fade-up">
+              <span className="inline-block text-xs font-bold tracking-widest uppercase text-primary bg-primary/10 px-3 py-1 rounded-full mb-4">Clientes Satisfeitos</span>
               <h2 className="font-headline-lg text-3xl sm:text-headline-lg text-on-surface font-bold mb-4">
-                Como Funciona
+                O Que Dizem Nossos Clientes
               </h2>
               <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
-                Um processo ágil e transparente para colocar sua empresa no
-                topo.
+                Resultados reais para negócios reais.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Testimonial 1 */}
+              <div className="glass-panel rounded-3xl p-8 border border-white/10 hover:border-primary/30 transition-all duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="100">
+                <div className="flex text-secondary mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="material-symbols-outlined text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                  ))}
+                </div>
+                <p className="font-body-md text-sm text-on-surface-variant leading-relaxed flex-grow mb-6">
+                  &ldquo;O site ficou incrível — moderno, elegante e representa perfeitamente o padrão do nosso consultório. As consultas aumentaram visivelmente depois do lançamento.&rdquo;
+                </p>
+                <div className="flex items-center gap-3 border-t border-white/5 pt-6">
+                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                    <span className="material-symbols-outlined text-primary text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>person</span>
+                  </div>
+                  <div>
+                    <p className="font-label-md text-sm text-on-surface font-bold">Glayde Ribeiro</p>
+                    <p className="font-body-md text-xs text-on-surface-variant">Clínica Médica</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Testimonial 2 */}
+              <div className="glass-panel rounded-3xl p-8 border border-primary/30 shadow-[0_0_30px_rgba(6,182,212,0.1)] hover:border-primary/50 transition-all duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="200">
+                <div className="flex text-secondary mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="material-symbols-outlined text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                  ))}
+                </div>
+                <p className="font-body-md text-sm text-on-surface-variant leading-relaxed flex-grow mb-6">
+                  &ldquo;Precisávamos de um site sóbrio e profissional para o escritório. A Rafael Tech entregou exatamente isso, dentro do prazo e com total transparência no processo.&rdquo;
+                </p>
+                <div className="flex items-center gap-3 border-t border-white/5 pt-6">
+                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                    <span className="material-symbols-outlined text-primary text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>person</span>
+                  </div>
+                  <div>
+                    <p className="font-label-md text-sm text-on-surface font-bold">JSA Advogados</p>
+                    <p className="font-body-md text-xs text-on-surface-variant">Escritório de Advocacia</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Testimonial 3 */}
+              <div className="glass-panel rounded-3xl p-8 border border-white/10 hover:border-primary/30 transition-all duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="300">
+                <div className="flex text-secondary mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="material-symbols-outlined text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                  ))}
+                </div>
+                <p className="font-body-md text-sm text-on-surface-variant leading-relaxed flex-grow mb-6">
+                  &ldquo;Além do design moderno, o que me surpreendeu foi a velocidade: meu site carrega instantaneamente. Meus clientes comentam isso sempre. Melhor investimento que fiz.&rdquo;
+                </p>
+                <div className="flex items-center gap-3 border-t border-white/5 pt-6">
+                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                    <span className="material-symbols-outlined text-primary text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>person</span>
+                  </div>
+                  <div>
+                    <p className="font-label-md text-sm text-on-surface font-bold">Marcos Antunes</p>
+                    <p className="font-body-md text-xs text-on-surface-variant">Barbearia Antunes</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* WORKFLOW SECTION */}
+        <section className="py-24 px-margin-page bg-surface-slate relative">
+          <div className="max-w-container-max mx-auto">
+            <div className="text-center mb-16" data-aos="fade-up">
+              <span className="inline-block text-xs font-bold tracking-widest uppercase text-primary bg-primary/10 px-3 py-1 rounded-full mb-4">Processo Simples</span>
+              <h2 className="font-headline-lg text-3xl sm:text-headline-lg text-on-surface font-bold mb-4">
+                Do Zero ao Ar em 15 Dias Úteis
+              </h2>
+              <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
+                Um processo ágil e transparente — você acompanha cada etapa e
+                aprova antes de publicar.
               </p>
             </div>
 
@@ -547,8 +648,7 @@ const Main = () => {
                     1. Briefing &amp; Estratégia
                   </h3>
                   <p className="font-body-md text-sm text-on-surface-variant max-w-xs mx-auto">
-                    Entendemos seu negócio e objetivos para planejar a melhor
-                    estratégia digital.
+                    Uma conversa para entender seu negócio, público-alvo e metas. Definimos juntos o projeto ideal.
                   </p>
                 </div>
 
@@ -564,11 +664,10 @@ const Main = () => {
                     </span>
                   </div>
                   <h3 className="font-headline-md text-xl text-on-surface mb-3 font-bold">
-                    2. Criação &amp; Desenvolvimento
+                    2. Design &amp; Desenvolvimento
                   </h3>
                   <p className="font-body-md text-sm text-on-surface-variant max-w-xs mx-auto">
-                    Design premium e tecnologia avançada aplicada pela nossa
-                    equipe.
+                    Design exclusivo e código de alta performance. Você aprova o layout antes de entrar em produção.
                   </p>
                 </div>
 
@@ -584,11 +683,10 @@ const Main = () => {
                     </span>
                   </div>
                   <h3 className="font-headline-md text-xl text-on-surface mb-3 font-bold">
-                    3. Entrega &amp; Otimização
+                    3. Lançamento &amp; Suporte
                   </h3>
                   <p className="font-body-md text-sm text-on-surface-variant max-w-xs mx-auto">
-                    Seu site no ar com qualidade, velocidade extrema e
-                    totalmente otimizado.
+                    Site no ar, otimizado para o Google, com treinamento para você gerenciar sozinho. Suporte contínuo incluso.
                   </p>
                 </div>
               </div>
@@ -603,12 +701,17 @@ const Main = () => {
         >
           <div className="max-w-container-max mx-auto text-left">
             <div className="text-center mb-16" data-aos="fade-up">
+              <span className="inline-block text-xs font-bold tracking-widest uppercase text-primary bg-primary/10 px-3 py-1 rounded-full mb-4">Investimento</span>
               <h2 className="font-headline-lg text-3xl sm:text-headline-lg text-on-surface font-bold mb-4">
                 Planos e Preços
               </h2>
               <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
-                Soluções completas com tecnologia de ponta para negócios sérios.
+                Soluções completas com tecnologia de ponta. Preço fechado — sem surpresas.
               </p>
+              <div className="inline-flex items-center gap-2 mt-4 bg-error/10 border border-error/20 text-on-error-container px-4 py-2 rounded-full text-sm font-semibold">
+                <span className="material-symbols-outlined text-error text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>schedule</span>
+                Vagas limitadas — apenas 3 projetos por mês
+              </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto items-stretch">
@@ -782,7 +885,7 @@ const Main = () => {
                         check_circle
                       </span>
                       <span className="font-body-md text-sm text-on-surface-variant">
-                        Otimização para GMN
+                        Otimização para Google Meu Negócio
                       </span>
                     </li>
                     <li className="flex items-center gap-3">
@@ -829,12 +932,11 @@ const Main = () => {
                 </div>
                 <div className="text-center md:text-left">
                   <h4 className="font-headline-md text-lg text-on-surface mb-1 font-bold">
-                    Propriedade Garantida
+                    100% Seu — Garantia de Propriedade
                   </h4>
                   <p className="font-body-md text-sm text-on-surface-variant leading-relaxed">
-                    Você é o dono oficial do seu site e do código. Sem
-                    pegadinhas contratuais, segurança jurídica total para sua
-                    empresa.
+                    Você é o dono do site e do código-fonte. Sem contratos de aprisionamento,
+                    sem letras miúdas. Segurança jurídica total para sua empresa.
                   </p>
                 </div>
               </div>

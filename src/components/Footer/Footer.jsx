@@ -96,7 +96,7 @@ const Footer = () => {
           </Link>
         </div>
 
-        {/* Contact & CNPJ Section */}
+        {/* Contact & Location Section */}
         <div className="flex flex-col space-y-4">
           <h4 className="font-label-md text-on-surface text-lg mb-2">
             Contato
@@ -110,8 +110,9 @@ const Footer = () => {
             <span className="material-symbols-outlined text-lg">chat</span>
             Chamar no WhatsApp
           </a>
-          <p className="font-body-md text-text-muted text-xs text-center mt-2">
-            CNPJ: 00.000.000/0001-00
+          <p className="font-body-md text-text-muted text-xs text-center flex items-center justify-center gap-1 mt-1">
+            <span className="material-symbols-outlined text-[14px]">location_on</span>
+            Belo Horizonte, MG — Brasil
           </p>
         </div>
       </div>

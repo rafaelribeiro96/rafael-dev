@@ -1,0 +1,17 @@
+# robots.txt — Rafael Tech
+# https://www.rafaeltech.com.br
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+# Crawl-delay para bots agressivos
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+# Sitemap
+Sitemap: https://www.rafaeltech.com.br/sitemap.xml
