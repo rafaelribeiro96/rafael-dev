@@ -61,9 +61,6 @@ const Hero = ({ ctaLink, carouselImages = [] }) => {
               className="font-label-md text-label-md text-on-surface hover:text-primary transition-all duration-300 inline-flex items-center gap-1.5 underline underline-offset-4 decoration-white/20 hover:decoration-primary font-bold"
             >
               Ver Soluções
-              <span className="material-symbols-outlined text-[14px]">
-                arrow_downward
-              </span>
             </a>
           </div>
 
