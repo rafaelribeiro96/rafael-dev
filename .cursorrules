@@ -1,0 +1,25 @@
+# Rafael Tech — Diretrizes de Desenvolvimento de IA
+
+## Regras de Arquitetura e Componentização
+
+1. **Evitar Arquivos Gigantescos**:
+   - Nenhum arquivo de componente ou página deve exceder **500 linhas** de código.
+   - Sempre prefira componentizar as responsabilidades em arquivos menores e específicos (Single Responsibility Principle).
+
+2. **Organização de Diretórios**:
+   - `src/pages/`: Apenas roteamento Next.js e wrappers de página. Devem ser limpos e conter pouca lógica de UI. Carregam dados usando `getServerSideProps` ou `getStaticProps` e passam para componentes dedicados.
+   - `src/components/`: Componentes visuais organizados por domínio (ex: `src/components/Admin/` para o painel administrativo).
+   - `src/lib/`: Funções utilitárias puras, SDKs, clientes de API e auxiliares de leitura de arquivos (ex: `content.js` para o Git-CMS).
+
+3. **Arquitetura do Painel Admin (Git-CMS)**:
+   - Toda a UI de administração reside em `src/components/Admin/`.
+   - O arquivo `ui.jsx` centraliza os design tokens (paleta Dark Studio), primitivos de inputs (`Input`, `Textarea`, `Toggle`, `DynamicList`, `SaveBtn`) e estilizações consistentes.
+   - Cada seção do painel deve ter seu próprio componente (ex: `GlobalSEOSection.jsx`, `PricingSection.jsx`, `PortfolioSection.jsx`, `ProjectModal.jsx`).
+
+4. **Estilo & Temas**:
+   - Seguir fielmente a identidade Dark Studio. Tons de slate/zinc, contrastes suaves de bordas (`rgba(255,255,255,0.07)`), e acentuações em cyan/primary (`#06b6d4`).
+   - Não misturar estilos ad-hoc inline que quebrem a consistência. Utilizar primitivos importados de `src/components/Admin/ui.jsx`.
+
+5. **Linting e Qualidade de Código**:
+   - Antes de finalizar qualquer alteração, rode `npx prettier --write <arquivo>` e `npx next lint` para assegurar conformidade total de sintaxe e estilo de código.
+   - Nunca use `eslint-disable` sem necessidade ou para regras que não existam ou não estejam carregadas na configuração do ESLint do projeto.

@@ -1,49 +1,36 @@
 /* eslint-disable react/prop-types */
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import Image from 'next/image';
 
-const projectsData = [
-  {
-    id: 1,
-    title: 'Glayde Ribeiro',
-    category: 'Gastronomia',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuA-iEpo0UQhz37g5XL4MLHc0zXqJ3sa1M3LvEMHSrYdOiq1N_R_kWQwdJ6HSi04QY5HOlupKJljgPnLwTtdWNboW5Pn_DKHmnhqWespAA-1jjOWmtA8ayRtuQXYZZH-Wl8-NK6ehhYRYayUN7Sc8HBHi475OdP318E6F0pdlWBtyG38GG8w0BaIP0oo-JANEdGk2bkeuHPdAU2yY4Iuiq7Grc9d8k9HcYXlB8h9nL5K9XuHe7R3wHKVMD3br9SGMQVDLf1Eh6VLlKPh',
-    description:
-      'Website institucional premium e catálogo digital desenvolvido para Glayde Ribeiro, combinando estética de luxo, tipografia refinada e performance impecável.',
-    link: 'https://www.glayderibeiro.com.br/'
-  },
-  {
-    id: 2,
-    title: 'JSA Advogados',
-    category: 'Advocacia',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuA-iEpo0UQhz37g5XL4MLHc0zXqJ3sa1M3LvEMHSrYdOiq1N_R_kWQwdJ6HSi04QY5HOlupKJljgPnLwTtdWNboW5Pn_DKHmnhqWespAA-1jjOWmtA8ayRtuQXYZZH-Wl8-NK6ehhYRYayUN7Sc8HBHi475OdP318E6F0pdlWBtyG38GG8w0BaIP0oo-JANEdGk2bkeuHPdAU2yY4Iuiq7Grc9d8k9HcYXlB8h9nL5K9XuHe7R3wHKVMD3br9SGMQVDLf1Eh6VLlKPh',
-    description:
-      'Website institucional de elite para o escritório JSA Advogados. Arquitetura jurídica sóbria, carregamento Edge-First e design minimalista focado em captação.',
-    link: 'https://jsaadvogados.com.br/'
-  },
-  {
-    id: 3,
-    title: 'Barbearia Antunes',
-    category: 'Serviços',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuDF73mJ2QIs-VPcu1W0cNTjS97VtCZDCEVYZJQQ9-KEj9Cpu_I3iYheXPOT0NImWkp80WAtEBf3sFLGYf9hRcyttyG0MrA5GXXs7NqM45NKEpDkH5l6EyMainUlIgpnGfrZuFRKvXkRD6jwgjbLjjGuFOSryI4OKd-0KsRsyzo_aSyjHG1qpWyFEUkimX_Wtf9mMJTe8h_RM-qY0VWNjsXji24gcUbODaHkFi9UZ-CnTcV22mUOHYUqAB3jNgbcIkQ0NkaUlI095V4C',
-    description:
-      'Plataforma web moderna para a Barbearia Antunes. Agendamento integrado em tempo real, catálogo de serviços e painel administrativo rápido (em desenvolvimento).',
-    link: '#'
-  }
-];
+const WHATSAPP_BASE = 'https://wa.me/5531991869943';
 
-const categories = ['Todos', 'Gastronomia', 'Advocacia', 'Serviços'];
+/**
+ * Generates a WhatsApp link with a custom pre-filled message.
+ * Falls back to the global ctaLink if no custom message is provided.
+ */
+function buildWhatsappLink(whatsappMessage, fallbackLink) {
+  if (!whatsappMessage) return fallbackLink;
+  return `${WHATSAPP_BASE}?text=${encodeURIComponent(whatsappMessage)}`;
+}
 
-const Portfolio = ({ ctaLink }) => {
+/**
+ * Portfolio component — Git-CMS driven.
+ * Data comes from content/portfolio/*.json via getStaticProps in index.jsx.
+ * To add/edit projects, update the JSON files in /content/portfolio.
+ */
+const Portfolio = ({ ctaLink, items = [] }) => {
   const [selectedCategory, setSelectedCategory] = useState('Todos');
+
+  // Derive categories dynamically from the loaded items
+  const categories = useMemo(() => {
+    const unique = [...new Set(items.map((p) => p.category))];
+    return ['Todos', ...unique];
+  }, [items]);
 
   const filteredProjects =
     selectedCategory === 'Todos'
-      ? projectsData
-      : projectsData.filter((project) => project.category === selectedCategory);
+      ? items
+      : items.filter((project) => project.category === selectedCategory);
 
   return (
     <section
@@ -63,7 +50,7 @@ const Portfolio = ({ ctaLink }) => {
           </p>
         </div>
 
-        {/* Filter Tabs */}
+        {/* Filter Tabs — derived from JSON data */}
         <div
           className="flex overflow-x-auto md:flex-wrap justify-start md:justify-center gap-3 mb-12 pb-3 -mx-[5vw] px-[5vw] scrollbar-none w-[calc(100%+10vw)] md:w-auto md:mx-0 md:px-0 scroll-smooth"
           data-aos="fade-up"
@@ -88,59 +75,61 @@ const Portfolio = ({ ctaLink }) => {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           data-aos="fade-up"
         >
-          {filteredProjects.map((project) => (
-            <div
-              key={project.id}
-              className="glass-panel rounded-3xl overflow-hidden border border-white/10 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(6,182,212,0.2)] transition-all duration-300 group flex flex-col h-full text-left"
-            >
-              <div className="aspect-[4/3] relative overflow-hidden bg-surface-deep p-6">
-                <Image
-                  alt={project.title}
-                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 drop-shadow-2xl"
-                  src={project.image}
-                  width={400}
-                  height={300}
-                />
-              </div>
-              <div className="p-6 sm:p-8 flex flex-col flex-grow bg-surface-slate">
-                <div className="mb-4">
-                  <span className="text-xs text-primary font-bold tracking-widest uppercase bg-primary/10 px-2.5 py-1 rounded">
-                    {project.category}
-                  </span>
+          {filteredProjects.map((project) => {
+            const hasLiveUrl = project.liveUrl && project.liveUrl !== '#';
+            const whatsappLink = buildWhatsappLink(
+              project.whatsappMessage,
+              ctaLink
+            );
+
+            return (
+              <div
+                key={project.id}
+                className="glass-panel rounded-3xl overflow-hidden border border-white/10 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(6,182,212,0.2)] transition-all duration-300 group flex flex-col h-full text-left"
+              >
+                <div className="aspect-[4/3] relative overflow-hidden bg-surface-deep p-6">
+                  <Image
+                    alt={project.title}
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 drop-shadow-2xl"
+                    src={project.image}
+                    width={400}
+                    height={300}
+                  />
                 </div>
-                <h3 className="font-headline-md text-xl text-on-surface mb-3 font-bold">
-                  {project.title}
-                </h3>
-                <p className="font-body-md text-sm text-on-surface-variant leading-relaxed mb-6 flex-grow">
-                  {project.description}
-                </p>
-                <div className="flex flex-col gap-3 mt-auto w-full">
-                  <a
-                    href={
-                      project.link && project.link !== '#'
-                        ? project.link
-                        : ctaLink
-                    }
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full text-center font-label-md text-sm bg-primary text-on-primary py-3.5 rounded-xl shadow-[0_0_15px_rgba(76,215,246,0.3)] hover:shadow-[0_0_25px_rgba(76,215,246,0.5)] transition-all font-semibold"
-                  >
-                    {project.link && project.link !== '#'
-                      ? 'Visitar Site'
-                      : 'Visitar Modelo'}
-                  </a>
-                  <a
-                    href={ctaLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full text-center font-label-md text-sm bg-transparent border border-white/20 text-on-surface py-3.5 rounded-xl hover:border-primary hover:text-primary transition-colors inline-block"
-                  >
-                    Quero um parecido
-                  </a>
+                <div className="p-6 sm:p-8 flex flex-col flex-grow bg-surface-slate">
+                  <div className="mb-4">
+                    <span className="text-xs text-primary font-bold tracking-widest uppercase bg-primary/10 px-2.5 py-1 rounded">
+                      {project.category}
+                    </span>
+                  </div>
+                  <h3 className="font-headline-md text-xl text-on-surface mb-3 font-bold">
+                    {project.title}
+                  </h3>
+                  <p className="font-body-md text-sm text-on-surface-variant leading-relaxed mb-6 flex-grow">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-col gap-3 mt-auto w-full">
+                    <a
+                      href={hasLiveUrl ? project.liveUrl : ctaLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full text-center font-label-md text-sm bg-primary text-on-primary py-3.5 rounded-xl shadow-[0_0_15px_rgba(76,215,246,0.3)] hover:shadow-[0_0_25px_rgba(76,215,246,0.5)] transition-all font-semibold"
+                    >
+                      {hasLiveUrl ? 'Visitar Site' : 'Visitar Modelo'}
+                    </a>
+                    <a
+                      href={whatsappLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full text-center font-label-md text-sm bg-transparent border border-white/20 text-on-surface py-3.5 rounded-xl hover:border-primary hover:text-primary transition-colors inline-block"
+                    >
+                      Quero um parecido
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

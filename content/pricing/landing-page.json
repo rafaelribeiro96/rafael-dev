@@ -1,0 +1,19 @@
+{
+  "id": "landing-page",
+  "order": 1,
+  "title": "Landing Page de Conversão",
+  "description": "Ideal para profissionais e empresas que querem gerar leads e vendas com uma página focada em conversão.",
+  "setupPrice": 750,
+  "maintenancePrice": 40,
+  "highlighted": false,
+  "badge": null,
+  "features": [
+    "Design Exclusivo e Focado em Conversão",
+    "Copywriting Persuasivo",
+    "Integração CRM / WhatsApp",
+    "Otimizado para Alta Performance",
+    "Gestor de Conteúdo (CMS)",
+    "Domínio Grátis por 1 Ano"
+  ],
+  "maintenanceNote": "Inclui hospedagem edge e atualizações de segurança automáticas."
+}

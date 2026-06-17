@@ -1,0 +1,19 @@
+{
+  "id": "site-institucional",
+  "order": 2,
+  "title": "Site Institucional Completo",
+  "description": "Para empresas que precisam de uma presença digital completa, com múltiplas páginas e recursos avançados.",
+  "setupPrice": 1500,
+  "maintenancePrice": 75,
+  "highlighted": true,
+  "badge": "Mais Popular",
+  "features": [
+    "Múltiplas Páginas (Até 5)",
+    "Blog Integrado",
+    "Seção de Projetos/Portfólio",
+    "Formulários de Contato Avançados",
+    "Otimização para Google Meu Negócio",
+    "Gestão de LGPD"
+  ],
+  "maintenanceNote": "Inclui hospedagem edge e atualizações de segurança automáticas."
+}
