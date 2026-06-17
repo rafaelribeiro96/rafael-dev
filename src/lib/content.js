@@ -80,3 +80,23 @@ export async function getPricingTiers() {
 export async function getPortfolioItems() {
   return readContentDir('portfolio');
 }
+
+/**
+ * Returns all FAQ items from content/faq/*.json
+ * sorted by the `order` field.
+ *
+ * @returns {Promise<Object[]>}
+ */
+export async function getFAQItems() {
+  return readContentDir('faq');
+}
+
+/**
+ * Returns all Hero mobile carousel images from content/carousel-images/*.json
+ * sorted by the `order` field.
+ *
+ * @returns {Promise<Object[]>}
+ */
+export async function getCarouselImages() {
+  return readContentDir('carousel-images');
+}

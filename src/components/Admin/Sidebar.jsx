@@ -10,12 +10,29 @@ const NAV = [
     sub: 'Hero, copy e metadados'
   },
   {
+    id: 'carousel',
+    label: 'Imagens do Hero',
+    icon: '🖼️',
+    sub: 'Carrossel no mobile'
+  },
+  {
     id: 'pricing',
     label: 'Gestão de Preços',
     icon: '💰',
     sub: 'Planos e valores'
   },
-  { id: 'portfolio', label: 'Portfólio', icon: '💼', sub: 'Projetos e cases' }
+  {
+    id: 'portfolio',
+    label: 'Portfólio',
+    icon: '💼',
+    sub: 'Projetos e cases'
+  },
+  {
+    id: 'faq',
+    label: 'FAQ / Dúvidas',
+    icon: '🙋',
+    sub: 'Perguntas frequentes'
+  }
 ];
 
 export default function Sidebar({ active, onSelect, pubStatus, onPublish }) {

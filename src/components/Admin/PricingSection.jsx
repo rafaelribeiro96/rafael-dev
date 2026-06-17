@@ -51,6 +51,7 @@ export default function PricingSection({ initialTiers = [] }) {
       setupPrice: 0,
       maintenancePrice: 0,
       highlighted: false,
+      active: true,
       badge: null,
       features: [''],
       maintenanceNote:
@@ -293,6 +294,22 @@ export default function PricingSection({ initialTiers = [] }) {
                       Destaque
                     </span>
                   </label>
+                  <label
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '7px',
+                      cursor: 'pointer'
+                    }}
+                  >
+                    <Toggle
+                      checked={selected.active !== false}
+                      onChange={(v) => upd('active', v)}
+                    />
+                    <span style={{ fontSize: '12px', color: T.textSub }}>
+                      Exibir no Site
+                    </span>
+                  </label>
                   <SaveBtn status={status} onClick={save} />
                   <button
                     onClick={deleteTier}
@@ -359,6 +376,18 @@ export default function PricingSection({ initialTiers = [] }) {
                     />
                   </Field>
                 </div>
+                <Field
+                  label="Ordem de Exibição"
+                  hint="(números menores aparecem primeiro)"
+                >
+                  <Input
+                    type="number"
+                    value={selected.order ?? ''}
+                    onChange={(e) => upd('order', Number(e.target.value))}
+                    placeholder="1"
+                    style={{ maxWidth: '120px' }}
+                  />
+                </Field>
                 <Field label="Badge" hint="(opcional — ex: Mais Popular)">
                   <Input
                     value={selected.badge || ''}

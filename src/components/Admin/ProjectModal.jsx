@@ -25,7 +25,9 @@ export default function ProjectModal({ project, onSave, onClose }) {
       image: '',
       description: '',
       liveUrl: '',
-      whatsappMessage: ''
+      whatsappMessage: '',
+      displayOn: 'both',
+      order: 99
     }
   );
   const [errors, setErrors] = useState({});
@@ -206,6 +208,25 @@ export default function ProjectModal({ project, onSave, onClose }) {
                 onChange={(e) => upd('category', e.target.value)}
                 options={CATEGORIES}
                 placeholder="Selecione..."
+              />
+            </Field>
+            <Field label="Exibição">
+              <SelectInput
+                value={form.displayOn || 'both'}
+                onChange={(e) => upd('displayOn', e.target.value)}
+                options={[
+                  { value: 'both', label: 'Ambos (Carrossel & Grid)' },
+                  { value: 'carousel', label: 'Apenas Carrossel Mobile' },
+                  { value: 'desktop', label: 'Apenas Grid Desktop' }
+                ]}
+              />
+            </Field>
+            <Field label="Ordem de Exibição">
+              <Input
+                type="number"
+                value={form.order ?? ''}
+                onChange={(e) => upd('order', Number(e.target.value))}
+                placeholder="Ex: 1"
               />
             </Field>
           </div>

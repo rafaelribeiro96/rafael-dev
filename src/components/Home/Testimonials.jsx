@@ -1,6 +1,30 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 
 const Testimonials = () => {
+  const scrollerRef = useRef(null);
+
+  useEffect(() => {
+    const container = scrollerRef.current;
+    if (!container) return;
+
+    const handleAutoScroll = () => {
+      if (window.innerWidth >= 768) return; // Only on mobile
+      const card = container.firstElementChild;
+      if (!card) return;
+      const cardWidth = card.offsetWidth + 24; // width + gap
+      const maxScroll = container.scrollWidth - container.clientWidth;
+
+      if (container.scrollLeft >= maxScroll - 10) {
+        container.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        container.scrollBy({ left: cardWidth, behavior: 'smooth' });
+      }
+    };
+
+    const interval = setInterval(handleAutoScroll, 4500); // 4.5s for testimonials since reading takes slightly longer
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="py-24 px-margin-page bg-surface-deep relative border-t border-white/5">
       <div className="max-w-container-max mx-auto">
@@ -16,7 +40,10 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="flex md:grid md:grid-cols-3 gap-6 md:gap-8 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory scroll-smooth pb-6 -mx-[5vw] px-[5vw] md:mx-0 md:px-0 scrollbar-none">
+        <div
+          ref={scrollerRef}
+          className="flex md:grid md:grid-cols-3 gap-6 md:gap-8 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory scroll-smooth pb-6 -mx-[5vw] px-[5vw] md:mx-0 md:px-0 scrollbar-none"
+        >
           {/* Testimonial 1 */}
           <div
             className="w-[85vw] sm:w-[350px] md:w-auto shrink-0 snap-center md:shrink md:snap-none glass-panel rounded-3xl p-6 sm:p-8 border border-white/10 hover:border-primary/30 transition-all duration-300 flex flex-col"

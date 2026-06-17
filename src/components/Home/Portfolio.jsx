@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef, useEffect } from 'react';
 import Image from 'next/image';
 
 const WHATSAPP_BASE = 'https://wa.me/5531991869943';
@@ -20,6 +20,7 @@ function buildWhatsappLink(whatsappMessage, fallbackLink) {
  */
 const Portfolio = ({ ctaLink, items = [] }) => {
   const [selectedCategory, setSelectedCategory] = useState('Todos');
+  const scrollerRef = useRef(null);
 
   // Derive categories dynamically from the loaded items
   const categories = useMemo(() => {
@@ -31,6 +32,28 @@ const Portfolio = ({ ctaLink, items = [] }) => {
     selectedCategory === 'Todos'
       ? items
       : items.filter((project) => project.category === selectedCategory);
+
+  useEffect(() => {
+    const container = scrollerRef.current;
+    if (!container) return;
+
+    const handleAutoScroll = () => {
+      if (window.innerWidth >= 768) return; // Only on mobile
+      const card = container.firstElementChild;
+      if (!card) return;
+      const cardWidth = card.offsetWidth + 24; // width + gap
+      const maxScroll = container.scrollWidth - container.clientWidth;
+
+      if (container.scrollLeft >= maxScroll - 10) {
+        container.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        container.scrollBy({ left: cardWidth, behavior: 'smooth' });
+      }
+    };
+
+    const interval = setInterval(handleAutoScroll, 4000);
+    return () => clearInterval(interval);
+  }, [filteredProjects]);
 
   return (
     <section
@@ -72,6 +95,7 @@ const Portfolio = ({ ctaLink, items = [] }) => {
 
         {/* Project Grid / Mobile Carousel */}
         <div
+          ref={scrollerRef}
           className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory scroll-smooth pb-6 -mx-[5vw] px-[5vw] md:mx-0 md:px-0 scrollbar-none"
           data-aos="fade-up"
         >
@@ -85,7 +109,13 @@ const Portfolio = ({ ctaLink, items = [] }) => {
             return (
               <div
                 key={project.id}
-                className="w-[85vw] sm:w-[350px] md:w-auto shrink-0 snap-center md:shrink md:snap-none glass-panel rounded-3xl overflow-hidden border border-white/10 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(6,182,212,0.2)] transition-all duration-300 group flex flex-col h-full text-left"
+                className={`w-[85vw] sm:w-[350px] md:w-auto shrink-0 snap-center md:shrink md:snap-none glass-panel rounded-3xl overflow-hidden border border-white/10 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(6,182,212,0.2)] transition-all duration-300 group flex-col h-full text-left ${
+                  project.displayOn === 'carousel'
+                    ? 'flex md:hidden'
+                    : project.displayOn === 'desktop'
+                    ? 'hidden md:flex'
+                    : 'flex'
+                }`}
               >
                 <div className="aspect-[4/3] relative overflow-hidden bg-surface-deep p-6">
                   <Image

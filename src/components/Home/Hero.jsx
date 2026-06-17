@@ -3,16 +3,21 @@ import React from 'react';
 import Image from 'next/image';
 import Marquee from 'react-fast-marquee';
 
-const prototypeImages = [
-  '/uploads/screencapture-glayderibeiro-br-2026-06-17-12-38-12-1781714859760.webp',
-  '/uploads/screencapture-jsaadvogados-br-2026-06-17-12-41-04-1781714874632.webp',
-  '/uploads/screencapture-localhost-3000-2026-06-17-12-43-40-1781714887158.webp',
+const defaultPrototypeImages = [
   '/uploads/screencapture-glayderibeiro-br-2026-06-17-12-38-12-1781714859760.webp',
   '/uploads/screencapture-jsaadvogados-br-2026-06-17-12-41-04-1781714874632.webp',
   '/uploads/screencapture-localhost-3000-2026-06-17-12-43-40-1781714887158.webp'
 ];
 
-const Hero = ({ ctaLink }) => {
+const Hero = ({ ctaLink, carouselImages = [] }) => {
+  const rawImages =
+    carouselImages.length > 0
+      ? carouselImages.map((item) => item.image).filter(Boolean)
+      : defaultPrototypeImages;
+  const prototypeImages =
+    rawImages.length < 5
+      ? [...rawImages, ...rawImages, ...rawImages]
+      : rawImages;
   return (
     <section className="relative min-h-[90vh] flex items-center px-margin-page py-16 overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/15 via-surface-deep to-surface-deep -z-10"></div>

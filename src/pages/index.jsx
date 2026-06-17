@@ -17,10 +17,15 @@ import Pricing from 'src/components/Home/Pricing';
 import FAQ from 'src/components/Home/FAQ';
 
 // Git-CMS: content helpers (server-side only)
-import { getPricingTiers, getPortfolioItems } from 'src/lib/content';
+import {
+  getPricingTiers,
+  getPortfolioItems,
+  getFAQItems,
+  getCarouselImages
+} from 'src/lib/content';
 
 /* eslint-disable react/prop-types */
-const Main = ({ pricingTiers, portfolioItems }) => {
+const Main = ({ pricingTiers, portfolioItems, faqItems, carouselImages }) => {
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -40,7 +45,7 @@ const Main = ({ pricingTiers, portfolioItems }) => {
         </title>
         <meta
           name="description"
-          content="Rafael Tech cria sites profissionais e landing pages de alta performance para empresas em Belo Horizonte e todo o Brasil. Sites ultra-rápidos e otimizados, que dominam o Google e convertem visitantes em clientes. Orçamento gratuito."
+          content="Rafael Tech cria sites profissionais e landing pages de alta performance para empresas in Belo Horizonte e todo o Brasil. Sites ultra-rápidos e otimizados, que dominam o Google e convertem visitantes em clientes. Orçamento gratuito."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
@@ -48,7 +53,7 @@ const Main = ({ pricingTiers, portfolioItems }) => {
       <Header />
 
       <main className="pt-20 overflow-x-hidden">
-        <Hero ctaLink={ctaLink} />
+        <Hero ctaLink={ctaLink} carouselImages={carouselImages} />
         <Services />
         <DigitalEcosystem />
         <ComparisonMatrix />
@@ -56,7 +61,7 @@ const Main = ({ pricingTiers, portfolioItems }) => {
         <Testimonials />
         <Workflow />
         <Pricing ctaLink={ctaLink} tiers={pricingTiers} />
-        <FAQ />
+        <FAQ items={faqItems} />
       </main>
 
       <Footer />
@@ -69,15 +74,20 @@ const Main = ({ pricingTiers, portfolioItems }) => {
  * To update content, edit the JSON files and rebuild (or push to trigger CI/CD).
  */
 export async function getStaticProps() {
-  const [pricingTiers, portfolioItems] = await Promise.all([
-    getPricingTiers(),
-    getPortfolioItems()
-  ]);
+  const [pricingTiers, portfolioItems, faqItems, carouselImages] =
+    await Promise.all([
+      getPricingTiers(),
+      getPortfolioItems(),
+      getFAQItems(),
+      getCarouselImages()
+    ]);
 
   return {
     props: {
       pricingTiers,
-      portfolioItems
+      portfolioItems,
+      faqItems,
+      carouselImages
     }
   };
 }

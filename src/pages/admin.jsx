@@ -6,11 +6,15 @@ import Sidebar from '../components/Admin/Sidebar';
 import GlobalSEOSection from '../components/Admin/GlobalSEOSection';
 import PricingSection from '../components/Admin/PricingSection';
 import PortfolioSection from '../components/Admin/PortfolioSection';
+import CarouselImagesSection from '../components/Admin/CarouselImagesSection';
+import FAQSection from '../components/Admin/FAQSection';
 
 export default function AdminPage({
   globalData,
   pricingTiers,
-  portfolioItems
+  portfolioItems,
+  faqItems,
+  carouselImages
 }) {
   const [active, setActive] = useState('seo');
   const [pubStatus, setPubStatus] = useState('idle');
@@ -84,6 +88,10 @@ export default function AdminPage({
           {active === 'portfolio' && (
             <PortfolioSection initialItems={portfolioItems} />
           )}
+          {active === 'carousel' && (
+            <CarouselImagesSection initialImages={carouselImages} />
+          )}
+          {active === 'faq' && <FAQSection initialItems={faqItems} />}
         </main>
       </div>
     </>
@@ -113,6 +121,8 @@ export async function getServerSideProps(ctx) {
   let globalData = {};
   let pricingTiers = [];
   let portfolioItems = [];
+  let faqItems = [];
+  let carouselImages = [];
 
   if (useGitHub) {
     try {
@@ -139,6 +149,22 @@ export async function getServerSideProps(ctx) {
     } catch (e) {
       console.error('Failed to load portfolio items from GitHub:', e);
     }
+
+    try {
+      const faqs = await readCollection('content/faq');
+      faqItems = faqs.sort((a, b) => (a.order ?? 999) - (b.order ?? 999));
+    } catch (e) {
+      console.error('Failed to load FAQ items from GitHub:', e);
+    }
+
+    try {
+      const carousel = await readCollection('content/carousel-images');
+      carouselImages = carousel.sort(
+        (a, b) => (a.order ?? 999) - (b.order ?? 999)
+      );
+    } catch (e) {
+      console.error('Failed to load carousel images from GitHub:', e);
+    }
   } else {
     // Local Filesystem Fallback
     const fs = (await import('fs/promises')).default;
@@ -152,6 +178,8 @@ export async function getServerSideProps(ctx) {
     );
     const PRICING_DIR = path.join(process.cwd(), 'content', 'pricing');
     const PORTFOLIO_DIR = path.join(process.cwd(), 'content', 'portfolio');
+    const FAQ_DIR = path.join(process.cwd(), 'content', 'faq');
+    const CAROUSEL_DIR = path.join(process.cwd(), 'content', 'carousel-images');
 
     const readDirLocal = async (dir) => {
       try {
@@ -176,11 +204,22 @@ export async function getServerSideProps(ctx) {
       void e;
     }
 
-    [pricingTiers, portfolioItems] = await Promise.all([
-      readDirLocal(PRICING_DIR),
-      readDirLocal(PORTFOLIO_DIR)
-    ]);
+    [pricingTiers, portfolioItems, faqItems, carouselImages] =
+      await Promise.all([
+        readDirLocal(PRICING_DIR),
+        readDirLocal(PORTFOLIO_DIR),
+        readDirLocal(FAQ_DIR),
+        readDirLocal(CAROUSEL_DIR)
+      ]);
   }
 
-  return { props: { globalData, pricingTiers, portfolioItems } };
+  return {
+    props: {
+      globalData,
+      pricingTiers,
+      portfolioItems,
+      faqItems,
+      carouselImages
+    }
+  };
 }

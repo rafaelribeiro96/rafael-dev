@@ -1,40 +1,72 @@
+/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 
-const FAQ = () => {
+const FAQ = ({ items = [] }) => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  const faqItems = [
+  const defaultFaqItems = [
     {
       question: 'Quanto custa um site profissional?',
       answer:
-        'Os valores variam conforme o tipo de projeto. Uma landing page começa a partir de R$ 749, um site institucional completo a partir de R$ 1299 e projetos de agendamento, crm, e-commerce a partir de R$ 2.499. O orçamento é feito sob medida após entender o seu negócio. Fale comigo pelo WhatsApp e te respondo no mesmo dia.'
+        'Os valores variam conforme o tipo e a complexidade do projeto:\n\n• Landing Page: a partir de R$ 749,00. Uma única página de alta performance focada em conversão direta.\n• Site Institucional Completo: a partir de R$ 1.299,00. Ideal para consolidar a presença digital da sua empresa com várias páginas.\n• Projetos Personalizados (E-commerce, CRM, Agendamentos e Reservas): a partir de R$ 2.499,00. Sistemas robustos e sob medida.\n\nO orçamento final é feito sob medida após entendermos o seu negócio. Fale comigo pelo WhatsApp e te respondo no mesmo dia.'
     },
     {
       question: 'Qual a diferença entre landing page e site institucional?',
       answer:
-        'Uma Landing Page é focada em conversão direta (ex: capturar contatos ou vender um produto/serviço específico) estruturada em uma única página persuasiva. Já o Site Institucional é mais amplo, contendo múltiplas páginas (Quem Somos, Serviços, Contato, etc.) para apresentar sua empresa inteira, gerando autoridade, credibilidade e presença no Google.'
+        'A principal diferença está no foco estratégico de cada solução:\n\n• Landing Page: É uma página única totalmente otimizada para conversão (ex: capturar contatos ou vender um produto/serviço único). Possui estrutura persuasiva e direta, sendo ideal para receber tráfego pago (Google Ads/Meta Ads).\n• Site Institucional: Possui múltiplas páginas (Quem Somos, Serviços, Contato, etc.). Foca em gerar autoridade, credibilidade de marca a longo prazo e posicionamento orgânico nas buscas do Google.'
     },
     {
       question: 'Em quanto tempo meu site fica pronto?',
       answer:
-        'O prazo padrão de entrega é de até 15 dias úteis, variando de acordo com a complexidade do projeto e a velocidade de envio dos conteúdos e feedbacks por parte do cliente.'
+        'O prazo médio de desenvolvimento é de até 15 dias úteis para a maioria dos projetos institucionais e landing pages. Sistemas mais complexos ou e-commerce completos podem levar de 20 a 30 dias úteis. Esse prazo passa a contar a partir do momento em que o cliente envia todos os materiais e informações necessárias.'
     },
     {
       question: 'Vocês criam sites para qual tipo de empresa?',
       answer:
-        'Atendemos todos os tipos e tamanhos de negócios: prestadores de serviços, médicos, psicólogos, advogados, clínicas, barbearias, pet shops, lojas virtuais locais, startups e muito mais. Criamos a solução perfeita adaptada às necessidades específicas de cada nicho.'
+        'Desenvolvemos sites para todos os segmentos e tamanhos de negócios:\n\n• Profissionais Liberais: Advogados, médicos, psicólogos, dentistas, contadores.\n• Prestadores de Serviço: Clínicas de estética, barbearias, pet shops, consultorias.\n• Empresas Locais: Lojas físicas, imobiliárias, restaurantes.\n\nCustomizamos toda a estrutura e linguagem visual focando nas necessidades específicas do seu nicho de atuação.'
     },
     {
       question:
         'Como é o processo de criação do primeiro contato à entrega final?',
       answer:
-        'O processo é dividido em 5 etapas simples: 1) Briefing & Alinhamento de objetivos; 2) Proposta comercial & Contrato; 3) Criação do design visual e estrutura; 4) Desenvolvimento técnico do código com otimização de velocidade e SEO; 5) Testes finais, treinamento de uso e entrega de chaves.'
+        'Nosso processo de trabalho é dividido em 5 fases transparentes:\n\n1. Briefing e Alinhamento: Reunião para entender seus objetivos, público-alvo e preferências visuais.\n2. Proposta e Contrato: Detalhamos o escopo, prazos, investimento e formalizamos com contrato.\n3. Design UI/UX: Elaboramos o layout visual exclusivo do site para sua aprovação.\n4. Desenvolvimento e SEO: Programamos o site com código limpo, velocidade e otimização para o Google.\n5. Lançamento e Treinamento: Publicamos o site no seu domínio e te treinamos para gerenciar todo o conteúdo sozinho de forma simples.'
     }
   ];
+
+  const faqItems = items.length > 0 ? items : defaultFaqItems;
+
+  const displayAnswer = (answerText) => {
+    if (!answerText) return null;
+    return answerText.split('\n').map((line, i) => {
+      if (line.trim().startsWith('•')) {
+        return (
+          <div
+            key={i}
+            className="pl-4 py-1 flex items-start gap-2 text-on-surface-variant"
+          >
+            <span className="text-primary font-bold">•</span>
+            <span>{line.replace('•', '').trim()}</span>
+          </div>
+        );
+      }
+      return (
+        <p
+          key={i}
+          className={
+            line.trim() === ''
+              ? 'h-3'
+              : 'mb-3 last:mb-0 text-on-surface-variant'
+          }
+        >
+          {line}
+        </p>
+      );
+    });
+  };
 
   return (
     <section className="py-24 px-margin-page bg-surface-deep relative border-t border-white/5 overflow-hidden">
@@ -91,14 +123,14 @@ const FAQ = () => {
                 </button>
 
                 <div
-                  className={`transition-all duration-300 ease-in-out ${
+                  className={`transition-all duration-300 ease-in-out overflow-hidden ${
                     isOpen
-                      ? 'max-h-[500px] opacity-100 border-t border-white/5'
+                      ? 'max-h-[800px] opacity-100 border-t border-white/5'
                       : 'max-h-0 opacity-0'
                   }`}
                 >
-                  <div className="p-6 font-body-md text-sm sm:text-base text-on-surface-variant leading-relaxed bg-surface/20">
-                    {item.answer}
+                  <div className="p-6 font-body-md text-sm sm:text-base leading-relaxed bg-surface/20">
+                    {displayAnswer(item.answer)}
                   </div>
                 </div>
               </div>
