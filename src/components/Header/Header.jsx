@@ -99,11 +99,11 @@ const Header = () => {
             href={ctaLink}
             target="_blank"
             rel="noopener noreferrer"
-            className={`font-label-md text-label-md bg-primary text-on-primary rounded-full shadow-[0_0_15px_rgba(76,215,246,0.3)] hover:shadow-[0_0_25px_rgba(76,215,246,0.5)] transition-all duration-300 transform hover:scale-[0.98] inline-block font-semibold ${
+            className={`font-label-md text-label-md bg-primary text-on-primary rounded-full shadow-[0_0_15px_rgba(76,215,246,0.3)] hover:shadow-[0_0_25px_rgba(76,215,246,0.5)] transition-all duration-300 transform hover:scale-[0.98] inline-block font-bold uppercase tracking-wider ${
               isScrolled ? 'px-5 py-2.5' : 'px-6 py-3'
             }`}
           >
-            Orçamento
+            ORÇAMENTO
           </a>
         </div>
 
@@ -113,9 +113,9 @@ const Header = () => {
             href={ctaLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-label-md text-xs bg-primary text-on-primary px-4 py-2 rounded-full hover:shadow-[0_0_15px_rgba(76,215,246,0.4)] transition-all active:scale-95 duration-200 font-semibold inline-block"
+            className="font-label-md text-xs bg-primary text-on-primary px-4 py-2 rounded-full hover:shadow-[0_0_15px_rgba(76,215,246,0.4)] transition-all active:scale-95 duration-200 font-bold inline-block uppercase tracking-wider"
           >
-            Orçamento
+            ORÇAMENTO
           </a>
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}

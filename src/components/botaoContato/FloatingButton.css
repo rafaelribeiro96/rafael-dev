@@ -1,14 +1,12 @@
-
-
-.floating-button  {
-  position: fixed;  
-  right: 15px; 
+.floating-button {
+  position: fixed;
+  right: 15px;
   bottom: 15px;
 }
 
-.floating-button2  {
-  position: fixed;  
-  right: 80px; 
+.floating-button2 {
+  position: fixed;
+  right: 80px;
   bottom: 20px;
 }
 
@@ -19,36 +17,34 @@
 }
 
 @media (max-width: 550px) {
-
   .float-buttons-div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: fixed;  
-    right: 15px; 
+    position: fixed;
+    right: 15px;
     bottom: 15px;
   }
-  
-  .floating-button  {
-    position: relative;  
-    right: auto; 
+
+  .floating-button {
+    position: relative;
+    right: auto;
     bottom: auto;
     margin-bottom: 10px;
   }
-  
-  .floating-button2  {
-    position: relative;  
-    right: auto; 
+
+  .floating-button2 {
+    position: relative;
+    right: auto;
     bottom: auto;
   }
-  
+
   .button-whatsapp {
     width: 50px;
   }
 }
 
-
-@media (max-width: 380px) {  
+@media (max-width: 380px) {
   .button-whatsapp {
     width: 40px;
   }

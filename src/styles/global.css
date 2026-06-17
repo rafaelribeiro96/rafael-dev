@@ -26,7 +26,7 @@ html {
 }
 
 body {
-  background-color: #0B0F19;
+  background-color: #0b0f19;
   color: #dfe2f1;
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
@@ -64,8 +64,12 @@ body {
 }
 
 .bg-grid-pattern {
-  background-image: linear-gradient(to right, rgba(76, 215, 246, 0.04) 1px, transparent 1px),
-                    linear-gradient(to bottom, rgba(76, 215, 246, 0.04) 1px, transparent 1px);
+  background-image: linear-gradient(
+      to right,
+      rgba(76, 215, 246, 0.04) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(76, 215, 246, 0.04) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
@@ -75,7 +79,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0B0F19;
+  background: #0b0f19;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -88,7 +92,8 @@ body {
 }
 
 /* Lenis smooth scroll styling */
-html.lenis, html.lenis body {
+html.lenis,
+html.lenis body {
   height: auto;
 }
 

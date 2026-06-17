@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useState, useMemo, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 
 const WHATSAPP_BASE = 'https://wa.me/5531991869943';
@@ -22,11 +22,8 @@ const Portfolio = ({ ctaLink, items = [] }) => {
   const [selectedCategory, setSelectedCategory] = useState('Todos');
   const scrollerRef = useRef(null);
 
-  // Derive categories dynamically from the loaded items
-  const categories = useMemo(() => {
-    const unique = [...new Set(items.map((p) => p.category))];
-    return ['Todos', ...unique];
-  }, [items]);
+  // Derive categories dynamically from the loaded items - set to only 'Todos' for now
+  const categories = ['Todos'];
 
   const filteredProjects =
     selectedCategory === 'Todos'
@@ -42,11 +39,19 @@ const Portfolio = ({ ctaLink, items = [] }) => {
       const card = container.firstElementChild;
       if (!card) return;
       const cardWidth = card.offsetWidth + 24; // width + gap
-      const maxScroll = container.scrollWidth - container.clientWidth;
+      const originalWidth = cardWidth * filteredProjects.length;
 
-      if (container.scrollLeft >= maxScroll - 10) {
-        container.scrollTo({ left: 0, behavior: 'smooth' });
+      if (container.scrollLeft >= originalWidth - 10) {
+        // Reset scroll position instantly to start
+        container.style.scrollBehavior = 'auto';
+        container.scrollLeft = 0;
+        // Scroll to the next card smoothly on the next tick
+        setTimeout(() => {
+          container.style.scrollBehavior = 'smooth';
+          container.scrollBy({ left: cardWidth, behavior: 'smooth' });
+        }, 50);
       } else {
+        container.style.scrollBehavior = 'smooth';
         container.scrollBy({ left: cardWidth, behavior: 'smooth' });
       }
     };
@@ -99,7 +104,8 @@ const Portfolio = ({ ctaLink, items = [] }) => {
           className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory scroll-smooth pb-6 -mx-[5vw] px-[5vw] md:mx-0 md:px-0 scrollbar-none"
           data-aos="fade-up"
         >
-          {filteredProjects.map((project) => {
+          {[...filteredProjects, ...filteredProjects].map((project, index) => {
+            const isDuplicate = index >= filteredProjects.length;
             const hasLiveUrl = project.liveUrl && project.liveUrl !== '#';
             const whatsappLink = buildWhatsappLink(
               project.whatsappMessage,
@@ -108,9 +114,11 @@ const Portfolio = ({ ctaLink, items = [] }) => {
 
             return (
               <div
-                key={project.id}
+                key={`${project.id}-${index}`}
                 className={`w-[85vw] sm:w-[350px] md:w-auto shrink-0 snap-center md:shrink md:snap-none glass-panel rounded-3xl overflow-hidden border border-white/10 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(6,182,212,0.2)] transition-all duration-300 group flex-col h-full text-left ${
-                  project.displayOn === 'carousel'
+                  isDuplicate
+                    ? 'flex md:hidden'
+                    : project.displayOn === 'carousel'
                     ? 'flex md:hidden'
                     : project.displayOn === 'desktop'
                     ? 'hidden md:flex'
@@ -143,17 +151,17 @@ const Portfolio = ({ ctaLink, items = [] }) => {
                       href={hasLiveUrl ? project.liveUrl : ctaLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full text-center font-label-md text-sm bg-primary text-on-primary py-3.5 rounded-xl shadow-[0_0_15px_rgba(76,215,246,0.3)] hover:shadow-[0_0_25px_rgba(76,215,246,0.5)] transition-all font-semibold"
+                      className="w-full text-center font-label-md text-sm bg-primary text-on-primary py-3.5 rounded-xl shadow-[0_0_15px_rgba(76,215,246,0.3)] hover:shadow-[0_0_25px_rgba(76,215,246,0.5)] transition-all font-bold uppercase tracking-wider"
                     >
-                      {hasLiveUrl ? 'Visitar Site' : 'Visitar Modelo'}
+                      {hasLiveUrl ? 'VISITAR SITE' : 'VISITAR MODELO'}
                     </a>
                     <a
                       href={whatsappLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full text-center font-label-md text-sm bg-transparent border border-white/20 text-on-surface py-3.5 rounded-xl hover:border-primary hover:text-primary transition-colors inline-block"
+                      className="w-full text-center font-label-md text-sm bg-transparent border border-white/20 text-on-surface py-3.5 rounded-xl hover:border-primary hover:text-primary transition-colors inline-block uppercase tracking-wider font-bold"
                     >
-                      Quero um parecido
+                      QUERO UM SITE ASSIM
                     </a>
                   </div>
                 </div>

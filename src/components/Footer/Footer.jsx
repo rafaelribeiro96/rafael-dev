@@ -103,10 +103,10 @@ const Footer = () => {
             href={ctaLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 bg-primary/10 text-primary border border-primary/30 px-6 py-3 rounded-xl hover:bg-primary/20 transition-colors font-label-md w-full text-center"
+            className="flex items-center justify-center gap-2 bg-primary/10 text-primary border border-primary/30 px-6 py-3 rounded-xl hover:bg-primary/20 transition-colors font-label-md w-full text-center uppercase tracking-wider font-bold"
           >
             <span className="material-symbols-outlined text-lg">chat</span>
-            Chamar no WhatsApp
+            CHAMAR NO WHATSAPP
           </a>
           <p className="font-body-md text-text-muted text-xs text-center flex items-center justify-center gap-1 mt-1">
             <span className="material-symbols-outlined text-[14px]">

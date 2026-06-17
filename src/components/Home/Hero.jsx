@@ -24,37 +24,31 @@ const Hero = ({ ctaLink, carouselImages = [] }) => {
       <div className="absolute inset-0 bg-grid-pattern opacity-20 pointer-events-none -z-10"></div>
 
       <div className="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
-        <div className="space-y-8 z-10 text-left" data-aos="fade-right">
-          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-2">
-            <span
-              className="material-symbols-outlined text-sm"
-              style={{ fontVariationSettings: "'FILL' 1" }}
-            >
-              public
-            </span>
-            Atendimento em Todo o Brasil
-          </div>
-          <h1 className="font-headline-xl text-3xl sm:text-5xl lg:text-headline-xl text-on-surface leading-tight font-extrabold tracking-tighter">
+        <div
+          className="space-y-8 z-10 text-center lg:text-left"
+          data-aos="fade-right"
+        >
+          <h1 className="font-headline-xl text-4xl sm:text-5xl lg:text-headline-xl text-on-surface leading-tight font-extrabold tracking-tighter">
             Sites Profissionais que{' '}
             <span className="text-gradient">
               Vendem, Ranqueiam e Impressionam.
             </span>
           </h1>
 
-          <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+          <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto lg:mx-0">
             Criamos sites institucionais e landing pages com tecnologia de
             ponta. Carregamento ultra-rápido, design exclusivo que converte e
             você mesmo atualiza o conteúdo — sem depender de ninguém.
           </p>
 
-          <div className="flex flex-wrap gap-4 pt-4">
+          <div className="flex flex-wrap justify-center lg:justify-start items-center gap-6 pt-4">
             <a
               href={ctaLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-label-md text-label-md bg-primary text-on-primary px-8 py-4 rounded-full shadow-[0_0_20px_rgba(76,215,246,0.4)] hover:shadow-[0_0_30px_rgba(76,215,246,0.6)] hover:-translate-y-1 transition-all duration-300 transform font-semibold text-center"
+              className="font-label-md text-label-md bg-primary text-on-primary px-8 py-4 rounded-full shadow-[0_0_20px_rgba(76,215,246,0.4)] hover:shadow-[0_0_30px_rgba(76,215,246,0.6)] hover:-translate-y-1 transition-all duration-300 transform font-bold text-center uppercase tracking-wider"
             >
-              Solicitar Orçamento Grátis
+              QUERO MEU SITE DE VENDAS
             </a>
             <a
               href="#servicos"
@@ -64,35 +58,40 @@ const Hero = ({ ctaLink, carouselImages = [] }) => {
                   .getElementById('servicos')
                   ?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="font-label-md text-label-md border border-white/20 text-on-surface px-8 py-4 rounded-full hover:border-primary hover:text-primary hover:bg-primary/5 transition-all duration-300 text-center"
+              className="font-label-md text-label-md text-on-surface hover:text-primary transition-all duration-300 inline-flex items-center gap-1.5 underline underline-offset-4 decoration-white/20 hover:decoration-primary font-bold"
             >
               Ver Soluções
+              <span className="material-symbols-outlined text-sm animate-bounce">
+                arrow_downward
+              </span>
             </a>
           </div>
 
           {/* Trust Badges */}
-          <div className="flex flex-wrap items-center gap-6 pt-2">
-            <div className="flex items-center gap-2 text-on-surface-variant">
+          <div className="flex flex-wrap justify-center lg:justify-start items-center gap-x-4 gap-y-2 pt-2">
+            <div className="flex items-center gap-1.5 text-on-surface-variant">
               <span
-                className="material-symbols-outlined text-secondary text-lg"
+                className="material-symbols-outlined text-secondary text-sm sm:text-lg"
                 style={{ fontVariationSettings: "'FILL' 1" }}
               >
                 verified
               </span>
-              <span className="text-sm font-medium">Alto Desempenho</span>
+              <span className="text-xs sm:text-sm font-medium">
+                Alto Desempenho
+              </span>
             </div>
-            <div className="flex items-center gap-2 text-on-surface-variant">
+            <div className="flex items-center gap-1.5 text-on-surface-variant">
               <span
-                className="material-symbols-outlined text-secondary text-lg"
+                className="material-symbols-outlined text-secondary text-sm sm:text-lg"
                 style={{ fontVariationSettings: "'FILL' 1" }}
               >
                 schedule
               </span>
-              <span className="text-sm font-medium">
+              <span className="text-xs sm:text-sm font-medium">
                 Entrega em até 15 dias úteis
               </span>
             </div>
-            <div className="flex items-center gap-2 text-on-surface-variant">
+            <div className="hidden lg:flex items-center gap-1.5 text-on-surface-variant">
               <span
                 className="material-symbols-outlined text-secondary text-lg"
                 style={{ fontVariationSettings: "'FILL' 1" }}

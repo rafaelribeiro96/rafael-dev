@@ -19,10 +19,10 @@
 
 .marquee-image:hover {
   filter: brightness(1.2);
-  cursor: pointer; 
+  cursor: pointer;
 }
 
-.title-insta-feed  {
+.title-insta-feed {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
@@ -37,6 +37,9 @@
 
   .container-insta-feed {
     gap: 0.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr)); /* Alterado para 2 colunas em telas menores que 700px */
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(45%, 1fr)
+    ); /* Alterado para 2 colunas em telas menores que 700px */
   }
 }

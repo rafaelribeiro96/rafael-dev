@@ -15,12 +15,11 @@
   margin: 3em 0;
   max-width: 800px;
   width: 47.5%;
-  box-shadow: 0 5px 15px rgba(0,0,0,1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 1);
   overflow: hidden;
   height: auto;
   min-height: 270px;
 }
-
 
 .post-card-page-blog:hover {
   background-color: rgba(0, 0, 0, 0.2);
@@ -30,7 +29,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding: 2em; 
+  padding: 2em;
   width: 100%;
   box-sizing: border-box;
 }
@@ -73,17 +72,16 @@
 
 .post-link-page-blog:hover {
   color: #fff;
-  background-color: #3D4ED6;
-  border-color: #3D4ED6;
+  background-color: #3d4ed6;
+  border-color: #3d4ed6;
 }
 
 @media (max-width: 1300px) {
-.posts-page-blog-container {
+  .posts-page-blog-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
   }
 
   .post-card-page-blog {
@@ -91,7 +89,6 @@
     height: auto; /* Permitir que a altura se ajuste automaticamente ao conteúdo */
   }
 }
-
 
 @media (max-width: 768px) {
   .post-card-page-blog {
@@ -117,6 +114,6 @@
 
   .post-img-page-blog {
     width: 100%; /* Permitir que a imagem ocupe toda a largura da tela */
-    height: 150px; 
+    height: 150px;
   }
 }

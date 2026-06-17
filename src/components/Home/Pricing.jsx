@@ -8,14 +8,41 @@ import React from 'react';
  */
 const PricingCard = ({ tier, ctaLink, isSolo }) => {
   const {
+    id,
     title,
     setupPrice,
     maintenancePrice,
     features = [],
     badge,
     highlighted,
-    maintenanceNote
+    maintenanceNote,
+    ctaText: customCtaText
   } = tier;
+
+  const ctaText = (
+    customCtaText ||
+    (id === 'landing-page'
+      ? 'QUERO UMA LANDING PAGE'
+      : id === 'site-institucional'
+      ? 'QUERO UM SITE INSTITUCIONAL'
+      : id === 'projetos-personalizados'
+      ? 'QUERO UM PROJETO PERSONALIZADO'
+      : 'QUERO MEU SITE')
+  ).toUpperCase();
+
+  const formattedSetupPrice = setupPrice
+    ? setupPrice.toLocaleString('pt-BR', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      })
+    : '0,00';
+
+  const formattedMaintenancePrice = maintenancePrice
+    ? maintenancePrice.toLocaleString('pt-BR', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      })
+    : '0,00';
 
   return (
     <div
@@ -52,14 +79,14 @@ const PricingCard = ({ tier, ctaLink, isSolo }) => {
                 A partir de
               </span>
               <span className="font-headline-xl text-4xl text-primary font-bold">
-                R$ {setupPrice ? setupPrice.toLocaleString('pt-BR') : '0'}
+                R$ {formattedSetupPrice}
               </span>
               <span className="font-body-md text-sm text-text-muted">
                 (Setup)
               </span>
             </div>
             <p className="font-label-md text-secondary text-sm font-semibold">
-              + R$ {maintenancePrice}/mês
+              + R$ {formattedMaintenancePrice}/mês
             </p>
           </div>
 
@@ -73,13 +100,13 @@ const PricingCard = ({ tier, ctaLink, isSolo }) => {
               href={ctaLink}
               target="_blank"
               rel="noopener noreferrer"
-              className={`w-full text-center font-label-md text-sm py-4 rounded-xl font-bold inline-block ${
+              className={`w-full text-center font-label-md text-sm py-4 rounded-xl font-bold inline-block uppercase tracking-wider ${
                 highlighted
                   ? 'bg-primary text-on-primary shadow-[0_0_20px_rgba(76,215,246,0.3)] hover:shadow-[0_0_30px_rgba(76,215,246,0.5)]'
                   : 'bg-transparent border-2 border-primary text-primary hover:bg-primary/10'
               }`}
             >
-              Selecionar Plano
+              {ctaText}
             </a>
           </div>
         </div>
@@ -122,13 +149,13 @@ const PricingCard = ({ tier, ctaLink, isSolo }) => {
               href={ctaLink}
               target="_blank"
               rel="noopener noreferrer"
-              className={`w-full text-center font-label-md text-sm py-4 rounded-xl font-bold inline-block ${
+              className={`w-full text-center font-label-md text-sm py-4 rounded-xl font-bold inline-block uppercase tracking-wider ${
                 highlighted
                   ? 'bg-primary text-on-primary shadow-[0_0_20px_rgba(76,215,246,0.3)] hover:shadow-[0_0_30px_rgba(76,215,246,0.5)]'
                   : 'bg-transparent border-2 border-primary text-primary hover:bg-primary/10'
               }`}
             >
-              Selecionar Plano
+              {ctaText}
             </a>
           </div>
         </div>

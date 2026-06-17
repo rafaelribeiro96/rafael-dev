@@ -2,7 +2,6 @@
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 40px;
-  
 }
 
 .thumbnail-container {
@@ -11,15 +10,14 @@
   justify-content: center;
 }
 
-
 .thumbnail-image {
   width: 23%;
   height: auto;
   margin: 8px;
   cursor: pointer;
-  border: #FFE6E6 solid 5px;
+  border: #ffe6e6 solid 5px;
   border-radius: 10px;
-  background-color: #FFE6E6;
+  background-color: #ffe6e6;
   box-sizing: border-box;
   object-fit: cover;
   height: 250px;
@@ -56,7 +54,8 @@
   cursor: pointer;
 }
 
-.prev-button, .next-button {
+.prev-button,
+.next-button {
   position: absolute;
   top: 50%;
   font-size: 50px;
@@ -76,27 +75,25 @@
 
 .mais_produtos {
   text-decoration: underline;
-  color: #3F292B;
+  color: #3f292b;
 }
 
-
 @media (max-width: 800px) {
-
   .close-button {
     top: 20px;
     right: 20px;
   }
-  
+
   .thumbnail-image {
     width: 43%;
     height: 120px;
-    border: #FFE6E6 solid 3px;
+    border: #ffe6e6 solid 3px;
   }
 
   .prev-button {
     left: 10px;
   }
-  
+
   .next-button {
     right: 10px;
   }

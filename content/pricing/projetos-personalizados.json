@@ -1,0 +1,20 @@
+{
+  "id": "projetos-personalizados",
+  "order": 3,
+  "title": "Projetos Personalizados",
+  "description": "Sistemas robustos desenvolvidos sob medida para o seu modelo de negócio. Ideal para automatizar e otimizar processos.",
+  "setupPrice": 2499,
+  "maintenancePrice": 120,
+  "highlighted": false,
+  "badge": "Orçamento Sob Medida",
+  "active": true,
+  "features": [
+    "Plataformas de E-commerce & Lojas Virtuais",
+    "Sistemas de Agendamento, Reservas & Consultas",
+    "CRMs & ERPs Dedicados para Gestão Interna",
+    "Áreas de Membros & Portais Educacionais",
+    "Integrações robustas via APIs e Webhooks",
+    "Fale Conosco para alinhar requisitos exatos"
+  ],
+  "maintenanceNote": "Nota: O valor de implantação e mensalidade varia conforme a complexidade e infraestrutura necessária para o projeto. Fale conosco para fazer um orçamento."
+}

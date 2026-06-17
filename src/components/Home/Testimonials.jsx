@@ -12,11 +12,19 @@ const Testimonials = () => {
       const card = container.firstElementChild;
       if (!card) return;
       const cardWidth = card.offsetWidth + 24; // width + gap
-      const maxScroll = container.scrollWidth - container.clientWidth;
+      const originalWidth = cardWidth * testimonials.length;
 
-      if (container.scrollLeft >= maxScroll - 10) {
-        container.scrollTo({ left: 0, behavior: 'smooth' });
+      if (container.scrollLeft >= originalWidth - 10) {
+        // Reset scroll position instantly to start
+        container.style.scrollBehavior = 'auto';
+        container.scrollLeft = 0;
+        // Scroll to the next card smoothly on the next tick
+        setTimeout(() => {
+          container.style.scrollBehavior = 'smooth';
+          container.scrollBy({ left: cardWidth, behavior: 'smooth' });
+        }, 50);
       } else {
+        container.style.scrollBehavior = 'smooth';
         container.scrollBy({ left: cardWidth, behavior: 'smooth' });
       }
     };
@@ -24,6 +32,28 @@ const Testimonials = () => {
     const interval = setInterval(handleAutoScroll, 4500); // 4.5s for testimonials since reading takes slightly longer
     return () => clearInterval(interval);
   }, []);
+
+  const testimonials = [
+    {
+      stars: 5,
+      text: 'O site ficou incrível — moderno, elegante e representa perfeitamente o padrão do nosso ateliê. As vendas aumentaram visivelmente depois do lançamento.',
+      name: 'Glayde Ribeiro',
+      business: 'Confeitaria Gourmet'
+    },
+    {
+      stars: 5,
+      text: 'Precisávamos de um site sóbrio e profissional para o escritório. A Rafael Tech entregou exatamente isso, dentro do prazo e com total transparência no processo.',
+      name: 'JSA Advogados',
+      business: 'Escritório de Advocacia',
+      highlighted: true
+    },
+    {
+      stars: 5,
+      text: 'Além do design moderno, o que me surpreendeu foi a velocidade: meu site carrega instantaneamente. Meus clientes comentam isso sempre. Melhor investimento que fiz.',
+      name: 'Daniel Antunes',
+      business: 'Barbearia Antunes'
+    }
+  ];
 
   return (
     <section className="py-24 px-margin-page bg-surface-deep relative border-t border-white/5">
@@ -44,131 +74,56 @@ const Testimonials = () => {
           ref={scrollerRef}
           className="flex md:grid md:grid-cols-3 gap-6 md:gap-8 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory scroll-smooth pb-6 -mx-[5vw] px-[5vw] md:mx-0 md:px-0 scrollbar-none"
         >
-          {/* Testimonial 1 */}
-          <div
-            className="w-[85vw] sm:w-[350px] md:w-auto shrink-0 snap-center md:shrink md:snap-none glass-panel rounded-3xl p-6 sm:p-8 border border-white/10 hover:border-primary/30 transition-all duration-300 flex flex-col"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <div className="flex text-secondary mb-4">
-              {[...Array(5)].map((_, i) => (
-                <span
-                  key={i}
-                  className="material-symbols-outlined text-lg"
-                  style={{ fontVariationSettings: "'FILL' 1" }}
-                >
-                  star
-                </span>
-              ))}
-            </div>
-            <p className="font-body-md text-sm text-on-surface-variant leading-relaxed flex-grow mb-6">
-              &ldquo;O site ficou incrível — moderno, elegante e representa
-              perfeitamente o padrão do nosso ateliê. As vendas aumentaram
-              visivelmente depois do lançamento.&rdquo;
-            </p>
-            <div className="flex items-center gap-3 border-t border-white/5 pt-6">
-              <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                <span
-                  className="material-symbols-outlined text-primary text-sm"
-                  style={{ fontVariationSettings: "'FILL' 1" }}
-                >
-                  person
-                </span>
+          {[...testimonials, ...testimonials].map((t, index) => {
+            const isDuplicate = index >= testimonials.length;
+            return (
+              <div
+                key={index}
+                className={`w-[85vw] sm:w-[350px] md:w-auto shrink-0 snap-center md:shrink md:snap-none glass-panel rounded-3xl p-6 sm:p-8 border transition-all duration-300 flex flex-col justify-between ${
+                  t.highlighted
+                    ? 'border-primary/30 shadow-[0_0_30px_rgba(6,182,212,0.1)] hover:border-primary/50'
+                    : 'border-white/10 hover:border-primary/30'
+                } ${isDuplicate ? 'flex md:hidden' : 'flex'}`}
+                data-aos="fade-up"
+                data-aos-delay={100 * ((index % testimonials.length) + 1)}
+              >
+                <div>
+                  <div className="flex text-secondary mb-4">
+                    {[...Array(t.stars)].map((_, i) => (
+                      <span
+                        key={i}
+                        className="material-symbols-outlined text-lg"
+                        style={{ fontVariationSettings: "'FILL' 1" }}
+                      >
+                        star
+                      </span>
+                    ))}
+                  </div>
+                  <p className="font-body-md text-sm text-on-surface-variant leading-relaxed mb-6">
+                    &ldquo;{t.text}&rdquo;
+                  </p>
+                </div>
+                <div className="flex items-center gap-3 border-t border-white/5 pt-6 mt-auto">
+                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                    <span
+                      className="material-symbols-outlined text-primary text-sm"
+                      style={{ fontVariationSettings: "'FILL' 1" }}
+                    >
+                      person
+                    </span>
+                  </div>
+                  <div>
+                    <p className="font-label-md text-sm text-on-surface font-bold">
+                      {t.name}
+                    </p>
+                    <p className="font-body-md text-xs text-on-surface-variant">
+                      {t.business}
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div>
-                <p className="font-label-md text-sm text-on-surface font-bold">
-                  Glayde Ribeiro
-                </p>
-                <p className="font-body-md text-xs text-on-surface-variant">
-                  Confeitaria Gourmet
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Testimonial 2 */}
-          <div
-            className="w-[85vw] sm:w-[350px] md:w-auto shrink-0 snap-center md:shrink md:snap-none glass-panel rounded-3xl p-6 sm:p-8 border border-primary/30 shadow-[0_0_30px_rgba(6,182,212,0.1)] hover:border-primary/50 transition-all duration-300 flex flex-col"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <div className="flex text-secondary mb-4">
-              {[...Array(5)].map((_, i) => (
-                <span
-                  key={i}
-                  className="material-symbols-outlined text-lg"
-                  style={{ fontVariationSettings: "'FILL' 1" }}
-                >
-                  star
-                </span>
-              ))}
-            </div>
-            <p className="font-body-md text-sm text-on-surface-variant leading-relaxed flex-grow mb-6">
-              &ldquo;Precisávamos de um site sóbrio e profissional para o
-              escritório. A Rafael Tech entregou exatamente isso, dentro do
-              prazo e com total transparência no processo.&rdquo;
-            </p>
-            <div className="flex items-center gap-3 border-t border-white/5 pt-6">
-              <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                <span
-                  className="material-symbols-outlined text-primary text-sm"
-                  style={{ fontVariationSettings: "'FILL' 1" }}
-                >
-                  person
-                </span>
-              </div>
-              <div>
-                <p className="font-label-md text-sm text-on-surface font-bold">
-                  JSA Advogados
-                </p>
-                <p className="font-body-md text-xs text-on-surface-variant">
-                  Escritório de Advocacia
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Testimonial 3 */}
-          <div
-            className="w-[85vw] sm:w-[350px] md:w-auto shrink-0 snap-center md:shrink md:snap-none glass-panel rounded-3xl p-6 sm:p-8 border border-white/10 hover:border-primary/30 transition-all duration-300 flex flex-col"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <div className="flex text-secondary mb-4">
-              {[...Array(5)].map((_, i) => (
-                <span
-                  key={i}
-                  className="material-symbols-outlined text-lg"
-                  style={{ fontVariationSettings: "'FILL' 1" }}
-                >
-                  star
-                </span>
-              ))}
-            </div>
-            <p className="font-body-md text-sm text-on-surface-variant leading-relaxed flex-grow mb-6">
-              &ldquo;Além do design moderno, o que me surpreendeu foi a
-              velocidade: meu site carrega instantaneamente. Meus clientes
-              comentam isso sempre. Melhor investimento que fiz.&rdquo;
-            </p>
-            <div className="flex items-center gap-3 border-t border-white/5 pt-6">
-              <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                <span
-                  className="material-symbols-outlined text-primary text-sm"
-                  style={{ fontVariationSettings: "'FILL' 1" }}
-                >
-                  person
-                </span>
-              </div>
-              <div>
-                <p className="font-label-md text-sm text-on-surface font-bold">
-                  Marcos Antunes
-                </p>
-                <p className="font-body-md text-xs text-on-surface-variant">
-                  Barbearia Antunes
-                </p>
-              </div>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
     </section>
