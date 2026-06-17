@@ -23,7 +23,7 @@ const ComparisonMatrix = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* WordPress Card */}
           <div
-            className="glass-panel p-8 md:p-10 rounded-3xl border border-error/20 hover:border-error/40 transition-colors relative overflow-hidden group"
+            className="glass-panel p-6 sm:p-8 md:p-10 rounded-3xl border border-error/20 hover:border-error/40 transition-colors relative overflow-hidden group"
             data-aos="fade-right"
           >
             <div className="absolute -top-10 -right-10 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
@@ -83,7 +83,7 @@ const ComparisonMatrix = () => {
 
           {/* Rafael Tech Card */}
           <div
-            className="glass-panel p-8 md:p-10 rounded-3xl border border-primary/45 shadow-[0_0_40px_rgba(6,182,212,0.15)] hover:shadow-[0_0_60px_rgba(6,182,212,0.25)] transition-all duration-500 relative overflow-hidden group transform hover:-translate-y-2 bg-gradient-to-br from-surface-slate to-surface-deep"
+            className="glass-panel p-6 sm:p-8 md:p-10 rounded-3xl border border-primary/45 shadow-[0_0_40px_rgba(6,182,212,0.15)] hover:shadow-[0_0_60px_rgba(6,182,212,0.25)] transition-all duration-500 relative overflow-hidden group transform hover:-translate-y-2 bg-gradient-to-br from-surface-slate to-surface-deep"
             data-aos="fade-left"
           >
             <div className="absolute -top-10 -right-10 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
@@ -108,7 +108,7 @@ const ComparisonMatrix = () => {
                   </span>
                 </div>
                 <span className="font-body-md text-sm sm:text-base text-on-surface font-semibold">
-                  Carregamento &lt; 1s (Garantido para conversão máxima)
+                  Carregamento ultra-rápido (Otimizado para conversão máxima)
                 </span>
               </li>
               <li className="flex items-start gap-4">

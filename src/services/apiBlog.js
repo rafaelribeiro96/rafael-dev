@@ -14,7 +14,7 @@ function handleRequestError(error) {
 const MOCK_POSTS = [
   {
     _id: '1',
-    title: 'Como Acelerar seu Site para Carregar em Menos de 1 Segundo',
+    title: 'Como Acelerar seu Site para um Carregamento Ultra-Rápido',
     link: 'como-acelerar-seu-site',
     description:
       'A velocidade de carregamento é o fator principal para manter clientes em sua página. Conheça as técnicas modernas que garantem desempenho extremo.',
@@ -27,7 +27,7 @@ const MOCK_POSTS = [
       <p>A maioria dos sites tradicionais (como WordPress mal otimizados) carrega dezenas de scripts desnecessários, imagens pesadas e faz consultas lentas ao banco de dados cada vez que um usuário entra na página.</p>
       <br/>
       <h2 style="font-size: 20px; font-weight: bold; color: #4cd7f6; margin-top: 20px; margin-bottom: 10px;">A Solução: Edge-First e Código Limpo</h2>
-      <p>Ao utilizar tecnologias modernas como Next.js com renderização estática e CDN na borda (Edge CDNs), o site já está pré-renderizado e é entregue instantaneamente ao visitante a partir do servidor mais próximo dele. O resultado é um tempo de carregamento inferior a 1 segundo e nota 100 no Google PageSpeed Insights.</p>
+      <p>Ao utilizar tecnologias modernas como Next.js com renderização estática e CDN na borda (Edge CDNs), o site já está pré-renderizado e é entregue instantaneamente ao visitante a partir do servidor mais próximo dele. O resultado é um carregamento ultra-rápido e excelente pontuação no Google PageSpeed Insights.</p>
     `,
     status: 'publicado'
   },

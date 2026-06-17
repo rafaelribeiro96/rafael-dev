@@ -65,14 +65,14 @@ const Portfolio = ({ ctaLink }) => {
 
         {/* Filter Tabs */}
         <div
-          className="flex flex-wrap justify-center gap-3 mb-12"
+          className="flex overflow-x-auto md:flex-wrap justify-start md:justify-center gap-3 mb-12 pb-3 -mx-[5vw] px-[5vw] scrollbar-none w-[calc(100%+10vw)] md:w-auto md:mx-0 md:px-0 scroll-smooth"
           data-aos="fade-up"
         >
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-2.5 rounded-full font-label-md text-sm transition-all duration-300 border ${
+              className={`px-6 py-2.5 rounded-full font-label-md text-sm transition-all duration-300 border shrink-0 whitespace-nowrap ${
                 selectedCategory === category
                   ? 'bg-primary/20 text-primary border-primary'
                   : 'bg-transparent text-on-surface-variant border-white/10 hover:border-primary/55 hover:text-primary'
@@ -102,7 +102,7 @@ const Portfolio = ({ ctaLink }) => {
                   height={300}
                 />
               </div>
-              <div className="p-8 flex flex-col flex-grow bg-surface-slate">
+              <div className="p-6 sm:p-8 flex flex-col flex-grow bg-surface-slate">
                 <div className="mb-4">
                   <span className="text-xs text-primary font-bold tracking-widest uppercase bg-primary/10 px-2.5 py-1 rounded">
                     {project.category}

@@ -1,6 +1,12 @@
 const nextConfig = {
+  outputFileTracing: false,
   images: {
-    domains: ['res.cloudinary.com', 'scontent.cdninstagram.com', 'imgcentauro-a.akamaihd.net', 'lh3.googleusercontent.com'],
+    domains: [
+      'res.cloudinary.com',
+      'scontent.cdninstagram.com',
+      'imgcentauro-a.akamaihd.net',
+      'lh3.googleusercontent.com'
+    ]
   },
   reactStrictMode: true,
   poweredByHeader: false,

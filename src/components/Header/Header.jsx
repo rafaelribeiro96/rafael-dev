@@ -88,7 +88,7 @@ const Header = () => {
             href={ctaLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-label-md text-xs bg-primary-container text-on-primary-container px-3 py-2 rounded-lg hover:shadow-[0_0_15px_rgba(6,182,212,0.4)] transition-all active:scale-95 duration-200 font-semibold"
+            className="font-label-md text-xs bg-primary-container text-on-primary-container px-3 py-2 rounded-lg hover:shadow-[0_0_15px_rgba(6,182,212,0.4)] transition-all active:scale-95 duration-200 font-semibold hidden sm:inline-block"
           >
             Especialista
           </a>

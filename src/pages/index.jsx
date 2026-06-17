@@ -34,7 +34,7 @@ const Main = () => {
         </title>
         <meta
           name="description"
-          content="Rafael Tech cria sites profissionais e landing pages de alta performance para empresas em Belo Horizonte e todo o Brasil. Sites que carregam em menos de 1s, dominam o Google e convertem visitantes em clientes. Orçamento gratuito."
+          content="Rafael Tech cria sites profissionais e landing pages de alta performance para empresas em Belo Horizonte e todo o Brasil. Sites ultra-rápidos e otimizados, que dominam o Google e convertem visitantes em clientes. Orçamento gratuito."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>

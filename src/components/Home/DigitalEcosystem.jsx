@@ -76,7 +76,7 @@ const DigitalEcosystem = () => {
               Velocidade que Converte
             </h3>
             <p className="font-body-md text-sm text-on-surface-variant">
-              Sites que carregam em menos de 1 segundo. O Google prioriza sites
+              Sites ultrarrápidos e de alta performance. O Google prioriza sites
               rápidos — e seus clientes também.
             </p>
           </div>

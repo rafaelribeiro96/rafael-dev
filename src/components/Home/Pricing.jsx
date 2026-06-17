@@ -19,21 +19,12 @@ const Pricing = ({ ctaLink }) => {
             Soluções completas com tecnologia de ponta. Preço fechado — sem
             surpresas.
           </p>
-          <div className="inline-flex items-center gap-2 mt-4 bg-error/10 border border-error/20 text-on-error-container px-4 py-2 rounded-full text-sm font-semibold">
-            <span
-              className="material-symbols-outlined text-error text-sm"
-              style={{ fontVariationSettings: "'FILL' 1" }}
-            >
-              schedule
-            </span>
-            Vagas limitadas — apenas 3 projetos por mês
-          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto items-stretch">
           {/* Plan 1 */}
           <div
-            className="glass-panel rounded-3xl p-8 md:p-10 border border-white/10 hover:border-primary/30 transition-all duration-300 flex flex-col h-full relative"
+            className="glass-panel rounded-3xl p-6 sm:p-8 md:p-10 border border-white/10 hover:border-primary/30 transition-all duration-300 flex flex-col h-full relative"
             data-aos="fade-right"
           >
             <div className="mb-8">
@@ -87,7 +78,7 @@ const Pricing = ({ ctaLink }) => {
                     check_circle
                   </span>
                   <span className="font-body-md text-sm text-on-surface-variant">
-                    PageSpeed 100 Garantido
+                    Otimizado para Alta Performance
                   </span>
                 </li>
                 <li className="flex items-center gap-3">
@@ -133,7 +124,7 @@ const Pricing = ({ ctaLink }) => {
 
           {/* Plan 2 */}
           <div
-            className="glass-panel rounded-3xl p-8 md:p-10 border border-primary/50 relative flex flex-col h-full shadow-[0_0_40px_rgba(6,182,212,0.15)] transform md:-translate-y-4 bg-gradient-to-b from-surface-slate to-surface-deep"
+            className="glass-panel rounded-3xl p-6 sm:p-8 md:p-10 border border-primary/50 relative flex flex-col h-full shadow-[0_0_40px_rgba(6,182,212,0.15)] transform md:-translate-y-4 bg-gradient-to-b from-surface-slate to-surface-deep"
             data-aos="fade-left"
           >
             <div className="absolute -top-4 right-8">

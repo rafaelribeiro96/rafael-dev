@@ -15,12 +15,12 @@ const Hero = ({ ctaLink }) => {
               className="material-symbols-outlined text-sm"
               style={{ fontVariationSettings: "'FILL' 1" }}
             >
-              location_on
+              public
             </span>
-            Belo Horizonte, MG — Atendemos todo o Brasil
+            Atendimento em Todo o Brasil
           </div>
-          <h1 className="font-headline-xl text-4xl sm:text-5xl lg:text-headline-xl text-on-surface leading-tight font-extrabold tracking-tighter">
-            Sites Profissionais que <br className="hidden md:block" />
+          <h1 className="font-headline-xl text-3xl sm:text-5xl lg:text-headline-xl text-on-surface leading-tight font-extrabold tracking-tighter">
+            Sites Profissionais que{' '}
             <span className="text-gradient">
               Vendem, Ranqueiam e Impressionam.
             </span>
@@ -28,8 +28,8 @@ const Hero = ({ ctaLink }) => {
 
           <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
             Criamos sites institucionais e landing pages com tecnologia de
-            ponta. Carregamento em menos de 1 segundo, design exclusivo que
-            converte e você mesmo atualiza o conteúdo — sem depender de ninguém.
+            ponta. Carregamento ultra-rápido, design exclusivo que converte e
+            você mesmo atualiza o conteúdo — sem depender de ninguém.
           </p>
 
           <div className="flex flex-wrap gap-4 pt-4">
@@ -64,7 +64,7 @@ const Hero = ({ ctaLink }) => {
               >
                 verified
               </span>
-              <span className="text-sm font-medium">PageSpeed 100</span>
+              <span className="text-sm font-medium">Alto Desempenho</span>
             </div>
             <div className="flex items-center gap-2 text-on-surface-variant">
               <span
@@ -104,17 +104,17 @@ const Hero = ({ ctaLink }) => {
               priority={true}
             />
 
-            {/* Float PageSpeed score badge */}
-            <div className="absolute -top-4 -right-4 bg-surface-container-high border border-primary/30 px-3 py-2 rounded-xl shadow-xl flex items-center gap-2">
+            {/* Float Performance badge */}
+            <div className="absolute -top-4 -right-2 sm:-right-4 bg-surface-container-high border border-primary/30 px-3 py-2 rounded-xl shadow-xl flex items-center gap-2">
               <div className="w-10 h-10 rounded-full border-4 border-secondary flex items-center justify-center">
-                <span className="text-secondary font-bold text-sm">100</span>
+                <span className="text-secondary font-bold text-sm">A+</span>
               </div>
               <div className="flex flex-col text-left">
                 <span className="text-xs text-text-muted font-label-md">
-                  PageSpeed
+                  Performance
                 </span>
                 <span className="text-xs text-on-surface font-bold">
-                  Insights
+                  Otimizada
                 </span>
               </div>
             </div>

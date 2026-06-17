@@ -6,7 +6,7 @@ export default class MyDocument extends Document {
     const siteName = 'Rafael Tech';
     const siteTitle = 'Rafael Tech | Sites Profissionais de Alta Performance';
     const siteDescription =
-      'Rafael Tech cria sites profissionais e landing pages de alta performance para empresas em Belo Horizonte e todo o Brasil. Sites que carregam em menos de 1s, dominam o Google e convertem visitantes em clientes. Solicite um orçamento gratuito.';
+      'Rafael Tech cria sites profissionais e landing pages de alta performance para empresas em Belo Horizonte e todo o Brasil. Sites ultra-rápidos e otimizados, que dominam o Google e convertem visitantes em clientes. Solicite um orçamento gratuito.';
     const ogImage = `${siteUrl}/og-image.png`;
 
     const localBusinessSchema = {
