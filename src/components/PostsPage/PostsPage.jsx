@@ -27,38 +27,64 @@ const PostsPage = () => {
   };
 
   return (
-    <>
+    <div className="bg-surface-deep text-on-surface min-h-screen flex flex-col">
       <Header />
-      {/* Passando o primeiro post como uma prop para o componente de vídeo */}
+
+      {/* Featured dynamic post with video background */}
       {posts.length > 0 && <VideoBlog post={posts[0]} />}
-      <div className="posts-page-blog-container">
-        {posts.map((post) => (
-          <Link
-            href={`/blog/${post.link}`}
-            className="post-card-page-blog"
-            key={post._id}
-          >
-            <div className="post-div-img-page-blog">
-              {post.image && (
-                <Image
-                  src={post.image}
-                  alt={post.title}
-                  className="post-img-page-blog"
-                  width={1500}
-                  height={800}
-                />
-              )}
-            </div>
-            <div className="blog-text-container">
-              <h2 className="post-title-page-blog">{post.title}</h2>
-              <p className="post-desc-page-blog">{post.description}</p>
-            </div>
-          </Link>
-        ))}
-      </div>
+
+      {/* Blog list section */}
+      <section className="flex-grow max-w-container-max mx-auto px-margin-page py-16 w-full text-left">
+        <h2 className="font-headline-lg text-3xl text-white font-bold mb-8 text-center md:text-left">
+          Artigos &amp; Insights
+        </h2>
+
+        {posts.length === 0 ? (
+          <div className="text-center py-12">
+            <p className="text-text-muted">Nenhum post publicado no momento.</p>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {posts.map((post) => (
+              <Link
+                href={`/blog/${post.link}`}
+                className="glass-card rounded-3xl overflow-hidden border border-white/10 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(6,182,212,0.2)] transition-all duration-300 group flex flex-col h-full"
+                key={post._id}
+              >
+                <div className="aspect-[16/9] relative overflow-hidden bg-surface-deep">
+                  {post.image && (
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      width={600}
+                      height={350}
+                    />
+                  )}
+                </div>
+                <div className="p-6 flex flex-col flex-grow bg-surface-slate text-left">
+                  <h3 className="font-headline-md text-lg text-on-surface mb-3 font-bold group-hover:text-primary transition-colors">
+                    {post.title}
+                  </h3>
+                  <p className="font-body-md text-sm text-on-surface-variant leading-relaxed line-clamp-3">
+                    {post.description}
+                  </p>
+                  <span className="text-primary text-xs font-semibold mt-6 flex items-center gap-1">
+                    Ler artigo completo
+                    <span className="material-symbols-outlined text-sm font-bold group-hover:translate-x-1 transition-transform">
+                      arrow_forward
+                    </span>
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        )}
+      </section>
+
       <InstaFeed />
       <Footer />
-    </>
+    </div>
   );
 };
 

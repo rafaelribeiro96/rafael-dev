@@ -1,6 +1,6 @@
 const nextConfig = {
   images: {
-    domains: ['res.cloudinary.com', 'scontent.cdninstagram.com', 'imgcentauro-a.akamaihd.net'],
+    domains: ['res.cloudinary.com', 'scontent.cdninstagram.com', 'imgcentauro-a.akamaihd.net', 'lh3.googleusercontent.com'],
   },
   reactStrictMode: true,
   poweredByHeader: false,
