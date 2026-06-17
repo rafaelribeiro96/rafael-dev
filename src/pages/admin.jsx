@@ -92,8 +92,8 @@ export default function AdminPage({
 
 export async function getServerSideProps(ctx) {
   // 1. Enforce Authentication (Server-Side Route Guard)
-  const cookies = ctx.req.headers.cookie || '';
-  const isAuthenticated = cookies.includes('admin_session=authenticated');
+  const { verifySessionFromRequest } = await import('src/lib/auth');
+  const isAuthenticated = verifySessionFromRequest(ctx.req);
 
   if (!isAuthenticated) {
     return {

@@ -1,6 +1,7 @@
 import { exec } from 'child_process';
 import { promisify } from 'util';
 import { isGitHubConfigured } from 'src/lib/github';
+import { verifySessionFromRequest } from 'src/lib/auth';
 
 const execAsync = promisify(exec);
 
@@ -11,8 +12,7 @@ export default async function handler(req, res) {
   }
 
   // 1. Enforce Authentication
-  const cookies = req.headers.cookie || '';
-  const isAuthenticated = cookies.includes('admin_session=authenticated');
+  const isAuthenticated = verifySessionFromRequest(req);
   if (!isAuthenticated) {
     return res.status(401).json({ error: 'Unauthorized' });
   }
@@ -28,6 +28,12 @@ export default async function handler(req, res) {
   const { message = 'chore(cms): update content via admin panel' } =
     req.body || {};
 
+  // Sanitize commit message to prevent shell command injection
+  const sanitizedMessage =
+    typeof message === 'string'
+      ? message.replace(/[^a-zA-Z0-9\s\-_()[\]:.,]/g, '')
+      : 'chore(cms): update content via admin panel';
+
   try {
     const cwd = process.cwd();
 
@@ -36,7 +42,7 @@ export default async function handler(req, res) {
 
     // Attempt commit
     const { stdout } = await execAsync(
-      `git commit -m "${message.replace(/"/g, '\\"')}"`,
+      `git commit -m "${sanitizedMessage.replace(/"/g, '\\"')}"`,
       { cwd }
     );
 

@@ -1,6 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 import { writeFile, deleteFile, isGitHubConfigured } from 'src/lib/github';
+import { verifySessionFromRequest } from 'src/lib/auth';
 
 const DIR = path.join(process.cwd(), 'content', 'pricing');
 const RELATIVE_DIR = 'content/pricing';
@@ -8,9 +9,13 @@ const RELATIVE_DIR = 'content/pricing';
 export default async function handler(req, res) {
   const { id } = req.query;
 
+  // Validate ID path parameter to prevent path traversal
+  if (!id || typeof id !== 'string' || !/^[a-zA-Z0-9_-]+$/.test(id)) {
+    return res.status(400).json({ error: 'ID de recurso inválido.' });
+  }
+
   // 1. Enforce Authentication
-  const cookies = req.headers.cookie || '';
-  const isAuthenticated = cookies.includes('admin_session=authenticated');
+  const isAuthenticated = verifySessionFromRequest(req);
   if (!isAuthenticated) {
     return res.status(401).json({ error: 'Unauthorized' });
   }

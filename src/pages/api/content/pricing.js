@@ -1,6 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 import { readCollection, writeFile, isGitHubConfigured } from 'src/lib/github';
+import { verifySessionFromRequest } from 'src/lib/auth';
 
 const DIR = path.join(process.cwd(), 'content', 'pricing');
 const RELATIVE_DIR = 'content/pricing';
@@ -20,8 +21,7 @@ async function readAllTiersLocal() {
 
 export default async function handler(req, res) {
   // 1. Enforce Authentication
-  const cookies = req.headers.cookie || '';
-  const isAuthenticated = cookies.includes('admin_session=authenticated');
+  const isAuthenticated = verifySessionFromRequest(req);
   if (!isAuthenticated) {
     return res.status(401).json({ error: 'Unauthorized' });
   }
@@ -43,8 +43,14 @@ export default async function handler(req, res) {
     }
 
     if (req.method === 'POST') {
-      const tier = req.body;
-      if (!tier.id) return res.status(400).json({ error: 'id is required' });
+      const tier = req.body || {};
+      if (
+        !tier.id ||
+        typeof tier.id !== 'string' ||
+        !/^[a-zA-Z0-9_-]+$/.test(tier.id)
+      ) {
+        return res.status(400).json({ error: 'ID inválido.' });
+      }
 
       if (useGitHub) {
         const relativePath = `${RELATIVE_DIR}/${tier.id}.json`;

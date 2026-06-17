@@ -69,23 +69,26 @@ A estrutura de arquivos do Git-CMS está organizada da seguinte forma:
 
 ---
 
-## 🔒 Fluxo de Autenticação Segura (Route Guard)
+## 🔒 Fluxo de Autenticação Segura (Route Guard & Assinatura)
 
-Para proteger o acesso ao painel e às APIs sem expor dados confidenciais:
+Para proteger o acesso ao painel e às APIs contra falsificação e ataques automatizados:
 
-1. **Geração do Cookie de Sessão**:
-   Ao digitar a senha correta (definida no servidor pela variável `ADMIN_PASSWORD`), a API `/api/admin/login` gera um cookie criptografado chamado `admin_session`:
+1. **Geração do Cookie de Sessão Criptográfico**:
+   Ao digitar a senha correta (definida no servidor pela variável `ADMIN_PASSWORD`), a API `/api/admin/login` gera um token criptográfico no formato `expiresAt:signature` (assinado via HMAC SHA-256 no backend usando a chave derivada da senha) e injeta o cookie chamado `admin_session`:
    - `HttpOnly`: Impede acesso ao cookie via JavaScript do navegador (mitiga ataques XSS).
    - `SameSite=Strict`: Impede o envio do cookie em requisições cross-site (mitiga ataques CSRF).
    - `Secure`: Força o tráfego do cookie apenas sob HTTPS (ativo em produção).
    - `Path=/`: Válido para todo o domínio.
 
-2. **Middleware Guard na Rota (`getServerSideProps`)**:
-   No arquivo `src/pages/admin.jsx`, a verificação de sessão ocorre no servidor antes da página ser renderizada:
+2. **Proteção de Força Bruta (Brute-Force & Lockout)**:
+   O endpoint `/api/admin/login` possui um limite em memória de no máximo 5 tentativas de login por IP de cliente. Caso o limite seja excedido, o IP é bloqueado por 15 minutos (retornando HTTP 429). Além disso, cada tentativa incorreta introduz um atraso artificial de 1.5 segundos na resposta para desacelerar robôs.
+
+3. **Middleware Guard na Rota (`getServerSideProps`)**:
+   No arquivo `src/pages/admin.jsx`, a verificação de sessão ocorre no servidor antes da página ser renderizada chamando a validação de assinatura HMAC:
    ```javascript
    export async function getServerSideProps(ctx) {
-     const cookies = ctx.req.headers.cookie || '';
-     const isAuthenticated = cookies.includes('admin_session=authenticated');
+     const { verifySessionFromRequest } = await import('src/lib/auth');
+     const isAuthenticated = verifySessionFromRequest(ctx.req);
 
      if (!isAuthenticated) {
        return {
@@ -101,8 +104,8 @@ Para proteger o acesso ao painel e às APIs sem expor dados confidenciais:
    }
    ```
 
-3. **Proteção nos Endpoints de API**:
-   Todos os endpoints em `/api/content/*` verificam o cookie `admin_session` nas requisições de escrita (`POST`, `PUT`, `DELETE`). Requisições não autorizadas retornam `401 Unauthorized`.
+4. **Proteção nos Endpoints de API**:
+   Todos os endpoints em `/api/content/*` e `/api/admin/*` validam a assinatura digital do cookie `admin_session` em todas as requisições de leitura/escrita. Requisições não autorizadas retornam `401 Unauthorized`.
 
 ---
 
@@ -140,8 +143,15 @@ Para permitir que o usuário faça o upload de fotos de seu próprio computador 
 
 2. **Segurança no Endpoint ([upload.js](file:///c:/Users/rafaelRibeiro/Documents/Pessoal/Rafael%20Tech/src/pages/api/admin/upload.js))**:
    - Limitador rígido de tamanho: arquivos maiores que 1MB após compressão são rejeitados no backend.
-   - Route guard de cookie de sessão ativo.
-   - Validação contra ataques de *Path Traversal* (impede escrita fora da pasta `public/uploads`).
+   - Route guard de cookie de sessão criptográfico ativo.
+   - Validação estrita por expressão regular allowlist (`/^[a-zA-Z0-9_-]+\.(jpg|jpeg|png|gif|webp|svg)$/i`) para mitigar ataques de Path Traversal (impedindo escrita fora da pasta `public/uploads`) e impedir a gravação de extensões executáveis maliciosas.
+
+---
+
+## 🛡️ Validação de Entradas & Prevenção de Vulnerabilidades
+
+- **Validação de ID em Coleções:** Os arquivos criados ou modificados de forma dinâmica nas rotas `/api/content/portfolio` e `/api/content/pricing` (incluindo as rotas com parâmetro dinâmico `[id]`) validam o ID recebido contra a regex de allowlist `/^[a-zA-Z0-9_-]+$/` para banir qualquer tentativa de *directory/path traversal* (como uso de caracteres `../` para acessar/sobrescrever pastas do sistema).
+- **Sanitização de Comando no Git:** A rota `/api/content/publish` filtra a mensagem de commit recebida para eliminar qualquer caractere de controle especial do terminal (`/[^a-zA-Z0-9\s\-_()[\]:.,]/g`), impedindo injeções de comandos no shell do servidor (command injection).
 
 ---
 

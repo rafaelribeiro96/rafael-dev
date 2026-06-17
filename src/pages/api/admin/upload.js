@@ -1,4 +1,5 @@
 import { isGitHubConfigured, writeBinaryFile } from 'src/lib/github';
+import { verifySessionFromRequest } from 'src/lib/auth';
 
 export const config = {
   api: {
@@ -14,8 +15,7 @@ export default async function handler(req, res) {
   }
 
   // 1. Authenticate Route Guard
-  const cookies = req.headers.cookie || '';
-  const isAuthenticated = cookies.includes('admin_session=authenticated');
+  const isAuthenticated = verifySessionFromRequest(req);
 
   if (!isAuthenticated) {
     return res.status(401).json({ error: 'Unauthorized' });
@@ -37,13 +37,14 @@ export default async function handler(req, res) {
       .json({ error: 'O arquivo excede o limite de segurança de 1MB.' });
   }
 
-  // 3. Prevent path traversal attacks
+  // 3. Prevent path traversal attacks and enforce standard image extensions
   if (
-    filename.includes('/') ||
-    filename.includes('\\') ||
-    filename.includes('..')
+    typeof filename !== 'string' ||
+    !/^[a-zA-Z0-9_-]+\.(jpg|jpeg|png|gif|webp|svg)$/i.test(filename)
   ) {
-    return res.status(400).json({ error: 'Nome de arquivo inválido.' });
+    return res
+      .status(400)
+      .json({ error: 'Nome de arquivo inválido ou formato não suportado.' });
   }
 
   const useGitHub = isGitHubConfigured();

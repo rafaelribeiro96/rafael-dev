@@ -1,14 +1,14 @@
 import fs from 'fs/promises';
 import path from 'path';
 import { getFile, writeFile, isGitHubConfigured } from 'src/lib/github';
+import { verifySessionFromRequest } from 'src/lib/auth';
 
 const FILE_PATH = path.join(process.cwd(), 'content', 'global', 'site.json');
 const RELATIVE_PATH = 'content/global/site.json';
 
 export default async function handler(req, res) {
   // 1. Enforce Authentication
-  const cookies = req.headers.cookie || '';
-  const isAuthenticated = cookies.includes('admin_session=authenticated');
+  const isAuthenticated = verifySessionFromRequest(req);
   if (!isAuthenticated) {
     return res.status(401).json({ error: 'Unauthorized' });
   }

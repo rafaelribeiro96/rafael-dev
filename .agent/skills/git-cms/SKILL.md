@@ -76,22 +76,58 @@ export async function writeFile(filePath, data, commitMessage = 'chore(cms): upd
 }
 ```
 
-### Passo 3: Fluxo de Autenticação Segura por Cookies (Sem Sessão de Estado)
-1. **Login Endpoint (`/api/admin/login`)**:
-   Valida o password contra a variável `ADMIN_PASSWORD`. Se correto, responde injetando o cookie:
+### Passo 3: Fluxo de Autenticação Segura e Resiliente (Assinatura Criptográfica)
+1. **Helper de Autenticação (`src/lib/auth.js`)**:
+   Nunca utilize cookies de autenticação estáticos e expostos. Use assinaturas criptográficas baseadas em HMAC SHA-256:
    ```javascript
-   res.setHeader(
-     'Set-Cookie',
-     'admin_session=authenticated; Path=/; HttpOnly; SameSite=Strict' + 
-     (process.env.NODE_ENV === 'production' ? '; Secure' : '')
-   );
+   import crypto from 'crypto';
+
+   // Chave secreta derivada do ADMIN_PASSWORD
+   function getSessionSecret() {
+     const password = process.env.ADMIN_PASSWORD || 'admin123';
+     return crypto.createHash('sha256').update(password).digest();
+   }
+
+   // Criação do Token: expiração de 24h + assinatura HMAC
+   export function createSessionToken() {
+     const expiresAt = Date.now() + 24 * 60 * 60 * 1000;
+     const payload = `authenticated:${expiresAt}`;
+     const secret = getSessionSecret();
+     const signature = crypto.createHmac('sha256', secret).update(payload).digest('hex');
+     return `${expiresAt}:${signature}`;
+   }
+
+   // Validação segura com comparação em tempo constante (timingSafeEqual)
+   export function verifySessionToken(token) {
+     if (!token || typeof token !== 'string') return false;
+     const [expiresAtStr, signature] = token.split(':');
+     const expiresAt = parseInt(expiresAtStr, 10);
+     if (isNaN(expiresAt) || Date.now() > expiresAt) return false;
+
+     const payload = `authenticated:${expiresAt}`;
+     const secret = getSessionSecret();
+     const expectedSignature = crypto.createHmac('sha256', secret).update(payload).digest('hex');
+     
+     try {
+       return crypto.timingSafeEqual(Buffer.from(signature, 'hex'), Buffer.from(expectedSignature, 'hex'));
+     } catch {
+       return false;
+     }
+   }
    ```
-2. **Check Endpoint (`/api/admin/check`)**:
-   Lê as requisições de cookies para validação rápida no frontend.
-3. **Logout Endpoint (`/api/admin/logout`)**:
-   Invalida o cookie definindo a data de expiração no passado: `Expires=Thu, 01 Jan 1970 00:00:00 GMT`.
-4. **Middleware Guard (`getServerSideProps`)**:
-   Protege a página `/admin` redirecionando usuários não autorizados para `/admin/login`.
+
+2. **Login Endpoint com Proteção contra Brute Force (`/api/admin/login`)**:
+   Limite as tentativas falhas por IP (ex: máx 5 tentativas a cada 15 min em memória) e adicione um delay artificial de `1.5s` na resposta de senhas incorretas para mitigar scripts automatizados:
+   ```javascript
+   const loginAttempts = new Map();
+   // Dentro do handler:
+   // 1. Verificar se o IP do cliente está bloqueado
+   // 2. Se a senha estiver incorreta, registrar tentativa falha, bloquear se atingir limite, atrasar resposta por 1.5s e retornar erro.
+   ```
+
+3. **Check/Logout Endpoints & Middleware Guard**:
+   - Utilize a validação do token assinado extraído do header Cookie em todas as rotas e em `getServerSideProps` para o Route Guard.
+   - O logout invalida o cookie definindo a expiração no passado.
 
 ### Passo 4: Construindo o Layout Componentizado Premium (Dark Studio)
 Evite arquivos massivos. Crie componentes específicos e reutilizáveis na pasta `src/components/Admin/`:
@@ -115,14 +151,20 @@ Para suportar upload de fotos do dispositivo sem inchar o repositório Git com a
 4. **Formulário de Entrada (`ProjectModal.jsx`)**:
    Acrescente um input oculto `<input type="file" accept="image/*" />` e um botão customizado. Execute a otimização no `onChange` e faça o POST para a rota de upload. Defina o link resultante no campo de imagem do formulário.
 
-### ⚠️ Erros Comuns e Como Evitá-los
-1. **Conflito de Scroll do Lenis (Scrollbar Travada)**:
+### ⚠️ Erros Comuns e Boas Práticas de Segurança
+1. **Directory/Path Traversal em Flat-Files**:
+   Ao salvar ou ler arquivos dinâmicos (como coleções do portfólio) usando caminhos compostos por parâmetros recebidos da requisição (ex: `req.query.id`), sempre valide o parâmetro com uma regex restrita `/^[a-zA-Z0-9_-]+$/` para evitar injeções como `../../`.
+2. **Upload de Extensões Arbitrárias**:
+   Nunca use apenas exclusão ou listas negras na sanitização de uploads. Enforce validação de nome de arquivo contra uma allowlist estrita baseada em extensões permitidas de imagem (ex: `/^[a-zA-Z0-9_-]+\.(jpg|jpeg|png|gif|webp|svg)$/i`).
+3. **Injeção de Comando no Git**:
+   Caso chame `git commit` via subprocesso do Node.js (`exec`), garanta que a mensagem recebida pelo usuário passe por uma sanitização estrita para remover caracteres de controle de shell (ex: crases, ponto-e-vírgula, cifrões, etc.), permitindo apenas caracteres seguros (`/[^a-zA-Z0-9\s\-_()[\]:.,]/g`).
+4. **Conflito de Scroll do Lenis (Scrollbar Travada)**:
    Se o projeto utilizar o Lenis globalmente, ele irá interceptar a rolagem da tela do admin (que é bloqueada com `overflow: hidden; height: 100vh`).
    *Correção*: No seu `_app.js`, desative a inicialização do Lenis caso `router.pathname.startsWith('/admin')`.
-2. **Erro 500 na Vercel (Módulos não encontrados no require)**:
+5. **Erro 500 na Vercel (Módulos não encontrados no require)**:
    Se o `outputFileTracing: false` estiver ativo no `next.config.js`, a Vercel não incluirá os arquivos do `node_modules` necessários na Lambda.
    *Correção*: Remova ou defina `outputFileTracing: true` no `next.config.js`.
-3. **Importações Dinâmicas no Servidor**:
+6. **Importações Dinâmicas no Servidor**:
    Se usar imports dinâmicos (`await import('src/lib/github')`) dentro de `getServerSideProps` na Vercel, o runtime Node do serverless pode falhar ao resolver aliases absolutos como `src/...`.
    *Correção*: Use imports estáticos no topo do arquivo. O Next.js automaticamente remove importações usadas apenas no `getServerSideProps` da build cliente.
 </process>
