@@ -74,7 +74,7 @@ const Hero = ({ ctaLink }) => {
                 schedule
               </span>
               <span className="text-sm font-medium">
-                Entrega em 15 dias úteis
+                Entrega em até 15 dias úteis
               </span>
             </div>
             <div className="flex items-center gap-2 text-on-surface-variant">

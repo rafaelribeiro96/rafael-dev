@@ -34,7 +34,7 @@ const Portfolio = ({ ctaLink, items = [] }) => {
 
   return (
     <section
-      className="py-24 px-margin-page bg-surface-slate relative border-y border-white/5"
+      className="py-24 px-margin-page bg-surface-slate relative border-y border-white/5 overflow-hidden"
       id="portfolio"
     >
       <div className="max-w-container-max mx-auto">

@@ -9,7 +9,7 @@ const Workflow = () => {
             Processo Simples
           </span>
           <h2 className="font-headline-lg text-3xl sm:text-headline-lg text-on-surface font-bold mb-4">
-            Do Zero ao Ar em 15 Dias Úteis
+            Do Zero ao Ar em até 15 Dias Úteis
           </h2>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
             Um processo ágil e transparente — você acompanha cada etapa e aprova

@@ -5,13 +5,13 @@ const FloatingButton = () => {
     'https://wa.me/5531991869943?text=Ol%C3%A1%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto%20com%20a%20Rafael%20Tech%21';
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
       <a
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
         title="Falar no WhatsApp"
-        className="w-16 h-16 rounded-full bg-[#25D366] flex items-center justify-center text-white shadow-[0_4px_20px_rgba(37,211,102,0.4)] hover:shadow-[0_4px_30px_rgba(37,211,102,0.6)] hover:scale-105 transition-all duration-300 relative group animate-bounce"
+        className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#25D366] flex items-center justify-center text-white shadow-[0_4px_20px_rgba(37,211,102,0.4)] hover:shadow-[0_4px_30px_rgba(37,211,102,0.6)] hover:scale-105 transition-all duration-300 relative group animate-bounce"
         style={{ animationDuration: '3s' }}
       >
         {/* Pulse effect rings */}
@@ -19,7 +19,7 @@ const FloatingButton = () => {
 
         {/* WhatsApp SVG Icon */}
         <svg
-          className="w-8 h-8 fill-current"
+          className="w-7 h-7 sm:w-8 sm:h-8 fill-current"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >

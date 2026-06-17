@@ -1,5 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import logoRafael1 from '../../assets/images/logoRafael1.svg';
 
 const Footer = () => {
   const ctaLink =
@@ -10,16 +12,12 @@ const Footer = () => {
       <div className="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-left">
         {/* Brand & Socials Section */}
         <div className="col-span-1 md:col-span-2 space-y-6">
-          <Link href="/" className="inline-flex items-center gap-2 group">
-            <span
-              className="material-symbols-outlined text-primary text-3xl transition-transform duration-300 group-hover:rotate-12"
-              style={{ fontVariationSettings: "'FILL' 1" }}
-            >
-              hexagon
-            </span>
-            <span className="text-headline-md font-headline-md font-bold text-on-surface">
-              Rafael Tech
-            </span>
+          <Link href="/" className="inline-flex items-center group h-12">
+            <Image
+              src={logoRafael1}
+              alt="Rafael Tech"
+              className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+            />
           </Link>
           <p className="font-body-md text-text-muted max-w-sm text-sm">
             Engenharia web de alta performance para negócios que não podem

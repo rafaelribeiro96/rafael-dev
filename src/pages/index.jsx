@@ -31,7 +31,7 @@ const Main = ({ pricingTiers, portfolioItems }) => {
     'https://wa.me/5531991869943?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista%20da%20Rafael%20Tech%20para%20alavancar%20minha%20presen%C3%A7a%20digital.';
 
   return (
-    <div className="bg-surface-deep text-on-surface font-body-lg min-h-screen">
+    <div className="bg-surface-deep text-on-surface font-body-lg min-h-screen overflow-x-hidden">
       <Head>
         <title>
           Rafael Tech | Sites Profissionais de Alta Performance para Empresas
@@ -45,7 +45,7 @@ const Main = ({ pricingTiers, portfolioItems }) => {
 
       <Header />
 
-      <main className="pt-20">
+      <main className="pt-20 overflow-x-hidden">
         <Hero ctaLink={ctaLink} />
         <DigitalEcosystem />
         <ComparisonMatrix />
