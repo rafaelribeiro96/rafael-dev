@@ -75,7 +75,10 @@ export default class MyDocument extends Document {
           <meta property="og:image" content={ogImage} />
           <meta property="og:image:width" content="1200" />
           <meta property="og:image:height" content="630" />
-          <meta property="og:image:alt" content="Rafael Tech — Sites Profissionais de Alta Performance" />
+          <meta
+            property="og:image:alt"
+            content="Rafael Tech — Sites Profissionais de Alta Performance"
+          />
           <meta property="og:locale" content="pt_BR" />
 
           {/* Twitter / X Card */}
@@ -88,7 +91,10 @@ export default class MyDocument extends Document {
           {/* Author & Copyright */}
           <meta name="author" content="Rafael Tech" />
           <meta name="copyright" content="Rafael Tech" />
-          <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+          <meta
+            name="robots"
+            content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+          />
 
           {/* Charset & Viewport (redundant with Next but safe to keep) */}
           <meta charSet="UTF-8" />

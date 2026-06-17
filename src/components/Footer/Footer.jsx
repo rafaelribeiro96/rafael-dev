@@ -111,7 +111,9 @@ const Footer = () => {
             Chamar no WhatsApp
           </a>
           <p className="font-body-md text-text-muted text-xs text-center flex items-center justify-center gap-1 mt-1">
-            <span className="material-symbols-outlined text-[14px]">location_on</span>
+            <span className="material-symbols-outlined text-[14px]">
+              location_on
+            </span>
             Belo Horizonte, MG — Brasil
           </p>
         </div>
