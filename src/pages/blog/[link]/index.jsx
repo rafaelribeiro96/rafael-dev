@@ -33,7 +33,7 @@ const PostBlog = ({ post }) => {
   return (
     <div className="bg-surface-deep text-on-surface min-h-screen flex flex-col justify-between">
       <Head>
-        <title>Rafael Tech - {post.title}</title>
+        <title>{`Rafael Tech - ${post.title}`}</title>
         <meta name="description" content={post.description} />
       </Head>
 

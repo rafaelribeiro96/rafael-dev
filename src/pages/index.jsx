@@ -9,48 +9,43 @@ import Footer from 'src/components/Footer/Footer';
 const projectsData = [
   {
     id: 1,
-    title: 'Clínica Odontológica',
+    title: 'Glayde Ribeiro',
     category: 'Clínicas',
     image:
       'https://lh3.googleusercontent.com/aida-public/AB6AXuA-iEpo0UQhz37g5XL4MLHc0zXqJ3sa1M3LvEMHSrYdOiq1N_R_kWQwdJ6HSi04QY5HOlupKJljgPnLwTtdWNboW5Pn_DKHmnhqWespAA-1jjOWmtA8ayRtuQXYZZH-Wl8-NK6ehhYRYayUN7Sc8HBHi475OdP318E6F0pdlWBtyG38GG8w0BaIP0oo-JANEdGk2bkeuHPdAU2yY4Iuiq7Grc9d8k9HcYXlB8h9nL5K9XuHe7R3wHKVMD3br9SGMQVDLf1Eh6VLlKPh',
     description:
-      'Design moderno e clean focado em agendamentos rápidos e credibilidade profissional.'
+      'Website institucional premium e portfólio digital desenvolvido para Glayde Ribeiro, combinando estética de luxo, tipografia refinada e performance impecável.',
+    link: 'https://www.glayderibeiro.com.br/'
   },
   {
     id: 2,
-    title: 'Confeitaria Gourmet',
-    category: 'Gastronomia',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuA-iEpo0UQhz37g5XL4MLHc0zXqJ3sa1M3LvEMHSrYdOiq1N_R_kWQwdJ6HSi04QY5HOlupKJljgPnLwTtdWNboW5Pn_DKHmnhqWespAA-1jjOWmtA8ayRtuQXYZZH-Wl8-NK6ehhYRYayUN7Sc8HBHi475OdP318E6F0pdlWBtyG38GG8w0BaIP0oo-JANEdGk2bkeuHPdAU2yY4Iuiq7Grc9d8k9HcYXlB8h9nL5K9XuHe7R3wHKVMD3br9SGMQVDLf1Eh6VLlKPh',
-    description:
-      'Layout visualmente rico, otimizado para expor produtos e integrar pedidos online.'
-  },
-  {
-    id: 3,
-    title: 'Escritório de Advocacia',
+    title: 'JSA Advogados',
     category: 'Advocacia',
     image:
       'https://lh3.googleusercontent.com/aida-public/AB6AXuA-iEpo0UQhz37g5XL4MLHc0zXqJ3sa1M3LvEMHSrYdOiq1N_R_kWQwdJ6HSi04QY5HOlupKJljgPnLwTtdWNboW5Pn_DKHmnhqWespAA-1jjOWmtA8ayRtuQXYZZH-Wl8-NK6ehhYRYayUN7Sc8HBHi475OdP318E6F0pdlWBtyG38GG8w0BaIP0oo-JANEdGk2bkeuHPdAU2yY4Iuiq7Grc9d8k9HcYXlB8h9nL5K9XuHe7R3wHKVMD3br9SGMQVDLf1Eh6VLlKPh',
     description:
-      'Arquitetura sóbria e elegante para passar confiança jurídica e captar leads qualificados.'
+      'Website institucional de elite para o escritório JSA Advogados. Arquitetura jurídica sóbria, carregamento Edge-First e design minimalista focado em captação.',
+    link: 'https://jsaadvogados.com.br/'
   },
   {
-    id: 4,
-    title: 'E-commerce Premium',
+    id: 3,
+    title: 'Barbearia Antunes',
     category: 'Serviços',
     image:
       'https://lh3.googleusercontent.com/aida-public/AB6AXuDF73mJ2QIs-VPcu1W0cNTjS97VtCZDCEVYZJQQ9-KEj9Cpu_I3iYheXPOT0NImWkp80WAtEBf3sFLGYf9hRcyttyG0MrA5GXXs7NqM45NKEpDkH5l6EyMainUlIgpnGfrZuFRKvXkRD6jwgjbLjjGuFOSryI4OKd-0KsRsyzo_aSyjHG1qpWyFEUkimX_Wtf9mMJTe8h_RM-qY0VWNjsXji24gcUbODaHkFi9UZ-CnTcV22mUOHYUqAB3jNgbcIkQ0NkaUlI095V4C',
     description:
-      'Loja virtual de alta performance com carregamento instantâneo de produtos.'
+      'Plataforma web moderna para a Barbearia Antunes. Agendamento integrado em tempo real, catálogo de serviços e painel administrativo rápido (em desenvolvimento).',
+    link: '#'
   },
   {
-    id: 5,
-    title: 'Landing Page Corporativa',
-    category: 'Serviços',
+    id: 4,
+    title: 'Confeitaria Gourmet',
+    category: 'Gastronomia',
     image:
       'https://lh3.googleusercontent.com/aida-public/AB6AXuAfd4npzGshsHqHWBdOJs4CCSr6tUVh6JK_5Hpbr0eNmezx-8ST7dOJKWprDGM5BiEEQBxjELFfEf5I5hJhYkKMJJu4WQqb-9AGbYTKex83e2LLgtGyO61zJ6-V2m2adX_352nblTNK8LGdqMGq_yy9WEkaHgDCkMU_su2pIYwPOP9BRcBem0c39mVqIHNoKb-LEAIiy5fKG18M6mrunmlK69bKDYyotZlhYw07dUMkCldLZg5ko92c2sRmKIXUEp2l-lQJWbZ29SQS',
     description:
-      'Página única de conversão focada em leads B2B de alta qualidade e agendamentos.'
+      'Layout visualmente rico, otimizado para expor produtos e integrar pedidos online de confeitarias e restaurantes.',
+    link: '#'
   }
 ];
 
@@ -79,7 +74,7 @@ const Main = () => {
   ];
 
   const ctaLink =
-    'https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista%20da%20Rafael%20Tech%20para%20alavancar%20minha%20presen%C3%A7a%20digital.';
+    'https://wa.me/5531991869943?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista%20da%20Rafael%20Tech%20para%20alavancar%20minha%20presen%C3%A7a%20digital.';
 
   return (
     <div className="bg-surface-deep text-on-surface font-body-lg min-h-screen">
@@ -487,12 +482,18 @@ const Main = () => {
                     </p>
                     <div className="flex flex-col gap-3 mt-auto w-full">
                       <a
-                        href={ctaLink}
+                        href={
+                          project.link && project.link !== '#'
+                            ? project.link
+                            : ctaLink
+                        }
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-full text-center font-label-md text-sm bg-primary text-on-primary py-3.5 rounded-xl shadow-[0_0_15px_rgba(76,215,246,0.3)] hover:shadow-[0_0_25px_rgba(76,215,246,0.5)] transition-all font-semibold"
                       >
-                        Visitar Modelo
+                        {project.link && project.link !== '#'
+                          ? 'Visitar Site'
+                          : 'Visitar Modelo'}
                       </a>
                       <a
                         href={ctaLink}

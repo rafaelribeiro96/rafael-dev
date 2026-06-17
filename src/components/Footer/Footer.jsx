@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Footer = () => {
   const ctaLink =
-    'https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista%20da%20Rafael%20Tech%20para%20alavancar%20minha%20presen%C3%A7a%20digital.';
+    'https://wa.me/5531991869943?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista%20da%20Rafael%20Tech%20para%20alavancar%20minha%20presen%C3%A7a%20digital.';
 
   return (
     <footer className="bg-[#050810] border-t border-white/10 w-full py-16 px-margin-page">

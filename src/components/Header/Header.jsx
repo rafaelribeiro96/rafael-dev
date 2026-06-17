@@ -21,7 +21,7 @@ const Header = () => {
   };
 
   const ctaLink =
-    'https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista%20da%20Rafael%20Tech%20para%20alavancar%20minha%20presen%C3%A7a%20digital.';
+    'https://wa.me/5531991869943?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista%20da%20Rafael%20Tech%20para%20alavancar%20minha%20presen%C3%A7a%20digital.';
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-surface-deep/90 backdrop-blur-xl border-b border-white/10 shadow-[0_0_20px_rgba(76,215,246,0.1)] transition-all duration-300">
