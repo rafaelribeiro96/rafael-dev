@@ -1,5 +1,4 @@
 const nextConfig = {
-  outputFileTracing: false,
   images: {
     domains: [
       'res.cloudinary.com',
