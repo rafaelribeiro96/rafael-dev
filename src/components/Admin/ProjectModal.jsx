@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect, useRef } from 'react';
 import { T, Field, Input, Textarea, SelectInput, slugify } from './ui';
+import { optimizeImage, sanitizeFilename } from 'src/lib/imageOptimizer';
 
 export const CATEGORIES = [
   'Gastronomia',
@@ -29,6 +30,50 @@ export default function ProjectModal({ project, onSave, onClose }) {
   );
   const [errors, setErrors] = useState({});
   const [imgError, setImgError] = useState(false);
+  const fileInputRef = useRef(null);
+  const [uploadStatus, setUploadStatus] = useState('idle'); // 'idle' | 'processing' | 'uploading' | 'success' | 'error'
+  const [uploadError, setUploadError] = useState('');
+
+  const handleFileChange = async (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setUploadStatus('processing');
+    setUploadError('');
+    try {
+      // 1. Optimize image client-side (limits dimensions to 1200px and compress to webp)
+      const optimized = await optimizeImage(file, 1200, 1200, 0.82);
+
+      setUploadStatus('uploading');
+
+      // 2. Clean filename to prevent spaces/accents
+      const cleanName = sanitizeFilename(file.name, optimized.format);
+
+      // 3. Post base64 fileData to serverless upload API
+      const res = await fetch('/api/admin/upload', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          filename: cleanName,
+          fileData: optimized.base64
+        })
+      });
+
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error || 'Erro ao salvar o arquivo no servidor.');
+      }
+
+      const data = await res.json();
+      upd('image', data.url);
+      setImgError(false);
+      setUploadStatus('success');
+    } catch (err) {
+      console.error(err);
+      setUploadStatus('error');
+      setUploadError(err.message || 'Falha no processamento.');
+    }
+  };
 
   const upd = (key, val) => setForm((f) => ({ ...f, [key]: val }));
 
@@ -176,7 +221,7 @@ export default function ProjectModal({ project, onSave, onClose }) {
           {/* Image preview / input */}
           <Field
             label="Imagem de Capa"
-            hint="(URL externa ou /images/portfolio/...)"
+            hint="(URL externa, caminho local ou upload do dispositivo)"
             style={{ marginBottom: '16px' }}
           >
             <div
@@ -210,6 +255,7 @@ export default function ProjectModal({ project, onSave, onClose }) {
                     onClick={() => {
                       upd('image', '');
                       setImgError(false);
+                      setUploadStatus('idle');
                     }}
                     style={{
                       position: 'absolute',
@@ -249,15 +295,87 @@ export default function ProjectModal({ project, onSave, onClose }) {
                   <span style={{ fontSize: '12px' }}>
                     {imgError
                       ? 'URL inválida — verifique o endereço'
-                      : 'Cole a URL da imagem abaixo'}
+                      : 'Faça upload de uma imagem ou cole a URL abaixo'}
                   </span>
                 </div>
               )}
+
+              <div
+                style={{
+                  display: 'flex',
+                  gap: '8px',
+                  alignItems: 'center',
+                  marginBottom: '10px'
+                }}
+              >
+                <input
+                  type="file"
+                  ref={fileInputRef}
+                  style={{ display: 'none' }}
+                  accept="image/*"
+                  onChange={handleFileChange}
+                />
+                <button
+                  type="button"
+                  onClick={() => fileInputRef.current?.click()}
+                  disabled={
+                    uploadStatus === 'processing' ||
+                    uploadStatus === 'uploading'
+                  }
+                  style={{
+                    flex: 1,
+                    padding: '8px 12px',
+                    borderRadius: '8px',
+                    background: 'rgba(255,255,255,0.06)',
+                    border: `1px solid ${T.border}`,
+                    color: T.textSub,
+                    cursor: 'pointer',
+                    fontSize: '12.5px',
+                    fontFamily: 'inherit',
+                    transition: 'all 0.15s'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = 'rgba(255,255,255,0.1)';
+                    e.currentTarget.style.color = T.text;
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = 'rgba(255,255,255,0.06)';
+                    e.currentTarget.style.color = T.textSub;
+                  }}
+                >
+                  💻 Enviar do Dispositivo
+                </button>
+              </div>
+
+              {uploadStatus !== 'idle' && (
+                <div
+                  style={{
+                    fontSize: '11.5px',
+                    marginBottom: '10px',
+                    color:
+                      uploadStatus === 'error'
+                        ? T.red
+                        : uploadStatus === 'success'
+                        ? T.green
+                        : T.primary
+                  }}
+                >
+                  {uploadStatus === 'processing' &&
+                    '⚙️ Otimizando e tratando imagem...'}
+                  {uploadStatus === 'uploading' &&
+                    '⚡ Enviando para o servidor...'}
+                  {uploadStatus === 'success' &&
+                    '✓ Upload realizado com sucesso!'}
+                  {uploadStatus === 'error' && `✗ Erro: ${uploadError}`}
+                </div>
+              )}
+
               <Input
                 value={form.image || ''}
                 onChange={(e) => {
                   upd('image', e.target.value);
                   setImgError(false);
+                  setUploadStatus('idle');
                 }}
                 placeholder="https://... ou /images/portfolio/projeto.webp"
               />

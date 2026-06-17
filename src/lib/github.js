@@ -118,6 +118,46 @@ export async function writeFile(filePath, content, message) {
 }
 
 /**
+  Writes a binary (base64 encoded) file directly to GitHub
+*/
+export async function writeBinaryFile(filePath, base64Content, message) {
+  const url = `https://api.github.com/repos/${GITHUB_REPO}/contents/${filePath}`;
+
+  // 1. Get SHA if exists using a separate endpoint or request (e.g. GET contents)
+  let sha = null;
+  const checkUrl = `https://api.github.com/repos/${GITHUB_REPO}/contents/${filePath}?ref=${GITHUB_BRANCH}`;
+  const checkRes = await fetch(checkUrl, { headers });
+  if (checkRes.ok) {
+    const checkData = await checkRes.json();
+    sha = checkData.sha;
+  }
+
+  // 2. Prepare payload
+  const payload = {
+    message,
+    content: base64Content,
+    branch: GITHUB_BRANCH
+  };
+  if (sha) payload.sha = sha;
+
+  // 3. Make PUT request
+  const res = await fetch(url, {
+    method: 'PUT',
+    headers,
+    body: JSON.stringify(payload)
+  });
+
+  if (!res.ok) {
+    const errorText = await res.text();
+    throw new Error(
+      `GitHub API Error writing binary file ${filePath}: ${res.status} - ${errorText}`
+    );
+  }
+
+  return res.json();
+}
+
+/**
   Deletes a file from GitHub
 */
 export async function deleteFile(filePath, message) {
