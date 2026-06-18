@@ -12,7 +12,7 @@ export default function Banner() {
         </h1>
         <ButtonLayout
           textoBotao="Entre em contato"
-          linkBotao="https://www.instagram.com/rafaelribeirotech/"
+          linkBotao="https://www.instagram.com/softlunadigital/"
         />
       </div>
     </div>

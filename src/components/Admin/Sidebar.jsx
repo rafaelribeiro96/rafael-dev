@@ -127,7 +127,7 @@ export default function Sidebar({ active, onSelect, pubStatus, onPublish }) {
                 letterSpacing: '-0.01em'
               }}
             >
-              Rafael Tech
+              SoftLuna
             </div>
             <div
               style={{ fontSize: '11px', color: T.textMuted, marginTop: '1px' }}

@@ -15,25 +15,25 @@ const MOCK_INSTA_FEED = [
     id: 'mock_insta1',
     media_type: 'IMAGE',
     media_url: mockupSite,
-    permalink: 'https://www.instagram.com/rafaelribeirotech/'
+    permalink: 'https://www.instagram.com/softlunadigital/'
   },
   {
     id: 'mock_insta2',
     media_type: 'IMAGE',
     media_url: portfolioImg,
-    permalink: 'https://www.instagram.com/rafaelribeirotech/'
+    permalink: 'https://www.instagram.com/softlunadigital/'
   },
   {
     id: 'mock_insta3',
     media_type: 'IMAGE',
     media_url: featuredContent,
-    permalink: 'https://www.instagram.com/rafaelribeirotech/'
+    permalink: 'https://www.instagram.com/softlunadigital/'
   },
   {
     id: 'mock_insta4',
     media_type: 'IMAGE',
     media_url: heroContent,
-    permalink: 'https://www.instagram.com/rafaelribeirotech/'
+    permalink: 'https://www.instagram.com/softlunadigital/'
   }
 ];
 
@@ -88,7 +88,7 @@ export function InstaFeed() {
             <Link
               key={item.id}
               href={
-                item.permalink || 'https://www.instagram.com/rafaelribeirotech/'
+                item.permalink || 'https://www.instagram.com/softlunadigital/'
               }
               target="_blank"
               className="block mx-4 w-[280px] aspect-square rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 hover:shadow-[0_0_20px_rgba(76,215,246,0.2)] transition-all duration-300 relative group"

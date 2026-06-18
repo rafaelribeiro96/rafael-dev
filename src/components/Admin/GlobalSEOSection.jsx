@@ -86,7 +86,7 @@ export default function GlobalSEOSection({ initialData }) {
           <Input
             value={data.seo?.metaTitle || ''}
             onChange={(e) => s('metaTitle')(e.target.value)}
-            placeholder="Rafael Tech | Sites Profissionais..."
+            placeholder="SoftLuna | Sites Profissionais..."
           />
           <div
             style={{
@@ -109,7 +109,7 @@ export default function GlobalSEOSection({ initialData }) {
           <Textarea
             value={data.seo?.metaDescription || ''}
             onChange={(e) => s('metaDescription')(e.target.value)}
-            placeholder="Rafael Tech cria sites profissionais..."
+            placeholder="SoftLuna cria sites profissionais..."
             maxLength={160}
           />
         </Field>

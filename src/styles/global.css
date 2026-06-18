@@ -26,51 +26,169 @@ html {
 }
 
 body {
-  background-color: #0b0f19;
-  color: #dfe2f1;
+  background-color: #ffffff;
+  color: #1e1b17;
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
   min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Custom premium classes from Stitch designs */
+::selection {
+  background: #c5a065;
+  color: #503704;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #c5a065;
+  outline-offset: 3px;
+}
+
+/* SoftLuna public site primitives */
+.rt-button {
+  align-items: center;
+  border-radius: 8px;
+  display: inline-flex;
+  font-family: 'Geist', 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  justify-content: center;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  min-height: 44px;
+  padding-inline: 24px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.rt-button:hover {
+  transform: translateY(-1px);
+}
+
+.rt-button-primary {
+  background: #775925;
+  border: 1px solid #775925;
+  color: #ffffff;
+}
+
+.rt-button-primary:hover {
+  background: #b38f54;
+  border-color: #b38f54;
+  color: #ffffff;
+}
+
+.rt-button-secondary {
+  background: transparent;
+  border: 1px solid #807668;
+  color: #1e1b17;
+}
+
+.rt-button-secondary:hover {
+  background: #fbf2eb;
+  border-color: #775925;
+  color: #775925;
+}
+
+.rt-button-secondary-inverse {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  color: #ffffff;
+}
+
+.rt-button-secondary-inverse:hover {
+  border-color: #c5a065;
+  color: #e8c082;
+}
+
+.rt-button-lg {
+  font-size: 14px;
+  min-height: 52px;
+  padding-inline: 40px;
+}
+
+.rt-button-full {
+  width: 100%;
+}
+
 .glass-panel {
-  background-color: rgba(15, 23, 42, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.78);
+  border: 1px solid #e5e7eb;
+  backdrop-filter: blur(10px);
 }
 
 .glass-card {
-  background: rgba(15, 23, 42, 0.6);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(6, 182, 212, 0.2);
-  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(229, 231, 235, 0.8);
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .glass-card:hover {
-  border-color: #4cd7f6;
+  border-color: #c5a065;
   transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(6, 182, 212, 0.15);
 }
 
 .text-gradient {
-  background: linear-gradient(to right, #dfe2f1, #4cd7f6);
+  background: linear-gradient(135deg, #775925 0%, #c5a065 55%, #e8c082 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-glow {
-  text-shadow: 0 0 15px rgba(76, 215, 246, 0.4);
+  text-shadow: none;
 }
 
 .bg-grid-pattern {
   background-image: linear-gradient(
       to right,
-      rgba(76, 215, 246, 0.04) 1px,
+      rgba(30, 27, 23, 0.04) 1px,
       transparent 1px
     ),
-    linear-gradient(to bottom, rgba(76, 215, 246, 0.04) 1px, transparent 1px);
+    linear-gradient(to bottom, rgba(30, 27, 23, 0.04) 1px, transparent 1px);
   background-size: 40px 40px;
+}
+
+.portfolio-marquee {
+  animation: portfolio-marquee 34s linear infinite;
+}
+
+.portfolio-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes portfolio-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 12px));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-marquee {
+    animation: none;
+    overflow-x: auto;
+  }
 }
 
 /* Scrollbar customization */
@@ -79,16 +197,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0b0f19;
+  background: #ffffff;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #d1c5b5;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #4cd7f6;
+  background: #c5a065;
 }
 
 /* Lenis smooth scroll styling */

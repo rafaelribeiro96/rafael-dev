@@ -1,238 +1,133 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 
-/**
- * Pricing component — Git-CMS driven.
- * Data comes from content/pricing/*.json via getStaticProps in index.jsx.
- * To add/edit plans, update the JSON files in /content/pricing.
- */
-const PricingCard = ({ tier, ctaLink, isSolo }) => {
+const formatCurrency = (value) =>
+  Number(value || 0).toLocaleString('pt-BR', {
+    style: 'currency',
+    currency: 'BRL',
+    minimumFractionDigits: 2
+  });
+
+const fallbackCta = (id) => {
+  if (id === 'landing-page') return 'Quero uma landing page';
+  if (id === 'site-institucional') return 'Quero um site institucional';
+  if (id === 'projetos-personalizados') return 'Quero um projeto personalizado';
+  return 'Iniciar projeto';
+};
+
+const PricingCard = ({ tier, ctaLink }) => {
   const {
     id,
     title,
+    description,
     setupPrice,
     maintenancePrice,
     features = [],
     badge,
     highlighted,
     maintenanceNote,
-    ctaText: customCtaText
+    ctaText
   } = tier;
 
-  const ctaText = (
-    customCtaText ||
-    (id === 'landing-page'
-      ? 'QUERO UMA LANDING PAGE'
-      : id === 'site-institucional'
-      ? 'QUERO UM SITE INSTITUCIONAL'
-      : id === 'projetos-personalizados'
-      ? 'QUERO UM PROJETO PERSONALIZADO'
-      : 'QUERO MEU SITE')
-  ).toUpperCase();
-
-  const formattedSetupPrice = setupPrice
-    ? setupPrice.toLocaleString('pt-BR', {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2
-      })
-    : '0,00';
-
-  const formattedMaintenancePrice = maintenancePrice
-    ? maintenancePrice.toLocaleString('pt-BR', {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2
-      })
-    : '0,00';
-
   return (
-    <div
-      className={`glass-panel rounded-3xl p-6 sm:p-8 md:p-10 border transition-all duration-300 relative flex flex-col justify-between ${
+    <article
+      className={`relative flex h-full flex-col rounded-2xl border bg-white p-8 transition-all duration-200 md:p-10 ${
         highlighted
-          ? 'border-primary/50 shadow-[0_0_40px_rgba(6,182,212,0.15)] bg-gradient-to-b from-surface-slate to-surface-deep'
-          : 'border-white/10 hover:border-primary/30'
-      } ${isSolo ? 'md:col-span-2' : ''}`}
-      data-aos="fade-up"
+          ? 'z-10 border-2 border-primary shadow-[0_24px_60px_rgba(30,27,23,0.12)] lg:scale-[1.04]'
+          : 'border-border-thin hover:border-primary/40 hover:shadow-[0_18px_44px_rgba(30,27,23,0.08)]'
+      }`}
     >
       {badge && (
-        <div className="absolute -top-4 right-8">
-          <span className="bg-gradient-to-r from-primary to-primary-container text-on-primary font-label-md text-xs px-4 py-1.5 rounded-full uppercase tracking-wider font-bold shadow-lg">
-            {badge}
-          </span>
-        </div>
+        <span
+          className={`font-label-md text-[10px] uppercase tracking-[0.08em] ${
+            highlighted
+              ? 'absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1 text-white'
+              : 'mb-5 inline-flex w-fit rounded-lg bg-surface-container-low px-3 py-1 text-primary'
+          }`}
+        >
+          {badge}
+        </span>
       )}
 
-      <div
-        className={
-          isSolo
-            ? 'grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-col gap-6 w-full items-stretch'
-            : 'flex flex-col h-full justify-between'
-        }
-      >
-        {/* Left side (pricing info) */}
-        <div className="w-full flex flex-col justify-between">
-          <div className="mb-6">
-            <h3 className="font-headline-md text-2xl text-on-surface mb-3 font-bold">
-              {title}
-            </h3>
-            <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1 mb-2">
-              <span className="font-body-md text-sm text-text-muted whitespace-nowrap">
-                A partir de
-              </span>
-              <span className="font-headline-xl text-4xl text-primary font-bold whitespace-nowrap">
-                R$ {formattedSetupPrice}
-              </span>
-            </div>
-            <p className="font-label-md text-secondary text-xs font-semibold leading-relaxed">
-              + R$ {formattedMaintenancePrice}/mês (manutenção e hospedagem
-              mensal)
-            </p>
-          </div>
-
-          {/* CTA for horizontal layout on md (solo) */}
-          <div
-            className={
-              isSolo ? 'hidden md:block lg:hidden mt-auto pt-4' : 'hidden'
-            }
-          >
-            <a
-              href={ctaLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`w-full text-center font-label-md text-sm py-4 rounded-xl font-bold inline-block uppercase tracking-wider ${
-                highlighted
-                  ? 'bg-primary text-on-primary shadow-[0_0_20px_rgba(76,215,246,0.3)] hover:shadow-[0_0_30px_rgba(76,215,246,0.5)]'
-                  : 'bg-transparent border-2 border-primary text-primary hover:bg-primary/10'
-              }`}
-            >
-              {ctaText}
-            </a>
-          </div>
-        </div>
-
-        {/* Right side (features) */}
-        <div className="w-full flex flex-col justify-between">
-          <div className="flex-grow">
-            <ul className="space-y-4 mb-6">
-              {features.map((feature, i) => (
-                <li key={i} className="flex items-center gap-3">
-                  <span className="material-symbols-outlined text-primary text-sm">
-                    check_circle
-                  </span>
-                  <span className="font-body-md text-sm text-on-surface-variant">
-                    {feature}
-                  </span>
-                </li>
-              ))}
-            </ul>
-
-            {maintenanceNote && (
-              <div className="bg-surface-deep/50 rounded-xl p-4 mb-6 border border-white/5">
-                <p className="font-label-md text-xs text-text-muted flex items-start gap-2">
-                  <span className="material-symbols-outlined text-[16px] shrink-0 mt-0.5">
-                    info
-                  </span>
-                  <span>
-                    <strong>Nota de Manutenção:</strong> {maintenanceNote}
-                  </span>
-                </p>
-              </div>
-            )}
-          </div>
-
-          {/* Standard CTA */}
-          <div
-            className={isSolo ? 'block md:hidden lg:block w-full' : 'w-full'}
-          >
-            <a
-              href={ctaLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`w-full text-center font-label-md text-sm py-4 rounded-xl font-bold inline-block uppercase tracking-wider ${
-                highlighted
-                  ? 'bg-primary text-on-primary shadow-[0_0_20px_rgba(76,215,246,0.3)] hover:shadow-[0_0_30px_rgba(76,215,246,0.5)]'
-                  : 'bg-transparent border-2 border-primary text-primary hover:bg-primary/10'
-              }`}
-            >
-              {ctaText}
-            </a>
-          </div>
-        </div>
+      <div>
+        <h3 className="font-headline-md text-[22px] leading-8 text-on-surface">
+          {title}
+        </h3>
+        <p className="mt-3 min-h-[72px] font-body-md text-[14px] leading-6 text-secondary">
+          {description}
+        </p>
       </div>
-    </div>
+
+      <div className="mt-8">
+        <p className="font-body-md text-[13px] uppercase tracking-[0.05em] text-text-secondary">
+          A partir de
+        </p>
+        <p className="mt-2 font-headline-md text-[34px] font-bold leading-[42px] text-on-surface">
+          {formatCurrency(setupPrice)}
+        </p>
+        <p className="mt-2 font-body-md text-[13px] leading-5 text-secondary">
+          + {formatCurrency(maintenancePrice)}/mes para hospedagem, manutencao e
+          suporte.
+        </p>
+      </div>
+
+      <ul className="mt-6 flex-grow space-y-3">
+        {features.map((feature) => (
+          <li
+            key={feature}
+            className="flex items-start gap-3 font-body-md text-[14px] leading-6 text-on-surface-variant"
+          >
+            <span className="material-symbols-outlined mt-0.5 text-[18px] text-primary">
+              done
+            </span>
+            <span>{feature}</span>
+          </li>
+        ))}
+      </ul>
+
+      {maintenanceNote && (
+        <p className="mt-6 rounded-xl bg-bg-secondary p-4 font-body-md text-[12px] leading-5 text-secondary">
+          {maintenanceNote}
+        </p>
+      )}
+
+      <a
+        href={ctaLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`rt-button rt-button-full mt-8 ${
+          highlighted ? 'rt-button-primary' : 'rt-button-secondary'
+        }`}
+      >
+        {ctaText || fallbackCta(id)}
+      </a>
+    </article>
   );
 };
 
 const Pricing = ({ ctaLink, tiers = [] }) => {
-  // Only show active tiers
   const activeTiers = tiers.filter((tier) => tier.active !== false);
-  const count = activeTiers.length;
-
-  // Responsive grids based on count
-  let gridClasses =
-    'grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto items-stretch';
-  if (count === 3) {
-    gridClasses =
-      'grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto items-stretch';
-  } else if (count === 4) {
-    gridClasses =
-      'grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto items-stretch';
-  } else if (count === 1) {
-    gridClasses = 'grid grid-cols-1 gap-8 max-w-md mx-auto items-stretch';
-  }
 
   return (
-    <section
-      className="py-24 px-margin-page bg-surface-slate relative border-t border-white/5"
-      id="planos"
-    >
-      <div className="max-w-container-max mx-auto text-left">
-        <div className="text-center mb-16" data-aos="fade-up">
-          <span className="inline-block text-xs font-bold tracking-widest uppercase text-primary bg-primary/10 px-3 py-1 rounded-full mb-4">
+    <section className="bg-bg-secondary px-margin-page py-24" id="planos">
+      <div className="mx-auto max-w-container-max">
+        <div className="mx-auto mb-16 max-w-3xl text-center">
+          <h2 className="font-headline-lg text-[34px] leading-[44px] text-on-surface sm:text-headline-lg">
             Investimento
-          </span>
-          <h2 className="font-headline-lg text-3xl sm:text-headline-lg text-on-surface font-bold mb-4">
-            Planos e Preços
           </h2>
-          <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
-            Soluções completas com tecnologia de ponta. Preço fechado — sem
-            surpresas.
+          <p className="mx-auto mt-4 max-w-2xl font-body-md text-[17px] leading-[27px] text-secondary">
+            Precos transparentes para projetos de alta demanda.
+          </p>
+          <p className="mx-auto mt-3 max-w-2xl font-body-md text-[15px] leading-6 text-secondary">
+            Escolha o ponto de partida. O painel admin continua controlando
+            precos, features, destaque e disponibilidade dos planos.
           </p>
         </div>
 
-        <div className={gridClasses}>
-          {activeTiers.map((tier, index) => {
-            // The 3rd card is solo if we have exactly 3 cards
-            const isSolo = count === 3 && index === 2;
-            return (
-              <PricingCard
-                key={tier.id}
-                tier={tier}
-                ctaLink={ctaLink}
-                isSolo={isSolo}
-              />
-            );
-          })}
-        </div>
-
-        {/* Trust Elements */}
-        <div className="max-w-3xl mx-auto mt-16" data-aos="fade-up">
-          <div className="glass-panel border border-primary/30 rounded-2xl p-6 flex flex-col md:flex-row items-center gap-6 justify-center bg-gradient-to-r from-primary/5 via-transparent to-primary/5">
-            <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
-              <span className="material-symbols-outlined text-primary text-2xl">
-                verified_user
-              </span>
-            </div>
-            <div className="text-center md:text-left">
-              <h4 className="font-headline-md text-lg text-on-surface mb-1 font-bold">
-                100% Seu — Garantia de Propriedade
-              </h4>
-              <p className="font-body-md text-sm text-on-surface-variant leading-relaxed">
-                Você é o dono do site e do código-fonte. Sem contratos de
-                aprisionamento, sem letras miúdas. Segurança jurídica total para
-                sua empresa.
-              </p>
-            </div>
-          </div>
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+          {activeTiers.map((tier) => (
+            <PricingCard key={tier.id} tier={tier} ctaLink={ctaLink} />
+          ))}
         </div>
       </div>
     </section>

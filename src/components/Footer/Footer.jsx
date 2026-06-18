@@ -1,144 +1,129 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-import logoRafael1 from '../../assets/images/logoRafael1.svg';
 
 const Footer = () => {
+  const year = new Date().getFullYear();
   const ctaLink =
-    'https://wa.me/5531991869943?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista%20da%20Rafael%20Tech%20para%20alavancar%20minha%20presen%C3%A7a%20digital.';
+    'https://wa.me/5531991869943?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista%20da%20SoftLuna%20para%20alavancar%20minha%20presen%C3%A7a%20digital.';
 
   return (
-    <footer className="bg-[#050810] border-t border-white/10 w-full py-16 px-margin-page">
-      <div className="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-left">
-        {/* Brand & Socials Section */}
-        <div className="col-span-1 md:col-span-2 flex flex-col items-center md:items-start text-center md:text-left space-y-6">
+    <footer className="border-t border-border-thin bg-white px-margin-page pb-16 pt-32">
+      <div className="mx-auto mb-24 grid max-w-container-wide grid-cols-12 gap-12 lg:gap-16">
+        <div className="col-span-12 lg:col-span-6">
           <Link
             href="/"
-            className="inline-flex items-center justify-center md:justify-start group h-12"
+            className="inline-flex w-fit items-center"
+            aria-label="SoftLuna - Inicio"
           >
-            <Image
-              src={logoRafael1}
-              alt="Rafael Tech"
-              className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+            <img
+              src="/logo%20preta%20completa%20-%20fundo%20transparente.svg"
+              alt="SoftLuna Solucoes Digitais"
+              className="h-20 w-auto sm:h-24"
             />
           </Link>
-          <p className="font-body-md text-text-muted max-w-sm text-sm">
-            Engenharia web de alta performance para negócios que não podem
-            esperar. Tecnologia Edge-First para dominar o digital.
+          <p className="mt-8 max-w-sm font-body-lg text-[17px] leading-7 text-secondary">
+            Engenharia web de alta performance para marcas que desejam elevar
+            seu padrao digital com design, velocidade e autonomia.
           </p>
-          <div className="flex justify-center md:justify-start gap-4 pt-2">
+          <div className="mt-12 flex flex-wrap gap-8">
+            <a
+              href="https://www.instagram.com/softlunadigital/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-label-md text-[12px] uppercase tracking-[0.05em] text-secondary transition-colors hover:text-primary"
+            >
+              Instagram
+            </a>
             <a
               href="https://www.linkedin.com/in/rafaelfeliperibeiro/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-text-muted hover:bg-primary/20 hover:text-primary transition-all duration-300"
+              className="font-label-md text-[12px] uppercase tracking-[0.05em] text-secondary transition-colors hover:text-primary"
             >
-              <svg
-                className="w-5 h-5 fill-current"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
-              </svg>
-            </a>
-            <a
-              href="https://www.instagram.com/rafaelribeirotech/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-              className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-text-muted hover:bg-primary/20 hover:text-primary transition-all duration-300"
-            >
-              <svg
-                className="w-5 h-5 fill-current"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path>
-              </svg>
+              LinkedIn
             </a>
           </div>
         </div>
 
-        {/* Navigation Section */}
-        <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-4">
-          <h4 className="font-label-md text-on-surface text-lg mb-2">
-            Navegação
-          </h4>
-          <Link
-            href="/"
-            className="font-body-md text-text-muted hover:text-primary transition-colors text-sm"
-          >
-            Home
-          </Link>
-          <Link
-            href="/#servicos"
-            className="font-body-md text-text-muted hover:text-primary transition-colors text-sm"
-          >
-            Ecossistema
-          </Link>
-          <Link
-            href="/#portfolio"
-            className="font-body-md text-text-muted hover:text-primary transition-colors text-sm"
-          >
-            Portfólio
-          </Link>
-          <Link
-            href="/#planos"
-            className="font-body-md text-text-muted hover:text-primary transition-colors text-sm"
-          >
-            Planos
-          </Link>
-          <Link
-            href="/blog"
-            className="font-body-md text-text-muted hover:text-primary transition-colors text-sm"
-          >
-            Blog
-          </Link>
+        <div className="col-span-6 lg:col-span-3">
+          <h2 className="mb-8 font-label-md text-[10px] uppercase tracking-[0.08em] text-on-surface">
+            Company
+          </h2>
+          <ul className="space-y-4 font-body-md text-[15px] text-secondary">
+            <li>
+              <Link
+                href="/#diferenciais"
+                className="transition-colors hover:text-primary"
+              >
+                Diferencial
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/#servicos"
+                className="transition-colors hover:text-primary"
+              >
+                Servicos
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/#portfolio"
+                className="transition-colors hover:text-primary"
+              >
+                Portfolio
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/blog"
+                className="transition-colors hover:text-primary"
+              >
+                Blog
+              </Link>
+            </li>
+          </ul>
         </div>
 
-        {/* Contact & Location Section */}
-        <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-4">
-          <h4 className="font-label-md text-on-surface text-lg mb-2">
-            Contato
-          </h4>
-          <a
-            href={ctaLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 bg-primary/10 text-primary border border-primary/30 px-6 py-3 rounded-xl hover:bg-primary/20 transition-colors font-label-md w-full text-center uppercase tracking-wider font-bold"
-          >
-            <span className="material-symbols-outlined text-lg">chat</span>
-            CHAMAR NO WHATSAPP
-          </a>
-          <p className="font-body-md text-text-muted text-xs flex items-center justify-center md:justify-start gap-1 mt-1">
-            <span className="material-symbols-outlined text-[14px]">
-              location_on
-            </span>
-            Belo Horizonte, MG — Brasil
-          </p>
+        <div className="col-span-6 lg:col-span-3">
+          <h2 className="mb-8 font-label-md text-[10px] uppercase tracking-[0.08em] text-on-surface">
+            Contact
+          </h2>
+          <ul className="space-y-4 font-body-md text-[15px] text-secondary">
+            <li>
+              <a
+                href={ctaLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-primary"
+              >
+                Chamar no WhatsApp
+              </a>
+            </li>
+            <li>
+              <a
+                href="mailto:contato@softluna.com.br"
+                className="transition-colors hover:text-primary"
+              >
+                contato@softluna.com.br
+              </a>
+            </li>
+            <li>
+              <p>Belo Horizonte, MG</p>
+            </li>
+          </ul>
         </div>
       </div>
 
-      {/* Bottom Copyright bar */}
-      <div className="max-w-container-max mx-auto mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
-        <p className="font-body-md text-xs text-text-muted">
-          © {new Date().getFullYear()} Rafael Ribeiro Tech. Todos os direitos
-          reservados.
-        </p>
-        <div className="flex items-center gap-2 bg-surface-slate px-4 py-2 rounded-full border border-white/5">
-          <span className="font-body-md text-xs text-text-muted">
-            Designed by
-          </span>
-          <span className="font-label-md text-xs text-on-surface flex items-center gap-1">
-            <span
-              className="material-symbols-outlined text-primary text-xs"
-              style={{ fontVariationSettings: "'FILL' 1" }}
-            >
-              hexagon
-            </span>
-            Rafael Tech
-          </span>
+      <div className="mx-auto flex max-w-container-wide flex-col items-center justify-between gap-8 border-t border-border-thin pt-12 font-label-md text-[10px] uppercase tracking-[0.08em] text-secondary/70 md:flex-row">
+        <p>&copy; {year} SoftLuna. Todos os direitos reservados.</p>
+        <div className="flex gap-8">
+          <Link href="/blog" className="transition-colors hover:text-primary">
+            Blog
+          </Link>
+          <a href={ctaLink} className="transition-colors hover:text-primary">
+            WhatsApp
+          </a>
         </div>
       </div>
     </footer>

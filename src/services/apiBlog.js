@@ -65,7 +65,7 @@ const MOCK_POSTS = [
       <p>As ferramentas de busca baseadas em IA (Google Gemini, OpenAI Search, Perplexity) priorizam fontes de alta autoridade, com dados estruturados corretos, sites ultrarrápidos e conteúdo de valor real.</p>
       <br/>
       <h2 style="font-size: 20px; font-weight: bold; color: #4cd7f6; margin-top: 20px; margin-bottom: 10px;">Fique pronto para a nova era da busca</h2>
-      <p>Na Rafael Tech, desenvolvemos toda a arquitetura semântica e estrutural necessária (schema markup) para que os robôs de inteligência artificial compreendam perfeitamente os serviços da sua empresa e a destaquem como recomendação principal.</p>
+      <p>Na SoftLuna, desenvolvemos toda a arquitetura semântica e estrutural necessária (schema markup) para que os robôs de inteligência artificial compreendam perfeitamente os serviços da sua empresa e a destaquem como recomendação principal.</p>
     `,
     status: 'publicado'
   }

@@ -1,5 +1,5 @@
-# robots.txt — Rafael Tech
-# https://www.rafaeltech.com.br
+# robots.txt — SoftLuna
+# https://www.softluna.com.br
 
 User-agent: *
 Allow: /
@@ -14,4 +14,4 @@ User-agent: SemrushBot
 Crawl-delay: 10
 
 # Sitemap
-Sitemap: https://www.rafaeltech.com.br/sitemap.xml
+Sitemap: https://www.softluna.com.br/sitemap.xml

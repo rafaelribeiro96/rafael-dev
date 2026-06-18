@@ -1,8 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { useRouter } from 'next/router';
-import logoRafael1 from '../../assets/images/logoRafael1.svg';
+
+const navItems = [
+  { label: 'Diferencial', href: '/#diferenciais', targetId: 'diferenciais' },
+  { label: 'Portfolio', href: '/#portfolio', targetId: 'portfolio' },
+  { label: 'Planos', href: '/#planos', targetId: 'planos' },
+  { label: 'Processo', href: '/#processo', targetId: 'processo' },
+  { label: 'FAQ', href: '/#faq', targetId: 'faq' }
+];
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,160 +16,104 @@ const Header = () => {
   const router = useRouter();
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 12);
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleNavClick = (e, targetId) => {
-    // If not on homepage, navigate to homepage first, then scroll
-    if (router.pathname !== '/') {
-      return; // Let normal Link behavior navigate to /#id
-    }
+  const handleNavClick = (event, targetId) => {
+    if (router.pathname !== '/') return;
 
-    e.preventDefault();
-    const element = document.getElementById(targetId);
-    if (element) {
-      setIsMenuOpen(false);
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    event.preventDefault();
+    setIsMenuOpen(false);
+    document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
   };
 
   const ctaLink =
-    'https://wa.me/5531991869943?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista%20da%20Rafael%20Tech%20para%20alavancar%20minha%20presen%C3%A7a%20digital.';
+    'https://wa.me/5531991869943?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista%20da%20SoftLuna%20para%20alavancar%20minha%20presen%C3%A7a%20digital.';
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 border-b border-white/10 transition-all duration-300 ${
+      className={`fixed top-0 z-50 w-full border-b border-border-thin transition-all duration-300 ${
         isScrolled
-          ? 'bg-surface-deep/75 backdrop-blur-md h-16 shadow-[0_4px_30px_rgba(0,0,0,0.3)]'
-          : 'bg-surface-deep/85 backdrop-blur-md h-20'
+          ? 'bg-white/95 backdrop-blur-xl'
+          : 'bg-white/85 backdrop-blur-md'
       }`}
+      aria-label="Navegacao principal"
     >
-      <div
-        className={`flex justify-between items-center max-w-container-max mx-auto px-margin-page transition-all duration-300 ${
-          isScrolled ? 'h-16' : 'h-20'
-        }`}
-      >
-        {/* Brand Logo */}
-        <Link href="/" className="flex items-center group">
-          <Image
-            src={logoRafael1}
-            alt="Rafael Tech"
-            className={`w-auto object-contain transition-all duration-300 group-hover:scale-[1.02] ${
-              isScrolled ? 'h-8' : 'h-10'
-            }`}
+      <div className="mx-auto grid h-20 max-w-container-wide grid-cols-[1fr_auto_1fr] items-center px-margin-page">
+        <Link
+          href="/"
+          className="inline-flex w-fit items-center"
+          aria-label="SoftLuna - Inicio"
+        >
+          <img
+            src="/Logo%20Preta%20-%20fundo%20transparente.svg"
+            alt="SoftLuna"
+            className="h-9 w-auto md:h-10"
           />
         </Link>
 
-        {/* Desktop Navigation Links */}
-        <div className="hidden md:flex space-x-8">
-          <Link
-            href="/#servicos"
-            onClick={(e) => handleNavClick(e, 'servicos')}
-            className="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors"
-          >
-            Serviços
-          </Link>
-          <Link
-            href="/#portfolio"
-            onClick={(e) => handleNavClick(e, 'portfolio')}
-            className="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors"
-          >
-            Portfólio
-          </Link>
-          <Link
-            href="/#planos"
-            onClick={(e) => handleNavClick(e, 'planos')}
-            className="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors"
-          >
-            Planos
-          </Link>
-          <Link
-            href="/blog"
-            className="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors"
-          >
-            Blog
-          </Link>
+        <div className="hidden items-center gap-8 md:flex">
+          {navItems.map((item) => (
+            <Link
+              key={item.targetId}
+              href={item.href}
+              onClick={(event) => handleNavClick(event, item.targetId)}
+              className="font-body-md text-[13px] leading-5 text-secondary transition-colors hover:text-on-surface"
+            >
+              {item.label}
+            </Link>
+          ))}
         </div>
 
-        {/* Desktop CTA Button */}
-        <div className="hidden md:block">
+        <div className="hidden justify-self-end md:block">
           <a
             href={ctaLink}
             target="_blank"
             rel="noopener noreferrer"
-            className={`font-label-md text-label-md bg-primary text-on-primary rounded-full shadow-[0_0_15px_rgba(76,215,246,0.3)] hover:shadow-[0_0_25px_rgba(76,215,246,0.5)] transition-all duration-300 transform hover:scale-[0.98] inline-block font-bold uppercase tracking-wider ${
-              isScrolled ? 'px-5 py-2.5' : 'px-6 py-3'
-            }`}
+            className="rt-button rt-button-primary"
           >
-            ORÇAMENTO
+            Iniciar projeto
           </a>
         </div>
 
-        {/* Mobile Action Controls */}
-        <div className="flex md:hidden items-center gap-3">
-          <a
-            href={ctaLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-label-md text-xs bg-primary text-on-primary px-4 py-2 rounded-full hover:shadow-[0_0_15px_rgba(76,215,246,0.4)] transition-all active:scale-95 duration-200 font-bold inline-block uppercase tracking-wider"
-          >
-            ORÇAMENTO
-          </a>
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-on-surface-variant hover:text-primary transition-colors active:scale-95 duration-200 p-1"
-            aria-label="Toggle Menu"
-          >
-            <span className="material-symbols-outlined text-2xl">
-              {isMenuOpen ? 'close' : 'menu'}
-            </span>
-          </button>
-        </div>
+        <button
+          type="button"
+          className="fixed right-4 top-[18px] inline-flex h-11 w-11 items-center justify-center rounded-lg border border-border-thin bg-white text-on-surface md:hidden"
+          aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
+          aria-expanded={isMenuOpen}
+          onClick={() => setIsMenuOpen((open) => !open)}
+        >
+          <span className="material-symbols-outlined text-[22px]">
+            {isMenuOpen ? 'close' : 'menu'}
+          </span>
+        </button>
       </div>
 
-      {/* Mobile Navigation Dropdown */}
       {isMenuOpen && (
-        <div
-          className={`md:hidden w-full absolute left-0 bg-surface-deep border-b border-white/10 px-margin-page py-6 flex flex-col gap-4 shadow-2xl transition-all duration-300 ${
-            isScrolled ? 'top-16' : 'top-20'
-          }`}
-        >
-          <Link
-            href="/#servicos"
-            onClick={(e) => handleNavClick(e, 'servicos')}
-            className="font-label-md text-base text-on-surface-variant hover:text-primary py-2 transition-colors border-b border-white/5"
-          >
-            Serviços
-          </Link>
-          <Link
-            href="/#portfolio"
-            onClick={(e) => handleNavClick(e, 'portfolio')}
-            className="font-label-md text-base text-on-surface-variant hover:text-primary py-2 transition-colors border-b border-white/5"
-          >
-            Portfólio
-          </Link>
-          <Link
-            href="/#planos"
-            onClick={(e) => handleNavClick(e, 'planos')}
-            className="font-label-md text-base text-on-surface-variant hover:text-primary py-2 transition-colors border-b border-white/5"
-          >
-            Planos
-          </Link>
-          <Link
-            href="/blog"
-            onClick={() => setIsMenuOpen(false)}
-            className="font-label-md text-base text-on-surface-variant hover:text-primary py-2 transition-colors"
-          >
-            Blog
-          </Link>
+        <div className="border-t border-border-thin bg-bg-primary px-margin-page py-5 md:hidden">
+          <div className="flex flex-col gap-1">
+            {navItems.map((item) => (
+              <Link
+                key={item.targetId}
+                href={item.href}
+                onClick={(event) => handleNavClick(event, item.targetId)}
+                className="rounded-lg px-2 py-3 font-body-md text-[16px] text-secondary transition-colors hover:bg-bg-secondary hover:text-on-surface"
+              >
+                {item.label}
+              </Link>
+            ))}
+            <a
+              href={ctaLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rt-button rt-button-primary rt-button-full mt-4"
+            >
+              Iniciar projeto
+            </a>
+          </div>
         </div>
       )}
     </nav>

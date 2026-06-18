@@ -418,7 +418,7 @@ export default function ProjectModal({ project, onSave, onClose }) {
             <Textarea
               value={form.whatsappMessage || ''}
               onChange={(e) => upd('whatsappMessage', e.target.value)}
-              placeholder="Olá! Vi o projeto X no portfólio da Rafael Tech e quero algo parecido para o meu negócio..."
+              placeholder="Olá! Vi o projeto X no portfólio da SoftLuna e quero algo parecido para o meu negócio..."
               maxLength={320}
             />
           </Field>

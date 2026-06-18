@@ -2,7 +2,7 @@ import React from 'react';
 
 const FloatingButton = () => {
   const whatsappUrl =
-    'https://wa.me/5531991869943?text=Ol%C3%A1%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto%20com%20a%20Rafael%20Tech%21';
+    'https://wa.me/5531991869943?text=Ol%C3%A1%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto%20com%20a%20SoftLuna%21';
 
   return (
     <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">

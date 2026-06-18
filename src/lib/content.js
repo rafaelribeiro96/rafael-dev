@@ -69,6 +69,28 @@ export async function getPricingTiers() {
 }
 
 /**
+ * Returns global site settings from content/global/site.json.
+ *
+ * Schema:
+ *   hero: { headline, subheadline, ctaText }
+ *   seo: { metaTitle, metaDescription, businessName, businessCity,
+ *          businessState, businessPhone, businessEmail }
+ *
+ * @returns {Promise<Object>}
+ */
+export async function getGlobalSite() {
+  const filePath = path.join(CONTENT_DIR, 'global', 'site.json');
+
+  try {
+    const raw = await fs.readFile(filePath, 'utf-8');
+    return JSON.parse(raw);
+  } catch (err) {
+    console.warn(`[git-cms] Failed to parse ${filePath}:`, err.message);
+    return { hero: {}, seo: {} };
+  }
+}
+
+/**
  * Returns all portfolio items from content/portfolio/*.json
  * sorted by the `order` field.
  *

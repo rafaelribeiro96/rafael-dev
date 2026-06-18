@@ -1,211 +1,102 @@
 /* eslint-disable react/prop-types */
-import React, { useState, useRef, useEffect, useMemo } from 'react';
+import React from 'react';
 import Image from 'next/image';
 
 const WHATSAPP_BASE = 'https://wa.me/5531991869943';
 
-/**
- * Generates a WhatsApp link with a custom pre-filled message.
- * Falls back to the global ctaLink if no custom message is provided.
- */
 function buildWhatsappLink(whatsappMessage, fallbackLink) {
   if (!whatsappMessage) return fallbackLink;
   return `${WHATSAPP_BASE}?text=${encodeURIComponent(whatsappMessage)}`;
 }
 
-/**
- * Portfolio component — Git-CMS driven.
- * Data comes from content/portfolio/*.json via getStaticProps in index.jsx.
- * To add/edit projects, update the JSON files in /content/portfolio.
- */
 const Portfolio = ({ ctaLink, items = [] }) => {
-  const scrollerRef = useRef(null);
-  const [isHovered, setIsHovered] = useState(false);
-  const [isDragging, setIsDragging] = useState(false);
-  const startX = useRef(0);
-  const scrollLeft = useRef(0);
-  const dragMoved = useRef(false);
-
-  // Track viewport size dynamically
-  const [isDesktop, setIsDesktop] = useState(false);
-  useEffect(() => {
-    const checkScreen = () => setIsDesktop(window.innerWidth >= 1024);
-    checkScreen();
-    window.addEventListener('resize', checkScreen);
-    return () => window.removeEventListener('resize', checkScreen);
-  }, []);
-
-  const filteredProjects = useMemo(() => {
-    // Filter out target platforms based on viewport
-    return items.filter((project) => {
-      if (isDesktop) {
-        return project.displayOn !== 'carousel';
-      } else {
-        return project.displayOn !== 'desktop';
-      }
-    });
-  }, [items, isDesktop]);
-
-  useEffect(() => {
-    const container = scrollerRef.current;
-    if (!container || isHovered || isDragging) return;
-
-    const handleAutoScroll = () => {
-      const card = container.firstElementChild;
-      if (!card) return;
-      // Get standard gap (32px on desktop because of md:gap-8, 24px on mobile)
-      const gap = window.innerWidth >= 768 ? 32 : 24;
-      const cardWidth = card.offsetWidth + gap;
-      const originalWidth = cardWidth * filteredProjects.length;
-
-      if (container.scrollLeft >= originalWidth - 10) {
-        // Reset scroll position instantly to start
-        container.style.scrollBehavior = 'auto';
-        container.scrollLeft = 0;
-        // Scroll to the next card smoothly on the next tick
-        setTimeout(() => {
-          if (!scrollerRef.current) return;
-          container.style.scrollBehavior = 'smooth';
-          container.scrollBy({ left: cardWidth, behavior: 'smooth' });
-        }, 50);
-      } else {
-        container.style.scrollBehavior = 'smooth';
-        container.scrollBy({ left: cardWidth, behavior: 'smooth' });
-      }
-    };
-
-    const interval = setInterval(handleAutoScroll, 4000);
-    return () => clearInterval(interval);
-  }, [filteredProjects, isHovered, isDragging]);
-
-  const handleMouseDown = (e) => {
-    setIsDragging(true);
-    dragMoved.current = false;
-    startX.current = e.pageX - scrollerRef.current.offsetLeft;
-    scrollLeft.current = scrollerRef.current.scrollLeft;
-    scrollerRef.current.style.scrollBehavior = 'auto';
-  };
-
-  const handleMouseLeaveOrUp = () => {
-    setIsDragging(false);
-    if (scrollerRef.current) {
-      scrollerRef.current.style.scrollBehavior = 'smooth';
-    }
-  };
-
-  const handleMouseMove = (e) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    const x = e.pageX - scrollerRef.current.offsetLeft;
-    const walk = (x - startX.current) * 1.5; // Scroll speed
-    if (Math.abs(walk) > 5) {
-      dragMoved.current = true;
-    }
-    scrollerRef.current.scrollLeft = scrollLeft.current - walk;
-  };
-
-  const handleLinkClick = (e) => {
-    if (dragMoved.current) {
-      e.preventDefault();
-    }
-  };
-
-  // Triple the project array to ensure seamless infinite looping marquee
-  const loopList = useMemo(() => {
-    if (filteredProjects.length === 0) return [];
-    return [...filteredProjects, ...filteredProjects, ...filteredProjects];
-  }, [filteredProjects]);
+  const projects = items.filter((project) => project.displayOn !== 'carousel');
+  const carouselProjects = [...projects, ...projects];
 
   return (
     <section
-      className="py-24 px-margin-page bg-surface-deep relative border-y border-white/5 overflow-hidden select-none"
+      className="bg-[#1a1a1a] px-margin-page py-28 text-white md:py-32"
       id="portfolio"
     >
-      <div className="max-w-container-max mx-auto">
-        <div className="text-center mb-16" data-aos="fade-up">
-          <span className="inline-block text-xs font-bold tracking-widest uppercase text-primary bg-primary/10 px-3 py-1 rounded-full mb-4">
-            Projetos Reais
-          </span>
-          <h2 className="font-headline-lg text-3xl sm:text-headline-lg text-on-surface font-bold mb-4">
-            Portfólio de Projetos
-          </h2>
-          <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
-            Sites entregues, online e gerando resultados para nossos clientes.
+      <div className="mx-auto max-w-container-max">
+        <div className="mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+          <div data-aos="fade-up">
+            <span className="mb-3 block font-label-md text-[13px] uppercase tracking-[0.05em] text-primary-container">
+              Projetos reais
+            </span>
+            <h2 className="font-headline-lg text-[34px] leading-[44px] text-white sm:text-headline-lg">
+              Galeria de projetos
+            </h2>
+          </div>
+          <p className="max-w-md font-body-md text-[17px] leading-[27px] text-white/65">
+            Sites entregues, online e construidos para unir estetica premium,
+            velocidade e autonomia de conteudo.
           </p>
         </div>
 
-        {/* Project Infinite Drag Carousel */}
         <div
-          ref={scrollerRef}
-          onMouseDown={handleMouseDown}
-          onMouseMove={handleMouseMove}
-          onMouseUp={handleMouseLeaveOrUp}
-          onMouseLeave={() => {
-            setIsHovered(false);
-            handleMouseLeaveOrUp();
-          }}
-          onMouseEnter={() => setIsHovered(true)}
-          className="flex gap-6 md:gap-8 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-6 -mx-[5vw] px-[5vw] md:mx-0 md:px-0 scrollbar-none cursor-grab active:cursor-grabbing"
+          className="-mx-margin-page overflow-hidden px-margin-page"
           data-aos="fade-up"
         >
-          {loopList.map((project, index) => {
-            const hasLiveUrl = project.liveUrl && project.liveUrl !== '#';
-            const whatsappLink = buildWhatsappLink(
-              project.whatsappMessage,
-              ctaLink
-            );
+          <div className="portfolio-marquee flex w-max gap-6">
+            {carouselProjects.map((project, index) => {
+              const hasLiveUrl = project.liveUrl && project.liveUrl !== '#';
+              const whatsappLink = buildWhatsappLink(
+                project.whatsappMessage,
+                ctaLink
+              );
 
-            return (
-              <div
-                key={`${project.id}-${index}`}
-                className="w-[85vw] sm:w-[350px] md:w-[380px] shrink-0 snap-center glass-panel rounded-3xl overflow-hidden border border-white/10 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(6,182,212,0.2)] transition-all duration-300 group flex flex-col h-full text-left"
-              >
-                <div className="aspect-[4/3] relative overflow-hidden bg-surface-deep">
-                  <Image
-                    alt={project.title}
-                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 drop-shadow-2xl"
-                    src={project.image}
-                    width={400}
-                    height={300}
-                    draggable={false}
-                  />
-                </div>
-                <div className="p-6 sm:p-8 flex flex-col flex-grow bg-surface-slate">
-                  <div className="mb-4">
-                    <span className="text-xs text-primary font-bold tracking-widest uppercase bg-primary/10 px-2.5 py-1 rounded">
-                      {project.category}
-                    </span>
+              return (
+                <article
+                  key={`${project.id}-${index}`}
+                  className="group w-[82vw] max-w-[560px] shrink-0 overflow-hidden rounded-[24px] border border-white/10 bg-white/[0.04] sm:w-[520px]"
+                  aria-hidden={index >= projects.length}
+                >
+                  <div className="relative aspect-[16/10] overflow-hidden bg-black">
+                    <Image
+                      alt={project.title}
+                      src={project.image}
+                      fill
+                      sizes="(min-width: 1024px) 560px, 100vw"
+                      className="object-cover object-top grayscale transition-all duration-700 group-hover:scale-[1.03] group-hover:grayscale-0"
+                    />
                   </div>
-                  <h3 className="font-headline-md text-xl text-on-surface mb-3 font-bold">
-                    {project.title}
-                  </h3>
-                  <p className="font-body-md text-sm text-on-surface-variant leading-relaxed mb-6 flex-grow">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-col gap-3 mt-auto w-full">
-                    <a
-                      href={hasLiveUrl ? project.liveUrl : ctaLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={handleLinkClick}
-                      className="w-full text-center font-label-md text-sm bg-primary text-on-primary py-3.5 rounded-xl shadow-[0_0_15px_rgba(76,215,246,0.3)] hover:shadow-[0_0_25px_rgba(76,215,246,0.5)] transition-all font-bold uppercase tracking-wider"
-                    >
-                      {hasLiveUrl ? 'VISITAR SITE' : 'VISITAR MODELO'}
-                    </a>
-                    <a
-                      href={whatsappLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={handleLinkClick}
-                      className="w-full text-center font-label-md text-sm bg-transparent border border-white/20 text-on-surface py-3.5 rounded-xl hover:border-primary hover:text-primary transition-colors inline-block uppercase tracking-wider font-bold"
-                    >
-                      QUERO UM SITE ASSIM
-                    </a>
+                  <div className="flex flex-col gap-6 p-7 md:p-8">
+                    <div>
+                      <p className="font-body-md text-[14px] leading-5 text-white/60">
+                        {project.category}
+                      </p>
+                      <h3 className="mt-2 font-headline-md text-[26px] leading-9 text-white">
+                        {project.title}
+                      </h3>
+                      <p className="mt-4 font-body-md text-[15px] leading-6 text-white/66">
+                        {project.description}
+                      </p>
+                    </div>
+
+                    <div className="flex flex-col gap-3 sm:flex-row">
+                      <a
+                        href={hasLiveUrl ? project.liveUrl : ctaLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="rt-button rt-button-primary flex-1"
+                      >
+                        {hasLiveUrl ? 'Visitar site' : 'Ver modelo'}
+                      </a>
+                      <a
+                        href={whatsappLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="rt-button rt-button-secondary-inverse flex-1"
+                      >
+                        Quero um assim
+                      </a>
+                    </div>
                   </div>
-                </div>
-              </div>
-            );
-          })}
+                </article>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

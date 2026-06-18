@@ -43,7 +43,7 @@ export default function AdminPage({
   return (
     <>
       <Head>
-        <title>Admin — Rafael Tech</title>
+        <title>Admin — SoftLuna</title>
         <meta name="robots" content="noindex,nofollow" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>

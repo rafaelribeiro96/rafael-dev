@@ -1,105 +1,136 @@
 import React from 'react';
 
+const trustBadges = [
+  {
+    label: '01. Performance',
+    title: 'Velocidade Sub-1s',
+    text: 'Otimizacao critica para retencao, ranqueamento e conversao.'
+  },
+  {
+    label: '02. Cronograma',
+    title: 'Entrega precisa',
+    text: 'Processo claro, prazos combinados e entregas acompanhadas.'
+  },
+  {
+    label: '03. Arquitetura',
+    title: 'Codigo proprietario',
+    text: 'Sem templates prontos. Codigo unico, autoral e escalavel.'
+  }
+];
+
 const DigitalEcosystem = () => {
   return (
-    <section className="py-24 px-margin-page bg-surface-deep relative border-t border-white/5">
-      <div className="max-w-container-max mx-auto text-left">
-        <div className="text-center mb-16" data-aos="fade-up">
-          <span className="inline-block text-xs font-bold tracking-widest uppercase text-primary bg-primary/10 px-3 py-1 rounded-full mb-4">
-            Por que nos escolher
-          </span>
-          <h2 className="font-headline-lg text-3xl sm:text-headline-lg text-white font-bold mb-4">
-            Tudo que Seu Negócio Precisa para Dominar o Digital
-          </h2>
-          <p className="font-body-md text-on-surface-variant max-w-2xl mx-auto">
-            Não entregamos apenas um site bonito. Entregamos uma máquina de
-            geração de clientes, integrada e pronta para crescer com você.
-          </p>
+    <>
+      <section className="overflow-hidden border-y border-border-thin bg-surface-container-lowest px-margin-page py-16 md:py-20">
+        <div className="mx-auto grid max-w-container-wide grid-cols-1 gap-10 md:grid-cols-3 md:gap-16">
+          {trustBadges.map((badge) => (
+            <div
+              key={badge.label}
+              className="w-full max-w-[330px] border-l border-primary/20 pl-8 md:max-w-none"
+            >
+              <span className="font-label-md text-[10px] uppercase tracking-[0.08em] text-primary">
+                {badge.label}
+              </span>
+              <h2 className="mt-4 font-headline-md text-[20px] font-bold leading-7 text-on-surface">
+                {badge.title}
+              </h2>
+              <p className="mt-3 font-body-md text-[14px] leading-6 text-secondary">
+                {badge.text}
+              </p>
+            </div>
+          ))}
         </div>
+      </section>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {/* Feature 1 */}
-          <div
-            className="glass-panel rounded-2xl p-6 hover:border-primary/50 transition-all duration-300 group"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-              <span className="material-symbols-outlined text-primary text-2xl">
-                storefront
-              </span>
-            </div>
-            <h3 className="font-headline-md text-lg text-on-surface mb-2 font-bold">
-              Google Meu Negócio
-            </h3>
-            <p className="font-body-md text-sm text-on-surface-variant">
-              Conquiste clientes na sua região exatamente quando eles buscam
-              pelo seu serviço no Google.
-            </p>
+      <section className="bg-white px-margin-page py-24" id="diferenciais">
+        <div className="mx-auto max-w-container-max">
+          <div className="mb-16" data-aos="fade-up">
+            <span className="mb-2 block font-label-md text-[13px] uppercase tracking-[0.05em] text-primary">
+              Por que nos escolher
+            </span>
+            <h2 className="font-headline-lg text-[34px] leading-[44px] text-on-surface sm:text-headline-lg">
+              O diferencial SoftLuna
+            </h2>
           </div>
 
-          {/* Feature 2 */}
-          <div
-            className="glass-panel rounded-2xl p-6 hover:border-primary/50 transition-all duration-300 group"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-              <span className="material-symbols-outlined text-primary text-2xl">
-                psychology
+          <div className="grid grid-cols-12 gap-gutter">
+            <article
+              className="col-span-12 rounded-[24px] border border-border-thin bg-surface-container-low p-8 transition-colors hover:border-primary-container md:col-span-8 md:p-10"
+              data-aos="fade-up"
+            >
+              <span className="material-symbols-outlined mb-6 text-[52px] text-primary">
+                google
               </span>
-            </div>
-            <h3 className="font-headline-md text-lg text-on-surface mb-2 font-bold">
-              Pronto para IA e ChatGPT
-            </h3>
-            <p className="font-body-md text-sm text-on-surface-variant">
-              Seu negócio aparece nas respostas do ChatGPT, Gemini e novas
-              buscas com IA — visibilidade onde a concorrência ainda não chegou.
-            </p>
-          </div>
+              <h3 className="font-headline-md text-[30px] leading-10 text-on-surface">
+                Google Business First
+              </h3>
+              <p className="mt-4 max-w-xl font-body-lg text-[18px] leading-[30px] text-secondary">
+                Arquitetura tecnica otimizada para busca organica, Google Meu
+                Negocio e velocidade de carregamento desde o primeiro deploy.
+              </p>
+              <a
+                href="#arquitetura"
+                className="rt-button rt-button-secondary mt-8 w-fit"
+              >
+                Ver arquitetura
+              </a>
+            </article>
 
-          {/* Feature 3 */}
-          <div
-            className="glass-panel rounded-2xl p-6 hover:border-primary/50 transition-all duration-300 group"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-              <span className="material-symbols-outlined text-primary text-2xl">
-                rocket_launch
+            <article
+              className="col-span-12 flex min-h-[260px] flex-col items-center justify-center rounded-[24px] bg-primary p-8 text-center text-on-primary md:col-span-4 md:p-10"
+              data-aos="fade-up"
+              data-aos-delay="80"
+            >
+              <span className="material-symbols-outlined mb-6 text-[60px]">
+                bolt
               </span>
-            </div>
-            <h3 className="font-headline-md text-lg text-on-surface mb-2 font-bold">
-              Velocidade que Converte
-            </h3>
-            <p className="font-body-md text-sm text-on-surface-variant">
-              Sites ultrarrápidos e de alta performance. O Google prioriza sites
-              rápidos — e seus clientes também.
-            </p>
-          </div>
+              <h3 className="font-headline-md text-[28px] leading-9">
+                Absolute Speed
+              </h3>
+              <p className="mt-3 font-body-md text-[15px] leading-6 opacity-85">
+                Stack moderna, imagens otimizadas e entrega edge-first.
+              </p>
+            </article>
 
-          {/* Feature 4 */}
-          <div
-            className="glass-panel rounded-2xl p-6 hover:border-primary/50 transition-all duration-300 group"
-            data-aos="fade-up"
-            data-aos-delay="400"
-          >
-            <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-              <span className="material-symbols-outlined text-primary text-2xl">
+            <article
+              className="col-span-12 rounded-[24px] border border-border-thin bg-white p-8 transition-colors hover:bg-surface-container-lowest md:col-span-4 md:p-10"
+              data-aos="fade-up"
+              data-aos-delay="120"
+            >
+              <span className="material-symbols-outlined mb-4 text-[42px] text-primary">
                 edit_document
               </span>
-            </div>
-            <h3 className="font-headline-md text-lg text-on-surface mb-2 font-bold">
-              Autonomia Total
-            </h3>
-            <p className="font-body-md text-sm text-on-surface-variant">
-              Você mesmo atualiza textos, fotos e preços pelo celular, em
-              segundos, sem pagar ninguém para isso.
-            </p>
+              <h3 className="font-headline-md text-[26px] leading-9 text-on-surface">
+                Autonomia total
+              </h3>
+              <p className="mt-3 font-body-md text-[15px] leading-6 text-secondary">
+                Textos, fotos, portfolio, planos e FAQ continuam editaveis pelo
+                painel admin via Git-CMS.
+              </p>
+            </article>
+
+            <article
+              className="relative col-span-12 overflow-hidden rounded-[24px] border border-border-thin bg-surface-container p-8 md:col-span-8 md:p-10"
+              data-aos="fade-up"
+              data-aos-delay="160"
+            >
+              <div className="relative z-10 max-w-xl">
+                <h3 className="font-headline-md text-[30px] leading-10 text-on-surface">
+                  AI-ready architecture
+                </h3>
+                <p className="mt-4 font-body-lg text-[18px] leading-[30px] text-on-surface-variant">
+                  Estrutura preparada para SEO moderno, respostas com IA,
+                  automacoes e integracoes futuras sem reconstruir o site do
+                  zero.
+                </p>
+              </div>
+              <div className="absolute bottom-0 right-0 h-40 w-40 translate-x-10 translate-y-10 rounded-full border border-primary-container/60" />
+              <div className="absolute bottom-8 right-16 h-24 w-24 rounded-full border border-outline-variant" />
+            </article>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

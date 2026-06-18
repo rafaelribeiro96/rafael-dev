@@ -6,10 +6,10 @@ const BlogPage = () => {
   return (
     <>
       <Head>
-        <title>Blog | Rafael Tech - Desenvolvimento Web e Otimização</title>
+        <title>Blog | SoftLuna - Desenvolvimento Web e Otimização</title>
         <meta
           name="description"
-          content="Artigos sobre engenharia web, SEO de alta performance, Google Meu Negócio, e novidades em desenvolvimento web com a Rafael Tech."
+          content="Artigos sobre engenharia web, SEO de alta performance, Google Meu Negócio, e novidades em desenvolvimento web com a SoftLuna."
         />
       </Head>
       <PostsPage />
