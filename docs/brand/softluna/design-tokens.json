@@ -1,0 +1,231 @@
+{
+  "$schema": "https://softluna.design/schemas/design-tokens.v1.json",
+  "brand": {
+    "name": "SoftLuna",
+    "system": "Lunar Day",
+    "description": "Light mode premium para uma software house de alta performance: branco amplo, linhas finas, rigor de engenharia e acento champagne."
+  },
+  "color": {
+    "background": {
+      "value": "#FFFFFF",
+      "type": "color",
+      "usage": "Secoes principais, superficies limpas e areas de leitura."
+    },
+    "backgroundSecondary": {
+      "value": "#F5F5F7",
+      "type": "color",
+      "usage": "Blocos de contraste, bento grids e areas editoriais suaves."
+    },
+    "textPrimary": {
+      "value": "#111111",
+      "type": "color",
+      "usage": "Titulos, textos principais e interfaces de alta legibilidade."
+    },
+    "textSecondary": {
+      "value": "#6E6E73",
+      "type": "color",
+      "usage": "Descricoes, labels, metadados e textos de apoio."
+    },
+    "accent": {
+      "value": "#C5A065",
+      "type": "color",
+      "usage": "Acoes primarias, detalhes de prestigio e destaques pontuais."
+    },
+    "accentHover": {
+      "value": "#B38F54",
+      "type": "color",
+      "usage": "Hover, foco e estados ativos de componentes primarios."
+    },
+    "borderThin": {
+      "value": "#E5E7EB",
+      "type": "color",
+      "usage": "Divisorias, inputs, cards e linhas estruturais de 1px."
+    },
+    "white": {
+      "value": "#FFFFFF",
+      "type": "color",
+      "usage": "Texto sobre botoes primarios e superficies puras."
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "display": {
+        "value": "'Geist', 'Inter', system-ui, sans-serif",
+        "type": "fontFamily"
+      },
+      "body": {
+        "value": "'Inter', 'Geist', system-ui, sans-serif",
+        "type": "fontFamily"
+      }
+    },
+    "fontWeight": {
+      "regular": {
+        "value": 400,
+        "type": "fontWeight"
+      },
+      "medium": {
+        "value": 500,
+        "type": "fontWeight"
+      },
+      "semibold": {
+        "value": 600,
+        "type": "fontWeight"
+      },
+      "bold": {
+        "value": 700,
+        "type": "fontWeight"
+      }
+    },
+    "scale": {
+      "h1": {
+        "fontSize": "48px",
+        "lineHeight": "58px",
+        "fontWeight": 700,
+        "letterSpacing": "0px"
+      },
+      "h2": {
+        "fontSize": "40px",
+        "lineHeight": "52px",
+        "fontWeight": 700,
+        "letterSpacing": "0px"
+      },
+      "h3": {
+        "fontSize": "32px",
+        "lineHeight": "40px",
+        "fontWeight": 600,
+        "letterSpacing": "0px"
+      },
+      "h4": {
+        "fontSize": "24px",
+        "lineHeight": "32px",
+        "fontWeight": 600,
+        "letterSpacing": "0px"
+      },
+      "bodyLarge": {
+        "fontSize": "19px",
+        "lineHeight": "30px",
+        "fontWeight": 400,
+        "letterSpacing": "0px"
+      },
+      "body": {
+        "fontSize": "17px",
+        "lineHeight": "27px",
+        "fontWeight": 400,
+        "letterSpacing": "0px"
+      },
+      "bodySmall": {
+        "fontSize": "15px",
+        "lineHeight": "24px",
+        "fontWeight": 400,
+        "letterSpacing": "0px"
+      },
+      "label": {
+        "fontSize": "13px",
+        "lineHeight": "18px",
+        "fontWeight": 600,
+        "letterSpacing": "0px"
+      }
+    }
+  },
+  "spacing": {
+    "xs": {
+      "value": "8px",
+      "type": "dimension"
+    },
+    "sm": {
+      "value": "16px",
+      "type": "dimension"
+    },
+    "md": {
+      "value": "24px",
+      "type": "dimension"
+    },
+    "lg": {
+      "value": "44px",
+      "type": "dimension"
+    },
+    "xl": {
+      "value": "70px",
+      "type": "dimension"
+    }
+  },
+  "radius": {
+    "none": {
+      "value": "0px",
+      "type": "dimension"
+    },
+    "card": {
+      "value": "12px",
+      "type": "dimension"
+    },
+    "pill": {
+      "value": "980px",
+      "type": "dimension"
+    }
+  },
+  "border": {
+    "thin": {
+      "width": "1px",
+      "style": "solid",
+      "color": "{color.borderThin.value}"
+    }
+  },
+  "shadow": {
+    "none": {
+      "value": "none",
+      "type": "shadow"
+    }
+  },
+  "sizing": {
+    "targetMin": {
+      "value": "44px",
+      "type": "dimension",
+      "usage": "Altura e largura minima de alvos clicaveis."
+    },
+    "container": {
+      "value": "1200px",
+      "type": "dimension",
+      "usage": "Largura maxima padrao para conteudo institucional."
+    },
+    "containerWide": {
+      "value": "1440px",
+      "type": "dimension",
+      "usage": "Largura maxima para composicoes amplas e bento grids."
+    }
+  },
+  "component": {
+    "buttonPrimary": {
+      "background": "{color.accent.value}",
+      "color": "{color.white.value}",
+      "border": "none",
+      "borderRadius": "{radius.pill.value}",
+      "minHeight": "{sizing.targetMin.value}",
+      "paddingInline": "{spacing.md.value}"
+    },
+    "buttonSecondary": {
+      "background": "transparent",
+      "color": "{color.textPrimary.value}",
+      "border": "1px solid {color.textPrimary.value}",
+      "borderRadius": "{radius.pill.value}",
+      "minHeight": "{sizing.targetMin.value}",
+      "paddingInline": "{spacing.md.value}"
+    },
+    "card": {
+      "background": "{color.background.value}",
+      "border": "1px solid {color.borderThin.value}",
+      "borderRadius": "{radius.card.value}",
+      "boxShadow": "{shadow.none.value}"
+    },
+    "input": {
+      "background": "{color.background.value}",
+      "color": "{color.textPrimary.value}",
+      "border": "1px solid {color.borderThin.value}",
+      "borderRadius": "{radius.card.value}",
+      "minHeight": "{sizing.targetMin.value}"
+    },
+    "focusRing": {
+      "outline": "2px solid {color.accent.value}",
+      "outlineOffset": "2px"
+    }
+  }
+}
