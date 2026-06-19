@@ -81,11 +81,16 @@ Cada tarefa executavel deve seguir este formato:
 
 ## Decisoes pendentes
 
-- [ ] D-001 - Definir fonte de verdade de precos: manter conteudo atual em `content/pricing/*.json` ou migrar para precos estrategicos do plano de negocio.
-- [ ] D-002 - Definir se money pages e blog serao conteudo estatico em codigo/arquivos markdown/JSON ou se o Git-CMS atual sera expandido para gerenciar essas colecoes.
-- [ ] D-003 - Definir se a SoftLuna continuara no Vercel ou se havera plano separado para Cloudflare Pages em producao e/ou sites de clientes.
-- [ ] D-004 - Definir ordem de publicacao: primeiro homepage/FAQs, primeiro money pages, ou primeiro blog.
-- [ ] D-005 - Definir se havera autores, bio editorial e pagina de blog antes dos artigos serem publicados.
+- [x] D-001 - Definir fonte de verdade de precos: manter conteudo atual em `content/pricing/*.json` ou migrar para precos estrategicos do plano de negocio.
+  - Decisao 2026-06-19: usar `content/pricing/*.json` como fonte publicada atual; precos estrategicos seguem como recomendacao futura. Registro: `docs/business/softluna/seo-foundation.md`, `.specs/project/STATE.md`.
+- [x] D-002 - Definir se money pages e blog serao conteudo estatico em codigo/arquivos markdown/JSON ou se o Git-CMS atual sera expandido para gerenciar essas colecoes.
+  - Decisao 2026-06-19: usar JSON versionado em `content/money-pages/` e `content/blog/`, lido em build; admin pode ser expandido depois do piloto. Registro: `docs/business/softluna/seo-foundation.md`, `.specs/project/STATE.md`.
+- [x] D-003 - Definir se a SoftLuna continuara no Vercel ou se havera plano separado para Cloudflare Pages em producao e/ou sites de clientes.
+  - Decisao 2026-06-19: manter Vercel e `@vercel/analytics` para a implementacao SEO imediata; Cloudflare Pages fica como decisao futura separada. Registro: `docs/business/softluna/seo-foundation.md`, `.specs/project/STATE.md`.
+- [x] D-004 - Definir ordem de publicacao: primeiro homepage/FAQs, primeiro money pages, ou primeiro blog.
+  - Decisao 2026-06-19: money page piloto primeiro; arquitetura/briefs do blog em paralelo; homepage/FAQs e lotes depois. Registro: `docs/business/softluna/seo-foundation.md`.
+- [x] D-005 - Definir se havera autores, bio editorial e pagina de blog antes dos artigos serem publicados.
+  - Decisao 2026-06-19: artigos terao autor e bio editorial; pagina publica de autor nao e obrigatoria para o primeiro lote. Registro: `docs/business/softluna/seo-foundation.md`.
 
 ## Riscos conhecidos
 
@@ -100,50 +105,50 @@ Cada tarefa executavel deve seguir este formato:
 
 Objetivo: remover ambiguidades estruturais antes de criar paginas, blog e copy em escala.
 
-- [ ] F0-001 - Consolidar fonte de verdade de precos
+- [x] F0-001 - Consolidar fonte de verdade de precos
   - Objetivo: decidir se os precos publicados devem continuar iguais ou seguir o plano estrategico.
   - Arquivos provaveis: `content/pricing/*.json`, `docs/business/softluna/business-model.md`, `.specs/project/STATE.md`.
   - Dependencias: D-001.
   - Skill indicada: `tlc-spec-driven`.
   - Criterios de aceite: decisao registrada; discrepancias documentadas; nenhuma copy nova contradiz a fonte escolhida.
   - Validacao: revisar conteudo publicado e docs; se alterar JSON, rodar `npm run build`.
-  - Registro de execucao:
+  - Registro de execucao: 2026-06-19, Codex. Decisao registrada em `docs/business/softluna/seo-foundation.md` e `.specs/project/STATE.md`. Nenhum JSON de preco foi alterado; build nao foi necessario.
 
-- [ ] F0-002 - Decidir modelo de conteudo para money pages
+- [x] F0-002 - Decidir modelo de conteudo para money pages
   - Objetivo: escolher entre paginas estaticas em Next.js, JSON em `content/`, markdown/MDX ou expansao do Git-CMS.
   - Arquivos provaveis: `src/pages`, `content/`, `src/lib/content.js`, `GIT-CMS.md`.
   - Dependencias: D-002.
   - Skill indicada: `tlc-spec-driven`.
   - Criterios de aceite: modelo definido com campos minimos de slug, H1, SEO title, meta description, nicho, CTA, FAQs, schema e links internos.
   - Validacao: documentar decisao antes de criar a primeira pagina.
-  - Registro de execucao:
+  - Registro de execucao: 2026-06-19, Codex. Modelo escolhido: `content/money-pages/*.json` + helper em `src/lib/content.js` + rota/template dinamico. Campos minimos registrados em `docs/business/softluna/seo-foundation.md`.
 
-- [ ] F0-003 - Decidir modelo de conteudo para blog
+- [x] F0-003 - Decidir modelo de conteudo para blog
   - Objetivo: definir onde os posts viverao, como serao listados e como receberao schema Article/FAQ.
   - Arquivos provaveis: `src/pages`, `content/`, `src/lib/content.js`.
   - Dependencias: D-002, D-005.
   - Skill indicada: `blog-strategy`, `tlc-spec-driven`.
   - Criterios de aceite: estrutura escolhida; campos minimos definidos; fluxo de criacao de brief, escrita, revisao e publicacao documentado.
   - Validacao: nenhuma implementacao de artigo antes da decisao.
-  - Registro de execucao:
+  - Registro de execucao: 2026-06-19, Codex. Modelo escolhido: substituir fluxo legado dependente de `NEXT_PUBLIC_API_URL` por `content/blog/*.json`, listagem `/blog` e detalhe `/blog/[slug]`. Campos e fluxo editorial registrados em `docs/business/softluna/seo-foundation.md`.
 
-- [ ] F0-004 - Criar inventario do conteudo atual
+- [x] F0-004 - Criar inventario do conteudo atual
   - Objetivo: mapear hero, secoes, portfolio, planos, FAQ e SEO global antes das mudancas.
   - Arquivos provaveis: `src/components/Home/*`, `content/*`, `src/pages/index.jsx`.
   - Dependencias: nenhuma.
   - Skill indicada: `tlc-spec-driven`.
   - Criterios de aceite: lista curta do que esta em codigo vs CMS; pontos que precisam migrar para conteudo editavel identificados.
   - Validacao: `rg`/leitura dos arquivos, sem editar.
-  - Registro de execucao:
+  - Registro de execucao: 2026-06-19, Codex. Inventario registrado em `docs/business/softluna/seo-foundation.md`: hero/SEO, pricing, portfolio, FAQ e carousel estao em `content/`; varias secoes da home seguem em codigo; blog atual e legado/mockado.
 
-- [ ] F0-005 - Definir padrao de tracking e conversoes
+- [x] F0-005 - Definir padrao de tracking e conversoes
   - Objetivo: padronizar nomes de eventos para WhatsApp, portfolio CTA, money pages e blog.
   - Arquivos provaveis: `src/pages/_app.*`, `src/components/*`, `src/components/Home/*`.
   - Dependencias: D-003 se houver mudanca de analytics/plataforma.
   - Skill indicada: `tlc-spec-driven`, `modern-web-guidance`.
   - Criterios de aceite: tabela de eventos com nome, gatilho, parametros e local de implementacao.
   - Validacao: apos implementar eventos, testar cliques em dev e revisar console/network.
-  - Registro de execucao:
+  - Registro de execucao: 2026-06-19, Codex. Padrao inicial de eventos registrado em `docs/business/softluna/seo-foundation.md`, partindo da stack atual de Vercel Analytics. Implementacao ficou para F6-002.
 
 ## Fase 1 - Arquitetura SEO e Money Pages
 
