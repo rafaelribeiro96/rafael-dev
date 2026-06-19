@@ -15,6 +15,8 @@ const fallbackCta = (id) => {
   return 'Iniciar projeto';
 };
 
+const domainBonus = 'Primeiro ano de domínio grátis';
+
 const PricingCard = ({ tier, ctaLink, variant = 'default' }) => {
   const {
     id,
@@ -91,6 +93,12 @@ const PricingCard = ({ tier, ctaLink, variant = 'default' }) => {
               : ''
           }`}
         >
+          <li className="flex items-start gap-3 rounded-xl border border-primary-container/50 bg-surface-container-low px-4 py-3 font-body-md text-[14px] font-medium leading-6 text-on-surface">
+            <span className="material-symbols-outlined mt-0.5 text-[18px] text-primary">
+              language
+            </span>
+            <span>{domainBonus}</span>
+          </li>
           {features.map((feature) => (
             <li
               key={feature}

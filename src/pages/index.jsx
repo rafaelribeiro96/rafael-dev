@@ -10,6 +10,7 @@ import ComparisonMatrix from 'src/components/Home/ComparisonMatrix';
 import Portfolio from 'src/components/Home/Portfolio';
 import Workflow from 'src/components/Home/Workflow';
 import Pricing from 'src/components/Home/Pricing';
+import OwnershipGuarantee from 'src/components/Home/OwnershipGuarantee';
 import FAQ from 'src/components/Home/FAQ';
 
 import {
@@ -74,6 +75,7 @@ const Main = ({ globalData, pricingTiers, portfolioItems, faqItems }) => {
         <Portfolio ctaLink={ctaLink} items={portfolioItems} />
         <Workflow />
         <Pricing ctaLink={ctaLink} tiers={pricingTiers} />
+        <OwnershipGuarantee />
         <FAQ items={faqItems} />
       </main>
 

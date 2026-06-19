@@ -88,36 +88,52 @@ const ComparisonMatrix = () => {
           </div>
         </div>
 
-        <div className="space-y-4 md:hidden" data-aos="fade-up">
+        <div
+          className="overflow-hidden rounded-2xl border border-border-thin bg-white md:hidden"
+          data-aos="fade-up"
+        >
+          <div className="grid grid-cols-2 border-b border-border-thin">
+            <div className="bg-error-container/25 px-4 py-4">
+              <p className="font-label-md text-[11px] uppercase tracking-[0.06em] text-error">
+                Template pesado
+              </p>
+            </div>
+            <div className="bg-surface-container-low px-4 py-4">
+              <p className="font-label-md text-[11px] uppercase tracking-[0.06em] text-primary">
+                SoftLuna
+              </p>
+            </div>
+          </div>
+
           {rows.map(([criterion, template, engineering]) => (
-            <article
+            <div
               key={criterion}
-              className="overflow-hidden rounded-2xl border border-border-thin bg-white"
+              className="border-b border-border-thin last:border-b-0"
             >
-              <div className="bg-bg-secondary px-5 py-4">
-                <h3 className="font-headline-md text-[19px] leading-7 text-on-surface">
+              <div className="bg-bg-secondary px-4 py-3">
+                <h3 className="font-headline-md text-[17px] leading-6 text-on-surface">
                   {criterion}
                 </h3>
               </div>
-              <div className="space-y-3 p-5">
-                <div className="rounded-xl border border-error-container/70 bg-error-container/20 p-4">
-                  <p className="mb-2 font-label-md text-[11px] uppercase tracking-[0.08em] text-error">
-                    Template / WordPress pesado
-                  </p>
-                  <p className="font-body-md text-[14px] leading-6 text-secondary">
+              <div className="grid grid-cols-2">
+                <div className="border-r border-border-thin px-4 py-4">
+                  <span className="material-symbols-outlined mb-2 text-[18px] text-error">
+                    close
+                  </span>
+                  <p className="font-body-md text-[13px] leading-5 text-secondary">
                     {template}
                   </p>
                 </div>
-                <div className="rounded-xl border border-primary-container/70 bg-surface-container-lowest p-4">
-                  <p className="mb-2 font-label-md text-[11px] uppercase tracking-[0.08em] text-primary">
-                    SoftLuna Engineering
-                  </p>
-                  <p className="font-body-md text-[14px] leading-6 text-on-surface">
+                <div className="bg-surface-container-lowest px-4 py-4">
+                  <span className="material-symbols-outlined mb-2 text-[18px] text-primary">
+                    done
+                  </span>
+                  <p className="font-body-md text-[13px] font-medium leading-5 text-on-surface">
                     {engineering}
                   </p>
                 </div>
               </div>
-            </article>
+            </div>
           ))}
         </div>
       </div>

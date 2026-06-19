@@ -44,7 +44,7 @@ const renderAnswer = (answerText) => {
 };
 
 const FAQ = ({ items = [] }) => {
-  const [openIndex, setOpenIndex] = useState(0);
+  const [openIndex, setOpenIndex] = useState(null);
   const faqItems = items.length > 0 ? items : defaultFaqItems;
 
   return (

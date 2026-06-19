@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 
 const navItems = [
   { label: 'Diferencial', href: '/#diferenciais', targetId: 'diferenciais' },
-  { label: 'Portfolio', href: '/#portfolio', targetId: 'portfolio' },
+  { label: 'Portfólio', href: '/#portfolio', targetId: 'portfolio' },
   { label: 'Planos', href: '/#planos', targetId: 'planos' },
   { label: 'Processo', href: '/#processo', targetId: 'processo' },
   { label: 'FAQ', href: '/#faq', targetId: 'faq' }
@@ -42,16 +42,16 @@ const Header = () => {
       }`}
       aria-label="Navegacao principal"
     >
-      <div className="mx-auto grid h-20 max-w-container-wide grid-cols-[1fr_auto_1fr] items-center px-margin-page">
+      <div className="mx-auto flex h-20 max-w-container-wide items-center justify-between gap-3 px-margin-page md:grid md:grid-cols-[1fr_auto_1fr]">
         <Link
           href="/"
-          className="inline-flex w-fit items-center"
+          className="inline-flex min-w-0 shrink items-center"
           aria-label="SoftLuna - Inicio"
         >
           <img
-            src="/Logo%20Preta%20-%20fundo%20transparente.svg"
+            src="/softluna-logo-mark-cropped.png"
             alt="SoftLuna"
-            className="h-9 w-auto md:h-10"
+            className="h-auto w-[104px] min-[380px]:w-[116px] sm:w-[132px] md:h-7 md:w-auto"
           />
         </Link>
 
@@ -75,13 +75,22 @@ const Header = () => {
             rel="noopener noreferrer"
             className="rt-button rt-button-primary"
           >
-            Iniciar projeto
+            Quero meu site
           </a>
         </div>
 
+        <a
+          href={ctaLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="ml-auto inline-flex min-h-10 shrink-0 items-center justify-center rounded-lg border border-primary bg-primary px-3 font-label-md text-[11px] uppercase tracking-[0.04em] text-white transition-colors hover:border-accent-hover hover:bg-accent-hover min-[380px]:px-4 md:hidden"
+        >
+          Quero meu site
+        </a>
+
         <button
           type="button"
-          className="fixed right-4 top-[18px] inline-flex h-11 w-11 items-center justify-center rounded-lg border border-border-thin bg-white text-on-surface md:hidden"
+          className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-border-thin bg-white text-on-surface md:hidden"
           aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
           aria-expanded={isMenuOpen}
           onClick={() => setIsMenuOpen((open) => !open)}
@@ -111,7 +120,7 @@ const Header = () => {
               rel="noopener noreferrer"
               className="rt-button rt-button-primary rt-button-full mt-4"
             >
-              Iniciar projeto
+              Quero meu site
             </a>
           </div>
         </div>

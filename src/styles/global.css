@@ -167,30 +167,6 @@ select:focus-visible {
   background-size: 40px 40px;
 }
 
-.portfolio-marquee {
-  animation: portfolio-marquee 28s linear infinite;
-}
-
-.portfolio-marquee:hover {
-  animation-play-state: paused;
-}
-
-@keyframes portfolio-marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(calc(-50% - 12px));
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .portfolio-marquee {
-    animation: none;
-    overflow-x: auto;
-  }
-}
-
 /* Scrollbar customization */
 ::-webkit-scrollbar {
   width: 8px;

@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 
 const WHATSAPP_BASE = 'https://wa.me/5531991869943';
@@ -11,7 +11,55 @@ function buildWhatsappLink(whatsappMessage, fallbackLink) {
 
 const Portfolio = ({ ctaLink, items = [] }) => {
   const projects = items.filter((project) => project.displayOn !== 'carousel');
-  const carouselProjects = [...projects, ...projects];
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const scrollerRef = useRef(null);
+  const resumeTimeoutRef = useRef(null);
+
+  const scrollToIndex = useCallback((index, behavior = 'smooth') => {
+    const container = scrollerRef.current;
+    const firstCard = container?.querySelector('[data-carousel-card]');
+    if (!container || !firstCard) return;
+
+    const gap = 24;
+    const cardWidth = firstCard.getBoundingClientRect().width + gap;
+    container.scrollTo({ left: cardWidth * index, behavior });
+  }, []);
+
+  useEffect(() => {
+    scrollToIndex(activeIndex);
+  }, [activeIndex, scrollToIndex]);
+
+  useEffect(() => {
+    if (projects.length <= 1 || isPaused) return undefined;
+
+    const interval = setInterval(() => {
+      setActiveIndex((current) => (current + 1) % projects.length);
+    }, 4500);
+
+    return () => clearInterval(interval);
+  }, [isPaused, projects.length]);
+
+  useEffect(() => {
+    return () => {
+      if (resumeTimeoutRef.current) clearTimeout(resumeTimeoutRef.current);
+    };
+  }, []);
+
+  const handleManualNavigation = (direction) => {
+    if (projects.length <= 1) return;
+
+    setIsPaused(true);
+    setActiveIndex((current) => {
+      if (direction === 'next') return (current + 1) % projects.length;
+      return (current - 1 + projects.length) % projects.length;
+    });
+
+    if (resumeTimeoutRef.current) clearTimeout(resumeTimeoutRef.current);
+    resumeTimeoutRef.current = setTimeout(() => {
+      setIsPaused(false);
+    }, 6500);
+  };
 
   return (
     <section
@@ -22,24 +70,25 @@ const Portfolio = ({ ctaLink, items = [] }) => {
         <div className="mb-10 flex flex-col justify-between gap-5 md:flex-row md:items-end">
           <div data-aos="fade-up">
             <span className="mb-3 block font-label-md text-[13px] uppercase tracking-[0.05em] text-primary-container">
-              Projetos reais
+              Serviços realizados
             </span>
             <h2 className="font-headline-lg text-[34px] leading-[44px] text-white sm:text-headline-lg">
               Galeria de projetos
             </h2>
           </div>
           <p className="max-w-md font-body-md text-[16px] leading-[26px] text-white/65">
-            Projetos reais com visual sob medida, carregamento rapido e caminho
-            direto para o lead pedir algo parecido.
+            Portfólio de serviços com visual sob medida, carregamento rapido e
+            caminho direto para o lead pedir algo parecido.
           </p>
         </div>
 
-        <div
-          className="-mx-margin-page overflow-hidden px-margin-page"
-          data-aos="fade-up"
-        >
-          <div className="portfolio-marquee flex w-max gap-6">
-            {carouselProjects.map((project, index) => {
+        <div className="-mx-margin-page px-margin-page" data-aos="fade-up">
+          <div
+            ref={scrollerRef}
+            className="flex snap-x snap-mandatory gap-6 overflow-x-hidden scroll-smooth"
+            aria-live="polite"
+          >
+            {projects.map((project, index) => {
               const hasLiveUrl = project.liveUrl && project.liveUrl !== '#';
               const whatsappLink = buildWhatsappLink(
                 project.whatsappMessage,
@@ -48,9 +97,10 @@ const Portfolio = ({ ctaLink, items = [] }) => {
 
               return (
                 <article
-                  key={`${project.id}-${index}`}
-                  className="group w-[78vw] max-w-[420px] shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] sm:w-[390px] lg:w-[410px]"
-                  aria-hidden={index >= projects.length}
+                  key={project.id}
+                  data-carousel-card
+                  className="group w-[78vw] max-w-[420px] shrink-0 snap-start overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] sm:w-[390px] lg:w-[410px]"
+                  aria-current={activeIndex === index}
                 >
                   <div className="relative aspect-[16/10] overflow-hidden bg-black">
                     <Image
@@ -97,6 +147,36 @@ const Portfolio = ({ ctaLink, items = [] }) => {
               );
             })}
           </div>
+
+          {projects.length > 1 && (
+            <div className="mt-7 flex items-center justify-between gap-4">
+              <div className="flex gap-2" aria-label="Controles do portfólio">
+                <button
+                  type="button"
+                  onClick={() => handleManualNavigation('prev')}
+                  className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-white/15 bg-white/[0.04] text-white transition-colors hover:border-primary-container hover:text-primary-container"
+                  aria-label="Projeto anterior"
+                >
+                  <span className="material-symbols-outlined text-[22px]">
+                    arrow_back
+                  </span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => handleManualNavigation('next')}
+                  className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-white/15 bg-white/[0.04] text-white transition-colors hover:border-primary-container hover:text-primary-container"
+                  aria-label="Próximo projeto"
+                >
+                  <span className="material-symbols-outlined text-[22px]">
+                    arrow_forward
+                  </span>
+                </button>
+              </div>
+              <p className="font-label-md text-[11px] uppercase tracking-[0.06em] text-white/45">
+                {activeIndex + 1} / {projects.length}
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </section>

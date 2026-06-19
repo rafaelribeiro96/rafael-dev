@@ -16,7 +16,7 @@ const Footer = () => {
             aria-label="SoftLuna - Inicio"
           >
             <img
-              src="/logo%20preta%20completa%20-%20fundo%20transparente.svg"
+              src="/softluna-logo-full-cropped.png"
               alt="SoftLuna Solucoes Digitais"
               className="h-14 w-auto sm:h-16"
             />
@@ -33,14 +33,6 @@ const Footer = () => {
               className="font-label-md text-[12px] uppercase tracking-[0.05em] text-secondary transition-colors hover:text-primary"
             >
               Instagram
-            </a>
-            <a
-              href="https://www.linkedin.com/in/rafaelfeliperibeiro/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-label-md text-[12px] uppercase tracking-[0.05em] text-secondary transition-colors hover:text-primary"
-            >
-              LinkedIn
             </a>
           </div>
         </div>
@@ -102,10 +94,12 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href="mailto:contato@softluna.com.br"
+                href="https://www.instagram.com/softlunadigital/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="transition-colors hover:text-primary"
               >
-                contato@softluna.com.br
+                Instagram
               </a>
             </li>
             <li>
