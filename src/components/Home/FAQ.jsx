@@ -5,12 +5,12 @@ const defaultFaqItems = [
   {
     question: 'Quanto custa um site profissional?',
     answer:
-      'Os valores variam conforme o tipo e a complexidade do projeto. O orcamento final e feito sob medida apos entendermos o seu negocio.'
+      'Os valores variam conforme o tipo e a complexidade do projeto. O orçamento final é feito sob medida após entendermos o seu negócio.'
   },
   {
     question: 'Em quanto tempo meu site fica pronto?',
     answer:
-      'Landing pages e sites institucionais simples normalmente levam ate 15 dias uteis, dependendo do envio dos materiais e aprovacoes.'
+      'Landing pages e sites institucionais simples normalmente levam até 15 dias úteis, dependendo do envio dos materiais e aprovações.'
   }
 ];
 
@@ -52,7 +52,7 @@ const FAQ = ({ items = [] }) => {
       <div className="mx-auto max-w-[860px]">
         <div className="mb-14 text-center" data-aos="fade-up">
           <span className="mb-3 block font-label-md text-[13px] uppercase tracking-[0.05em] text-primary">
-            Duvidas frequentes
+            Dúvidas frequentes
           </span>
           <h2 className="font-headline-lg text-[34px] leading-[44px] text-on-surface sm:text-headline-lg">
             Perguntas frequentes

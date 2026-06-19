@@ -3,20 +3,20 @@ import React, { useEffect, useRef } from 'react';
 const testimonials = [
   {
     stars: 5,
-    text: 'O site ficou incrivel, moderno e representa perfeitamente o padrao do nosso atelie. As vendas aumentaram depois do lancamento.',
+    text: 'O site ficou incrível, moderno e representa perfeitamente o padrão do nosso ateliê. As vendas aumentaram depois do lançamento.',
     name: 'Glayde Ribeiro',
     business: 'Confeitaria Gourmet'
   },
   {
     stars: 5,
-    text: 'Precisavamos de um site sobrio e profissional para o escritorio. A SoftLuna entregou exatamente isso, dentro do prazo e com transparencia.',
+    text: 'Precisávamos de um site sóbrio e profissional para o escritório. A SoftLuna entregou exatamente isso, dentro do prazo e com transparência.',
     name: 'JSA Advogados',
     business: 'Escritorio de Advocacia',
     highlighted: true
   },
   {
     stars: 5,
-    text: 'Alem do design moderno, o que surpreendeu foi a velocidade: meu site carrega instantaneamente. Melhor investimento que fiz.',
+    text: 'Além do design moderno, o que surpreendeu foi a velocidade: meu site carrega instantaneamente. Melhor investimento que fiz.',
     name: 'Daniel Antunes',
     business: 'Barbearia Antunes'
   }

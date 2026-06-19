@@ -4,17 +4,17 @@ const trustBadges = [
   {
     label: '01. Performance',
     title: 'Performance edge',
-    text: 'Sites leves, servidos por CDN e pensados para carregar rapido no mobile.'
+    text: 'Sites leves, servidos por CDN e pensados para carregar rápido no mobile.'
   },
   {
     label: '02. Cronograma',
     title: 'Escopo claro',
-    text: 'Briefing objetivo, aprovacao visual e entregas sem abrir margem para retrabalho infinito.'
+    text: 'Briefing objetivo, aprovação visual e entregas sem abrir margem para retrabalho infinito.'
   },
   {
     label: '03. Arquitetura',
-    title: 'Ativo proprio',
-    text: 'Codigo e conteudo organizados para a empresa manter o site mesmo se trocar de fornecedor.'
+    title: 'Ativo próprio',
+    text: 'Código e conteúdo organizados para a empresa manter o site mesmo se trocar de fornecedor.'
   }
 ];
 
@@ -68,8 +68,8 @@ const DigitalEcosystem = () => {
                 SEO local desde a estrutura
               </h3>
               <p className="mt-4 max-w-xl font-body-lg text-[18px] leading-[30px] text-secondary">
-                Dados estruturados, metas, Open Graph e base semantica para o
-                Google entender sua empresa, sua cidade e seus servicos.
+                Dados estruturados, metas, Open Graph e base semântica para o
+                Google entender sua empresa, sua cidade e seus serviços.
               </p>
               <a
                 href="#arquitetura"
@@ -105,10 +105,10 @@ const DigitalEcosystem = () => {
                 edit_document
               </span>
               <h3 className="font-headline-md text-[26px] leading-9 text-on-surface">
-                Painel sem friccao
+                Painel sem fricção
               </h3>
               <p className="mt-3 font-body-md text-[15px] leading-6 text-secondary">
-                Textos, fotos, portfolio, planos e FAQ ficam editaveis sem
+                Textos, fotos, portfólio, planos e FAQ ficam editáveis sem
                 WordPress, plugins ou risco de desmontar o layout.
               </p>
             </article>
@@ -123,8 +123,8 @@ const DigitalEcosystem = () => {
                   Arquitetura pronta para busca com IA
                 </h3>
                 <p className="mt-4 font-body-lg text-[18px] leading-[30px] text-on-surface-variant">
-                  Codigo semantico e dados organizados para Google, respostas
-                  generativas, automacoes e integracoes futuras.
+                  Código semântico e dados organizados para Google, respostas
+                  generativas, automações e integrações futuras.
                 </p>
               </div>
               <div className="absolute bottom-0 right-0 h-40 w-40 translate-x-10 translate-y-10 rounded-full border border-primary-container/60" />

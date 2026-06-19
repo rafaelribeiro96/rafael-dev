@@ -77,7 +77,7 @@ const Portfolio = ({ ctaLink, items = [] }) => {
             </h2>
           </div>
           <p className="max-w-md font-body-md text-[16px] leading-[26px] text-white/65">
-            Portfólio de serviços com visual sob medida, carregamento rapido e
+            Portfólio de serviços com visual sob medida, carregamento rápido e
             caminho direto para o lead pedir algo parecido.
           </p>
         </div>

@@ -40,13 +40,13 @@ const Header = () => {
           ? 'bg-white/95 backdrop-blur-xl'
           : 'bg-white/85 backdrop-blur-md'
       }`}
-      aria-label="Navegacao principal"
+      aria-label="Navegação principal"
     >
       <div className="mx-auto flex h-20 max-w-container-wide items-center justify-between gap-3 px-margin-page md:grid md:grid-cols-[1fr_auto_1fr]">
         <Link
           href="/"
           className="inline-flex min-w-0 shrink items-center"
-          aria-label="SoftLuna - Inicio"
+          aria-label="SoftLuna - Início"
         >
           <img
             src="/softluna-logo-mark-cropped.png"

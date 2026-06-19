@@ -59,6 +59,7 @@ Minimum information needed before building a client site:
 
 Before publishing:
 
+- Review Portuguese copy for spelling, accent marks, crase and agreement before publishing.
 - Hero says what the business does, where it operates and why it is credible.
 - CTA is visible in the first viewport.
 - WhatsApp message is contextual.
@@ -85,6 +86,7 @@ When asking an AI to generate copy, visual concepts, posts or images for SoftLun
 - Brand: SoftLuna, Lunar Day.
 - Palette: white `#FFFFFF`, lunar gray `#F5F5F7`, primary text `#111111`, secondary text `#6E6E73`, champagne `#C5A065`, hover champagne `#B38F54`.
 - Tone: precise, premium, calm, technical, conversion-aware.
+- Language: Brazilian Portuguese (`pt-BR`) with correct accents, orthography and final proofreading before publish.
 - Avoid: generic tech startup neon, heavy gradients, cluttered WordPress-template look, exaggerated hype.
 - Subject: high-performance websites, local SEO, Git-CMS autonomy, WhatsApp conversion, AI-assisted engineering.
 

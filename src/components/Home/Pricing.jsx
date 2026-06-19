@@ -40,45 +40,57 @@ const PricingCard = ({ tier, ctaLink, variant = 'default' }) => {
           : 'border-border-thin hover:border-primary/40 hover:shadow-[0_18px_44px_rgba(30,27,23,0.08)]'
       } ${
         isHorizontal
-          ? 'lg:grid lg:grid-cols-[1.05fr_0.85fr_1.2fr] lg:items-start lg:gap-8'
+          ? 'lg:grid lg:grid-cols-[0.92fr_1.08fr] lg:items-stretch lg:gap-8 lg:p-7 xl:gap-10'
           : 'flex h-full flex-col'
       }`}
     >
-      <div>
-        {badge && (
-          <span
-            className={`font-label-md text-[10px] uppercase tracking-[0.08em] ${
-              highlighted && !isHorizontal
-                ? 'absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1 text-white'
-                : 'mb-4 inline-flex w-fit rounded-lg bg-surface-container-low px-3 py-1 text-primary'
+      <div
+        className={
+          isHorizontal
+            ? 'flex min-h-full flex-col justify-between rounded-2xl bg-surface-container-low/60 p-5 md:p-6'
+            : ''
+        }
+      >
+        <div>
+          {badge && (
+            <span
+              className={`font-label-md text-[10px] uppercase tracking-[0.08em] ${
+                highlighted && !isHorizontal
+                  ? 'absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1 text-white'
+                  : 'mb-4 inline-flex w-fit rounded-lg bg-white px-3 py-1 text-primary ring-1 ring-primary-container/70'
+              }`}
+            >
+              {badge}
+            </span>
+          )}
+          <h3 className="font-headline-md text-[22px] leading-8 text-on-surface md:text-[24px]">
+            {title}
+          </h3>
+          <p
+            className={`mt-3 font-body-md text-[14px] leading-6 text-secondary ${
+              isHorizontal ? 'max-w-[36rem]' : 'min-h-[72px]'
             }`}
           >
-            {badge}
-          </span>
-        )}
-        <h3 className="font-headline-md text-[22px] leading-8 text-on-surface md:text-[24px]">
-          {title}
-        </h3>
-        <p
-          className={`mt-3 font-body-md text-[14px] leading-6 text-secondary ${
-            isHorizontal ? 'max-w-xl' : 'min-h-[72px]'
-          }`}
-        >
-          {description}
-        </p>
-      </div>
+            {description}
+          </p>
+        </div>
 
-      <div className={isHorizontal ? 'mt-7 lg:mt-0' : 'mt-7'}>
-        <p className="font-body-md text-[13px] uppercase tracking-[0.05em] text-text-secondary">
-          A partir de
-        </p>
-        <p className="mt-2 font-headline-md text-[30px] font-bold leading-[38px] text-on-surface md:text-[34px] md:leading-[42px]">
-          {formatCurrency(setupPrice)}
-        </p>
-        <p className="mt-2 font-body-md text-[13px] leading-5 text-secondary">
-          + {formatCurrency(maintenancePrice)}/mes para hospedagem, manutencao e
-          suporte.
-        </p>
+        <div
+          className={
+            isHorizontal ? 'mt-6 border-t border-border-thin pt-5' : 'mt-7'
+          }
+        >
+          <p className="font-body-md text-[13px] uppercase tracking-[0.05em] text-text-secondary">
+            A partir de
+          </p>
+          <p className="mt-2 font-headline-md text-[30px] font-bold leading-[38px] text-on-surface md:text-[34px] md:leading-[42px]">
+            {formatCurrency(setupPrice)}
+          </p>
+          <p className="mt-2 max-w-sm font-body-md text-[13px] leading-5 text-secondary">
+            + {formatCurrency(maintenancePrice)}/mês para hospedagem, manutenção
+            e suporte.
+          </p>
+        </div>
       </div>
 
       <div
@@ -89,7 +101,7 @@ const PricingCard = ({ tier, ctaLink, variant = 'default' }) => {
         <ul
           className={`space-y-3 ${
             isHorizontal
-              ? 'lg:grid lg:grid-cols-2 lg:gap-x-6 lg:gap-y-3 lg:space-y-0'
+              ? 'lg:grid lg:grid-cols-2 lg:gap-x-5 lg:gap-y-3 lg:space-y-0'
               : ''
           }`}
         >
@@ -113,7 +125,11 @@ const PricingCard = ({ tier, ctaLink, variant = 'default' }) => {
         </ul>
 
         {maintenanceNote && (
-          <p className="mt-5 rounded-xl bg-bg-secondary p-4 font-body-md text-[12px] leading-5 text-secondary">
+          <p
+            className={`rounded-xl bg-bg-secondary p-4 font-body-md text-[12px] leading-5 text-secondary ${
+              isHorizontal ? 'mt-4 lg:max-w-[30rem]' : 'mt-5'
+            }`}
+          >
             {maintenanceNote}
           </p>
         )}
@@ -124,7 +140,7 @@ const PricingCard = ({ tier, ctaLink, variant = 'default' }) => {
           rel="noopener noreferrer"
           className={`rt-button rt-button-full mt-7 ${
             highlighted ? 'rt-button-primary' : 'rt-button-secondary'
-          } ${isHorizontal ? 'lg:max-w-[260px]' : ''}`}
+          } ${isHorizontal ? 'lg:max-w-[300px]' : ''}`}
         >
           {ctaText || fallbackCta(id)}
         </a>
@@ -155,12 +171,12 @@ const Pricing = ({ ctaLink, tiers = [] }) => {
             Investimento
           </h2>
           <p className="mx-auto mt-4 max-w-2xl font-body-md text-[17px] leading-[27px] text-secondary">
-            Dois pontos de partida claros para colocar sua presenca digital no
+            Dois pontos de partida claros para colocar sua presença digital no
             ar com performance, design e painel editavel.
           </p>
           <p className="mx-auto mt-3 max-w-2xl font-body-md text-[15px] leading-6 text-secondary">
-            Projetos com regras de negocio, automacoes ou integrações entram em
-            escopo personalizado, com briefing tecnico antes do orcamento final.
+            Projetos com regras de negócio, automações ou integrações entram em
+            escopo personalizado, com briefing técnico antes do orçamento final.
           </p>
         </div>
 

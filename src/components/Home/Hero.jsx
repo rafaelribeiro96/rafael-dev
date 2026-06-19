@@ -3,10 +3,10 @@ import React from 'react';
 
 const Hero = ({ ctaLink, heroContent = {} }) => {
   const headline =
-    heroContent?.headline || 'Sites rapidos, elegantes e prontos para vender.';
+    heroContent?.headline || 'Sites rápidos, elegantes e prontos para vender.';
   const subheadline =
     heroContent?.subheadline ||
-    'A SoftLuna cria landing pages, sites institucionais e solucoes digitais com performance edge, SEO local e painel simples para voce editar sem depender de plugins.';
+    'A SoftLuna cria landing pages, sites institucionais e soluções digitais com performance edge, SEO local e painel simples para você editar sem depender de plugins.';
   const ctaText = heroContent?.ctaText || 'Quero meu site agora';
 
   return (
@@ -43,7 +43,7 @@ const Hero = ({ ctaLink, heroContent = {} }) => {
             }}
             className="rt-button rt-button-secondary rt-button-lg w-full sm:w-auto"
           >
-            Ver portfolio
+            Ver portfólio
           </a>
         </div>
       </div>

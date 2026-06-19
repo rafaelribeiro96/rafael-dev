@@ -2,18 +2,18 @@
   "id": "site-institucional",
   "order": 2,
   "title": "Site Institucional Completo",
-  "description": "Para empresas que precisam apresentar servicos, autoridade e estrutura local completa no Google.",
+  "description": "Para empresas que precisam apresentar serviços, autoridade e estrutura local completa no Google.",
   "setupPrice": 1299,
   "maintenancePrice": 75,
   "highlighted": true,
   "badge": "Mais Popular",
   "features": [
-    "Ate 5 paginas estrategicas",
+    "Até 5 páginas estratégicas",
     "SEO local e dados estruturados",
-    "Portfolio, servicos e depoimentos",
-    "Formulario e WhatsApp integrados",
+    "Portfólio, serviços e depoimentos",
+    "Formulário e WhatsApp integrados",
     "Painel para textos, imagens e FAQ",
-    "Base preparada para blog ou expansao"
+    "Base preparada para blog ou expansão"
   ],
-  "maintenanceNote": "Inclui hospedagem edge, SSL, backup do projeto e suporte para pequenas atualizacoes de conteudo."
+  "maintenanceNote": "Inclui hospedagem edge, SSL, backup do projeto e suporte para pequenas atualizações de conteúdo."
 }

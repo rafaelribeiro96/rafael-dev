@@ -5,9 +5,9 @@ const servicesList = [
     title: 'Landing Pages',
     icon: 'conversion_path',
     description:
-      'Pagina unica para campanha, trafego pago ou validacao de oferta, com copy, WhatsApp e SEO basico.',
+      'Página única para campanha, tráfego pago ou validação de oferta, com copy, WhatsApp e SEO básico.',
     features: [
-      'Copy orientada a conversao',
+      'Copy orientada à conversão',
       'WhatsApp/CRM',
       'Performance mobile'
     ]
@@ -16,15 +16,15 @@ const servicesList = [
     title: 'Sites Institucionais',
     icon: 'business',
     description:
-      'Site multipagina para empresas que precisam apresentar servicos, autoridade e estrutura local no Google.',
-    features: ['Ate 5 paginas', 'Painel editavel', 'SEO local']
+      'Site multipágina para empresas que precisam apresentar serviços, autoridade e estrutura local no Google.',
+    features: ['Até 5 páginas', 'Painel editável', 'SEO local']
   },
   {
     title: 'Projetos Personalizados',
     icon: 'dashboard_customize',
     description:
-      'Aplicacoes, e-commerce, areas de membros e automacoes quando o projeto exige regra de negocio propria.',
-    features: ['Briefing tecnico', 'APIs e webhooks', 'Escopo sob medida']
+      'Aplicações, e-commerce, áreas de membros e automações quando o projeto exige regra de negócio própria.',
+    features: ['Briefing técnico', 'APIs e webhooks', 'Escopo sob medida']
   }
 ];
 
@@ -40,15 +40,15 @@ const Services = () => {
           data-aos="fade-up"
         >
           <span className="mb-3 block font-label-md text-[13px] uppercase tracking-[0.05em] text-primary">
-            Solucoes em engenharia web
+            Soluções em engenharia web
           </span>
           <h2 className="font-headline-lg text-[34px] leading-[44px] text-on-surface sm:text-headline-lg">
-            Solucoes digitais para empresas que precisam vender e ser
+            Soluções digitais para empresas que precisam vender e ser
             encontradas.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl font-body-md text-[17px] leading-[27px] text-secondary">
             Da landing page ao sistema sob medida, cada entrega combina design
-            sob medida, performance, SEO local e conteudo editavel.
+            sob medida, performance, SEO local e conteúdo editável.
           </p>
         </div>
 

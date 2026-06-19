@@ -13,17 +13,17 @@ const Footer = () => {
           <Link
             href="/"
             className="inline-flex w-fit items-center"
-            aria-label="SoftLuna - Inicio"
+            aria-label="SoftLuna - Início"
           >
             <img
               src="/softluna-logo-full-cropped.png"
-              alt="SoftLuna Solucoes Digitais"
+              alt="SoftLuna Soluções Digitais"
               className="h-14 w-auto sm:h-16"
             />
           </Link>
           <p className="mt-5 max-w-sm font-body-lg text-[15px] leading-6 text-secondary">
             Engenharia web de alta performance para marcas que desejam elevar
-            seu padrao digital com design, velocidade e autonomia.
+            seu padrão digital com design, velocidade e autonomia.
           </p>
           <div className="mt-7 flex flex-wrap gap-6">
             <a
@@ -39,7 +39,7 @@ const Footer = () => {
 
         <div className="col-span-6 lg:col-span-3">
           <h2 className="mb-5 font-label-md text-[10px] uppercase tracking-[0.08em] text-on-surface">
-            Company
+            Empresa
           </h2>
           <ul className="space-y-3 font-body-md text-[14px] text-secondary">
             <li>
@@ -55,7 +55,7 @@ const Footer = () => {
                 href="/#servicos"
                 className="transition-colors hover:text-primary"
               >
-                Servicos
+                Serviços
               </Link>
             </li>
             <li>
@@ -63,7 +63,7 @@ const Footer = () => {
                 href="/#portfolio"
                 className="transition-colors hover:text-primary"
               >
-                Portfolio
+                Portfólio
               </Link>
             </li>
             <li>
@@ -79,7 +79,7 @@ const Footer = () => {
 
         <div className="col-span-6 lg:col-span-3">
           <h2 className="mb-5 font-label-md text-[10px] uppercase tracking-[0.08em] text-on-surface">
-            Contact
+            Contato
           </h2>
           <ul className="space-y-3 font-body-md text-[14px] text-secondary">
             <li>

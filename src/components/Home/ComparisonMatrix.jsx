@@ -4,27 +4,27 @@ const rows = [
   [
     'Performance',
     'Sites lentos por excesso de plugins e temas pesados',
-    'Next.js/Astro estatico, CDN global e foco em nota alta no PageSpeed'
+    'Next.js/Astro estático, CDN global e foco em nota alta no PageSpeed'
   ],
   [
     'SEO & Google',
-    'SEO depende de extensoes e configuracoes manuais',
-    'Estrutura semantica, SEO local e dados prontos para Google e IAs'
+    'SEO depende de extensões e configurações manuais',
+    'Estrutura semântica, SEO local e dados prontos para Google e IAs'
   ],
   [
-    'Seguranca',
-    'Mais plugins, atualizacoes constantes e maior superficie de ataque',
-    'Menos dependencias, deploy versionado e infraestrutura mais simples'
+    'Segurança',
+    'Mais plugins, atualizações constantes e maior superfície de ataque',
+    'Menos dependências, deploy versionado e infraestrutura mais simples'
   ],
   [
-    'Edicao',
-    'Painel inchado, confuso e facil de quebrar o layout',
-    'Git-CMS simples para editar textos, fotos, planos, FAQ e portfolio'
+    'Edição',
+    'Painel inchado, confuso e fácil de quebrar o layout',
+    'Git-CMS simples para editar textos, fotos, planos, FAQ e portfólio'
   ],
   [
     'Design',
-    'Limitado por templates, blocos prontos e aparencia repetida',
-    'Interface exclusiva, alinhada a marca, conversao e posicionamento'
+    'Limitado por templates, blocos prontos e aparência repetida',
+    'Interface exclusiva, alinhada à marca, conversão e posicionamento'
   ]
 ];
 
@@ -38,16 +38,16 @@ const ComparisonMatrix = () => {
         <div className="mb-10 flex flex-col justify-between gap-5 md:mb-12 md:flex-row md:items-end">
           <div data-aos="fade-up">
             <span className="mb-3 block font-label-md text-[13px] uppercase tracking-[0.05em] text-primary">
-              O fim das limitacoes
+              O fim das limitações
             </span>
             <h2 className="font-headline-lg text-[30px] leading-[38px] text-on-surface sm:text-headline-lg">
               Por que engenharia web supera template pesado.
             </h2>
           </div>
           <p className="max-w-md font-body-md text-[16px] leading-[26px] text-secondary">
-            A SoftLuna cria ativos digitais leves, editaveis e preparados para
-            busca local. A diferenca aparece no carregamento, no painel e na
-            conversao.
+            A SoftLuna cria ativos digitais leves, editáveis e preparados para
+            busca local. A diferença aparece no carregamento, no painel e na
+            conversão.
           </p>
         </div>
 
@@ -57,13 +57,13 @@ const ComparisonMatrix = () => {
         >
           <div className="grid grid-cols-[0.8fr_1fr_1fr]">
             <div className="bg-bg-secondary p-6 font-label-md text-[13px] uppercase tracking-[0.05em] text-text-secondary">
-              Criterio
+              Critério
             </div>
             <div className="bg-bg-secondary p-6 font-label-md text-[13px] uppercase tracking-[0.05em] text-text-secondary">
               Template / WordPress pesado
             </div>
             <div className="bg-surface-container-lowest p-6 font-label-md text-[13px] uppercase tracking-[0.05em] text-primary">
-              SoftLuna Engineering
+              Engenharia SoftLuna
             </div>
 
             {rows.map(([criterion, template, engineering]) => (

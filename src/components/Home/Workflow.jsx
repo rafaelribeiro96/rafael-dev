@@ -3,18 +3,18 @@ import React from 'react';
 const steps = [
   {
     number: '01',
-    title: 'Diagnostico & oferta',
-    text: 'Entendemos o negocio, a cidade, o publico, os concorrentes e a acao principal que o site precisa gerar.'
+    title: 'Diagnóstico & oferta',
+    text: 'Entendemos o negócio, a cidade, o público, os concorrentes e a ação principal que o site precisa gerar.'
   },
   {
     number: '02',
     title: 'Design & desenvolvimento',
-    text: 'Criamos a interface, escrevemos a base de copy, programamos com performance e validamos mobile, SEO e conteudo.'
+    text: 'Criamos a interface, escrevemos a base de copy, programamos com performance e validamos mobile, SEO e conteúdo.'
   },
   {
     number: '03',
-    title: 'Publicacao & manutencao',
-    text: 'Publicamos em infraestrutura moderna, entregamos o painel editavel e mantemos suporte para seguranca e melhorias.'
+    title: 'Publicação & manutenção',
+    text: 'Publicamos em infraestrutura moderna, entregamos o painel editável e mantemos suporte para segurança e melhorias.'
   }
 ];
 
@@ -30,7 +30,7 @@ const Workflow = () => {
             Do briefing ao site publicado, sem complicar o processo.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl font-body-md text-[17px] leading-[27px] text-secondary">
-            Voce acompanha as decisoes importantes, aprova a direcao visual e
+            Você acompanha as decisões importantes, aprova a direção visual e
             recebe um ativo digital pronto para operar.
           </p>
         </div>

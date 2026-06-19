@@ -2,19 +2,19 @@
   "id": "projetos-personalizados",
   "order": 3,
   "title": "Projetos Personalizados",
-  "description": "Para e-commerce, portais, automacoes, dashboards e sistemas que precisam de regras proprias, integracoes e levantamento tecnico.",
+  "description": "Para e-commerce, portais, automações, dashboards e sistemas que precisam de regras próprias, integrações e levantamento técnico.",
   "setupPrice": 2499,
   "maintenancePrice": 120,
   "highlighted": false,
-  "badge": "Orcamento Sob Medida",
+  "badge": "Orçamento Sob Medida",
   "active": true,
   "features": [
     "E-commerce e lojas virtuais",
     "Agendamento, reservas e consultas",
     "CRMs, ERPs e dashboards internos",
-    "Areas de membros e portais educacionais",
-    "Integracoes via APIs e webhooks",
-    "Briefing tecnico antes do escopo final"
+    "Áreas de membros e portais educacionais",
+    "Integrações via APIs e webhooks",
+    "Briefing técnico antes do escopo final"
   ],
-  "maintenanceNote": "O valor de implantacao e mensalidade varia conforme complexidade, infraestrutura, integracoes e volume de suporte necessario."
+  "maintenanceNote": "O valor de implantação e mensalidade varia conforme complexidade, infraestrutura, integrações e volume de suporte necessário."
 }

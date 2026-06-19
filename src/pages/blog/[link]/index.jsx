@@ -49,7 +49,7 @@ const PostBlog = ({ post }) => {
             <span className="material-symbols-outlined text-sm font-bold group-hover:-translate-x-1 transition-transform">
               arrow_back
             </span>
-            Voltar para o Blog
+            Voltar para o blog
           </Link>
 
           {/* Article Header */}
