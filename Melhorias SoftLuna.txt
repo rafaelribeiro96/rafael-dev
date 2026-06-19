@@ -1,0 +1,85 @@
+1. Estruturação Massiva de "Money Pages" Institucionais (BoFu)
+Para dominarmos as buscas do Google em nível nacional e capturarmos clientes no momento exato de compra (fundo de funil), criaremos uma rota dinâmica de páginas de serviço otimizadas
+. O H1 de cada página seguirá a regra de ouro: Palavra-chave Transacional + Nicho
+.
+Lista de Money Pages por Nichos (Landing Pages e Institucionais):
+Saúde & Bem-Estar: /site-para-clinicas-medicas, /site-para-dentistas-e-consultorios, /site-para-clinicas-de-estetica, /site-para-psicologos.
+Beleza & Estilo: /site-para-barbearias, /site-para-saloes-de-beleza, /site-para-tatuadores-e-estudios.
+Serviços Profissionais: /site-para-advogados-e-escritorios, /site-para-contabilidade, /site-para-arquitetos, /site-para-corretores-e-imobiliarias.
+Comércio & Varejo: /site-para-lojas-de-varejo, /site-para-oficinas-mecanicas, /site-para-restaurantes-e-deliveries, /site-para-petshops-e-veterinarias.
+Marketing & Tech: /landing-page-para-gestores-de-trafego, /landing-page-para-infoprodutos.
+Lista de Money Pages para Softwares Sob Medida: Como também atendemos projetos complexos
+, teremos páginas dedicadas a essas soluções:
+/criacao-de-lojas-virtuais-ecommerce
+/sistemas-de-agendamento-online (Forte apelo para clínicas e salões).
+/desenvolvimento-de-sistemas-sob-medida (Portais, catálogos, áreas de membros e registros)
+.
+2. Plano de Conteúdo Massivo para o Blog (ToFu/MoFu)
+Para atrair o cliente que ainda está pesquisando ou frustrado com o site atual, usaremos artigos baseados nas perguntas reais do AnswerThePublic e People Also Ask do Google
+. Todo artigo terminará com um Advertorial, uma chamada persuasiva induzindo o clique direto para o nosso WhatsApp
+.
+Cluster 1: Custos e Investimentos (A dor do bolso)
+Quanto custa um site profissional para empresas no Brasil em 2026?
+O barato que sai caro: Os riscos de fazer um site "de graça" ou em plataformas amadoras
+.
+Landing Page ou Site Institucional: Onde sua empresa deve investir primeiro?
+Cluster 2: Performance e Otimização (A armadilha do mercado)
+Por que o site da sua empresa demora tanto para abrir no celular? (Focando na dor dos templates e plugins pesados do WordPress)
+.
+O que é a nota do Google PageSpeed e por que sites lentos fazem você perder clientes?
+Como posicionar o seu negócio local no topo do Google na sua cidade
+.
+Cluster 3: Nichados e Específicos (Conexão direta)
+A importância de um sistema de agendamento próprio para a sua clínica ou barbearia
+.
+Como escritórios de advocacia atraem clientes de alto valor através do Google
+.
+O que não pode faltar no site de uma oficina mecânica para passar confiança.
+3. Melhorias na Copy e Estrutura do Nosso Site Institucional
+A copy do site precisa transpirar resultados, velocidade e facilidade
+. Vamos remover os jargões e focar no comercial
+.
+Hero Section (A Dobra Principal):
+H1: Seu Negócio no Topo do Google com um Site que Carrega Instantaneamente
+.
+Subtítulo: Criamos Landing Pages, Sites Profissionais e Sistemas sob medida para sua empresa vender mais em todo o Brasil. Design premium, nota máxima de velocidade e um painel fácil para você mesmo editar tudo
+.
+O Fim das Limitações (Comparativo):
+Trocar o foco técnico por dores reais. O Site Tradicional (Lento): Cheio de plugins, vulnerável a hackers, e faz você perder dinheiro em anúncios porque a página não abre
+. A Nossa Tecnologia: Carregamento instantâneo, blindado contra invasões e nota máxima no Google para reduzir seus custos com tráfego pago
+.
+Portfólio Focado em CRO (Otimização de Conversão):
+Em cada projeto exposto (advogados, confeitarias, clínicas), inserir obrigatoriamente o botão "Quero um site parecido com este para minha empresa"
+. Isso encurta o processo de vendas visualmente
+.
+Apresentação dos Planos (3 Tiers Claros):
+Landing Pages: Foco em campanhas e anúncios rápidos
+.
+Site Institucional: Foco em autoridade e ranqueamento no Google
+.
+Projetos Personalizados: Destaque para Lojas Virtuais, Sistemas de Agendamento, CRMs e Automações
+.
+4. Novas FAQs Estratégicas de Conversão
+As perguntas frequentes devem quebrar as objeções do cliente tradicional na hora da compra
+:
+Vocês atendem empresas fora da sua cidade? Sim, atendemos todo o Brasil. Nossa estrutura é 100% digital e hospedamos seu site em servidores globais, garantindo carregamento instantâneo em qualquer estado do país.
+Preciso de um site mesmo se eu já tiver Instagram? O Instagram é uma vitrine, mas o Google é onde o cliente pesquisa quando está com o cartão de crédito na mão pronto para comprar. Um site profissional passa credibilidade e capta clientes fora do horário comercial
+.
+Eu mesmo vou conseguir atualizar meu site? Sim! Entregamos um painel administrativo em português, tão simples quanto usar o Word ou o bloco de notas
+. Você atualiza fotos, textos e preços em segundos, sem perigo de quebrar o visual do site
+.
+Quanto tempo demora para o meu site ficar pronto? Landing Pages e Sites Institucionais são entregues de forma super ágil, em até 15 dias úteis. Projetos maiores, como Lojas Virtuais e Sistemas de Agendamento, variam de 20 a 30 dias
+.
+Qual a diferença entre uma Landing Page e um Site Completo? A Landing Page é uma página única, direta ao ponto, ideal para quem faz anúncios no Google/Instagram. O Site Institucional tem várias páginas (Sobre, Serviços, Contato) e é focado em construir autoridade a longo prazo no Google
+.
+5. O Caminho para Dominar o Google e as IAs (Tráfego Orgânico)
+Para garantir que o nosso site e o dos nossos clientes sejam encontrados pelos novos mecanismos de busca, aplicaremos o SEO Estrutural e Answer Engine Optimization (AEO)
+:
+Schema Markup (JSON-LD) para Negócios Locais: Todo site criado terá um código oculto (Dados Estruturados) que diz exatamente para o Google e para IAs (como o ChatGPT Search, Gemini e AI Overviews do Google) o nome da empresa, os serviços prestados, a área de atendimento (Brasil) e a faixa de preço
+. Isso é o que garante ser citado nas respostas geradas por inteligência artificial
+.
+Velocidade Extrema (Core Web Vitals): O Google pune sites lentos na ranqueação
+. Como usamos páginas pré-renderizadas que abrem quase que imediatamente via CDN (Cloudflare), ganhamos uma vantagem técnica absurda sobre concorrentes locais que usam plataformas pesadas
+.
+Integração com Google Meu Negócio: Orientaremos nossos clientes locais a sincronizarem as informações do site diretamente com a ficha do Google Empresas
+. Isso é o fator de maior peso (32%) para dominar o mapa de buscas da cidade (Local Pack)
