@@ -1,0 +1,109 @@
+{
+  "slug": "sistema-agendamento-proprio-clinica-barbearia",
+  "status": "published",
+  "order": 7,
+  "clusterKey": "nichos",
+  "cluster": "Nichados e especificos",
+  "primaryKeyword": "sistema de agendamento online",
+  "secondaryKeywords": [
+    "agendamento online clinica",
+    "agendamento online barbearia",
+    "site com agenda online"
+  ],
+  "intent": "Entender quando agenda online propria faz sentido",
+  "funnelStage": "MoFu",
+  "title": "A importancia de um sistema de agendamento proprio para sua clinica ou barbearia",
+  "seoTitle": "Sistema de Agendamento Online Para Clinicas | SoftLuna",
+  "metaDescription": "Entenda quando uma clinica, barbearia ou salao deve usar agendamento online proprio integrado ao site e WhatsApp.",
+  "excerpt": "Agenda online reduz atrito, organiza horarios e melhora atendimento, mas precisa ser planejada com LGPD, fluxo operacional e canais reais do negocio.",
+  "answerFirst": "Um sistema de agendamento proprio vale quando a empresa perde horarios por troca manual de mensagens, precisa organizar equipe, confirmar atendimentos ou captar clientes fora do horario comercial. Para clinicas, dados pessoais exigem cuidado adicional; para barbearias e saloes, simplicidade e WhatsApp bem conectado costumam ser decisivos.",
+  "publishedAt": "2026-06-19",
+  "updatedAt": "2026-06-19",
+  "author": "Equipe SoftLuna",
+  "authorBio": "Estudio de engenharia web focado em sites rapidos, editaveis, SEO local e conversao por WhatsApp para negocios de servico.",
+  "heroImage": "/og-image.png",
+  "sections": [
+    {
+      "heading": "Agenda online nao e so tecnologia",
+      "content": [
+        "Agenda online muda a rotina da equipe. Antes de implementar, e preciso definir servicos, duracao, profissionais, pausas, remarcacao, confirmacao, cancelamento e canal de suporte.",
+        "Quando isso fica claro, o site pode receber visitantes, explicar servicos e encaminhar para uma agenda simples ou para WhatsApp com contexto."
+      ]
+    },
+    {
+      "heading": "Quando faz sentido criar um fluxo proprio",
+      "content": [
+        "Faz sentido quando o negocio recebe muitas mensagens repetidas, perde horarios por demora de resposta ou precisa padronizar reservas. Tambem ajuda quando ha varios profissionais e servicos com duracoes diferentes.",
+        "Para clinicas, a arquitetura deve evitar exposicao desnecessaria de dados sensiveis e alinhar formularios, consentimento, privacidade e armazenamento."
+      ],
+      "items": [
+        "Servicos e horarios previsiveis.",
+        "Equipe com agenda compartilhada.",
+        "Alta demanda fora do horario comercial.",
+        "Necessidade de confirmar, remarcar e reduzir faltas."
+      ]
+    },
+    {
+      "heading": "Site, agenda e WhatsApp devem trabalhar juntos",
+      "content": [
+        "O site apresenta servicos, profissionais, localizacao e perguntas frequentes. A agenda captura a intencao. O WhatsApp resolve duvidas, encaixes e casos que exigem atendimento humano.",
+        "A melhor experiencia costuma combinar automacao moderada com uma saida clara para contato direto."
+      ]
+    },
+    {
+      "heading": "Como a SoftLuna aborda esse tipo de projeto",
+      "content": [
+        "A SoftLuna pode construir desde uma pagina com CTA inteligente para WhatsApp ate um sistema de agendamento sob medida, dependendo da maturidade operacional.",
+        "O primeiro passo e mapear o fluxo real antes de escrever codigo."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Toda clinica precisa de agendamento online proprio?",
+      "answer": "Nao. Algumas clinicas resolvem bem com WhatsApp organizado. Agenda propria faz sentido quando volume, equipe ou complexidade justificam automacao."
+    },
+    {
+      "question": "Agendamento online substitui recepcao?",
+      "answer": "Normalmente nao. Ele reduz tarefas repetitivas e organiza dados, mas atendimento humano continua importante para duvidas e excecoes."
+    },
+    {
+      "question": "O que muda por causa da LGPD?",
+      "answer": "Dados de saude podem ser sensiveis. Formularios, armazenamento e acesso precisam ser planejados com minimizacao, seguranca e finalidade clara."
+    }
+  ],
+  "sources": [
+    {
+      "label": "ANPD - portal institucional",
+      "url": "https://www.gov.br/anpd/pt-br"
+    },
+    {
+      "label": "Ministerio da Saude - LGPD e dados de saude",
+      "url": "https://sisaps.saude.gov.br/sistemas/esusaps/docs/manual/LGPD/"
+    },
+    {
+      "label": "Reservio - software de agendamento para barbearia",
+      "url": "https://www.reservio.com/pt-br/software-para-barbearia"
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "Site para clinicas medicas",
+      "href": "/site-para-clinicas-medicas"
+    },
+    {
+      "label": "Sistemas de agendamento online",
+      "href": "/sistemas-de-agendamento-online"
+    },
+    {
+      "label": "SEO local para empresas",
+      "href": "/blog/seo-local-negocio-topo-google-cidade"
+    }
+  ],
+  "cta": {
+    "title": "Quer mapear um fluxo de agendamento?",
+    "description": "A SoftLuna ajuda a decidir entre WhatsApp organizado, agenda integrada ou sistema sob medida.",
+    "label": "Planejar agendamento",
+    "whatsappMessage": "Ola, li o artigo sobre agendamento online e quero mapear uma solucao para meu negocio."
+  }
+}

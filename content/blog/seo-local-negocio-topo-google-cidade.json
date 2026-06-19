@@ -1,0 +1,109 @@
+{
+  "slug": "seo-local-negocio-topo-google-cidade",
+  "status": "published",
+  "order": 6,
+  "clusterKey": "performance",
+  "cluster": "Performance e otimizacao",
+  "primaryKeyword": "SEO local para empresas",
+  "secondaryKeywords": [
+    "posicionar negocio local no Google",
+    "Google Business Profile SEO",
+    "site para SEO local"
+  ],
+  "intent": "Entender como alinhar site e perfil local no Google",
+  "funnelStage": "MoFu",
+  "title": "Como posicionar o seu negocio local no topo do Google na sua cidade",
+  "seoTitle": "SEO Local Para Empresas: Site e Google | SoftLuna",
+  "metaDescription": "Veja como site, paginas de servico, Google Business Profile e consistencia de informacoes ajudam no SEO local.",
+  "excerpt": "SEO local depende de relevancia, distancia, destaque, perfil completo, conteudo claro e site que confirma servicos, cidade e canais de contato.",
+  "answerFirst": "Para melhorar SEO local, a empresa precisa manter Google Business Profile completo e atualizado, usar informacoes consistentes, explicar servicos e area atendida no site, publicar paginas claras e facilitar contato. Nao existe garantia de topo, mas a combinacao de perfil local, site rapido e conteudo especifico aumenta a clareza para usuarios e buscadores.",
+  "publishedAt": "2026-06-19",
+  "updatedAt": "2026-06-19",
+  "author": "Equipe SoftLuna",
+  "authorBio": "Estudio de engenharia web focado em sites rapidos, editaveis, SEO local e conversao por WhatsApp para negocios de servico.",
+  "heroImage": "/og-image.png",
+  "sections": [
+    {
+      "heading": "SEO local comeca pela clareza da empresa",
+      "content": [
+        "O Google precisa entender quem e a empresa, o que ela faz, onde atende e como o cliente entra em contato. O usuario precisa entender isso ainda mais rapido.",
+        "Perfil local completo, site coerente e informacoes consistentes reduzem duvida. Nome, categoria, telefone, cidade, servicos e horarios devem contar a mesma historia."
+      ]
+    },
+    {
+      "heading": "O papel do Google Business Profile",
+      "content": [
+        "O perfil local aparece no Google Search e Maps. Ele deve conter categoria correta, servicos, fotos, horarios, telefone, site, descricao, atributos e respostas a avaliacoes quando aplicavel.",
+        "Segundo a documentacao do Google, informacoes completas e atualizadas ajudam clientes a saber o que a empresa faz, onde fica e quando podem visitar ou chamar."
+      ],
+      "items": [
+        "Categoria principal coerente.",
+        "Servicos preenchidos com linguagem do cliente.",
+        "Fotos reais e atualizadas.",
+        "Link para site ou pagina de servico alinhada."
+      ]
+    },
+    {
+      "heading": "O papel do site no SEO local",
+      "content": [
+        "O site funciona como base de explicacao. Ele pode ter paginas para servicos, bairros/cidades quando fizer sentido, FAQ, portfolio e artigos que respondem duvidas antes do contato.",
+        "Tambem e o lugar de estruturar schema, metadados e links internos. Isso nao substitui reputacao e avaliacoes, mas ajuda buscadores a interpretar a oferta."
+      ]
+    },
+    {
+      "heading": "O que evitar",
+      "content": [
+        "Evite prometer topo do Google, criar paginas duplicadas para varias cidades sem conteudo real ou exagerar palavras-chave. SEO local bom e especifico, util e consistente.",
+        "A SoftLuna cria paginas com linguagem comercial clara, dados estruturados e CTAs diretos para WhatsApp, sem depender de truques."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Ter site ajuda no Google Maps?",
+      "answer": "Ajuda indiretamente ao confirmar servicos, area, contato e autoridade. O perfil local continua sendo uma peca propria e precisa estar bem preenchido."
+    },
+    {
+      "question": "Da para garantir primeiro lugar na cidade?",
+      "answer": "Nao. SEO local depende de muitos fatores, como relevancia, distancia, destaque, concorrencia e qualidade das informacoes."
+    },
+    {
+      "question": "Qual pagina devo linkar no perfil local?",
+      "answer": "Use a pagina que melhor representa o servico ou unidade. Para uma empresa simples, a home pode bastar. Para nichos, uma money page pode converter melhor."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Google Business Profile - Get listed on Google",
+      "url": "https://business.google.com/us/business-profile/"
+    },
+    {
+      "label": "Google Business Profile Help - improve local ranking",
+      "url": "https://support.google.com/business/answer/7091?hl=en"
+    },
+    {
+      "label": "Google Business Profile Help - guidelines",
+      "url": "https://support.google.com/business/answer/3038177?hl=en"
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "Site para clinicas medicas",
+      "href": "/site-para-clinicas-medicas"
+    },
+    {
+      "label": "Portfolio SoftLuna",
+      "href": "/#portfolio"
+    },
+    {
+      "label": "Planos SoftLuna",
+      "href": "/#planos"
+    }
+  ],
+  "cta": {
+    "title": "Quer alinhar site e busca local?",
+    "description": "A SoftLuna estrutura paginas, metadados, schema e CTAs para negocios locais que precisam ser entendidos no Google e no WhatsApp.",
+    "label": "Planejar SEO local",
+    "whatsappMessage": "Ola, li o artigo sobre SEO local e quero alinhar meu site com meu perfil do Google."
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "slug": "site-oficina-mecanica-confianca",
+  "status": "published",
+  "order": 9,
+  "clusterKey": "nichos",
+  "cluster": "Nichados e especificos",
+  "primaryKeyword": "site para oficina mecanica",
+  "secondaryKeywords": [
+    "site oficina mecanica confianca",
+    "SEO local oficina mecanica",
+    "orcamento oficina pelo WhatsApp"
+  ],
+  "intent": "Entender elementos essenciais de site para oficina mecanica",
+  "funnelStage": "MoFu",
+  "title": "O que nao pode faltar no site de uma oficina mecanica para passar confianca",
+  "seoTitle": "Site Para Oficina Mecanica: O Que Ter | SoftLuna",
+  "metaDescription": "Veja quais secoes ajudam uma oficina mecanica a passar confianca, aparecer localmente e receber pedidos de orcamento pelo WhatsApp.",
+  "excerpt": "Oficina mecanica vende confianca antes do servico. O site deve mostrar servicos, localizacao, prova real, diferenciais e caminho rapido para orcamento.",
+  "answerFirst": "Um site de oficina mecanica deve deixar claros servicos, endereco, horario, marcas atendidas quando aplicavel, fotos reais, avaliacoes, garantias, formas de contato e pedido de orcamento. Para SEO local, a pagina precisa confirmar cidade, bairro, especialidades e consistencia com o Google Business Profile.",
+  "publishedAt": "2026-06-19",
+  "updatedAt": "2026-06-19",
+  "author": "Equipe SoftLuna",
+  "authorBio": "Estudio de engenharia web focado em sites rapidos, editaveis, SEO local e conversao por WhatsApp para negocios de servico.",
+  "heroImage": "/og-image.png",
+  "sections": [
+    {
+      "heading": "Confianca vem antes do orcamento",
+      "content": [
+        "Quem procura oficina geralmente quer resolver um problema urgente e reduzir risco. O site precisa responder se a oficina entende aquele servico, onde fica, como atende e como pedir ajuda.",
+        "Fotos reais, lista de servicos e linguagem simples ajudam mais do que textos genericos sobre excelencia."
+      ]
+    },
+    {
+      "heading": "Secoes essenciais para oficina mecanica",
+      "content": [
+        "A pagina deve facilitar a decisao no celular. O visitante precisa ver servicos, provas de confianca, localizacao e botao de WhatsApp sem procurar demais.",
+        "Se a oficina atende especialidades, como injecao, freios, suspensao, ar-condicionado ou revisao preventiva, cada item deve ser explicado de forma curta."
+      ],
+      "items": [
+        "Servicos principais e especialidades.",
+        "Endereco, mapa, horario e area atendida.",
+        "Fotos reais da oficina e equipe.",
+        "CTA para orcamento com mensagem contextual."
+      ]
+    },
+    {
+      "heading": "Como o site ajuda o SEO local",
+      "content": [
+        "O site reforca as informacoes do perfil local: nome, telefone, cidade, servicos e categorias. Tambem permite criar conteudo para duvidas comuns, como revisao antes de viagem ou sinais de problema no freio.",
+        "O objetivo nao e repetir a palavra-chave em excesso. E responder melhor que uma pagina vazia ou um perfil incompleto."
+      ]
+    },
+    {
+      "heading": "Como a SoftLuna estruturaria uma pagina de oficina",
+      "content": [
+        "A SoftLuna priorizaria velocidade mobile, servicos escaneaveis, WhatsApp visivel, dados de localizacao e FAQ. Para oficinas com mais demanda, tambem pode haver formulario de pre-orcamento.",
+        "O resultado esperado e uma pagina objetiva, facil de atualizar e alinhada ao Google Business Profile."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Oficina mecanica precisa de site se ja tem Google Maps?",
+      "answer": "O perfil local ajuda muito, mas o site permite explicar servicos, mostrar prova, responder duvidas e criar paginas mais completas para busca."
+    },
+    {
+      "question": "Devo colocar preco dos servicos no site?",
+      "answer": "Depende da oficina. Muitos servicos exigem diagnostico. Nesse caso, vale explicar fatores que afetam o orcamento e facilitar o envio de informacoes pelo WhatsApp."
+    },
+    {
+      "question": "Fotos reais importam?",
+      "answer": "Sim. Para negocios locais, fotos reais de ambiente, equipe e estrutura costumam passar mais confianca que imagens genericas."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Google Business Profile - improve local ranking",
+      "url": "https://support.google.com/business/answer/7091?hl=en"
+    },
+    {
+      "label": "Google Search Central - SEO Starter Guide",
+      "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "SEO local para empresas",
+      "href": "/blog/seo-local-negocio-topo-google-cidade"
+    },
+    {
+      "label": "Quanto custa um site profissional",
+      "href": "/blog/quanto-custa-site-profissional-empresas-brasil-2026"
+    },
+    {
+      "label": "Planos SoftLuna",
+      "href": "/#planos"
+    }
+  ],
+  "cta": {
+    "title": "Quer uma pagina objetiva para sua oficina?",
+    "description": "A SoftLuna monta uma estrutura rapida, clara e local para transformar buscas em pedidos de orcamento.",
+    "label": "Criar site da oficina",
+    "whatsappMessage": "Ola, li o artigo sobre site para oficina mecanica e quero criar uma pagina para minha oficina."
+  }
+}

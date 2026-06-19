@@ -321,7 +321,7 @@ Cluster 3: Nichados e Especificos
 
 ### Tarefas
 
-- [ ] F2-001 - Definir arquitetura tecnica do blog
+- [x] F2-001 - Definir arquitetura tecnica do blog
   - Objetivo: decidir rotas, listagem, detalhe, fonte de dados e schema dos posts.
   - Arquivos provaveis: `src/pages`, `content/`, `src/lib/content.js`.
   - Dependencias: F0-003.
@@ -329,8 +329,9 @@ Cluster 3: Nichados e Especificos
   - Criterios de aceite: modelo de post, rota, campos, listagem e SEO definidos antes do primeiro artigo.
   - Validacao: decisao documentada; build quando implementado.
   - Registro de execucao:
+    - 2026-06-19: Blog migrado para conteudo estatico versionado em `content/blog/*.json`, com listagem em `/blog`, detalhe em `/blog/[slug]` usando a rota existente `src/pages/blog/[link]/index.jsx`, leitura por `src/lib/content.js` e schema em `src/lib/seoSchema.js`.
 
-- [ ] F2-002 - Criar calendario editorial inicial
+- [x] F2-002 - Criar calendario editorial inicial
   - Objetivo: transformar os 9 temas em ordem de publicacao com prioridades e links internos.
   - Arquivos provaveis: `ROADMAP-SEO.md` ou `docs/business/softluna/`.
   - Dependencias: F2-001.
@@ -338,8 +339,9 @@ Cluster 3: Nichados e Especificos
   - Criterios de aceite: calendario com data alvo, cluster, keyword, funil, CTA e pagina de destino.
   - Validacao: revisar coerencia com oferta e prioridades comerciais.
   - Registro de execucao:
+    - 2026-06-19: Calendario dos 9 artigos iniciais consolidado em `docs/business/softluna/blog-authority-plan.md`, com ordem, cluster, keyword, funil, CTA e pagina de destino.
 
-- [ ] F2-003 - Produzir briefs dos 9 artigos iniciais
+- [x] F2-003 - Produzir briefs dos 9 artigos iniciais
   - Objetivo: criar briefing completo antes de redigir.
   - Arquivos provaveis: local definido em F2-001/F2-002.
   - Dependencias: F2-002.
@@ -347,8 +349,9 @@ Cluster 3: Nichados e Especificos
   - Criterios de aceite: cada brief tem SERP/PAA atual, fontes, outline, links internos, FAQ e advertorial previsto.
   - Validacao: checar fontes e intencao antes de escrever.
   - Registro de execucao:
+    - 2026-06-19: Briefs dos 9 artigos documentados em `docs/business/softluna/blog-authority-plan.md`, com SERP/PAA observada, fontes, links internos, FAQ e advertorial previsto.
 
-- [ ] F2-004 - Publicar Cluster Custos e Investimentos
+- [x] F2-004 - Publicar Cluster Custos e Investimentos
   - Objetivo: escrever e publicar os 3 artigos do cluster de custos.
   - Arquivos provaveis: definidos em F2-001.
   - Dependencias: F2-003.
@@ -356,8 +359,9 @@ Cluster 3: Nichados e Especificos
   - Criterios de aceite: artigos publicados com schema, links internos e CTA; qualidade revisada.
   - Validacao: `npm run lint`, `npm run build`, revisao SEO e pt-BR.
   - Registro de execucao:
+    - 2026-06-19: Publicados `quanto-custa-site-profissional-empresas-brasil-2026`, `riscos-de-site-gratis-ou-plataformas-amadoras` e `landing-page-ou-site-institucional` em `content/blog/`, com FAQ, fontes, links internos e CTA WhatsApp.
 
-- [ ] F2-005 - Publicar Cluster Performance e Otimizacao
+- [x] F2-005 - Publicar Cluster Performance e Otimizacao
   - Objetivo: escrever e publicar os 3 artigos do cluster de performance.
   - Arquivos provaveis: definidos em F2-001.
   - Dependencias: F2-003.
@@ -365,8 +369,9 @@ Cluster 3: Nichados e Especificos
   - Criterios de aceite: artigos publicados com explicacoes tecnicas claras, sem promessas absolutas de PageSpeed/ranking.
   - Validacao: `npm run lint`, `npm run build`, revisao SEO e pt-BR.
   - Registro de execucao:
+    - 2026-06-19: Publicados `site-lento-celular-por-que-demora-abrir`, `nota-google-pagespeed-por-que-importa` e `seo-local-negocio-topo-google-cidade`, evitando promessa absoluta de ranking/PageSpeed e usando fontes Google/web.dev.
 
-- [ ] F2-006 - Publicar Cluster Nichado e Especifico
+- [x] F2-006 - Publicar Cluster Nichado e Especifico
   - Objetivo: escrever e publicar os 3 artigos de nicho.
   - Arquivos provaveis: definidos em F2-001.
   - Dependencias: F2-003.
@@ -374,8 +379,9 @@ Cluster 3: Nichados e Especificos
   - Criterios de aceite: artigos conectam diretamente com money pages correspondentes e CTA contextual.
   - Validacao: `npm run lint`, `npm run build`, revisao SEO e pt-BR.
   - Registro de execucao:
+    - 2026-06-19: Publicados `sistema-agendamento-proprio-clinica-barbearia`, `advocacia-clientes-alto-valor-google` e `site-oficina-mecanica-confianca`, com links para money pages/planos/portfolio e cautela editorial em LGPD/OAB.
 
-- [ ] F2-007 - Criar rotina de atualizacao e auditoria editorial
+- [x] F2-007 - Criar rotina de atualizacao e auditoria editorial
   - Objetivo: definir cadencia de revisao, atualizacao de fontes e medicao de resultados.
   - Arquivos provaveis: `ROADMAP-SEO.md`, docs de negocio.
   - Dependencias: F2-004, F2-005, F2-006.
@@ -383,6 +389,7 @@ Cluster 3: Nichados e Especificos
   - Criterios de aceite: rotina mensal definida com posts a revisar, metricas e criterios de melhoria.
   - Validacao: primeira auditoria registrada apos publicacao.
   - Registro de execucao:
+    - 2026-06-19: Rotina mensal de auditoria e criterios de melhoria definidos em `docs/business/softluna/blog-authority-plan.md`; primeira validacao tecnica registrada com `npm run lint`, `npm run build` e smoke HTTP das 9 rotas de artigo.
 
 ## Fase 3 - Copy do site institucional
 
@@ -680,5 +687,5 @@ As titles e metas abaixo sao provisorias. Antes de publicar cada rota em lote, r
 
 1. Revisar/aprovar a money page piloto `/site-para-clinicas-medicas`.
 2. Depois executar F1-005 a F1-009 em lotes, sempre com pesquisa SERP/PAA atual por rota antes de publicar copy final.
-3. Em paralelo, executar F2-001 a F2-003 para preparar blog sem publicar artigos ainda.
-4. So entao iniciar artigos, FAQs estrategicas, ajustes de homepage e rotina de metricas.
+3. Revisar em navegacao real os 9 artigos publicados na Fase 2 e expandir conteudo onde houver prioridade comercial.
+4. Iniciar FAQs estrategicas, ajustes de homepage e rotina de metricas/tracking.

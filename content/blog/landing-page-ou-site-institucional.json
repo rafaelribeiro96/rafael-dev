@@ -1,0 +1,104 @@
+{
+  "slug": "landing-page-ou-site-institucional",
+  "status": "published",
+  "order": 3,
+  "clusterKey": "custos",
+  "cluster": "Custos e investimentos",
+  "primaryKeyword": "landing page ou site institucional",
+  "secondaryKeywords": [
+    "diferenca landing page e site institucional",
+    "quando fazer landing page",
+    "quando fazer site institucional"
+  ],
+  "intent": "Comparar formatos e escolher investimento inicial",
+  "funnelStage": "MoFu",
+  "title": "Landing Page ou Site Institucional: onde investir primeiro?",
+  "seoTitle": "Landing Page ou Site Institucional? | SoftLuna",
+  "metaDescription": "Compare landing page e site institucional para decidir o melhor investimento inicial para campanhas, SEO local e autoridade.",
+  "excerpt": "Landing page concentra uma decisao. Site institucional construi contexto, autoridade e caminhos de SEO. A escolha depende do objetivo comercial do momento.",
+  "answerFirst": "Escolha landing page quando existe uma oferta unica, campanha ativa ou validacao rapida. Escolha site institucional quando a empresa precisa explicar varios servicos, mostrar equipe, portfolio, FAQ, areas de atuacao e gerar autoridade local. Em muitos casos, a landing page e a primeira etapa e o site vem na sequencia.",
+  "publishedAt": "2026-06-19",
+  "updatedAt": "2026-06-19",
+  "author": "Equipe SoftLuna",
+  "authorBio": "Estudio de engenharia web focado em sites rapidos, editaveis, SEO local e conversao por WhatsApp para negocios de servico.",
+  "heroImage": "/og-image.png",
+  "sections": [
+    {
+      "heading": "A pergunta certa nao e qual e melhor",
+      "content": [
+        "Landing page e site institucional resolvem problemas diferentes. A landing page reduz distracoes para uma acao especifica. O site institucional organiza a presenca da empresa e cria base para busca organica.",
+        "Quando a decisao de compra exige confianca, comparacao e detalhes, o site completo ajuda. Quando o objetivo e uma campanha com oferta clara, a landing page tende a converter com menos atrito."
+      ]
+    },
+    {
+      "heading": "Use landing page quando o objetivo for direto",
+      "content": [
+        "Campanhas de trafego pago, lancamentos, captura de leads, eventos e ofertas sazonais combinam com landing pages. Elas precisam de proposta clara, prova, FAQ, CTA e carregamento rapido no celular.",
+        "A landing page tambem serve para gestores de trafego que precisam de uma URL dedicada por oferta, sem mexer em todo o site da empresa."
+      ],
+      "items": [
+        "Uma oferta principal.",
+        "Um publico prioritario.",
+        "Uma conversao mensuravel.",
+        "Prazo curto para publicar e testar."
+      ]
+    },
+    {
+      "heading": "Use site institucional quando a marca precisa ser entendida",
+      "content": [
+        "Clinicas, escritorios, prestadores e empresas locais normalmente precisam explicar servicos, equipe, localizacao, diferenciais e perguntas frequentes. O site institucional cria esse mapa.",
+        "Ele tambem facilita links internos entre artigos, money pages, portfolio e paginas de servico, criando uma base melhor para SEO de longo prazo."
+      ]
+    },
+    {
+      "heading": "Como a SoftLuna decide o primeiro escopo",
+      "content": [
+        "A decisao passa por objetivo, urgencia, verba, complexidade e maturidade da oferta. Se o negocio ainda esta validando uma promessa, a landing page pode ser suficiente. Se ja existe operacao e varios servicos, o site institucional costuma ser mais robusto."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Posso comecar com landing page e evoluir para site?",
+      "answer": "Sim. Esse e um caminho comum quando a empresa quer validar uma oferta antes de ampliar a presenca digital."
+    },
+    {
+      "question": "Site institucional tambem converte?",
+      "answer": "Sim, desde que tenha CTAs claros, servicos bem explicados, prova de confianca e caminhos diretos para WhatsApp ou formulario."
+    },
+    {
+      "question": "Qual formato e melhor para SEO?",
+      "answer": "Para SEO de longo prazo, o site institucional oferece mais superficie de conteudo. Landing pages podem ranquear, mas geralmente trabalham temas mais estreitos."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Google Search Central - SEO Starter Guide",
+      "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+    },
+    {
+      "label": "Google Search Central - Structured data gallery",
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/search-gallery"
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "Landing page para gestores de trafego",
+      "href": "/landing-page-para-gestores-de-trafego"
+    },
+    {
+      "label": "Site para clinicas medicas",
+      "href": "/site-para-clinicas-medicas"
+    },
+    {
+      "label": "Planos SoftLuna",
+      "href": "/#planos"
+    }
+  ],
+  "cta": {
+    "title": "Ainda em duvida entre landing page e site?",
+    "description": "Explique seu objetivo comercial e receba uma recomendacao de escopo inicial sem inflar o projeto.",
+    "label": "Escolher meu formato",
+    "whatsappMessage": "Ola, li o artigo sobre landing page ou site institucional e quero ajuda para escolher o formato ideal."
+  }
+}

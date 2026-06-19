@@ -99,3 +99,101 @@ export function buildMoneyPageSchema({
     '@graph': graph
   };
 }
+
+export function buildBlogPostSchema({ post, globalData = {} }) {
+  const seo = globalData?.seo || {};
+  const postUrl = absoluteUrl(`/blog/${post.slug}`);
+  const blogUrl = absoluteUrl('/blog');
+  const organizationId = `${SITE_URL}#organization`;
+  const articleId = `${postUrl}#article`;
+  const breadcrumbId = `${postUrl}#breadcrumb`;
+  const faqId = `${postUrl}#faq`;
+  const authorId = `${SITE_URL}#author-${(post.author || 'softluna')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')}`;
+
+  const graph = [
+    {
+      '@type': ['Organization', 'LocalBusiness'],
+      '@id': organizationId,
+      name: seo.businessName || 'SoftLuna',
+      url: SITE_URL,
+      telephone: seo.businessPhone || undefined,
+      email: seo.businessEmail || undefined,
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: seo.businessCity || 'Belo Horizonte',
+        addressRegion: seo.businessState || 'MG',
+        addressCountry: 'BR'
+      },
+      areaServed: ['Belo Horizonte', 'Minas Gerais', 'Brasil']
+    },
+    {
+      '@type': 'Person',
+      '@id': authorId,
+      name: post.author || 'Equipe SoftLuna',
+      description: post.authorBio || undefined
+    },
+    {
+      '@type': 'Article',
+      '@id': articleId,
+      mainEntityOfPage: postUrl,
+      headline: post.title,
+      description: post.metaDescription || post.excerpt,
+      image: absoluteUrl(post.heroImage || '/og-image.png'),
+      datePublished: post.publishedAt,
+      dateModified: post.updatedAt || post.publishedAt,
+      author: { '@id': authorId },
+      publisher: { '@id': organizationId },
+      about: post.primaryKeyword,
+      articleSection: post.cluster,
+      keywords: [post.primaryKeyword, ...(post.secondaryKeywords || [])]
+        .filter(Boolean)
+        .join(', ')
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': breadcrumbId,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Inicio',
+          item: SITE_URL
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Blog',
+          item: blogUrl
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: post.title,
+          item: postUrl
+        }
+      ]
+    }
+  ];
+
+  if (post.faqs?.length) {
+    graph.push({
+      '@type': 'FAQPage',
+      '@id': faqId,
+      mainEntity: post.faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer
+        }
+      }))
+    });
+  }
+
+  return {
+    '@context': 'https://schema.org',
+    '@graph': graph
+  };
+}

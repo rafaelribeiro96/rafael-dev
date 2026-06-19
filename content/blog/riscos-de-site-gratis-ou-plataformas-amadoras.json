@@ -1,0 +1,104 @@
+{
+  "slug": "riscos-de-site-gratis-ou-plataformas-amadoras",
+  "status": "published",
+  "order": 2,
+  "clusterKey": "custos",
+  "cluster": "Custos e investimentos",
+  "primaryKeyword": "site gratis para empresa",
+  "secondaryKeywords": [
+    "riscos de site gratis",
+    "site barato para empresa",
+    "plataforma amadora site"
+  ],
+  "intent": "Entender riscos de criar site gratuito ou muito barato",
+  "funnelStage": "ToFu",
+  "title": "O barato que sai caro: riscos de fazer um site de graca",
+  "seoTitle": "Site Gratis Para Empresa: Riscos e Limites | SoftLuna",
+  "metaDescription": "Entenda quando um site gratis ajuda, quando atrapalha e quais riscos afetam dominio, SEO, velocidade, suporte e confianca.",
+  "excerpt": "Um site gratuito pode validar uma ideia, mas raramente sustenta uma presenca profissional quando a empresa precisa de dominio, SEO, velocidade, controle e conversao.",
+  "answerFirst": "Sites gratuitos podem ser uteis para testes, mas empresas que dependem de credibilidade precisam avaliar limites de dominio, rastreamento, velocidade, SEO, suporte e propriedade. O custo oculto aparece quando a marca precisa migrar, refazer conteudo ou corrigir uma experiencia que ja afastou potenciais clientes.",
+  "publishedAt": "2026-06-19",
+  "updatedAt": "2026-06-19",
+  "author": "Equipe SoftLuna",
+  "authorBio": "Estudio de engenharia web focado em sites rapidos, editaveis, SEO local e conversao por WhatsApp para negocios de servico.",
+  "heroImage": "/og-image.png",
+  "sections": [
+    {
+      "heading": "O problema nao e comecar simples, e ficar preso",
+      "content": [
+        "Comecar com uma ferramenta gratuita pode ser aceitavel para validar uma ideia. O risco surge quando o site vira o principal ponto de confianca da empresa e ainda parece improvisado, lento ou limitado.",
+        "Uma presenca profissional precisa de dominio proprio, paginas claras, metadados, rastreamento, imagens otimizadas, boas mensagens de contato e caminho de evolucao."
+      ]
+    },
+    {
+      "heading": "Quais riscos mais aparecem em sites gratuitos?",
+      "content": [
+        "O primeiro risco e reputacional: o visitante percebe dominio estranho, layout generico, textos fracos ou ausencia de informacoes essenciais. O segundo e tecnico: performance ruim, pouca liberdade de SEO e dificuldade para integrar ferramentas.",
+        "O terceiro risco e operacional. Quando o negocio cresce, migrar conteudo, URLs, imagens e formularios pode custar mais do que construir uma base correta desde o inicio."
+      ],
+      "items": [
+        "Dominio e marca ficam menos profissionais.",
+        "SEO tecnico e schema ficam limitados.",
+        "Migracao futura pode gerar retrabalho.",
+        "Suporte e propriedade dos dados nem sempre ficam claros."
+      ]
+    },
+    {
+      "heading": "Quando um site barato e suficiente?",
+      "content": [
+        "Um site barato pode atender uma campanha simples, uma oferta temporaria ou uma operacao que ainda nao depende de SEO. Mesmo assim, ele deve carregar bem no celular e explicar a oferta com clareza.",
+        "Se a empresa quer construir autoridade local, aparecer para pesquisas especificas e transformar visitantes em conversas, a economia precisa ser comparada com o custo de perder oportunidades."
+      ]
+    },
+    {
+      "heading": "A alternativa pragmatica",
+      "content": [
+        "A melhor alternativa nao e sempre contratar o projeto mais caro. E escolher uma base enxuta, proprietaria, rapida e bem estruturada. A SoftLuna prefere escopos claros, manutencao leve e conteudo editavel a sites cheios de plugins sem necessidade."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Site gratuito aparece no Google?",
+      "answer": "Pode aparecer, mas aparecer nao significa competir bem. Conteudo, estrutura, velocidade, dominio, autoridade e experiencia continuam importantes para SEO."
+    },
+    {
+      "question": "Quando devo sair de uma plataforma gratuita?",
+      "answer": "Quando o site ja participa da venda, precisa passar confianca, receber trafego organico ou integrar canais como WhatsApp, analytics e paginas de servico."
+    },
+    {
+      "question": "Preciso refazer tudo se meu site atual for ruim?",
+      "answer": "Nem sempre. Primeiro vale auditar conteudo, URLs, dominio, performance e objetivos. Em muitos casos, reconstruir com escopo menor e mais limpo resolve melhor que remendar."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Google Search Central - SEO Starter Guide",
+      "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+    },
+    {
+      "label": "Google Search Central - Page experience and Core Web Vitals",
+      "url": "https://developers.google.com/search/docs/appearance/core-web-vitals"
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "Planos SoftLuna",
+      "href": "/#planos"
+    },
+    {
+      "label": "Por que sites lentos perdem clientes",
+      "href": "/blog/site-lento-celular-por-que-demora-abrir"
+    },
+    {
+      "label": "Sites profissionais para empresas",
+      "href": "/#servicos"
+    }
+  ],
+  "cta": {
+    "title": "Seu site atual parece improvisado?",
+    "description": "A SoftLuna pode revisar a base atual e indicar se vale ajustar, migrar ou reconstruir com uma estrutura mais enxuta.",
+    "label": "Pedir avaliacao do site",
+    "whatsappMessage": "Ola, li o artigo sobre riscos de site gratis e quero avaliar se meu site atual precisa ser refeito."
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "slug": "quanto-custa-site-profissional-empresas-brasil-2026",
+  "status": "published",
+  "order": 1,
+  "clusterKey": "custos",
+  "cluster": "Custos e investimentos",
+  "primaryKeyword": "quanto custa um site profissional",
+  "secondaryKeywords": [
+    "preco site profissional 2026",
+    "quanto custa site para empresa",
+    "investimento em site institucional"
+  ],
+  "intent": "Entender faixas de preco e criterios de investimento antes de contratar",
+  "funnelStage": "MoFu",
+  "title": "Quanto custa um site profissional para empresas no Brasil em 2026?",
+  "seoTitle": "Quanto Custa um Site Profissional em 2026? | SoftLuna",
+  "metaDescription": "Veja o que influencia o custo de um site profissional em 2026, quando uma landing page basta e quando vale investir em site completo.",
+  "excerpt": "O preco de um site depende de escopo, conteudo, design, SEO, performance, CMS e suporte. O ponto central nao e pagar menos: e comprar a estrutura certa para gerar confianca e contato.",
+  "answerFirst": "Em 2026, uma empresa deve avaliar o custo de um site pelo papel comercial da pagina: apresentar servicos, receber contatos, apoiar SEO local e reduzir dependencia de redes sociais. Landing pages costumam resolver campanhas e ofertas simples; sites institucionais atendem negocios que precisam explicar varias areas, prova de confianca e conteudo recorrente.",
+  "publishedAt": "2026-06-19",
+  "updatedAt": "2026-06-19",
+  "author": "Equipe SoftLuna",
+  "authorBio": "Estudio de engenharia web focado em sites rapidos, editaveis, SEO local e conversao por WhatsApp para negocios de servico.",
+  "heroImage": "/og-image.png",
+  "sections": [
+    {
+      "heading": "O que realmente entra no preco de um site profissional?",
+      "content": [
+        "Um site profissional nao e apenas uma pagina bonita. O investimento cobre briefing, organizacao da oferta, arquitetura das secoes, design responsivo, desenvolvimento, metadados, schema, configuracao de dominio, publicacao e suporte inicial.",
+        "Quando o fornecedor cobra muito abaixo do mercado, alguma parte costuma sair do escopo: estrategia, performance, conteudo, manutencao, revisao mobile ou propriedade tecnica. Isso pode parecer economia no inicio e virar retrabalho depois."
+      ],
+      "items": [
+        "Escopo: landing page, site institucional, ecommerce ou sistema.",
+        "Conteudo: copy pronta, copy assistida ou producao completa.",
+        "Tecnologia: site estatico rapido, WordPress, construtor visual ou sistema sob medida.",
+        "Manutencao: hospedagem, atualizacoes, suporte, backups e pequenos ajustes."
+      ]
+    },
+    {
+      "heading": "Quando uma landing page e suficiente?",
+      "content": [
+        "A landing page e uma boa escolha quando a empresa tem uma oferta objetiva, uma campanha especifica ou precisa validar demanda rapidamente. Ela concentra a mensagem em uma decisao: chamar no WhatsApp, pedir orcamento, agendar ou baixar um material.",
+        "Para negocios com muitos servicos, equipe, unidades, portfolio e conteudo educativo, o site institucional tende a ser mais adequado porque cria caminhos de descoberta e permite trabalhar SEO com mais profundidade."
+      ]
+    },
+    {
+      "heading": "Como comparar propostas sem cair na armadilha do menor preco?",
+      "content": [
+        "Compare o que sera entregue, nao apenas o valor final. Uma proposta boa deixa claro quantidade de paginas, revisoes, CMS, SEO basico, performance, prazo, suporte e o que acontece depois da publicacao.",
+        "Tambem vale perguntar quem fica com dominio, codigo, textos e imagens. Site deve ser ativo da empresa, nao uma dependencia opaca do fornecedor."
+      ]
+    },
+    {
+      "heading": "Como a SoftLuna precifica hoje",
+      "content": [
+        "A SoftLuna usa os planos publicados no site como fonte de verdade: Landing Page de Conversao, Site Institucional Completo e Projetos Personalizados. A escolha depende do objetivo comercial e do nivel de complexidade.",
+        "O foco e entregar uma base rapida, elegante, editavel e pronta para evoluir com SEO local e conteudo. Antes de qualquer preco fechado, o escopo precisa estar claro."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Existe preco certo para todo site profissional?",
+      "answer": "Nao. O preco depende de escopo, conteudo, tecnologia, prazo, suporte e complexidade. O melhor caminho e definir o objetivo comercial antes de comparar propostas."
+    },
+    {
+      "question": "Vale pagar por manutencao mensal?",
+      "answer": "Vale quando a manutencao inclui suporte, hospedagem, SSL, pequenos ajustes, monitoramento e continuidade tecnica. O ponto e saber exatamente o que esta incluso."
+    },
+    {
+      "question": "Um site barato pode funcionar?",
+      "answer": "Pode funcionar para uma necessidade simples, mas costuma limitar performance, SEO, design, suporte ou autonomia. O risco aumenta quando a empresa depende do site para gerar leads."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Google Search Central - SEO Starter Guide",
+      "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+    },
+    {
+      "label": "Wix Brasil - quanto custa um site em 2026",
+      "url": "https://pt.wix.com/blog/quanto-custa-um-site-profissional"
+    },
+    {
+      "label": "AG Sao Paulo - guia de precos de site em 2026",
+      "url": "https://agsaopaulo.com.br/quanto-custa-criar-um-site/"
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "Ver planos da SoftLuna",
+      "href": "/#planos"
+    },
+    {
+      "label": "Portfolio SoftLuna",
+      "href": "/#portfolio"
+    },
+    {
+      "label": "Landing page para campanhas",
+      "href": "/landing-page-para-gestores-de-trafego"
+    }
+  ],
+  "cta": {
+    "title": "Quer descobrir o formato certo para o seu site?",
+    "description": "Envie uma mensagem com o tipo de negocio, cidade, servicos e objetivo principal. A SoftLuna ajuda a escolher entre landing page, site institucional ou projeto personalizado.",
+    "label": "Falar sobre meu site",
+    "whatsappMessage": "Ola, li o artigo sobre quanto custa um site profissional e quero entender qual formato faz sentido para minha empresa."
+  }
+}

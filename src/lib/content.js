@@ -143,3 +143,27 @@ export async function getMoneyPageBySlug(slug) {
   const pages = await getMoneyPages();
   return pages.find((page) => page.slug === slug) || null;
 }
+
+/**
+ * Returns all blog posts from content/blog/*.json sorted by order.
+ *
+ * @param {{ includeDrafts?: boolean }} options
+ * @returns {Promise<Object[]>}
+ */
+export async function getBlogPosts({ includeDrafts = false } = {}) {
+  const posts = await readContentDir('blog');
+  return includeDrafts
+    ? posts
+    : posts.filter((post) => post.status === 'published');
+}
+
+/**
+ * Returns a single published blog post by slug.
+ *
+ * @param {string} slug
+ * @returns {Promise<Object|null>}
+ */
+export async function getBlogPostBySlug(slug) {
+  const posts = await getBlogPosts();
+  return posts.find((post) => post.slug === slug) || null;
+}

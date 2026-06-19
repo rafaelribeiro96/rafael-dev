@@ -1,0 +1,105 @@
+{
+  "slug": "nota-google-pagespeed-por-que-importa",
+  "status": "published",
+  "order": 5,
+  "clusterKey": "performance",
+  "cluster": "Performance e otimizacao",
+  "primaryKeyword": "nota Google PageSpeed",
+  "secondaryKeywords": [
+    "PageSpeed Insights",
+    "Core Web Vitals",
+    "nota de performance site"
+  ],
+  "intent": "Entender o que a nota PageSpeed mede e como usar no negocio",
+  "funnelStage": "ToFu",
+  "title": "O que e a nota do Google PageSpeed e por que sites lentos fazem voce perder clientes?",
+  "seoTitle": "Nota Google PageSpeed: O Que Medir | SoftLuna",
+  "metaDescription": "Entenda o que a nota do PageSpeed mostra, o que ela nao garante e como usa-la para melhorar experiencia e conversao.",
+  "excerpt": "A nota PageSpeed e um sinal tecnico util, mas nao deve ser lida sozinha. O que importa e transformar diagnostico em experiencia melhor para o visitante.",
+  "answerFirst": "A nota do Google PageSpeed resume oportunidades de performance e experiencia em laboratorio, enquanto Core Web Vitals mostram metricas reais quando ha dados suficientes. Ela nao garante ranking nem vendas, mas ajuda a encontrar gargalos que podem prejudicar carregamento, interacao, estabilidade visual e conversao.",
+  "publishedAt": "2026-06-19",
+  "updatedAt": "2026-06-19",
+  "author": "Equipe SoftLuna",
+  "authorBio": "Estudio de engenharia web focado em sites rapidos, editaveis, SEO local e conversao por WhatsApp para negocios de servico.",
+  "heroImage": "/og-image.png",
+  "sections": [
+    {
+      "heading": "PageSpeed e diagnostico, nao trofeu",
+      "content": [
+        "A nota ajuda a enxergar gargalos, mas deve ser interpretada com contexto. Um site pode ter nota alta e copy fraca; outro pode ter nota media, mas carregar rapido o suficiente para o publico.",
+        "O objetivo e melhorar experiencia real: conteudo visivel, toque responsivo, layout estavel e caminho claro para contato."
+      ]
+    },
+    {
+      "heading": "O que observar no relatorio",
+      "content": [
+        "Avalie as metricas principais, o tamanho dos arquivos, scripts de terceiros, imagens, fontes e oportunidades de cache. Em vez de tentar zerar todos os avisos, priorize o que afeta o usuario e a conversao.",
+        "Para pequenas empresas, uma pagina leve e objetiva normalmente gera mais valor que uma pagina visualmente carregada com dezenas de animacoes."
+      ],
+      "items": [
+        "LCP para carregamento do conteudo principal.",
+        "INP para resposta apos clique ou toque.",
+        "CLS para estabilidade visual.",
+        "Peso de JavaScript e imagens."
+      ]
+    },
+    {
+      "heading": "Como velocidade afeta conversao",
+      "content": [
+        "Visitantes chegam com intencao e pouca paciencia, especialmente no celular. Se o site atrasa, a empresa perde parte da atencao antes mesmo de apresentar servicos, prova e contato.",
+        "Velocidade tambem reduz atrito em campanhas pagas. Pagar pelo clique e enviar para uma pagina lenta e uma forma silenciosa de desperdicamento."
+      ]
+    },
+    {
+      "heading": "O padrao que buscamos na SoftLuna",
+      "content": [
+        "A SoftLuna busca sites enxutos, estaticos, com conteudo priorizado e sem dependencias desnecessarias. O PageSpeed entra como ferramenta de validacao, nao como promessa isolada.",
+        "A pergunta final e simples: o visitante consegue entender, confiar e chamar no WhatsApp sem esperar demais?"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Preciso tirar 100 no PageSpeed?",
+      "answer": "Nao. Nota 100 pode ser desejavel, mas o foco deve ser experiencia real, Core Web Vitals, estabilidade e conversao."
+    },
+    {
+      "question": "PageSpeed mede dados reais?",
+      "answer": "Pode mostrar dados reais quando ha volume suficiente, mas tambem usa medicao de laboratorio. Por isso, contexto e essencial."
+    },
+    {
+      "question": "Velocidade ajuda SEO?",
+      "answer": "Ajuda como parte de experiencia e qualidade tecnica, mas nao substitui conteudo, relevancia, autoridade e adequacao a intencao de busca."
+    }
+  ],
+  "sources": [
+    {
+      "label": "web.dev - Learn Core Web Vitals",
+      "url": "https://web.dev/explore/learn-core-web-vitals"
+    },
+    {
+      "label": "Google Search Console Help - Core Web Vitals report",
+      "url": "https://support.google.com/webmasters/answer/9205520?hl=en"
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "Por que seu site demora para abrir",
+      "href": "/blog/site-lento-celular-por-que-demora-abrir"
+    },
+    {
+      "label": "Quanto custa um site profissional",
+      "href": "/blog/quanto-custa-site-profissional-empresas-brasil-2026"
+    },
+    {
+      "label": "Planos SoftLuna",
+      "href": "/#planos"
+    }
+  ],
+  "cta": {
+    "title": "Quer uma pagina mais leve para sua oferta?",
+    "description": "A SoftLuna cria sites com base tecnica enxuta para reduzir atrito antes do contato comercial.",
+    "label": "Conversar sobre performance",
+    "whatsappMessage": "Ola, li o artigo sobre PageSpeed e quero melhorar a velocidade do meu site."
+  }
+}

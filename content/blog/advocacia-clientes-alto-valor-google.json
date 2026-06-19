@@ -1,0 +1,105 @@
+{
+  "slug": "advocacia-clientes-alto-valor-google",
+  "status": "published",
+  "order": 8,
+  "clusterKey": "nichos",
+  "cluster": "Nichados e especificos",
+  "primaryKeyword": "site para advogados",
+  "secondaryKeywords": [
+    "marketing juridico Google",
+    "site para escritorio de advocacia",
+    "SEO para advogados"
+  ],
+  "intent": "Entender como escritorios podem usar site e Google com sobriedade",
+  "funnelStage": "MoFu",
+  "title": "Como escritorios de advocacia atraem clientes de alto valor atraves do Google",
+  "seoTitle": "Site Para Advogados e SEO Juridico | SoftLuna",
+  "metaDescription": "Veja como um escritorio de advocacia pode usar site, conteudo e SEO local com sobriedade e respeito as regras da OAB.",
+  "excerpt": "Advocacia precisa de autoridade, clareza e sobriedade. O site deve explicar areas, perfil profissional e contato sem promessas de resultado.",
+  "answerFirst": "Escritorios de advocacia podem atrair clientes qualificados pelo Google com paginas de areas de atuacao, conteudo educativo, perfil profissional, prova institucional e contato claro. A comunicacao precisa ser informativa e sobria, sem promessa de resultado, captacao agressiva ou linguagem sensacionalista.",
+  "publishedAt": "2026-06-19",
+  "updatedAt": "2026-06-19",
+  "author": "Equipe SoftLuna",
+  "authorBio": "Estudio de engenharia web focado em sites rapidos, editaveis, SEO local e conversao por WhatsApp para negocios de servico.",
+  "heroImage": "/og-image.png",
+  "sections": [
+    {
+      "heading": "Cliente juridico pesquisa antes de confiar",
+      "content": [
+        "Muitos clientes chegam ao escritorio depois de comparar especialidade, clareza, postura e sinais de confianca. O site ajuda a organizar essa avaliacao antes da conversa.",
+        "A pagina nao deve prometer vitoria. Ela deve explicar areas de atuacao, experiencia, processo de atendimento e proximos passos."
+      ]
+    },
+    {
+      "heading": "O que um site juridico precisa comunicar",
+      "content": [
+        "A estrutura deve ser sobria: areas de atuacao, perfil do escritorio, equipe, conteudo educativo, perguntas frequentes, localizacao e canais de contato.",
+        "Conteudo para SEO juridico deve responder duvidas reais sem transformar informacao em consultoria individual. Essa distincao protege o escritorio e ajuda o visitante a decidir se deve procurar atendimento."
+      ],
+      "items": [
+        "Areas de atuacao explicadas em linguagem clara.",
+        "Perfil profissional e registro quando aplicavel.",
+        "Conteudo informativo sem promessa de exito.",
+        "Contato discreto e objetivo."
+      ]
+    },
+    {
+      "heading": "Como usar Google sem ferir a sobriedade",
+      "content": [
+        "SEO local e conteudo educativo podem fortalecer presenca digital sem apelo agressivo. A prioridade deve ser informar, orientar e mostrar competencia, nao criar urgencia artificial.",
+        "O Provimento 205/2021 da OAB e materiais seccionais sobre marketing juridico devem ser considerados na revisao final da copy."
+      ]
+    },
+    {
+      "heading": "Como a SoftLuna constrói paginas juridicas",
+      "content": [
+        "A SoftLuna trata sites juridicos como projetos de autoridade e clareza. A linguagem visual e contida, a navegacao e objetiva e os CTAs sao formulados para contato profissional.",
+        "Antes da publicacao, o escritorio deve revisar juridicamente a copy."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Advogado pode ter site profissional?",
+      "answer": "Sim, mas a comunicacao deve respeitar as regras da OAB, manter carater informativo e evitar promessas, mercantilizacao ou captacao indevida."
+    },
+    {
+      "question": "SEO juridico pode usar artigos?",
+      "answer": "Pode, desde que os artigos sejam educativos, responsaveis e nao substituam consultoria individual."
+    },
+    {
+      "question": "O site deve ter WhatsApp?",
+      "answer": "Pode ter, desde que o CTA seja sobrio e o atendimento preserve sigilo, triagem adequada e limites eticos."
+    }
+  ],
+  "sources": [
+    {
+      "label": "CFOAB - Provimento n. 205/2021",
+      "url": "https://eticaedisciplina.oab.org.br/provimento"
+    },
+    {
+      "label": "OAB/SP - Provimento 205/2021 PDF",
+      "url": "https://www.oabsp.org.br/upload/526840268.pdf"
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "Portfolio JSA Advogados",
+      "href": "/#portfolio"
+    },
+    {
+      "label": "SEO local para empresas",
+      "href": "/blog/seo-local-negocio-topo-google-cidade"
+    },
+    {
+      "label": "Planos SoftLuna",
+      "href": "/#planos"
+    }
+  ],
+  "cta": {
+    "title": "Seu escritorio precisa de uma presenca mais sobria?",
+    "description": "A SoftLuna cria sites juridicos com foco em autoridade, desempenho e contato profissional, sempre com revisao final do escritorio.",
+    "label": "Conversar sobre site juridico",
+    "whatsappMessage": "Ola, li o artigo sobre site para advogados e quero conversar sobre um site para meu escritorio."
+  }
+}

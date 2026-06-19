@@ -1,0 +1,105 @@
+{
+  "slug": "site-lento-celular-por-que-demora-abrir",
+  "status": "published",
+  "order": 4,
+  "clusterKey": "performance",
+  "cluster": "Performance e otimizacao",
+  "primaryKeyword": "site lento no celular",
+  "secondaryKeywords": [
+    "site demora para abrir",
+    "velocidade de site mobile",
+    "site lento perde clientes"
+  ],
+  "intent": "Diagnosticar causas de lentidao em sites mobile",
+  "funnelStage": "ToFu",
+  "title": "Por que o site da sua empresa demora tanto para abrir no celular?",
+  "seoTitle": "Site Lento no Celular: Causas e Correcoes | SoftLuna",
+  "metaDescription": "Entenda por que sites ficam lentos no celular e quais pontos revisar antes de investir em anuncios ou SEO.",
+  "excerpt": "Sites lentos geralmente combinam imagens pesadas, scripts demais, hospedagem fraca, layout instavel e codigo acumulado. O efeito aparece primeiro no celular.",
+  "answerFirst": "Um site demora para abrir no celular quando precisa baixar arquivos demais, imagens sem otimizacao, scripts de terceiros, fontes pesadas ou respostas lentas do servidor. A solucao comeca por medir LCP, INP e CLS, depois remover excesso, otimizar imagens, reduzir JavaScript e servir paginas de forma mais proxima do usuario.",
+  "publishedAt": "2026-06-19",
+  "updatedAt": "2026-06-19",
+  "author": "Equipe SoftLuna",
+  "authorBio": "Estudio de engenharia web focado em sites rapidos, editaveis, SEO local e conversao por WhatsApp para negocios de servico.",
+  "heroImage": "/og-image.png",
+  "sections": [
+    {
+      "heading": "Lentidao mobile quase sempre e acumulada",
+      "content": [
+        "O problema raramente esta em um unico detalhe. Sites antigos acumulam plugins, pixels, fontes, imagens grandes, temas pesados e scripts que rodam antes do conteudo principal aparecer.",
+        "No celular, esse excesso fica mais visivel porque a rede pode variar, o processador e menor e a tela exige que o conteudo principal apareca rapido."
+      ]
+    },
+    {
+      "heading": "O que medir antes de mexer",
+      "content": [
+        "Core Web Vitals ajuda a separar sensacao de lentidao de sintomas tecnicos. LCP observa carregamento do conteudo principal, INP avalia resposta a interacoes e CLS mede estabilidade visual.",
+        "Uma boa auditoria combina PageSpeed Insights, Search Console quando houver dados e inspecao tecnica de imagens, scripts, cache e servidor."
+      ],
+      "items": [
+        "LCP: o elemento principal aparece tarde.",
+        "INP: cliques e toques demoram a responder.",
+        "CLS: elementos pulam durante o carregamento.",
+        "Peso total: imagens, fontes e JavaScript passam do necessario."
+      ]
+    },
+    {
+      "heading": "Por que refazer pode ser melhor que remendar",
+      "content": [
+        "Quando a base tecnica e pesada, pequenas otimizacoes ajudam pouco. Um site estatico, enxuto e com imagens tratadas costuma ser mais previsivel que um tema cheio de dependencias.",
+        "Isso nao significa que todo WordPress precise ser trocado. Significa que a decisao deve comparar custo de ajuste, risco de quebrar plugins e resultado esperado."
+      ]
+    },
+    {
+      "heading": "Como a SoftLuna evita o problema desde o inicio",
+      "content": [
+        "A SoftLuna trabalha com arquitetura static-first, paginas pre-renderizadas, imagens otimizadas e menos dependencias. O objetivo e entregar uma base rapida antes de adicionar recursos extras.",
+        "Performance nao e promessa absoluta de ranking. E uma fundacao para experiencia, rastreamento e conversao."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "PageSpeed baixo significa que preciso refazer o site?",
+      "answer": "Nao necessariamente. Primeiro e preciso identificar causas. Refazer faz sentido quando a base atual impede ganhos relevantes ou custa mais manter do que reconstruir."
+    },
+    {
+      "question": "Core Web Vitals garante melhor posicao no Google?",
+      "answer": "Nao garante. O Google recomenda boas metricas para experiencia e busca, mas ranking depende de varios sistemas, conteudo, relevancia e contexto."
+    },
+    {
+      "question": "Imagem pesada e a principal causa?",
+      "answer": "E uma causa comum, mas nao a unica. JavaScript, servidor, fontes, CSS, plugins e terceiros tambem podem pesar."
+    }
+  ],
+  "sources": [
+    {
+      "label": "web.dev - Web Vitals",
+      "url": "https://web.dev/articles/vitals"
+    },
+    {
+      "label": "Google Search Central - Core Web Vitals and Search",
+      "url": "https://developers.google.com/search/docs/appearance/core-web-vitals"
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "Riscos de site gratis ou amador",
+      "href": "/blog/riscos-de-site-gratis-ou-plataformas-amadoras"
+    },
+    {
+      "label": "Planos SoftLuna",
+      "href": "/#planos"
+    },
+    {
+      "label": "Portfolio SoftLuna",
+      "href": "/#portfolio"
+    }
+  ],
+  "cta": {
+    "title": "Seu site esta lento no celular?",
+    "description": "A SoftLuna pode avaliar a estrutura atual e indicar se vale otimizar ou reconstruir com uma base mais leve.",
+    "label": "Avaliar performance",
+    "whatsappMessage": "Ola, li o artigo sobre site lento no celular e quero avaliar a performance do meu site."
+  }
+}

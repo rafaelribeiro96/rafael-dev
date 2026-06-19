@@ -1,7 +1,7 @@
 # State
 
 **Last Updated:** 2026-06-19
-**Current Work:** SEO money page pilot
+**Current Work:** SEO blog authority implementation
 
 ---
 
@@ -48,6 +48,13 @@
 **Reason:** The roadmap explicitly requires final copy research before publication and the lotes depend on the approved pilot.
 **Trade-off:** Only one money page is live in the first implementation pass, but the template and matrix are ready for batch expansion.
 **Impact:** Future F1 work should create one JSON per remaining route under `content/money-pages/` using the documented matrix and the existing dynamic route.
+
+### AD-007: Publish the first blog authority cluster set as static JSON (2026-06-19)
+
+**Decision:** F2 published the initial 9 blog articles from `content/blog/*.json`, rendered statically through `/blog` and `/blog/[slug]`, with Article, FAQPage and BreadcrumbList schema.
+**Reason:** This removes dependence on the legacy `NEXT_PUBLIC_API_URL` blog service and gives money pages/homepage future internal-link support.
+**Trade-off:** The new blog collection is not editable in the admin yet; article updates remain file-based until a Git-CMS expansion is approved.
+**Impact:** Future blog work should update `content/blog/*.json` and `docs/business/softluna/blog-authority-plan.md`, then run lint/build before publication.
 
 ---
 
@@ -102,4 +109,5 @@
 - [ ] Decide whether to migrate live pricing JSON to the strategic prices later.
 - [ ] Decide long-term hosting defaults for SoftLuna and client projects.
 - [ ] Review and approve the `/site-para-clinicas-medicas` pilot before publishing the remaining money page batches.
+- [ ] Decide whether the admin/Git-CMS should manage `content/blog/` and `content/money-pages/`.
 - [ ] Replace default admin password fallback before production launch.
