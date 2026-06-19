@@ -1,0 +1,114 @@
+{
+  "id": "landing-page-para-gestores-de-trafego",
+  "order": 16,
+  "slug": "landing-page-para-gestores-de-trafego",
+  "status": "published",
+  "category": "Marketing e tech",
+  "primaryKeyword": "landing page para gestores de trafego",
+  "secondaryKeywords": [
+    "landing page gestor de trafego",
+    "landing page para tráfego pago",
+    "criar LP de conversão",
+    "página de vendas tráfego"
+  ],
+  "seo": {
+    "title": "Landing Page para Gestores de Tráfego | SoftLuna",
+    "description": "Landing page para campanhas com copy, velocidade, WhatsApp, eventos de conversão e SEO básico para gestores fecharem mais contratos.",
+    "canonical": "https://softluna.com.br/landing-page-para-gestores-de-trafego",
+    "ogImage": "/og-image.png"
+  },
+  "hero": {
+    "eyebrow": "Marketing de Performance",
+    "h1": "Landing page para gestores de tráfego focada em conversão",
+    "lead": "Feche mais contratos de assessoria. Uma página de alta performance, ultra-rápida, com copy persuasiva e eventos de pixel/analytics configurados para suas campanhas.",
+    "primaryCta": "Quero criar minha Landing Page",
+    "secondaryCta": "Ver planos",
+    "whatsappMessage": "Olá! Sou gestor de tráfego e quero criar minha landing page com a SoftLuna. Como funciona?"
+  },
+  "painPoints": [
+    "Você roda anúncios para si mesmo mas a página atual demora para abrir, aumentando o custo por clique.",
+    "Ausência de eventos de conversão (lead, clique em WhatsApp) no código para otimizar suas campanhas de tráfego.",
+    "Copy genérica ou layout amador que afasta empresários e clientes de maior orçamento.",
+    "Perda de leads devido a designs poluídos que confundem o visitante."
+  ],
+  "solution": {
+    "title": "Uma página de conversão que otimiza seus investimentos em anúncios",
+    "description": "Desenvolvemos uma landing page limpa, leve, focada em uma única ação de conversão (WhatsApp ou formulário) e preparada para rastreamento de anúncios.",
+    "items": [
+      "Copy estruturada para qualificar os leads (gerar interesse e filtrar curiosos).",
+      "Layout focado em conversão com velocidade superior a concorrentes comuns.",
+      "Integração prévia de Pixel do Meta, Google Tag Manager e analytics.",
+      "Apresentação estruturada do seu método de trabalho e cases de sucesso."
+    ]
+  },
+  "benefits": [
+    {
+      "title": "Menor custo por lead",
+      "description": "Páginas mais rápidas melhoram a experiência do usuário e diminuem o custo comercial de anúncios."
+    },
+    {
+      "title": "Rastreamento completo",
+      "description": "Todos os cliques e ações importantes são mapeados com eventos para suas campanhas."
+    },
+    {
+      "title": "Autoridade profissional",
+      "description": "Layout premium que demonstra a competência técnica que você oferece aos clientes."
+    },
+    {
+      "title": "Mobile first real",
+      "description": "Foco absoluto em smartphones, onde 95% do seu tráfego de anúncios é gerado."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Vocês instalam os pixels de anúncios?",
+      "answer": "Sim, integramos os scripts do Meta Pixel, Google Tag e Google Analytics no código-fonte, prontos para suas campanhas."
+    },
+    {
+      "question": "Consigo adicionar novos cases de sucesso no site?",
+      "answer": "Sim, pelo painel você gerencia e atualiza os cases e depoimentos sem precisar mexer em códigos."
+    }
+  ],
+  "recommendedPlanIds": [
+    "landing-page",
+    "site-institucional",
+    "projetos-personalizados"
+  ],
+  "portfolioIds": [],
+  "process": [
+    {
+      "title": "Diagnostico",
+      "description": "Mapeamos sua atuacao, publico-alvo, diferenciais e as principais demandas do seu nicho."
+    },
+    {
+      "title": "Estrutura",
+      "description": "Definimos secoes, links internos, canais de conversao e a arquitetura inicial de SEO local."
+    },
+    {
+      "title": "Design e implementacao",
+      "description": "Construimos uma pagina rapida, elegante, responsiva e otimizada, alinhada a sua marca."
+    },
+    {
+      "title": "Publicacao assistida",
+      "description": "Validamos metadados, links, WhatsApp, tags de conversao e dados estruturados antes de ir ao ar."
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "Planos da SoftLuna",
+      "href": "/#planos"
+    },
+    {
+      "label": "Processo de criacao",
+      "href": "/#processo"
+    },
+    {
+      "label": "Perguntas frequentes",
+      "href": "/#faq"
+    }
+  ],
+  "researchNotes": [
+    "SERP pesquisada em 2026-06-19 para a keyword: landing page para gestores de trafego",
+    "Copy em total conformidade sem promessas absurdas de resultados."
+  ]
+}

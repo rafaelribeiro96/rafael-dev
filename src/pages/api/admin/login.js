@@ -35,9 +35,19 @@ export default async function handler(req, res) {
   }
 
   const { password } = req.body || {};
-  const correctPassword = process.env.ADMIN_PASSWORD || 'admin123';
+  const correctPassword = process.env.ADMIN_PASSWORD;
 
-  if (password === correctPassword) {
+  if (!correctPassword) {
+    if (process.env.NODE_ENV === 'production') {
+      return res.status(500).json({
+        error:
+          'ADMIN_PASSWORD não configurado no servidor. Acesso bloqueado por segurança.'
+      });
+    }
+  }
+
+  const passwordToCompare = correctPassword || 'admin123';
+  if (password === passwordToCompare) {
     // Reset login attempts on success
     loginAttempts.delete(ip);
 

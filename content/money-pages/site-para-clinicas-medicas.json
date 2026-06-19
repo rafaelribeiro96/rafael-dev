@@ -78,12 +78,12 @@
       "description": "Validamos title, meta, schema, links, WhatsApp, formularios e pontos de privacidade antes da publicacao."
     }
   ],
-  "recommendedPlanIds": ["site-institucional", "projetos-personalizados"],
+  "recommendedPlanIds": ["landing-page", "site-institucional", "projetos-personalizados"],
   "portfolioIds": [],
   "faqs": [
     {
       "question": "Quanto custa um site para clinica medica?",
-      "answer": "A SoftLuna usa os planos publicados como ponto de partida. Um site institucional parte de R$ 1.299,00 de implantacao e R$ 75,00 por mes; projetos com agendamento, areas extras ou integracoes entram em escopo personalizado."
+      "answer": "A SoftLuna usa os planos publicados como ponto de partida. Oferecemos Landing Pages simples a partir de R$ 749,00 de implantacao e R$ 40,00 de manutencao mensal. Um site institucional completo parte de R$ 1.299,00 de implantacao e R$ 75,00 por mes, e projetos personalizados com agendamento online e integracoes entram em escopo sob medida."
     },
     {
       "question": "O site pode ter agendamento online?",

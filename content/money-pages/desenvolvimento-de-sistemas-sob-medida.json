@@ -1,0 +1,114 @@
+{
+  "id": "desenvolvimento-de-sistemas-sob-medida",
+  "order": 20,
+  "slug": "desenvolvimento-de-sistemas-sob-medida",
+  "status": "published",
+  "category": "Solucoes sob medida",
+  "primaryKeyword": "desenvolvimento de sistemas sob medida",
+  "secondaryKeywords": [
+    "desenvolvimento de software sob medida",
+    "desenvolvimento de sistemas web",
+    "criar sistema customizado",
+    "empresa de desenvolvimento de software"
+  ],
+  "seo": {
+    "title": "Desenvolvimento de Sistemas Sob Medida | SoftLuna",
+    "description": "Desenvolvimento de sistemas sob medida com descoberta técnica, arquitetura escalável, interface, banco de dados e integrações robustas.",
+    "canonical": "https://softluna.com.br/desenvolvimento-de-sistemas-sob-medida",
+    "ogImage": "/og-image.png"
+  },
+  "hero": {
+    "eyebrow": "Engenharia de Software",
+    "h1": "Desenvolvimento de sistemas sob medida para operações em escala",
+    "lead": "Sua empresa cresceu e as planilhas ou sistemas prontos já não servem mais? Desenvolvemos plataformas web robustas, escaláveis e sob medida para sua rotina.",
+    "primaryCta": "Falar com Engenheiro de Software",
+    "secondaryCta": "Ver planos",
+    "whatsappMessage": "Olá! Quero conversar sobre o desenvolvimento de um sistema sob medida com a SoftLuna."
+  },
+  "painPoints": [
+    "Sua operação perde eficiência usando planilhas soltas ou múltiplos softwares que não se conversam.",
+    "Sistemas prontos cobram mensalidades abusivas por usuário ou não atendem às suas regras de negócio.",
+    "Falhas de segurança, vazamentos de dados ou processos manuais lentos na gestão operacional.",
+    "Dificuldade em obter relatórios consolidados e métricas em tempo real para tomada de decisões."
+  ],
+  "solution": {
+    "title": "Um software desenhado exclusivamente para as regras do seu negócio",
+    "description": "Do mapeamento de requisitos à entrega de um sistema web completo com painéis, bancos de dados integrados e integrações de API seguras.",
+    "items": [
+      "Fase detalhada de diagnóstico técnico e mapeamento de fluxos operacionais.",
+      "Interface de usuário rápida, moderna e intuitiva para sua equipe.",
+      "Banco de dados seguro, modelado para estabilidade e velocidade.",
+      "Integrações robustas com ERPs, CRMs, gateways e outros serviços externos."
+    ]
+  },
+  "benefits": [
+    {
+      "title": "Propriedade total do software",
+      "description": "Livre-se de licenças caras e mensalidades por usuário. O sistema é seu."
+    },
+    {
+      "title": "Regras de negócio exatas",
+      "description": "O sistema se adapta à sua empresa, e não o contrário."
+    },
+    {
+      "title": "Escalabilidade planejada",
+      "description": "Tecnologias modernas preparadas para suportar o crescimento da operação."
+    },
+    {
+      "title": "Segurança de dados",
+      "description": "Conformidade com a LGPD e níveis de acesso restritos para cada tipo de colaborador."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Como funciona a etapa de levantamento de requisitos?",
+      "answer": "Nossos engenheiros realizam reuniões para detalhar todas as necessidades, gerando um escopo técnico transparente antes do início da codificação."
+    },
+    {
+      "question": "Quem é dono do código-fonte do sistema?",
+      "answer": "O cliente detém a propriedade intelectual do software sob medida desenvolvido para ele, sem dependências ou royalties."
+    }
+  ],
+  "recommendedPlanIds": [
+    "landing-page",
+    "site-institucional",
+    "projetos-personalizados"
+  ],
+  "portfolioIds": [],
+  "process": [
+    {
+      "title": "Diagnostico",
+      "description": "Mapeamos sua atuacao, publico-alvo, diferenciais e as principais demandas do seu nicho."
+    },
+    {
+      "title": "Estrutura",
+      "description": "Definimos secoes, links internos, canais de conversao e a arquitetura inicial de SEO local."
+    },
+    {
+      "title": "Design e implementacao",
+      "description": "Construimos uma pagina rapida, elegante, responsiva e otimizada, alinhada a sua marca."
+    },
+    {
+      "title": "Publicacao assistida",
+      "description": "Validamos metadados, links, WhatsApp, tags de conversao e dados estruturados antes de ir ao ar."
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "Planos da SoftLuna",
+      "href": "/#planos"
+    },
+    {
+      "label": "Processo de criacao",
+      "href": "/#processo"
+    },
+    {
+      "label": "Perguntas frequentes",
+      "href": "/#faq"
+    }
+  ],
+  "researchNotes": [
+    "SERP pesquisada em 2026-06-19 para a keyword: desenvolvimento de sistemas sob medida",
+    "Copy em total conformidade sem promessas absurdas de resultados."
+  ]
+}

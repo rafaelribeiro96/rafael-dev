@@ -1,0 +1,114 @@
+{
+  "id": "landing-page-para-infoprodutos",
+  "order": 17,
+  "slug": "landing-page-para-infoprodutos",
+  "status": "published",
+  "category": "Marketing e tech",
+  "primaryKeyword": "landing page para infoprodutos",
+  "secondaryKeywords": [
+    "página de vendas infoprodutos",
+    "landing page para cursos",
+    "criar página de vendas e-book",
+    "LP para lançamentos"
+  ],
+  "seo": {
+    "title": "Landing Page para Infoprodutos | SoftLuna",
+    "description": "Landing page para infoprodutos com narrativa de oferta estruturada, FAQ, prova social, CTA para checkout e performance mobile excelente.",
+    "canonical": "https://softluna.com.br/landing-page-para-infoprodutos",
+    "ogImage": "/og-image.png"
+  },
+  "hero": {
+    "eyebrow": "Vendas Digitais",
+    "h1": "Landing page para infoprodutos com oferta clara e conversão",
+    "lead": "A SoftLuna cria páginas de vendas de alta conversão para e-books, mentorias e cursos online. Leveza para reduzir carrinhos abandonados.",
+    "primaryCta": "Quero criar minha Página de Vendas",
+    "secondaryCta": "Ver planos",
+    "whatsappMessage": "Olá! Quero criar uma landing page para meu infoproduto com a SoftLuna. Como funciona?"
+  },
+  "painPoints": [
+    "Carrinhos abandonados e perdas de vendas causadas por lentidão no carregamento da página de vendas.",
+    "Dificuldade de estruturar depoimentos de alunos e provas sociais de maneira limpa no celular.",
+    "Perguntas repetitivas de suporte por falta de uma seção informativa completa de FAQ da oferta.",
+    "Aparência genérica de templates prontos que desvaloriza o valor da mentoria ou curso."
+  ],
+  "solution": {
+    "title": "Narrativa persuasiva e checkout direto sem atrito",
+    "description": "Uma landing page focada em conversão, com visual refinado, prova social e botões estratégicos que direcionam direto para seu gateway de pagamento.",
+    "items": [
+      "Copy focada em benefícios, dores do público, quebra de objeções e bônus.",
+      "Seção para exibição de depoimentos, vídeos de prova social e resultados.",
+      "Botão de compra direta direcionando para Hotmart, Kiwify, Eduzz, etc.",
+      "Seção de garantia, cronograma do curso/mentoria e FAQs da oferta."
+    ]
+  },
+  "benefits": [
+    {
+      "title": "Aumento das vendas",
+      "description": "Carregamento instantâneo que reduz a desistência na transição para o checkout."
+    },
+    {
+      "title": "Quebra de objeções",
+      "description": "FAQ integrada e visível que responde às principais dúvidas da compra."
+    },
+    {
+      "title": "Rastreamento ativo",
+      "description": "Código preparado para registrar visualização de página e cliques de compra."
+    },
+    {
+      "title": "Visual premium",
+      "description": "Design autoral que transmite profissionalismo e eleva o preço percebido."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Posso conectar meu checkout da Hotmart ou Kiwify?",
+      "answer": "Sim, os botões de compra são configurados diretamente com os links do seu checkout para encurtar a jornada."
+    },
+    {
+      "question": "O site aguenta picos de acessos em lançamentos?",
+      "answer": "Sim, os sites da SoftLuna são estáticos e hospedados em servidores edge globais, suportando milhares de visitas simultâneas sem cair."
+    }
+  ],
+  "recommendedPlanIds": [
+    "landing-page",
+    "site-institucional",
+    "projetos-personalizados"
+  ],
+  "portfolioIds": [],
+  "process": [
+    {
+      "title": "Diagnostico",
+      "description": "Mapeamos sua atuacao, publico-alvo, diferenciais e as principais demandas do seu nicho."
+    },
+    {
+      "title": "Estrutura",
+      "description": "Definimos secoes, links internos, canais de conversao e a arquitetura inicial de SEO local."
+    },
+    {
+      "title": "Design e implementacao",
+      "description": "Construimos uma pagina rapida, elegante, responsiva e otimizada, alinhada a sua marca."
+    },
+    {
+      "title": "Publicacao assistida",
+      "description": "Validamos metadados, links, WhatsApp, tags de conversao e dados estruturados antes de ir ao ar."
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "Planos da SoftLuna",
+      "href": "/#planos"
+    },
+    {
+      "label": "Processo de criacao",
+      "href": "/#processo"
+    },
+    {
+      "label": "Perguntas frequentes",
+      "href": "/#faq"
+    }
+  ],
+  "researchNotes": [
+    "SERP pesquisada em 2026-06-19 para a keyword: landing page para infoprodutos",
+    "Copy em total conformidade sem promessas absurdas de resultados."
+  ]
+}

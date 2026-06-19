@@ -1,0 +1,114 @@
+{
+  "id": "site-para-petshops-e-veterinarias",
+  "order": 15,
+  "slug": "site-para-petshops-e-veterinarias",
+  "status": "published",
+  "category": "Comercio e varejo",
+  "primaryKeyword": "site para petshops e veterinarias",
+  "secondaryKeywords": [
+    "site para petshop",
+    "site para clinica veterinaria",
+    "SEO local veterinaria",
+    "criar site petshop"
+  ],
+  "seo": {
+    "title": "Site para Petshops e Veterinárias | SoftLuna",
+    "description": "Site para petshop ou clínica veterinária com serviços, equipe, unidade, WhatsApp e SEO local para atrair tutores preocupados.",
+    "canonical": "https://softluna.com.br/site-para-petshops-e-veterinarias",
+    "ogImage": "/og-image.png"
+  },
+  "hero": {
+    "eyebrow": "Cuidado Animal",
+    "h1": "Site para petshops e veterinárias com serviços e agendamentos",
+    "lead": "Desenvolvemos sites profissionais e acolhedores para clínicas veterinárias e petshops apresentarem seus planos de saúde, exames, banho e tosa, e localização.",
+    "primaryCta": "Quero criar um site pet",
+    "secondaryCta": "Ver planos",
+    "whatsappMessage": "Olá! Quero criar o site para minha clínica veterinária com a SoftLuna. Como podemos começar?"
+  },
+  "painPoints": [
+    "Tutores de pets procuram clínicas 24h na região em momentos de urgência, mas não acham informações rápidas de telefone.",
+    "Falta de posicionamento para termos de exames, vacinas e banho/tosa no bairro.",
+    "Equipe passa o dia respondendo sobre preços de tosa, vacinas e agendamento de consultas.",
+    "Falta de um canal informativo sobre os veterinários e especialidades disponíveis."
+  ],
+  "solution": {
+    "title": "Presença digital confiável para os cuidados com os pets",
+    "description": "Um site institucional completo com seção de emergência visível, catálogo de serviços de banho e tosa, equipe médica veterinária e canais de contato.",
+    "items": [
+      "Destaque visível de contato rápido e endereço para emergências 24h.",
+      "Listagem detalhada de serviços veterinários (consultas, exames, cirurgias, vacinas).",
+      "Apresentação da equipe profissional com especialidades e CRMV.",
+      "Seção para agendamento de banho e tosa ou consultas via WhatsApp."
+    ]
+  },
+  "benefits": [
+    {
+      "title": "Mais tranquilidade ao tutor",
+      "description": "O cliente encontra contatos de urgência, localização e especialidades em segundos."
+    },
+    {
+      "title": "Mais agendamentos locais",
+      "description": "SEO otimizado para o bairro e região onde o petshop/clínica atua."
+    },
+    {
+      "title": "Apresentação da equipe",
+      "description": "Fotos reais e perfis dos veterinários ajudam a construir confiança inicial."
+    },
+    {
+      "title": "Fácil de administrar",
+      "description": "Edite planos, horários de plantão e valores com total autonomia."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "O site funciona para clínicas veterinárias 24 horas?",
+      "answer": "Sim, incluímos um botão de emergência em destaque no cabeçalho do celular para ligar ou abrir a rota do GPS imediatamente."
+    },
+    {
+      "question": "É seguro colocar um formulário para marcar consultas?",
+      "answer": "Sim, os dados coletados respeitam a LGPD e são transmitidos de forma segura para o contato da recepção."
+    }
+  ],
+  "recommendedPlanIds": [
+    "landing-page",
+    "site-institucional",
+    "projetos-personalizados"
+  ],
+  "portfolioIds": [],
+  "process": [
+    {
+      "title": "Diagnostico",
+      "description": "Mapeamos sua atuacao, publico-alvo, diferenciais e as principais demandas do seu nicho."
+    },
+    {
+      "title": "Estrutura",
+      "description": "Definimos secoes, links internos, canais de conversao e a arquitetura inicial de SEO local."
+    },
+    {
+      "title": "Design e implementacao",
+      "description": "Construimos uma pagina rapida, elegante, responsiva e otimizada, alinhada a sua marca."
+    },
+    {
+      "title": "Publicacao assistida",
+      "description": "Validamos metadados, links, WhatsApp, tags de conversao e dados estruturados antes de ir ao ar."
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "Planos da SoftLuna",
+      "href": "/#planos"
+    },
+    {
+      "label": "Processo de criacao",
+      "href": "/#processo"
+    },
+    {
+      "label": "Perguntas frequentes",
+      "href": "/#faq"
+    }
+  ],
+  "researchNotes": [
+    "SERP pesquisada em 2026-06-19 para a keyword: site para petshops e veterinarias",
+    "Copy em total conformidade sem promessas absurdas de resultados."
+  ]
+}

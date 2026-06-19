@@ -1,0 +1,114 @@
+{
+  "id": "site-para-tatuadores-e-estudios",
+  "order": 7,
+  "slug": "site-para-tatuadores-e-estudios",
+  "status": "published",
+  "category": "Beleza e estilo",
+  "primaryKeyword": "site para tatuadores e estudios",
+  "secondaryKeywords": [
+    "site para tatuador",
+    "site para estudio de tatuagem",
+    "portfolio de tatuagem",
+    "criar site de tatuagem"
+  ],
+  "seo": {
+    "title": "Site para Tatuadores e Estúdios | SoftLuna",
+    "description": "Site para tatuador com portfólio, estilos, agenda, WhatsApp, SEO local e design visual sob medida para atrair mais orçamentos.",
+    "canonical": "https://softluna.com.br/site-para-tatuadores-e-estudios",
+    "ogImage": "/og-image.png"
+  },
+  "hero": {
+    "eyebrow": "Tattoo & Art",
+    "h1": "Site para tatuadores e estúdios com portfólio e contato direto",
+    "lead": "Valorize sua arte com um portfólio digital rápido e de alto impacto visual. Atraia orçamentos qualificados direto para seu WhatsApp ou formulário.",
+    "primaryCta": "Quero criar meu site de tattoo",
+    "secondaryCta": "Ver planos",
+    "whatsappMessage": "Olá! Quero criar um site para meu estúdio de tatuagem com a SoftLuna. Como funciona?"
+  },
+  "painPoints": [
+    "Instagram oscila o alcance e limita a organização do portfólio por estilos e artistas.",
+    "Perda de tempo no WhatsApp respondendo orçamentos que não têm informações básicas (tamanho, local, referência).",
+    "Dificuldade de mostrar os cuidados pré e pós-tatuagem para os clientes de forma organizada.",
+    "Falta de autoridade profissional na busca do Google para estúdios locais."
+  ],
+  "solution": {
+    "title": "Um portfólio de alto nível para destacar seus trabalhos",
+    "description": "Criamos sites integrando portfólio limpo categorizado por estilos (fineline, realismo, etc.), formulário de orçamento guiado e cuidados com a cicatrização.",
+    "items": [
+      "Portfólio categorizado por estilo de tatuagem ou por artista do estúdio.",
+      "Formulário inteligente para facilitar orçamentos qualificados de clientes.",
+      "Página dedicada a cuidados pós-tatuagem e política de agendamento.",
+      "Otimização local para buscas por estúdios de tatuagem na cidade."
+    ]
+  },
+  "benefits": [
+    {
+      "title": "Orçamentos mais fáceis",
+      "description": "O formulário ajuda o cliente a enviar a ideia, tamanho e referências de forma organizada."
+    },
+    {
+      "title": "Independência do Instagram",
+      "description": "Sua arte organizada em um domínio próprio e permanente."
+    },
+    {
+      "title": "SEO Local focado",
+      "description": "Apareça quando clientes procurarem por estilos específicos na sua região."
+    },
+    {
+      "title": "Performance visual",
+      "description": "Imagens com carregamento ultra-rápido sem perder a resolução da arte."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Como funciona o formulário de orçamentos?",
+      "answer": "Criamos um fluxo simples para coletar tamanho, local do corpo, referências e direcionar o cliente qualificado direto ao seu WhatsApp comercial."
+    },
+    {
+      "question": "Consigo adicionar novos artistas no site?",
+      "answer": "Sim, a estrutura modular permite atualizar a equipe e as fotos do portfólio com facilidade."
+    }
+  ],
+  "recommendedPlanIds": [
+    "landing-page",
+    "site-institucional",
+    "projetos-personalizados"
+  ],
+  "portfolioIds": [],
+  "process": [
+    {
+      "title": "Diagnostico",
+      "description": "Mapeamos sua atuacao, publico-alvo, diferenciais e as principais demandas do seu nicho."
+    },
+    {
+      "title": "Estrutura",
+      "description": "Definimos secoes, links internos, canais de conversao e a arquitetura inicial de SEO local."
+    },
+    {
+      "title": "Design e implementacao",
+      "description": "Construimos uma pagina rapida, elegante, responsiva e otimizada, alinhada a sua marca."
+    },
+    {
+      "title": "Publicacao assistida",
+      "description": "Validamos metadados, links, WhatsApp, tags de conversao e dados estruturados antes de ir ao ar."
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "Planos da SoftLuna",
+      "href": "/#planos"
+    },
+    {
+      "label": "Processo de criacao",
+      "href": "/#processo"
+    },
+    {
+      "label": "Perguntas frequentes",
+      "href": "/#faq"
+    }
+  ],
+  "researchNotes": [
+    "SERP pesquisada em 2026-06-19 para a keyword: site para tatuadores e estudios",
+    "Copy em total conformidade sem promessas absurdas de resultados."
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "id": "site-para-advogados-e-escritorios",
+  "order": 8,
+  "slug": "site-para-advogados-e-escritorios",
+  "status": "published",
+  "category": "Servicos profissionais",
+  "primaryKeyword": "site para advogados e escritorios",
+  "secondaryKeywords": [
+    "site para escritório de advocacia",
+    "site jurídico profissional",
+    "SEO para advogados",
+    "criação de site de advocacia"
+  ],
+  "seo": {
+    "title": "Site para Advogados e Escritórios | SoftLuna",
+    "description": "Site para escritório de advocacia com áreas de atuação, perfil profissional, contato direto, SEO local e sobriedade em total conformidade com a OAB.",
+    "canonical": "https://softluna.com.br/site-para-advogados-e-escritorios",
+    "ogImage": "/og-image.png"
+  },
+  "hero": {
+    "eyebrow": "Advocacia e Justiça",
+    "h1": "Site para advogados e escritórios com autoridade e sobriedade",
+    "lead": "Desenvolvemos sites jurídicos profissionais que transmitem autoridade, organizam áreas de atuação e facilitam o contato de novos clientes, respeitando o código de ética da OAB.",
+    "primaryCta": "Quero criar um site jurídico",
+    "secondaryCta": "Ver planos",
+    "whatsappMessage": "Olá! Sou advogado e quero criar um site para meu escritório com a SoftLuna. Como funciona?"
+  },
+  "painPoints": [
+    "Clientes buscam especialistas jurídicos no Google, mas não encontram suas áreas de atuação detalhadas.",
+    "Necessidade de seguir rigorosamente o Código de Ética e Disciplina da OAB (sem publicidade mercantilista).",
+    "Falta de apresentação clara do perfil dos sócios e localização do escritório.",
+    "Falta de um canal simples de triagem inicial de casos via site."
+  ],
+  "solution": {
+    "title": "Sua autoridade jurídica consolidada na internet",
+    "description": "Uma estrutura sóbria e informativa que lista as áreas de atuação (civil, trabalhista, tributário, etc.), currículo dos sócios e formulário de contato qualificado.",
+    "items": [
+      "Páginas dedicadas a áreas de atuação e especialidades do escritório.",
+      "Perfil detalhado dos advogados, sócios e registros OAB visíveis.",
+      "Seção informativa institucional que evita chamadas apelativas ou promessas de ganho.",
+      "Contato fácil via WhatsApp ou formulário de consulta com triagem."
+    ]
+  },
+  "benefits": [
+    {
+      "title": "Total conformidade OAB",
+      "description": "Design e copy estruturados de forma informativa, sem ferir a publicidade ética da OAB."
+    },
+    {
+      "title": "Triagem otimizada",
+      "description": "Evita contatos fora do seu nicho de atuação organizando a mensagem inicial."
+    },
+    {
+      "title": "SEO focado em demandas",
+      "description": "Melhore sua posição para buscas específicas de advocacia no seu município."
+    },
+    {
+      "title": "Leitura acessível e rápida",
+      "description": "Design sóbrio, rápido e responsivo, ideal para leitura em qualquer dispositivo."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "O site respeita as normas da OAB?",
+      "answer": "Sim, os sites são desenvolvidos com caráter estritamente informativo e institucional, sem promessas de resultados ou mercantilização da profissão."
+    },
+    {
+      "question": "Consigo adicionar artigos informativos no site?",
+      "answer": "Sim, com a estrutura de blog você pode publicar boletins informativos jurídicos para demonstrar autoridade."
+    }
+  ],
+  "recommendedPlanIds": [
+    "landing-page",
+    "site-institucional",
+    "projetos-personalizados"
+  ],
+  "portfolioIds": [],
+  "process": [
+    {
+      "title": "Diagnostico",
+      "description": "Mapeamos sua atuacao, publico-alvo, diferenciais e as principais demandas do seu nicho."
+    },
+    {
+      "title": "Estrutura",
+      "description": "Definimos secoes, links internos, canais de conversao e a arquitetura inicial de SEO local."
+    },
+    {
+      "title": "Design e implementacao",
+      "description": "Construimos uma pagina rapida, elegante, responsiva e otimizada, alinhada a sua marca."
+    },
+    {
+      "title": "Publicacao assistida",
+      "description": "Validamos metadados, links, WhatsApp, tags de conversao e dados estruturados antes de ir ao ar."
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "Planos da SoftLuna",
+      "href": "/#planos"
+    },
+    {
+      "label": "Processo de criacao",
+      "href": "/#processo"
+    },
+    {
+      "label": "Perguntas frequentes",
+      "href": "/#faq"
+    }
+  ],
+  "researchNotes": [
+    "SERP pesquisada em 2026-06-19 para a keyword: site para advogados e escritorios",
+    "Copy em total conformidade sem promessas absurdas de resultados."
+  ]
+}

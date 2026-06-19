@@ -1,0 +1,114 @@
+{
+  "id": "site-para-corretores-e-imobiliarias",
+  "order": 11,
+  "slug": "site-para-corretores-e-imobiliarias",
+  "status": "published",
+  "category": "Servicos profissionais",
+  "primaryKeyword": "site para corretores e imobiliarias",
+  "secondaryKeywords": [
+    "site para imobiliaria",
+    "site para corretor de imoveis",
+    "criar site imobiliario",
+    "SEO imobiliario"
+  ],
+  "seo": {
+    "title": "Site para Corretores e Imobiliárias | SoftLuna",
+    "description": "Site para imobiliária ou corretor com vitrine de imóveis, contato rápido, SEO local e estrutura preparada para integrações de canais de atendimento.",
+    "canonical": "https://softluna.com.br/site-para-corretores-e-imobiliarias",
+    "ogImage": "/og-image.png"
+  },
+  "hero": {
+    "eyebrow": "Negócios Imobiliários",
+    "h1": "Site para corretores e imobiliárias com imóveis e atendimento",
+    "lead": "Apresente sua carteira de imóveis de forma limpa, com filtros inteligentes, velocidade de carregamento e atalhos de contato rápido para aumentar as visitas presenciais.",
+    "primaryCta": "Quero criar um site imobiliário",
+    "secondaryCta": "Ver planos",
+    "whatsappMessage": "Olá! Sou corretor/imobiliária e quero criar meu site com a SoftLuna. Como funciona?"
+  },
+  "painPoints": [
+    "Sites imobiliários tradicionais são pesados, difíceis de pesquisar e lentos de abrir no celular.",
+    "Portais de imóveis cobram taxas altas e misturam sua oferta com a de concorrentes diretos.",
+    "Perguntas repetitivas sobre localização, taxas e fotos por falta de estruturação na página do imóvel.",
+    "Dificuldade de encontrar o corretor responsável por cada imóvel de forma direta."
+  ],
+  "solution": {
+    "title": "Independência comercial e captação própria de leads",
+    "description": "Uma plataforma imobiliária rápida que permite exibir seus principais imóveis cadastrados, com filtros ágeis e botão de WhatsApp que identifica qual imóvel o cliente está vendo.",
+    "items": [
+      "Vitrine de imóveis com fotos em alta definição, características técnicas e facilidade de pesquisa.",
+      "Integração de WhatsApp personalizada (a mensagem identifica o código do imóvel que o cliente busca).",
+      "SEO local focado em captação de proprietários e compradores na sua região de atuação.",
+      "Seção para proprietários cadastrarem seus imóveis de forma simples."
+    ]
+  },
+  "benefits": [
+    {
+      "title": "Mais visitas marcadas",
+      "description": "O contato de interesse é imediato e direcionado para o imóvel específico."
+    },
+    {
+      "title": "Carregamento instantâneo",
+      "description": "Imóveis e fotos carregam em milissegundos no celular do cliente na rua."
+    },
+    {
+      "title": "Destaque no SEO Local",
+      "description": "Apareça nas buscas por imóveis e bairros específicos na sua cidade."
+    },
+    {
+      "title": "Facilidade de atualização",
+      "description": "Altere dados, fotos e valores de forma rápida pelo painel administrativo."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Como funciona a integração com o WhatsApp do corretor?",
+      "answer": "Os botões de contato enviam uma mensagem estruturada que avisa ao corretor qual é o link ou código do imóvel de interesse do cliente."
+    },
+    {
+      "question": "É fácil cadastrar novos imóveis?",
+      "answer": "Sim, o painel do Git-CMS permite preencher as informações de endereço, fotos e características de forma guiada e sem complicações."
+    }
+  ],
+  "recommendedPlanIds": [
+    "landing-page",
+    "site-institucional",
+    "projetos-personalizados"
+  ],
+  "portfolioIds": [],
+  "process": [
+    {
+      "title": "Diagnostico",
+      "description": "Mapeamos sua atuacao, publico-alvo, diferenciais e as principais demandas do seu nicho."
+    },
+    {
+      "title": "Estrutura",
+      "description": "Definimos secoes, links internos, canais de conversao e a arquitetura inicial de SEO local."
+    },
+    {
+      "title": "Design e implementacao",
+      "description": "Construimos uma pagina rapida, elegante, responsiva e otimizada, alinhada a sua marca."
+    },
+    {
+      "title": "Publicacao assistida",
+      "description": "Validamos metadados, links, WhatsApp, tags de conversao e dados estruturados antes de ir ao ar."
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "Planos da SoftLuna",
+      "href": "/#planos"
+    },
+    {
+      "label": "Processo de criacao",
+      "href": "/#processo"
+    },
+    {
+      "label": "Perguntas frequentes",
+      "href": "/#faq"
+    }
+  ],
+  "researchNotes": [
+    "SERP pesquisada em 2026-06-19 para a keyword: site para corretores e imobiliarias",
+    "Copy em total conformidade sem promessas absurdas de resultados."
+  ]
+}

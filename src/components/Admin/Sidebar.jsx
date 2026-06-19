@@ -32,6 +32,18 @@ const NAV = [
     label: 'FAQ / Dúvidas',
     icon: '🙋',
     sub: 'Perguntas frequentes'
+  },
+  {
+    id: 'blog',
+    label: 'Artigos do Blog',
+    icon: '📝',
+    sub: 'Conteúdo e autoridade'
+  },
+  {
+    id: 'money-pages',
+    label: 'Páginas Transacionais',
+    icon: '🚀',
+    sub: 'Niches e Money Pages'
   }
 ];
 

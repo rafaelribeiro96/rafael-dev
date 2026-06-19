@@ -1,0 +1,114 @@
+{
+  "id": "sistemas-de-agendamento-online",
+  "order": 19,
+  "slug": "sistemas-de-agendamento-online",
+  "status": "published",
+  "category": "Solucoes sob medida",
+  "primaryKeyword": "sistemas de agendamento online",
+  "secondaryKeywords": [
+    "sistema de agendamento próprio",
+    "criar sistema de marcação de consulta",
+    "agendamento online para empresas",
+    "software de agenda"
+  ],
+  "seo": {
+    "title": "Sistemas de Agendamento Online | SoftLuna",
+    "description": "Sistema de agendamento online com fluxo sob medida, notificações integradas, painel administrativo e integrações rápidas.",
+    "canonical": "https://softluna.com.br/sistemas-de-agendamento-online",
+    "ogImage": "/og-image.png"
+  },
+  "hero": {
+    "eyebrow": "Soluções Digitais",
+    "h1": "Sistemas de agendamento online para organizar horários",
+    "lead": "Automatize a marcação de consultas, sessões ou reuniões dos seus clientes. Reduza o trabalho da recepção e evite horários ociosos com soluções próprias.",
+    "primaryCta": "Quero criar um sistema de agendamento",
+    "secondaryCta": "Ver planos",
+    "whatsappMessage": "Olá! Quero criar um sistema de agendamento online com a SoftLuna. Como funciona?"
+  },
+  "painPoints": [
+    "Recepção perde horas confirmando horários e gerenciando agendas de profissionais no papel.",
+    "Clientes desistem de agendar por falta de resposta rápida de horários vagos no WhatsApp.",
+    "Prejuízos constantes com clientes que faltam aos horários agendados sem aviso prévio.",
+    "Dificuldade de controle de pagamentos antecipados ou reservas em horários concorridos."
+  ],
+  "solution": {
+    "title": "Gestão inteligente de horários sem intermediários",
+    "description": "Criamos fluxos de agendamentos automatizados integrados com calendário, envios de lembretes e opção de pagamento prévio da consulta.",
+    "items": [
+      "Fluxo intuitivo onde o cliente escolhe o serviço, profissional, dia e horário.",
+      "Notificações automáticas de confirmação e lembretes de agendamento.",
+      "Painel administrativo para os profissionais gerenciarem suas escalas e férias.",
+      "Integração com pagamentos para cobrar sinal ou taxa de reserva online."
+    ]
+  },
+  "benefits": [
+    {
+      "title": "Redução de faltas",
+      "description": "Lembretes automáticos por WhatsApp/e-mail reduzem a taxa de ausência em até 70%."
+    },
+    {
+      "title": "Automação da recepção",
+      "description": "Sua agenda funciona 24 horas por dia, 7 dias por semana, sem intervenção humana."
+    },
+    {
+      "title": "Pagamentos antecipados",
+      "description": "Opção de cobrar a reserva ou taxa antecipada para evitar prejuízos."
+    },
+    {
+      "title": "Relatórios de ocupação",
+      "description": "Veja as métricas de serviços mais buscados e horários de maior demanda."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Consigo limitar o número de agendamentos por profissional?",
+      "answer": "Sim, o sistema gerencia a escala individual de cada profissional, impedindo conflitos de horários."
+    },
+    {
+      "question": "O sistema envia notificações automáticas?",
+      "answer": "Sim, configuramos notificações via e-mail e SMS (ou WhatsApp opcional) para confirmação de reservas e lembretes."
+    }
+  ],
+  "recommendedPlanIds": [
+    "landing-page",
+    "site-institucional",
+    "projetos-personalizados"
+  ],
+  "portfolioIds": [],
+  "process": [
+    {
+      "title": "Diagnostico",
+      "description": "Mapeamos sua atuacao, publico-alvo, diferenciais e as principais demandas do seu nicho."
+    },
+    {
+      "title": "Estrutura",
+      "description": "Definimos secoes, links internos, canais de conversao e a arquitetura inicial de SEO local."
+    },
+    {
+      "title": "Design e implementacao",
+      "description": "Construimos uma pagina rapida, elegante, responsiva e otimizada, alinhada a sua marca."
+    },
+    {
+      "title": "Publicacao assistida",
+      "description": "Validamos metadados, links, WhatsApp, tags de conversao e dados estruturados antes de ir ao ar."
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "Planos da SoftLuna",
+      "href": "/#planos"
+    },
+    {
+      "label": "Processo de criacao",
+      "href": "/#processo"
+    },
+    {
+      "label": "Perguntas frequentes",
+      "href": "/#faq"
+    }
+  ],
+  "researchNotes": [
+    "SERP pesquisada em 2026-06-19 para a keyword: sistemas de agendamento online",
+    "Copy em total conformidade sem promessas absurdas de resultados."
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "id": "site-para-clinicas-de-estetica",
+  "order": 3,
+  "slug": "site-para-clinicas-de-estetica",
+  "status": "published",
+  "category": "Saude e bem-estar",
+  "primaryKeyword": "site para clinicas de estetica",
+  "secondaryKeywords": [
+    "site para clinica de estetica",
+    "site estetica profissional",
+    "SEO local estetica",
+    "criação de site estetica"
+  ],
+  "seo": {
+    "title": "Site para Clínicas de Estética | SoftLuna",
+    "description": "Site para clínica de estética com catálogo de serviços, fotos, WhatsApp, SEO local e performance mobile premium.",
+    "canonical": "https://softluna.com.br/site-para-clinicas-de-estetica",
+    "ogImage": "/og-image.png"
+  },
+  "hero": {
+    "eyebrow": "Estética Premium",
+    "h1": "Site para clínicas de estética com serviços claros e contato direto",
+    "lead": "A SoftLuna cria sites sofisticados e rápidos para clínicas de estética que precisam apresentar tratamentos faciais, corporais e tecnologias de ponta.",
+    "primaryCta": "Quero criar um site de estética",
+    "secondaryCta": "Ver planos",
+    "whatsappMessage": "Olá! Quero criar um site para clínica de estética com a SoftLuna. Como funciona?"
+  },
+  "painPoints": [
+    "Falta de clareza sobre os benefícios reais dos procedimentos e aparelhos oferecidos.",
+    "Perda de clientes interessados devido a carregamento lento de imagens de antes e depois.",
+    "Dúvidas recorrentes no WhatsApp sobre indicações e contraindicações de tratamentos.",
+    "Ausência de identidade visual premium que justifique serviços de alto valor."
+  ],
+  "solution": {
+    "title": "Uma vitrine elegante e informativa para seus procedimentos",
+    "description": "Desenvolvemos sites com carregamento rápido de fotos, catálogo detalhado de tratamentos e caminhos diretos para agendamento de avaliações.",
+    "items": [
+      "Apresentação elegante de procedimentos corporais, faciais e injetáveis.",
+      "Seção informativa de indicações, duração e cuidados com os procedimentos.",
+      "Integração rápida para agendamento de avaliações via WhatsApp.",
+      "Galeria otimizada de fotos da clínica e equipamentos de ponta."
+    ]
+  },
+  "benefits": [
+    {
+      "title": "Valorização dos serviços",
+      "description": "Design moderno e fluido que transmite o padrão de qualidade e sofisticação da clínica."
+    },
+    {
+      "title": "Foco em avaliação",
+      "description": "Direcionamento focado para que o visitante marque a primeira avaliação pelo WhatsApp."
+    },
+    {
+      "title": "Performance mobile",
+      "description": "Layout leve que abre instantaneamente em qualquer smartphone."
+    },
+    {
+      "title": "Autonomia de edição",
+      "description": "Adicione novos tratamentos ou altere informações de forma simples."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "É seguro mostrar fotos de antes e depois?",
+      "answer": "Sim, contanto que haja consentimento assinado dos pacientes e que respeite as diretrizes do conselho regional de saúde/estética aplicável."
+    },
+    {
+      "question": "Vocês integram com sistemas de marcação de consulta?",
+      "answer": "Sim, o site pode encaminhar para qualquer plataforma de agendamento online de sua escolha."
+    }
+  ],
+  "recommendedPlanIds": [
+    "landing-page",
+    "site-institucional",
+    "projetos-personalizados"
+  ],
+  "portfolioIds": [],
+  "process": [
+    {
+      "title": "Diagnostico",
+      "description": "Mapeamos sua atuacao, publico-alvo, diferenciais e as principais demandas do seu nicho."
+    },
+    {
+      "title": "Estrutura",
+      "description": "Definimos secoes, links internos, canais de conversao e a arquitetura inicial de SEO local."
+    },
+    {
+      "title": "Design e implementacao",
+      "description": "Construimos uma pagina rapida, elegante, responsiva e otimizada, alinhada a sua marca."
+    },
+    {
+      "title": "Publicacao assistida",
+      "description": "Validamos metadados, links, WhatsApp, tags de conversao e dados estruturados antes de ir ao ar."
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "Planos da SoftLuna",
+      "href": "/#planos"
+    },
+    {
+      "label": "Processo de criacao",
+      "href": "/#processo"
+    },
+    {
+      "label": "Perguntas frequentes",
+      "href": "/#faq"
+    }
+  ],
+  "researchNotes": [
+    "SERP pesquisada em 2026-06-19 para a keyword: site para clinicas de estetica",
+    "Copy em total conformidade sem promessas absurdas de resultados."
+  ]
+}

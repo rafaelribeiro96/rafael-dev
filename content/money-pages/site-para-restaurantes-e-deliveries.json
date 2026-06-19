@@ -1,0 +1,114 @@
+{
+  "id": "site-para-restaurantes-e-deliveries",
+  "order": 14,
+  "slug": "site-para-restaurantes-e-deliveries",
+  "status": "published",
+  "category": "Comercio e varejo",
+  "primaryKeyword": "site para restaurantes e deliveries",
+  "secondaryKeywords": [
+    "site para restaurante",
+    "criar site de delivery",
+    "cardapio online restaurante",
+    "SEO local restaurante"
+  ],
+  "seo": {
+    "title": "Site para Restaurantes e Deliveries | SoftLuna",
+    "description": "Site para restaurante com cardápio leve, endereço, WhatsApp, delivery integrado e performance mobile rápida para reter clientes famintos.",
+    "canonical": "https://softluna.com.br/site-para-restaurantes-e-deliveries",
+    "ogImage": "/og-image.png"
+  },
+  "hero": {
+    "eyebrow": "Gastronomia e Delivery",
+    "h1": "Site para restaurantes e deliveries com cardápio rápido",
+    "lead": "Crie um site rápido que abre seu cardápio instantaneamente no celular do cliente faminto. Facilite pedidos para delivery e reservas de mesas sem intermediários.",
+    "primaryCta": "Quero criar um site de restaurante",
+    "secondaryCta": "Ver planos",
+    "whatsappMessage": "Olá! Quero criar o site para meu restaurante com a SoftLuna. Como funciona?"
+  },
+  "painPoints": [
+    "Clientes desistem de ver o cardápio porque ele está em um PDF pesado ou link que demora a carregar.",
+    "Altas taxas de aplicativos de delivery (como iFood) esmagam a margem de lucro do restaurante.",
+    "Informações confusas de horário, endereço de retirada e telefones de contato.",
+    "Ausência nas buscas locais do Google quando clientes pesquisam por 'restaurante perto' ou 'onde comer'."
+  ],
+  "solution": {
+    "title": "Cardápio na ponta dos dedos e pedidos diretos sem taxas",
+    "description": "Desenvolvemos sites focados na velocidade de exibição dos pratos, facilidade de pedidos diretos por WhatsApp/sistema próprio e localização clara.",
+    "items": [
+      "Cardápio interativo e ultra-rápido otimizado para celulares.",
+      "Link direto para receber pedidos sem comissão via WhatsApp ou plataforma própria.",
+      "Botão de agendamento de reservas ou contato comercial destacado.",
+      "Integração com Google Maps para retirada no balcão e rotas rápidas."
+    ]
+  },
+  "benefits": [
+    {
+      "title": "Zero taxas sobre vendas",
+      "description": "Direcione clientes para seu próprio canal e economize com comissões de aplicativos de entrega."
+    },
+    {
+      "title": "Cardápio sempre aberto",
+      "description": "Página leve que carrega pratos e fotos de forma fluida em conexões móveis fracas."
+    },
+    {
+      "title": "Mais tráfego local",
+      "description": "Otimização local para atrair clientes do bairro que buscam onde jantar ou almoçar."
+    },
+    {
+      "title": "Fácil de atualizar pratos",
+      "description": "Remova itens esgotados, mude preços e adicione promoções pelo painel."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Posso usar o site para receber pedidos automáticos?",
+      "answer": "Sim, conectamos botões do cardápio direcionando para sistemas de atendimento automatizado ou direto ao WhatsApp do seu time."
+    },
+    {
+      "question": "O site funciona para reservas de mesas?",
+      "answer": "Sim, estruturamos uma área para solicitação de reservas de mesa com indicação de data, horário e número de pessoas."
+    }
+  ],
+  "recommendedPlanIds": [
+    "landing-page",
+    "site-institucional",
+    "projetos-personalizados"
+  ],
+  "portfolioIds": [],
+  "process": [
+    {
+      "title": "Diagnostico",
+      "description": "Mapeamos sua atuacao, publico-alvo, diferenciais e as principais demandas do seu nicho."
+    },
+    {
+      "title": "Estrutura",
+      "description": "Definimos secoes, links internos, canais de conversao e a arquitetura inicial de SEO local."
+    },
+    {
+      "title": "Design e implementacao",
+      "description": "Construimos uma pagina rapida, elegante, responsiva e otimizada, alinhada a sua marca."
+    },
+    {
+      "title": "Publicacao assistida",
+      "description": "Validamos metadados, links, WhatsApp, tags de conversao e dados estruturados antes de ir ao ar."
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "Planos da SoftLuna",
+      "href": "/#planos"
+    },
+    {
+      "label": "Processo de criacao",
+      "href": "/#processo"
+    },
+    {
+      "label": "Perguntas frequentes",
+      "href": "/#faq"
+    }
+  ],
+  "researchNotes": [
+    "SERP pesquisada em 2026-06-19 para a keyword: site para restaurantes e deliveries",
+    "Copy em total conformidade sem promessas absurdas de resultados."
+  ]
+}

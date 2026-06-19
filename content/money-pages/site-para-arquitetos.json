@@ -1,0 +1,114 @@
+{
+  "id": "site-para-arquitetos",
+  "order": 10,
+  "slug": "site-para-arquitetos",
+  "status": "published",
+  "category": "Servicos profissionais",
+  "primaryKeyword": "site para arquitetos",
+  "secondaryKeywords": [
+    "site para escritório de arquitetura",
+    "portfolio de arquitetura",
+    "criação de site arquitetura",
+    "SEO para arquitetura"
+  ],
+  "seo": {
+    "title": "Site para Arquitetos | SoftLuna",
+    "description": "Site para arquiteto com portfólio elegante, serviços, processos, formulário, WhatsApp e performance mobile sofisticada.",
+    "canonical": "https://softluna.com.br/site-para-arquitetos",
+    "ogImage": "/og-image.png"
+  },
+  "hero": {
+    "eyebrow": "Arquitetura e Interiores",
+    "h1": "Site para arquitetos com portfólio elegante e contato qualificado",
+    "lead": "Exponha seus projetos de interiores, comerciais e residenciais com a sofisticação que sua marca exige. Atraia clientes qualificados que buscam design e execução.",
+    "primaryCta": "Quero criar meu site de arquitetura",
+    "secondaryCta": "Ver planos",
+    "whatsappMessage": "Olá! Quero criar um site para meu escritório de arquitetura com a SoftLuna. Como funciona?"
+  },
+  "painPoints": [
+    "O Instagram fragmenta o portfólio e não apresenta o memorial descritivo nem o processo de trabalho completo.",
+    "Imagens pesadas de projetos de arquitetura deixam o site lento e ruim de navegar no celular.",
+    "Clientes chegam sem entender o método de trabalho (do briefing à entrega do executivo).",
+    "Perda de leads de médio e alto padrão por falta de uma apresentação digital premium."
+  ],
+  "solution": {
+    "title": "O projeto da sua carreira apresentado em alta definição",
+    "description": "Um site institucional focado em apresentar portfólio de alta qualidade, metodologia de trabalho transparente e formulário inteligente de briefing.",
+    "items": [
+      "Portfólio de projetos com divisão por categorias (residencial, comercial, interiores).",
+      "Apresentação da metodologia de trabalho (estudo preliminar, 3D, executivo, obra).",
+      "Formulário estruturado de briefing inicial para filtrar projetos viáveis.",
+      "Design minimalista que dá total destaque para as imagens de seus projetos."
+    ]
+  },
+  "benefits": [
+    {
+      "title": "Destaque visual premium",
+      "description": "Design limpo e sofisticado alinhado às tendências mundiais de arquitetura."
+    },
+    {
+      "title": "Filtragem de contatos",
+      "description": "Formulário de briefing que ajuda a entender o escopo do cliente antes da primeira reunião."
+    },
+    {
+      "title": "Otimização de imagens",
+      "description": "Tecnologia própria para carregar fotos em alta definição com extrema rapidez."
+    },
+    {
+      "title": "Processo transparente",
+      "description": "O visitante entende todas as fases do projeto antes de entrar em contato."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Como funciona a otimização das fotos dos projetos?",
+      "answer": "Utilizamos compressão inteligente e formato WebP para garantir que as fotos fiquem leves e abram rápido no celular, mantendo a nitidez dos detalhes."
+    },
+    {
+      "question": "Vocês criam o design integrado com nossa identidade?",
+      "answer": "Sim, adaptamos a paleta de cores, tipografia e o layout para refletir o estilo e a assinatura visual do seu escritório."
+    }
+  ],
+  "recommendedPlanIds": [
+    "landing-page",
+    "site-institucional",
+    "projetos-personalizados"
+  ],
+  "portfolioIds": [],
+  "process": [
+    {
+      "title": "Diagnostico",
+      "description": "Mapeamos sua atuacao, publico-alvo, diferenciais e as principais demandas do seu nicho."
+    },
+    {
+      "title": "Estrutura",
+      "description": "Definimos secoes, links internos, canais de conversao e a arquitetura inicial de SEO local."
+    },
+    {
+      "title": "Design e implementacao",
+      "description": "Construimos uma pagina rapida, elegante, responsiva e otimizada, alinhada a sua marca."
+    },
+    {
+      "title": "Publicacao assistida",
+      "description": "Validamos metadados, links, WhatsApp, tags de conversao e dados estruturados antes de ir ao ar."
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "Planos da SoftLuna",
+      "href": "/#planos"
+    },
+    {
+      "label": "Processo de criacao",
+      "href": "/#processo"
+    },
+    {
+      "label": "Perguntas frequentes",
+      "href": "/#faq"
+    }
+  ],
+  "researchNotes": [
+    "SERP pesquisada em 2026-06-19 para a keyword: site para arquitetos",
+    "Copy em total conformidade sem promessas absurdas de resultados."
+  ]
+}

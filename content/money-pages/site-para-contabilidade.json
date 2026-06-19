@@ -1,0 +1,114 @@
+{
+  "id": "site-para-contabilidade",
+  "order": 9,
+  "slug": "site-para-contabilidade",
+  "status": "published",
+  "category": "Servicos profissionais",
+  "primaryKeyword": "site para contabilidade",
+  "secondaryKeywords": [
+    "site para escritório de contabilidade",
+    "criação de site de contabilidade",
+    "SEO para contabilidade",
+    "site contábil profissional"
+  ],
+  "seo": {
+    "title": "Site para Contabilidade | SoftLuna",
+    "description": "Site para escritório de contabilidade com serviços, segmentos atendidos, WhatsApp, área do cliente e SEO local estruturado.",
+    "canonical": "https://softluna.com.br/site-para-contabilidade",
+    "ogImage": "/og-image.png"
+  },
+  "hero": {
+    "eyebrow": "Assessoria Contábil",
+    "h1": "Site para contabilidade com serviços e captação organizada",
+    "lead": "Desenvolvemos sites de alto desempenho para escritórios de contabilidade que precisam apresentar seus serviços fiscais, societários, trabalhistas e segmentos atendidos.",
+    "primaryCta": "Quero criar um site de contabilidade",
+    "secondaryCta": "Ver planos",
+    "whatsappMessage": "Olá! Quero criar um site para meu escritório de contabilidade com a SoftLuna. Pode me ajudar?"
+  },
+  "painPoints": [
+    "Empresas procuram contabilidade especializada em seu setor, mas não encontram os nichos atendidos no site.",
+    "Falta de credibilidade digital faz o escritório perder novos clientes corporativos mais exigentes.",
+    "Falta de um link fácil para área do cliente ou sistemas de emissão de notas.",
+    "Dificuldade de posicionamento local no Google para atrair empresas do município."
+  ],
+  "solution": {
+    "title": "Mais empresas atendidas e rotina comercial organizada",
+    "description": "Estruturamos uma página focada em serviços contábeis, facilidade de atendimento, e caminhos rápidos para abertura de empresas ou migração de plano.",
+    "items": [
+      "Apresentação estruturada de serviços (abertura de empresa, assessoria fiscal, BPO financeiro).",
+      "Destaque dos setores atendidos (comércio, clínicas, prestadores de serviços).",
+      "Links facilitados para sistemas parceiros, portal do cliente e WhatsApp comercial.",
+      "Seção para solicitação rápida de propostas societárias ou fiscais."
+    ]
+  },
+  "benefits": [
+    {
+      "title": "Mais propostas qualificadas",
+      "description": "O site ajuda a triar o tamanho e a necessidade da empresa antes do contato."
+    },
+    {
+      "title": "Credibilidade corporativa",
+      "description": "Design profissional e limpo que transmite a segurança necessária na contabilidade."
+    },
+    {
+      "title": "Destaque na busca local",
+      "description": "SEO direcionado para atrair empresas locais que buscam serviços de contabilidade."
+    },
+    {
+      "title": "Fácil navegação",
+      "description": "Atalhos rápidos para que seus clientes atuais acessem a área restrita do sistema."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Posso incluir links para a área do cliente?",
+      "answer": "Sim, adicionamos botões e links de fácil acesso para os portais externos de envio de documentos (Questor, Domínio, etc.)."
+    },
+    {
+      "question": "O site ajuda na captação de clientes de BPO Financeiro?",
+      "answer": "Sim, criamos uma seção dedicada aos benefícios da terceirização financeira para destacar essa oferta comercial."
+    }
+  ],
+  "recommendedPlanIds": [
+    "landing-page",
+    "site-institucional",
+    "projetos-personalizados"
+  ],
+  "portfolioIds": [],
+  "process": [
+    {
+      "title": "Diagnostico",
+      "description": "Mapeamos sua atuacao, publico-alvo, diferenciais e as principais demandas do seu nicho."
+    },
+    {
+      "title": "Estrutura",
+      "description": "Definimos secoes, links internos, canais de conversao e a arquitetura inicial de SEO local."
+    },
+    {
+      "title": "Design e implementacao",
+      "description": "Construimos uma pagina rapida, elegante, responsiva e otimizada, alinhada a sua marca."
+    },
+    {
+      "title": "Publicacao assistida",
+      "description": "Validamos metadados, links, WhatsApp, tags de conversao e dados estruturados antes de ir ao ar."
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "Planos da SoftLuna",
+      "href": "/#planos"
+    },
+    {
+      "label": "Processo de criacao",
+      "href": "/#processo"
+    },
+    {
+      "label": "Perguntas frequentes",
+      "href": "/#faq"
+    }
+  ],
+  "researchNotes": [
+    "SERP pesquisada em 2026-06-19 para a keyword: site para contabilidade",
+    "Copy em total conformidade sem promessas absurdas de resultados."
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "id": "site-para-psicologos",
+  "order": 4,
+  "slug": "site-para-psicologos",
+  "status": "published",
+  "category": "Saude e bem-estar",
+  "primaryKeyword": "site para psicologos",
+  "secondaryKeywords": [
+    "site de psicologia",
+    "site para psicologo clinico",
+    "criar site de psicologia",
+    "SEO para psicologos"
+  ],
+  "seo": {
+    "title": "Site para Psicólogos | SoftLuna",
+    "description": "Site para psicólogos com abordagem profissional, especialidades, reembolso, WhatsApp e estrutura otimizada para SEO local.",
+    "canonical": "https://softluna.com.br/site-para-psicologos",
+    "ogImage": "/og-image.png"
+  },
+  "hero": {
+    "eyebrow": "Psicologia Clínica",
+    "h1": "Site para psicólogos com apresentação sóbria e acolhedora",
+    "lead": "Criamos sites para profissionais da saúde mental apresentarem suas abordagens clínicas, especialidades, consultório e atendimento online com ética e discrição.",
+    "primaryCta": "Quero criar meu site de psicologia",
+    "secondaryCta": "Ver planos",
+    "whatsappMessage": "Olá! Sou psicólogo e quero criar meu site profissional com a SoftLuna. Pode me ajudar?"
+  },
+  "painPoints": [
+    "Dificuldade em transmitir acolhimento profissional através de um site comum.",
+    "Perguntas constantes de pacientes sobre reembolso médico, sessões online e convênios.",
+    "Falta de posicionamento no Google para termos como terapia e psicologia na sua região.",
+    "Falta de clareza sobre o CRP e as abordagens terapêuticas aplicadas."
+  ],
+  "solution": {
+    "title": "Presença digital ética e profissional para psicoterapeutas",
+    "description": "Uma estrutura de página acolhedora que explica o funcionamento das sessões (online e presenciais), reembolso do plano e abordagem de tratamento.",
+    "items": [
+      "Apresentação da abordagem clínica (TCC, psicanálise, gestalt, etc.).",
+      "Explicação passo a passo sobre terapia online e emissão de recibos para reembolso.",
+      "Botão de agendamento discreto e seguro via WhatsApp.",
+      "Destaque correto do registro do conselho regional (CRP)."
+    ]
+  },
+  "benefits": [
+    {
+      "title": "Transmissão de confiança",
+      "description": "Design limpo e sóbrio focado em acolhimento e ética profissional."
+    },
+    {
+      "title": "Facilidade de reembolso",
+      "description": "Seção didática para tirar dúvidas sobre reembolso de planos de saúde."
+    },
+    {
+      "title": "SEO focado em terapia",
+      "description": "Otimização local para quem busca terapia ou psicologia na sua cidade."
+    },
+    {
+      "title": "Seguro e em conformidade",
+      "description": "Copy sob diretrizes do CFP/CRP, sem promessas de resultados ou cura."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Como funciona a terapia online no site?",
+      "answer": "O site explica a dinâmica e direciona o paciente a agendar via WhatsApp, onde o profissional define a plataforma segura para a sessão."
+    },
+    {
+      "question": "O site atende às regras do CFP?",
+      "answer": "Sim, estruturamos a página seguindo o Código de Ética do Psicólogo, mantendo a sobriedade informativa."
+    }
+  ],
+  "recommendedPlanIds": [
+    "landing-page",
+    "site-institucional",
+    "projetos-personalizados"
+  ],
+  "portfolioIds": [],
+  "process": [
+    {
+      "title": "Diagnostico",
+      "description": "Mapeamos sua atuacao, publico-alvo, diferenciais e as principais demandas do seu nicho."
+    },
+    {
+      "title": "Estrutura",
+      "description": "Definimos secoes, links internos, canais de conversao e a arquitetura inicial de SEO local."
+    },
+    {
+      "title": "Design e implementacao",
+      "description": "Construimos uma pagina rapida, elegante, responsiva e otimizada, alinhada a sua marca."
+    },
+    {
+      "title": "Publicacao assistida",
+      "description": "Validamos metadados, links, WhatsApp, tags de conversao e dados estruturados antes de ir ao ar."
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "Planos da SoftLuna",
+      "href": "/#planos"
+    },
+    {
+      "label": "Processo de criacao",
+      "href": "/#processo"
+    },
+    {
+      "label": "Perguntas frequentes",
+      "href": "/#faq"
+    }
+  ],
+  "researchNotes": [
+    "SERP pesquisada em 2026-06-19 para a keyword: site para psicologos",
+    "Copy em total conformidade sem promessas absurdas de resultados."
+  ]
+}

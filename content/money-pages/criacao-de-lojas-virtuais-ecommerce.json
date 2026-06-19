@@ -1,0 +1,114 @@
+{
+  "id": "criacao-de-lojas-virtuais-ecommerce",
+  "order": 18,
+  "slug": "criacao-de-lojas-virtuais-ecommerce",
+  "status": "published",
+  "category": "Comercio e varejo",
+  "primaryKeyword": "criacao de lojas virtuais ecommerce",
+  "secondaryKeywords": [
+    "criação de e-commerce profissional",
+    "desenvolvimento de loja virtual",
+    "site de vendas profissional",
+    "criar e-commerce"
+  ],
+  "seo": {
+    "title": "Criação de Lojas Virtuais E-commerce | SoftLuna",
+    "description": "Criação de e-commerce profissional com catálogo, páginas comerciais, checkout simplificado, SEO técnico e suporte técnico.",
+    "canonical": "https://softluna.com.br/criacao-de-lojas-virtuais-ecommerce",
+    "ogImage": "/og-image.png"
+  },
+  "hero": {
+    "eyebrow": "E-commerce & Vendas",
+    "h1": "Criação de lojas virtuais e-commerce com vitrine e operação",
+    "lead": "Venda seus produtos online sem intermediários abusivos. Desenvolvemos lojas virtuais sob medida, rápidas, responsivas e integradas a sistemas de entrega e pagamentos.",
+    "primaryCta": "Quero criar uma loja virtual",
+    "secondaryCta": "Ver planos",
+    "whatsappMessage": "Olá! Quero criar minha loja virtual e-commerce com a SoftLuna. Pode me ajudar?"
+  },
+  "painPoints": [
+    "Taxas exorbitantes cobradas por marketplaces e plataformas de e-commerce tradicionais.",
+    "Loja atual lenta no celular, gerando abandono de carrinho durante a compra.",
+    "Dificuldade em gerenciar estoque, pedidos e acompanhar as métricas de vendas organizadas.",
+    "Falta de segurança nas transações ou layouts confusos que geram desconfiança."
+  ],
+  "solution": {
+    "title": "Uma loja virtual rápida, segura e sem burocracias",
+    "description": "Construímos e-commerces com fluxo fluido de compra, catálogo completo com filtros de produtos, gateway de pagamento configurado e painel de controle.",
+    "items": [
+      "Vitrine de produtos dinâmica, com categorias, filtros e busca rápida.",
+      "Integração com principais meios de pagamento (Pix, cartão) e cálculo de frete.",
+      "Painel administrativo simples para cadastro de produtos e gestão de estoque.",
+      "SEO otimizado para o catálogo de produtos e marcas da loja."
+    ]
+  },
+  "benefits": [
+    {
+      "title": "Independência financeira",
+      "description": "Tenha sua própria loja livre de comissões pesadas de marketplaces."
+    },
+    {
+      "title": "Checkout fluido",
+      "description": "Menos etapas para o cliente concluir a compra, aumentando o faturamento real."
+    },
+    {
+      "title": "Segurança total",
+      "description": "Protocolos seguros de transação que garantem a proteção dos dados dos clientes."
+    },
+    {
+      "title": "Performance mobile",
+      "description": "Design focado na experiência de compra rápida por smartphones."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Como funciona o cálculo de frete e envio?",
+      "answer": "Integramos a loja com Correios ou plataformas como Melhor Envio para realizar o cálculo automático no carrinho."
+    },
+    {
+      "question": "Quais gateways de pagamento são suportados?",
+      "answer": "Conectamos sua loja ao Mercado Pago, PagSeguro, Asaas, Stripe ou qualquer gateway homologado de sua escolha."
+    }
+  ],
+  "recommendedPlanIds": [
+    "landing-page",
+    "site-institucional",
+    "projetos-personalizados"
+  ],
+  "portfolioIds": [],
+  "process": [
+    {
+      "title": "Diagnostico",
+      "description": "Mapeamos sua atuacao, publico-alvo, diferenciais e as principais demandas do seu nicho."
+    },
+    {
+      "title": "Estrutura",
+      "description": "Definimos secoes, links internos, canais de conversao e a arquitetura inicial de SEO local."
+    },
+    {
+      "title": "Design e implementacao",
+      "description": "Construimos uma pagina rapida, elegante, responsiva e otimizada, alinhada a sua marca."
+    },
+    {
+      "title": "Publicacao assistida",
+      "description": "Validamos metadados, links, WhatsApp, tags de conversao e dados estruturados antes de ir ao ar."
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "Planos da SoftLuna",
+      "href": "/#planos"
+    },
+    {
+      "label": "Processo de criacao",
+      "href": "/#processo"
+    },
+    {
+      "label": "Perguntas frequentes",
+      "href": "/#faq"
+    }
+  ],
+  "researchNotes": [
+    "SERP pesquisada em 2026-06-19 para a keyword: criacao de lojas virtuais ecommerce",
+    "Copy em total conformidade sem promessas absurdas de resultados."
+  ]
+}

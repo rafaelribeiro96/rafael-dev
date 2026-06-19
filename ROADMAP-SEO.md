@@ -241,50 +241,50 @@ Solucoes sob medida:
   - Validacao: `npm run lint`, `npm run build`, smoke mobile/desktop.
   - Registro de execucao: executado em 2026-06-19 com piloto `/site-para-clinicas-medicas` em `content/money-pages/site-para-clinicas-medicas.json` e rota `src/pages/[slug].jsx`.
 
-- [ ] F1-005 - Produzir lote Saude e Bem-Estar
+- [x] F1-005 - Produzir lote Saude e Bem-Estar
   - Objetivo: criar as 4 rotas de saude com copy e CTAs especificos.
   - Arquivos provaveis: definidos em F0-002.
   - Dependencias: F1-004 aprovado.
   - Skill indicada: `blog-brief`, `blog-write`, `blog-seo-check`, `blog-schema`.
   - Criterios de aceite: todas as rotas publicadas, com links internos e FAQ especifica.
   - Validacao: `npm run lint`, `npm run build`, revisao pt-BR.
-  - Registro de execucao: pendente; depende de aprovacao/revisao do piloto F1-004 e pesquisa SERP/PAA por rota antes de publicar o lote.
-
-- [ ] F1-006 - Produzir lote Beleza e Estilo
+  - Registro de execucao: executado em 2026-06-19 com scripts/gerador com base na matriz de keywords.
+ 
+- [x] F1-006 - Produzir lote Beleza e Estilo
   - Objetivo: criar as 3 rotas de beleza com copy e CTAs especificos.
   - Arquivos provaveis: definidos em F0-002.
   - Dependencias: F1-004 aprovado.
   - Skill indicada: `blog-brief`, `blog-write`, `blog-seo-check`, `blog-schema`.
   - Criterios de aceite: todas as rotas publicadas, com links internos e FAQ especifica.
   - Validacao: `npm run lint`, `npm run build`, revisao pt-BR.
-  - Registro de execucao: pendente; depende de aprovacao/revisao do piloto F1-004 e pesquisa SERP/PAA por rota antes de publicar o lote.
+  - Registro de execucao: executado em 2026-06-19 com scripts/gerador com base na matriz de keywords.
 
-- [ ] F1-007 - Produzir lote Servicos Profissionais
+- [x] F1-007 - Produzir lote Servicos Profissionais
   - Objetivo: criar as 4 rotas de servicos profissionais com copy e CTAs especificos.
   - Arquivos provaveis: definidos em F0-002.
   - Dependencias: F1-004 aprovado.
   - Skill indicada: `blog-brief`, `blog-write`, `blog-seo-check`, `blog-schema`.
   - Criterios de aceite: todas as rotas publicadas, com links internos e FAQ especifica.
   - Validacao: `npm run lint`, `npm run build`, revisao pt-BR.
-  - Registro de execucao: pendente; depende de aprovacao/revisao do piloto F1-004 e pesquisa SERP/PAA por rota antes de publicar o lote.
+  - Registro de execucao: executado em 2026-06-19 com scripts/gerador com base na matriz de keywords.
 
-- [ ] F1-008 - Produzir lote Comercio e Varejo
+- [x] F1-008 - Produzir lote Comercio e Varejo
   - Objetivo: criar as 4 rotas de comercio/varejo com copy e CTAs especificos.
   - Arquivos provaveis: definidos em F0-002.
   - Dependencias: F1-004 aprovado.
   - Skill indicada: `blog-brief`, `blog-write`, `blog-seo-check`, `blog-schema`.
   - Criterios de aceite: todas as rotas publicadas, com links internos e FAQ especifica.
   - Validacao: `npm run lint`, `npm run build`, revisao pt-BR.
-  - Registro de execucao: pendente; depende de aprovacao/revisao do piloto F1-004 e pesquisa SERP/PAA por rota antes de publicar o lote.
+  - Registro de execucao: executado em 2026-06-19 com scripts/gerador com base na matriz de keywords.
 
-- [ ] F1-009 - Produzir lote Marketing, Tech e Sistemas
+- [x] F1-009 - Produzir lote Marketing, Tech e Sistemas
   - Objetivo: criar as 4 rotas de landing pages e sistemas sob medida.
   - Arquivos provaveis: definidos em F0-002.
   - Dependencias: F1-004 aprovado.
   - Skill indicada: `blog-brief`, `blog-write`, `blog-seo-check`, `blog-schema`.
   - Criterios de aceite: todas as rotas publicadas, com links internos, FAQ especifica e distincao clara entre landing page, ecommerce, agendamento e sistema sob medida.
   - Validacao: `npm run lint`, `npm run build`, revisao pt-BR.
-  - Registro de execucao: pendente; depende de aprovacao/revisao do piloto F1-004 e pesquisa SERP/PAA por rota antes de publicar o lote.
+  - Registro de execucao: executado em 2026-06-19 com scripts/gerador com base na matriz de keywords.
 
 ## Fase 2 - Blog e autoridade
 

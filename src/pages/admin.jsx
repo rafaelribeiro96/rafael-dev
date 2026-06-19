@@ -8,13 +8,17 @@ import PricingSection from '../components/Admin/PricingSection';
 import PortfolioSection from '../components/Admin/PortfolioSection';
 import CarouselImagesSection from '../components/Admin/CarouselImagesSection';
 import FAQSection from '../components/Admin/FAQSection';
+import BlogSection from '../components/Admin/BlogSection';
+import MoneyPagesSection from '../components/Admin/MoneyPagesSection';
 
 export default function AdminPage({
   globalData,
   pricingTiers,
   portfolioItems,
   faqItems,
-  carouselImages
+  carouselImages,
+  blogPosts,
+  moneyPages
 }) {
   const [active, setActive] = useState('seo');
   const [pubStatus, setPubStatus] = useState('idle');
@@ -92,6 +96,10 @@ export default function AdminPage({
             <CarouselImagesSection initialImages={carouselImages} />
           )}
           {active === 'faq' && <FAQSection initialItems={faqItems} />}
+          {active === 'blog' && <BlogSection initialPosts={blogPosts} />}
+          {active === 'money-pages' && (
+            <MoneyPagesSection initialPages={moneyPages} />
+          )}
         </main>
       </div>
     </>
@@ -123,6 +131,8 @@ export async function getServerSideProps(ctx) {
   let portfolioItems = [];
   let faqItems = [];
   let carouselImages = [];
+  let blogPosts = [];
+  let moneyPages = [];
 
   if (useGitHub) {
     try {
@@ -165,6 +175,20 @@ export async function getServerSideProps(ctx) {
     } catch (e) {
       console.error('Failed to load carousel images from GitHub:', e);
     }
+
+    try {
+      const blog = await readCollection('content/blog');
+      blogPosts = blog.sort((a, b) => (a.order ?? 999) - (b.order ?? 999));
+    } catch (e) {
+      console.error('Failed to load blog posts from GitHub:', e);
+    }
+
+    try {
+      const mps = await readCollection('content/money-pages');
+      moneyPages = mps.sort((a, b) => (a.order ?? 999) - (b.order ?? 999));
+    } catch (e) {
+      console.error('Failed to load money pages from GitHub:', e);
+    }
   } else {
     // Local Filesystem Fallback
     const fs = (await import('fs/promises')).default;
@@ -180,6 +204,8 @@ export async function getServerSideProps(ctx) {
     const PORTFOLIO_DIR = path.join(process.cwd(), 'content', 'portfolio');
     const FAQ_DIR = path.join(process.cwd(), 'content', 'faq');
     const CAROUSEL_DIR = path.join(process.cwd(), 'content', 'carousel-images');
+    const BLOG_DIR = path.join(process.cwd(), 'content', 'blog');
+    const MONEY_PAGES_DIR = path.join(process.cwd(), 'content', 'money-pages');
 
     const readDirLocal = async (dir) => {
       try {
@@ -204,13 +230,21 @@ export async function getServerSideProps(ctx) {
       void e;
     }
 
-    [pricingTiers, portfolioItems, faqItems, carouselImages] =
-      await Promise.all([
-        readDirLocal(PRICING_DIR),
-        readDirLocal(PORTFOLIO_DIR),
-        readDirLocal(FAQ_DIR),
-        readDirLocal(CAROUSEL_DIR)
-      ]);
+    [
+      pricingTiers,
+      portfolioItems,
+      faqItems,
+      carouselImages,
+      blogPosts,
+      moneyPages
+    ] = await Promise.all([
+      readDirLocal(PRICING_DIR),
+      readDirLocal(PORTFOLIO_DIR),
+      readDirLocal(FAQ_DIR),
+      readDirLocal(CAROUSEL_DIR),
+      readDirLocal(BLOG_DIR),
+      readDirLocal(MONEY_PAGES_DIR)
+    ]);
   }
 
   return {
@@ -219,7 +253,9 @@ export async function getServerSideProps(ctx) {
       pricingTiers,
       portfolioItems,
       faqItems,
-      carouselImages
+      carouselImages,
+      blogPosts,
+      moneyPages
     }
   };
 }

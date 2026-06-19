@@ -1,0 +1,114 @@
+{
+  "id": "site-para-dentistas-e-consultorios",
+  "order": 2,
+  "slug": "site-para-dentistas-e-consultorios",
+  "status": "published",
+  "category": "Saude e bem-estar",
+  "primaryKeyword": "site para dentistas e consultorios",
+  "secondaryKeywords": [
+    "site odontologico profissional",
+    "site para consultorio odontologico",
+    "site com agendamento para dentista",
+    "SEO local para dentistas"
+  ],
+  "seo": {
+    "title": "Site para Dentistas e Consultórios | SoftLuna",
+    "description": "Site para dentistas com serviços, equipe, CRO, WhatsApp, agendamento e SEO local para captar novos pacientes na sua cidade.",
+    "canonical": "https://softluna.com.br/site-para-dentistas-e-consultorios",
+    "ogImage": "/og-image.png"
+  },
+  "hero": {
+    "eyebrow": "Odontologia Digital",
+    "h1": "Site para dentistas e consultórios com agenda e autoridade local",
+    "lead": "Desenvolvemos sites odontológicos rápidos e elegantes, focados em apresentar suas especialidades, equipe e estrutura com clareza técnica e conformidade profissional.",
+    "primaryCta": "Quero criar um site odontológico",
+    "secondaryCta": "Ver planos",
+    "whatsappMessage": "Olá! Quero criar um site para consultório odontológico com a SoftLuna. Como podemos começar?"
+  },
+  "painPoints": [
+    "Pacientes procuram dentistas especializados no Google, mas encontram informações vagas ou desatualizadas.",
+    "A equipe gasta muito tempo respondendo dúvidas repetidas sobre convênios aceitos e localização.",
+    "A ausência de fotos da clínica ou apresentação da equipe reduz a conversão de novos pacientes.",
+    "Necessidade de seguir as diretrizes éticas do CFO/CRO sem promessas absurdas de resultados clínicos."
+  ],
+  "solution": {
+    "title": "Autoridade e facilidade de agendamento para o paciente",
+    "description": "Um site institucional estruturado com páginas de tratamentos, perfil profissional, CRO visível e integração de agendamento online direto.",
+    "items": [
+      "Apresentação clara de tratamentos (implantes, ortodontia, estética, pediatria).",
+      "Página institucional com fotos da clínica e perfil clínico dos profissionais.",
+      "Integração rápida com canais de agendamento ou WhatsApp da recepção.",
+      "SEO local otimizado para o Google Maps da sua região."
+    ]
+  },
+  "benefits": [
+    {
+      "title": "Mais agendamentos qualificados",
+      "description": "O tempo de resposta cai e o paciente encontra exatamente os tratamentos que procura."
+    },
+    {
+      "title": "Conformidade ética",
+      "description": "Copy desenvolvida para respeitar as normas éticas do CRO, sem sensacionalismo."
+    },
+    {
+      "title": "SEO Local otimizado",
+      "description": "O site é preparado para ser encontrado na busca por dentistas na sua cidade."
+    },
+    {
+      "title": "Mobile e rápido",
+      "description": "Carregamento instantâneo no celular, de onde vêm a maioria dos acessos de pacientes."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Como funciona a conformidade com o CRO?",
+      "answer": "Os textos e imagens são desenvolvidos de maneira sóbria e informativa, respeitando as regras do CFO/CRO sobre publicidade odontológica."
+    },
+    {
+      "question": "O site terá agendamento online?",
+      "answer": "Sim, podemos integrar o site com sistemas de agendamento que você já usa ou criar um botão direto para a recepção via WhatsApp."
+    }
+  ],
+  "recommendedPlanIds": [
+    "landing-page",
+    "site-institucional",
+    "projetos-personalizados"
+  ],
+  "portfolioIds": [],
+  "process": [
+    {
+      "title": "Diagnostico",
+      "description": "Mapeamos sua atuacao, publico-alvo, diferenciais e as principais demandas do seu nicho."
+    },
+    {
+      "title": "Estrutura",
+      "description": "Definimos secoes, links internos, canais de conversao e a arquitetura inicial de SEO local."
+    },
+    {
+      "title": "Design e implementacao",
+      "description": "Construimos uma pagina rapida, elegante, responsiva e otimizada, alinhada a sua marca."
+    },
+    {
+      "title": "Publicacao assistida",
+      "description": "Validamos metadados, links, WhatsApp, tags de conversao e dados estruturados antes de ir ao ar."
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "Planos da SoftLuna",
+      "href": "/#planos"
+    },
+    {
+      "label": "Processo de criacao",
+      "href": "/#processo"
+    },
+    {
+      "label": "Perguntas frequentes",
+      "href": "/#faq"
+    }
+  ],
+  "researchNotes": [
+    "SERP pesquisada em 2026-06-19 para a keyword: site para dentistas e consultorios",
+    "Copy em total conformidade sem promessas absurdas de resultados."
+  ]
+}

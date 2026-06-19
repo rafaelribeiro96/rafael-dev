@@ -1,0 +1,114 @@
+{
+  "id": "site-para-lojas-de-varejo",
+  "order": 12,
+  "slug": "site-para-lojas-de-varejo",
+  "status": "published",
+  "category": "Comercio e varejo",
+  "primaryKeyword": "site para lojas de varejo",
+  "secondaryKeywords": [
+    "site para loja física",
+    "criar catálogo online loja",
+    "SEO local varejo",
+    "criação de site comercial"
+  ],
+  "seo": {
+    "title": "Site para Lojas de Varejo | SoftLuna",
+    "description": "Site para loja de varejo com catálogo de produtos, endereço, WhatsApp integrado, SEO local e caminho simplificado para vendas.",
+    "canonical": "https://softluna.com.br/site-para-lojas-de-varejo",
+    "ogImage": "/og-image.png"
+  },
+  "hero": {
+    "eyebrow": "Comércio Local",
+    "h1": "Site para lojas de varejo com catálogo, busca local e WhatsApp",
+    "lead": "Crie uma vitrine digital para sua loja física. Apresente seus principais produtos, localização e integre vendas rápidas e contato comercial pelo WhatsApp.",
+    "primaryCta": "Quero criar um site para minha loja",
+    "secondaryCta": "Ver planos",
+    "whatsappMessage": "Olá! Quero criar um site para minha loja de varejo com a SoftLuna. Como funciona?"
+  },
+  "painPoints": [
+    "Clientes ligam ou mandam mensagem perguntando se a loja tem o produto em estoque.",
+    "Dificuldade de manter os clientes atualizados sobre promoções, novidades e horário de funcionamento.",
+    "Não aparecer no Google quando pessoas procuram por lojas daquela categoria na sua região.",
+    "Lojas virtuais completas exigem taxas altas e infraestrutura complexa para quem só precisa de um catálogo."
+  ],
+  "solution": {
+    "title": "Uma vitrine online para trazer mais clientes à sua loja física",
+    "description": "Desenvolvemos sites com catálogo digital de produtos organizados, localização visível e link de contato direto para vendas por WhatsApp ou retirada na loja.",
+    "items": [
+      "Catálogo de produtos com fotos organizadas por categorias e descrição clara.",
+      "Facilidade de contato para tirar dúvidas de estoque e cores pelo WhatsApp.",
+      "Localização integrada com mapa e botão de rota rápida para a loja física.",
+      "Seção para divulgação de campanhas de descontos e novidades da loja."
+    ]
+  },
+  "benefits": [
+    {
+      "title": "Mais tráfego na loja física",
+      "description": "O site serve como canal de captação que atrai clientes locais à sua loja física."
+    },
+    {
+      "title": "Vendas integradas ao WhatsApp",
+      "description": "O cliente escolhe o produto e finaliza a negociação direto no WhatsApp da equipe comercial."
+    },
+    {
+      "title": "SEO Local otimizado",
+      "description": "Apareça nas buscas regionais por produtos específicos da sua loja."
+    },
+    {
+      "title": "Leve e fácil",
+      "description": "Sem taxas sobre vendas, ideal para comércios que buscam simplicidade."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "O site é uma loja virtual completa com pagamento?",
+      "answer": "Este formato foca em catálogo institucional e direcionamento para vendas via WhatsApp, o que evita taxas de transação e burocracia. Se precisar de checkout completo, oferecemos o plano de e-commerce."
+    },
+    {
+      "question": "É fácil alterar os produtos no catálogo?",
+      "answer": "Sim, pelo painel você adiciona novos itens, altera preços e imagens de forma instantânea."
+    }
+  ],
+  "recommendedPlanIds": [
+    "landing-page",
+    "site-institucional",
+    "projetos-personalizados"
+  ],
+  "portfolioIds": [],
+  "process": [
+    {
+      "title": "Diagnostico",
+      "description": "Mapeamos sua atuacao, publico-alvo, diferenciais e as principais demandas do seu nicho."
+    },
+    {
+      "title": "Estrutura",
+      "description": "Definimos secoes, links internos, canais de conversao e a arquitetura inicial de SEO local."
+    },
+    {
+      "title": "Design e implementacao",
+      "description": "Construimos uma pagina rapida, elegante, responsiva e otimizada, alinhada a sua marca."
+    },
+    {
+      "title": "Publicacao assistida",
+      "description": "Validamos metadados, links, WhatsApp, tags de conversao e dados estruturados antes de ir ao ar."
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "Planos da SoftLuna",
+      "href": "/#planos"
+    },
+    {
+      "label": "Processo de criacao",
+      "href": "/#processo"
+    },
+    {
+      "label": "Perguntas frequentes",
+      "href": "/#faq"
+    }
+  ],
+  "researchNotes": [
+    "SERP pesquisada em 2026-06-19 para a keyword: site para lojas de varejo",
+    "Copy em total conformidade sem promessas absurdas de resultados."
+  ]
+}

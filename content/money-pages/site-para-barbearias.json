@@ -1,0 +1,114 @@
+{
+  "id": "site-para-barbearias",
+  "order": 5,
+  "slug": "site-para-barbearias",
+  "status": "published",
+  "category": "Beleza e estilo",
+  "primaryKeyword": "site para barbearias",
+  "secondaryKeywords": [
+    "site para barbearia",
+    "criar site barbearia",
+    "landing page barbearia",
+    "SEO local barbearia"
+  ],
+  "seo": {
+    "title": "Site para Barbearias | SoftLuna",
+    "description": "Site para barbearia com serviços, barbeiros, unidade, WhatsApp, agendamento e SEO local para encher a agenda.",
+    "canonical": "https://softluna.com.br/site-para-barbearias",
+    "ogImage": "/og-image.png"
+  },
+  "hero": {
+    "eyebrow": "Beleza Masculina",
+    "h1": "Site para barbearias com agenda, estilo e busca local",
+    "lead": "Crie um site rápido e com estilo para sua barbearia. Apresente seus serviços, profissionais, galeria de fotos e integre o agendamento online de forma direta.",
+    "primaryCta": "Quero criar um site para barbearia",
+    "secondaryCta": "Ver planos",
+    "whatsappMessage": "Olá! Quero criar um site para minha barbearia com a SoftLuna. Quais são as opções?"
+  },
+  "painPoints": [
+    "Clientes têm dificuldade para agendar horários ou encontrar o link correto do app.",
+    "Falta de posicionamento no Google quando as pessoas buscam 'barbearia perto de mim'.",
+    "Dificuldade de mostrar os serviços (corte, barba, pigmentação) de forma visual e rápida no celular.",
+    "Perda de clientes para concorrentes com melhor presença e fotos online."
+  ],
+  "solution": {
+    "title": "Agenda lotada e estilo próprio na internet",
+    "description": "Desenvolvemos sites com forte apelo visual, informações de contato rápidas e link direto de agendamento para diminuir a fricção.",
+    "items": [
+      "Catálogo rápido de serviços com preços e tempo estimado de atendimento.",
+      "Link direto em destaque para a ferramenta de agendamento online ou WhatsApp.",
+      "Galeria de fotos do espaço físico e dos melhores cortes realizados.",
+      "Informações de endereço, mapa interativo e horários de funcionamento."
+    ]
+  },
+  "benefits": [
+    {
+      "title": "Foco em conversão rápida",
+      "description": "O visitante escolhe o serviço e clica no agendamento em segundos."
+    },
+    {
+      "title": "Destaque no Google Maps",
+      "description": "Otimização local para aparecer no topo das buscas locais da região."
+    },
+    {
+      "title": "Identidade visual forte",
+      "description": "Design moderno alinhado ao conceito rústico ou moderno da barbearia."
+    },
+    {
+      "title": "Totalmente mobile",
+      "description": "Interface fluida ideal para clientes que acessam pelo celular."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Vocês integram com aplicativos de agendamento?",
+      "answer": "Sim, conectamos botões do site direto ao Booksy, Avec, WhatsApp ou qualquer outra ferramenta que sua barbearia use."
+    },
+    {
+      "question": "Como funciona a manutenção do site?",
+      "answer": "Nossa taxa mensal garante hospedagem de alto desempenho, atualizações necessárias de horários e suporte."
+    }
+  ],
+  "recommendedPlanIds": [
+    "landing-page",
+    "site-institucional",
+    "projetos-personalizados"
+  ],
+  "portfolioIds": [],
+  "process": [
+    {
+      "title": "Diagnostico",
+      "description": "Mapeamos sua atuacao, publico-alvo, diferenciais e as principais demandas do seu nicho."
+    },
+    {
+      "title": "Estrutura",
+      "description": "Definimos secoes, links internos, canais de conversao e a arquitetura inicial de SEO local."
+    },
+    {
+      "title": "Design e implementacao",
+      "description": "Construimos uma pagina rapida, elegante, responsiva e otimizada, alinhada a sua marca."
+    },
+    {
+      "title": "Publicacao assistida",
+      "description": "Validamos metadados, links, WhatsApp, tags de conversao e dados estruturados antes de ir ao ar."
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "Planos da SoftLuna",
+      "href": "/#planos"
+    },
+    {
+      "label": "Processo de criacao",
+      "href": "/#processo"
+    },
+    {
+      "label": "Perguntas frequentes",
+      "href": "/#faq"
+    }
+  ],
+  "researchNotes": [
+    "SERP pesquisada em 2026-06-19 para a keyword: site para barbearias",
+    "Copy em total conformidade sem promessas absurdas de resultados."
+  ]
+}

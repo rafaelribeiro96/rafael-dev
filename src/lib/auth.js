@@ -4,7 +4,15 @@ import crypto from 'crypto';
  * Derives a strong, consistent 32-byte secret key based on the ADMIN_PASSWORD environment variable.
  */
 function getSessionSecret() {
-  const password = process.env.ADMIN_PASSWORD || 'admin123';
+  const password = process.env.ADMIN_PASSWORD;
+  if (!password) {
+    if (process.env.NODE_ENV === 'production') {
+      throw new Error(
+        'ADMIN_PASSWORD environment variable must be set in production!'
+      );
+    }
+    return crypto.createHash('sha256').update('admin123').digest();
+  }
   return crypto.createHash('sha256').update(password).digest();
 }
 

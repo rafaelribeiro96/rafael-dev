@@ -1,0 +1,114 @@
+{
+  "id": "site-para-saloes-de-beleza",
+  "order": 6,
+  "slug": "site-para-saloes-de-beleza",
+  "status": "published",
+  "category": "Beleza e estilo",
+  "primaryKeyword": "site para saloes de beleza",
+  "secondaryKeywords": [
+    "site para salao de beleza",
+    "criar site salao de beleza",
+    "SEO local salao de beleza",
+    "agendamento salao de beleza"
+  ],
+  "seo": {
+    "title": "Site para Salões de Beleza | SoftLuna",
+    "description": "Site para salão de beleza com serviços, equipe, fotos, WhatsApp, agendamento e SEO local para captar novos clientes.",
+    "canonical": "https://softluna.com.br/site-para-saloes-de-beleza",
+    "ogImage": "/og-image.png"
+  },
+  "hero": {
+    "eyebrow": "Beleza e Estilo",
+    "h1": "Site para salões de beleza com serviços, equipe e agendamento",
+    "lead": "Apresente os serviços de cabelo, manicure, estética e maquiagem do seu salão de forma sofisticada e rápida. Atraia clientes na sua região com SEO local.",
+    "primaryCta": "Quero criar um site para salão",
+    "secondaryCta": "Ver planos",
+    "whatsappMessage": "Olá! Quero criar um site para meu salão de beleza com a SoftLuna. Como funciona?"
+  },
+  "painPoints": [
+    "Dificuldade de mostrar fotos reais e de qualidade dos serviços no celular sem deixar o site lento.",
+    "Telefone ocupado ou atraso nas respostas de WhatsApp geram perda de clientes para concorrentes.",
+    "Ausência nas buscas do Google quando clientes pesquisam por 'serviços de cabelo e unha perto'.",
+    "Falta de valorização da equipe de profissionais e de suas especialidades."
+  ],
+  "solution": {
+    "title": "Sua marca de beleza com a sofisticação que ela merece",
+    "description": "Um site elegante que serve como vitrine dos seus melhores trabalhos, facilitando a escolha de serviços e a marcação de horários.",
+    "items": [
+      "Catálogo completo de serviços (corte, mechas, manicure, sobrancelhas).",
+      "Apresentação da equipe e especialidades de cada profissional.",
+      "Caminhos rápidos para agendamento online e contato telefônico.",
+      "Integração com mapas e facilidade de localização no bairro."
+    ]
+  },
+  "benefits": [
+    {
+      "title": "Valorização da marca",
+      "description": "Design sofisticado e fluido que valoriza o padrão de atendimento do salão."
+    },
+    {
+      "title": "Redução de faltas",
+      "description": "Sistemas integrados de agendamento ajudam a manter a agenda organizada."
+    },
+    {
+      "title": "Atração local",
+      "description": "SEO otimizado para o bairro e região onde o salão está localizado."
+    },
+    {
+      "title": "Edição simples",
+      "description": "Atualize preços, adicione novos profissionais ou fotos de forma rápida."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Posso colocar os preços de todos os serviços?",
+      "answer": "Sim, você pode organizar por categorias de serviços de forma detalhada e editar quando precisar pelo painel."
+    },
+    {
+      "question": "Como funciona a galeria de fotos?",
+      "answer": "Adicionamos uma galeria leve de trabalhos reais, garantindo que as imagens não pesem no carregamento mobile."
+    }
+  ],
+  "recommendedPlanIds": [
+    "landing-page",
+    "site-institucional",
+    "projetos-personalizados"
+  ],
+  "portfolioIds": [],
+  "process": [
+    {
+      "title": "Diagnostico",
+      "description": "Mapeamos sua atuacao, publico-alvo, diferenciais e as principais demandas do seu nicho."
+    },
+    {
+      "title": "Estrutura",
+      "description": "Definimos secoes, links internos, canais de conversao e a arquitetura inicial de SEO local."
+    },
+    {
+      "title": "Design e implementacao",
+      "description": "Construimos uma pagina rapida, elegante, responsiva e otimizada, alinhada a sua marca."
+    },
+    {
+      "title": "Publicacao assistida",
+      "description": "Validamos metadados, links, WhatsApp, tags de conversao e dados estruturados antes de ir ao ar."
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "Planos da SoftLuna",
+      "href": "/#planos"
+    },
+    {
+      "label": "Processo de criacao",
+      "href": "/#processo"
+    },
+    {
+      "label": "Perguntas frequentes",
+      "href": "/#faq"
+    }
+  ],
+  "researchNotes": [
+    "SERP pesquisada em 2026-06-19 para a keyword: site para saloes de beleza",
+    "Copy em total conformidade sem promessas absurdas de resultados."
+  ]
+}

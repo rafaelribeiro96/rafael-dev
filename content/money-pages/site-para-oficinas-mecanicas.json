@@ -1,0 +1,114 @@
+{
+  "id": "site-para-oficinas-mecanicas",
+  "order": 13,
+  "slug": "site-para-oficinas-mecanicas",
+  "status": "published",
+  "category": "Comercio e varejo",
+  "primaryKeyword": "site para oficinas mecanicas",
+  "secondaryKeywords": [
+    "site para oficina mecanica",
+    "SEO local oficina mecanica",
+    "criar site de mecanica",
+    "site de serviços automotivos"
+  ],
+  "seo": {
+    "title": "Site para Oficinas Mecânicas | SoftLuna",
+    "description": "Site para oficina mecânica com serviços, localização, WhatsApp, depoimentos de clientes e SEO local para captação de novos agendamentos.",
+    "canonical": "https://softluna.com.br/site-para-oficinas-mecanicas",
+    "ogImage": "/og-image.png"
+  },
+  "hero": {
+    "eyebrow": "Serviços Automotivos",
+    "h1": "Site para oficinas mecânicas com serviços e orçamentos rápidos",
+    "lead": "Coloque sua oficina no mapa do Google. Apresente seus serviços especializados, depoimentos de clientes, mapa de localização e receba orçamentos de novos clientes pelo WhatsApp.",
+    "primaryCta": "Quero criar o site da minha oficina",
+    "secondaryCta": "Ver planos",
+    "whatsappMessage": "Olá! Quero criar o site para minha oficina mecânica com a SoftLuna. Como funciona?"
+  },
+  "painPoints": [
+    "Motoristas com problemas no carro buscam no celular mas não encontram os serviços da oficina perto.",
+    "Desconfiança inicial de novos clientes sobre a seriedade e a estrutura da mecânica.",
+    "Perguntas repetitivas sobre marcas atendidas, prazos e reboque de carros.",
+    "Falta de profissionalismo digital em comparação com grandes concessionárias locais."
+  ],
+  "solution": {
+    "title": "Confiança, localização clara e contato de emergência rápido",
+    "description": "Um site institucional focado em transmitir credibilidade técnica, listar serviços, marcas atendidas e facilitar o contato para agendamentos e orçamentos.",
+    "items": [
+      "Apresentação detalhada de serviços (revisão, freios, injeção, ar condicionado, suspensão).",
+      "Seção de depoimentos e avaliações reais de clientes satisfeitos.",
+      "Endereço destacado com botão de rota do Google Maps.",
+      "Botão de contato rápido para reboque e orçamentos via WhatsApp."
+    ]
+  },
+  "benefits": [
+    {
+      "title": "Mais novos clientes locais",
+      "description": "Otimização local atrai motoristas do bairro e redondezas precisando de consertos."
+    },
+    {
+      "title": "Mais credibilidade profissional",
+      "description": "Um site limpo e bem apresentado eleva a percepção de seriedade da oficina."
+    },
+    {
+      "title": "Facilidade de contato rápido",
+      "description": "Atalho de emergência no topo do celular para novos orçamentos rápidos."
+    },
+    {
+      "title": "Lista de marcas parceiras",
+      "description": "Mostre quais marcas de peças e veículos você atende com prioridade."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "O site ajuda a oficina a aparecer no mapa?",
+      "answer": "Sim, fazemos a otimização técnica e criamos consistência com seu Google Business Profile para ajudar sua oficina a aparecer no topo do mapa da cidade."
+    },
+    {
+      "question": "Podemos listar os preços de serviços padrão?",
+      "answer": "Sim, você pode organizar e exibir tabelas de preços de serviços comuns como troca de óleo e alinhamento."
+    }
+  ],
+  "recommendedPlanIds": [
+    "landing-page",
+    "site-institucional",
+    "projetos-personalizados"
+  ],
+  "portfolioIds": [],
+  "process": [
+    {
+      "title": "Diagnostico",
+      "description": "Mapeamos sua atuacao, publico-alvo, diferenciais e as principais demandas do seu nicho."
+    },
+    {
+      "title": "Estrutura",
+      "description": "Definimos secoes, links internos, canais de conversao e a arquitetura inicial de SEO local."
+    },
+    {
+      "title": "Design e implementacao",
+      "description": "Construimos uma pagina rapida, elegante, responsiva e otimizada, alinhada a sua marca."
+    },
+    {
+      "title": "Publicacao assistida",
+      "description": "Validamos metadados, links, WhatsApp, tags de conversao e dados estruturados antes de ir ao ar."
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "Planos da SoftLuna",
+      "href": "/#planos"
+    },
+    {
+      "label": "Processo de criacao",
+      "href": "/#processo"
+    },
+    {
+      "label": "Perguntas frequentes",
+      "href": "/#faq"
+    }
+  ],
+  "researchNotes": [
+    "SERP pesquisada em 2026-06-19 para a keyword: site para oficinas mecanicas",
+    "Copy em total conformidade sem promessas absurdas de resultados."
+  ]
+}

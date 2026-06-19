@@ -81,9 +81,11 @@ const MoneyPage = ({
 }) => {
   const ctaLink = buildWhatsappLink(page.hero.whatsappMessage);
   const schema = buildMoneyPageSchema({ page, pricingTiers, globalData });
-  const recommendedPlans = pricingTiers.filter((tier) =>
-    page.recommendedPlanIds?.includes(tier.id)
-  );
+  const recommendedPlans = page.recommendedPlanIds
+    ? page.recommendedPlanIds
+        .map((id) => pricingTiers.find((tier) => tier.id === id))
+        .filter(Boolean)
+    : [];
   const canonical =
     page.seo?.canonical || `https://softluna.com.br/${page.slug}`;
   const ogImage = absoluteUrl(page.seo.ogImage || '/og-image.png');
@@ -280,32 +282,62 @@ const MoneyPage = ({
           <div className="mx-auto max-w-container-max">
             <SectionHeading
               eyebrow="Planos recomendados"
-              title="Comece pelo formato certo para a sua clinica"
+              title={`Comece pelo formato certo para ${
+                page.primaryKeyword
+                  ? page.primaryKeyword.replace(
+                      /site para |landing page para |criacao de |desenvolvimento de /gi,
+                      ''
+                    )
+                  : 'seu negocio'
+              }`}
               description="Os valores abaixo seguem a fonte publica atual em content/pricing."
               align="center"
             />
-            <div className="grid gap-5 md:grid-cols-2">
+            <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
               {recommendedPlans.map((plan) => (
                 <article
                   key={plan.id}
-                  className="rounded-lg border border-border-thin bg-white p-6"
+                  className="flex flex-col justify-between rounded-lg border border-border-thin bg-white p-6 shadow-[0_4px_20px_rgba(0,0,0,0.02)] transition-all hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)]"
                 >
-                  <h3 className="font-headline-md text-[22px] leading-8 text-on-surface">
-                    {plan.title}
-                  </h3>
-                  <p className="mt-3 font-body-md text-[14px] leading-6 text-secondary">
-                    {plan.description}
-                  </p>
-                  <p className="mt-5 font-label-md text-[12px] uppercase tracking-[0.08em] text-text-secondary">
-                    A partir de
-                  </p>
-                  <p className="mt-2 font-headline-md text-[30px] font-bold leading-[38px]">
-                    {formatCurrency(plan.setupPrice)}
-                  </p>
-                  <p className="mt-1 font-body-md text-[13px] leading-5 text-secondary">
-                    + {formatCurrency(plan.maintenancePrice)}/mes para
-                    hospedagem, manutencao e suporte.
-                  </p>
+                  <div>
+                    <h3 className="font-headline-md text-[22px] leading-8 text-on-surface">
+                      {plan.title}
+                    </h3>
+                    <p className="mt-3 font-body-md text-[14px] leading-6 text-secondary">
+                      {plan.description}
+                    </p>
+                    <p className="mt-5 font-label-md text-[12px] uppercase tracking-[0.08em] text-text-secondary">
+                      A partir de
+                    </p>
+                    <p className="mt-2 font-headline-md text-[30px] font-bold leading-[38px]">
+                      {formatCurrency(plan.setupPrice)}
+                    </p>
+                    <p className="mt-1 font-body-md text-[13px] leading-5 text-secondary">
+                      + {formatCurrency(plan.maintenancePrice)}/mes para
+                      hospedagem, manutencao e suporte.
+                    </p>
+                  </div>
+                  <div className="mt-8">
+                    <a
+                      className="rt-button rt-button-primary w-full text-center"
+                      href={buildWhatsappLink(
+                        `${page.hero.whatsappMessage} Tenho interesse no plano: ${plan.title}.`
+                      )}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() =>
+                        trackEvent('money_page_plan_whatsapp_click', {
+                          slug: page.slug,
+                          planId: plan.id,
+                          niche: page.category || '',
+                          primaryKeyword: page.primaryKeyword || '',
+                          ctaPosition: 'pricing_plan_card'
+                        })
+                      }
+                    >
+                      Quero este plano
+                    </a>
+                  </div>
                 </article>
               ))}
             </div>
