@@ -122,3 +122,24 @@ export async function getFAQItems() {
 export async function getCarouselImages() {
   return readContentDir('carousel-images');
 }
+
+/**
+ * Returns all money pages from content/money-pages/*.json
+ * sorted by the `order` field.
+ *
+ * @returns {Promise<Object[]>}
+ */
+export async function getMoneyPages() {
+  return readContentDir('money-pages');
+}
+
+/**
+ * Returns a single money page by slug.
+ *
+ * @param {string} slug
+ * @returns {Promise<Object|null>}
+ */
+export async function getMoneyPageBySlug(slug) {
+  const pages = await getMoneyPages();
+  return pages.find((page) => page.slug === slug) || null;
+}

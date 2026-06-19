@@ -205,41 +205,41 @@ Solucoes sob medida:
 
 ### Tarefas
 
-- [ ] F1-001 - Definir template comum das money pages
+- [x] F1-001 - Definir template comum das money pages
   - Objetivo: criar a estrutura padrao de secoes para todas as paginas.
   - Arquivos provaveis: depende de F0-002; provavel `src/pages/[slug].jsx` ou template em `src/components`.
   - Dependencias: F0-002, F0-004.
   - Skill indicada: `tlc-spec-driven`, `frontend-design`.
   - Criterios de aceite: template inclui hero, dores do nicho, solucao SoftLuna, beneficios, processo, planos/CTA, FAQ, portfolio relacionado e schema.
   - Validacao: revisao de design contra Lunar Day; build quando implementado.
-  - Registro de execucao:
+  - Registro de execucao: executado em 2026-06-19 com JSON versionado em `content/money-pages/`, template em `src/pages/[slug].jsx` e documentacao em `docs/business/softluna/money-pages-architecture.md`.
 
-- [ ] F1-002 - Criar matriz de keywords e intencao por rota
+- [x] F1-002 - Criar matriz de keywords e intencao por rota
   - Objetivo: para cada rota, registrar keyword primaria, secundarias, intencao, oferta e CTA.
   - Arquivos provaveis: `ROADMAP-SEO.md` ou doc auxiliar em `docs/business/softluna/`.
   - Dependencias: lista base de rotas.
   - Skill indicada: `blog-strategy`, `modern-web-guidance`.
   - Criterios de aceite: todas as 19 rotas com H1 proposto, title provisoria, meta description provisoria e mensagem de WhatsApp.
   - Validacao: pesquisa atual de SERP/PAA antes de considerar final.
-  - Registro de execucao:
+  - Registro de execucao: executado em 2026-06-19 em `docs/business/softluna/money-pages-architecture.md`; todas as 19 rotas possuem keyword primaria, intencao, oferta, H1, title, meta e CTA provisoria.
 
-- [ ] F1-003 - Planejar dados estruturados das money pages
+- [x] F1-003 - Planejar dados estruturados das money pages
   - Objetivo: definir schema por tipo de pagina.
   - Arquivos provaveis: `src/pages`, `src/lib`, possivel componente de JSON-LD.
   - Dependencias: F1-001.
   - Skill indicada: `blog-schema`.
   - Criterios de aceite: Service schema para servicos, FAQ schema para perguntas da pagina, BreadcrumbList para navegacao e Organization/LocalBusiness quando aplicavel.
   - Validacao: testar JSON-LD em Rich Results Test/Schema Validator antes de publicar.
-  - Registro de execucao:
+  - Registro de execucao: executado em 2026-06-19 com helper `src/lib/seoSchema.js` gerando Organization/LocalBusiness, Service, BreadcrumbList e FAQPage em `@graph`.
 
-- [ ] F1-004 - Criar primeira money page piloto
+- [x] F1-004 - Criar primeira money page piloto
   - Objetivo: implementar uma pagina piloto para validar template, copy, schema, responsividade e build.
   - Arquivos provaveis: definidos em F0-002 e F1-001.
   - Dependencias: F1-001, F1-002, F1-003.
   - Skill indicada: `frontend-design`, `blog-seo-check`, `blog-schema`.
   - Criterios de aceite: pagina indexavel, responsiva, com CTA contextual, schema valido e copy revisada.
   - Validacao: `npm run lint`, `npm run build`, smoke mobile/desktop.
-  - Registro de execucao:
+  - Registro de execucao: executado em 2026-06-19 com piloto `/site-para-clinicas-medicas` em `content/money-pages/site-para-clinicas-medicas.json` e rota `src/pages/[slug].jsx`.
 
 - [ ] F1-005 - Produzir lote Saude e Bem-Estar
   - Objetivo: criar as 4 rotas de saude com copy e CTAs especificos.
@@ -248,7 +248,7 @@ Solucoes sob medida:
   - Skill indicada: `blog-brief`, `blog-write`, `blog-seo-check`, `blog-schema`.
   - Criterios de aceite: todas as rotas publicadas, com links internos e FAQ especifica.
   - Validacao: `npm run lint`, `npm run build`, revisao pt-BR.
-  - Registro de execucao:
+  - Registro de execucao: pendente; depende de aprovacao/revisao do piloto F1-004 e pesquisa SERP/PAA por rota antes de publicar o lote.
 
 - [ ] F1-006 - Produzir lote Beleza e Estilo
   - Objetivo: criar as 3 rotas de beleza com copy e CTAs especificos.
@@ -257,7 +257,7 @@ Solucoes sob medida:
   - Skill indicada: `blog-brief`, `blog-write`, `blog-seo-check`, `blog-schema`.
   - Criterios de aceite: todas as rotas publicadas, com links internos e FAQ especifica.
   - Validacao: `npm run lint`, `npm run build`, revisao pt-BR.
-  - Registro de execucao:
+  - Registro de execucao: pendente; depende de aprovacao/revisao do piloto F1-004 e pesquisa SERP/PAA por rota antes de publicar o lote.
 
 - [ ] F1-007 - Produzir lote Servicos Profissionais
   - Objetivo: criar as 4 rotas de servicos profissionais com copy e CTAs especificos.
@@ -266,7 +266,7 @@ Solucoes sob medida:
   - Skill indicada: `blog-brief`, `blog-write`, `blog-seo-check`, `blog-schema`.
   - Criterios de aceite: todas as rotas publicadas, com links internos e FAQ especifica.
   - Validacao: `npm run lint`, `npm run build`, revisao pt-BR.
-  - Registro de execucao:
+  - Registro de execucao: pendente; depende de aprovacao/revisao do piloto F1-004 e pesquisa SERP/PAA por rota antes de publicar o lote.
 
 - [ ] F1-008 - Produzir lote Comercio e Varejo
   - Objetivo: criar as 4 rotas de comercio/varejo com copy e CTAs especificos.
@@ -275,7 +275,7 @@ Solucoes sob medida:
   - Skill indicada: `blog-brief`, `blog-write`, `blog-seo-check`, `blog-schema`.
   - Criterios de aceite: todas as rotas publicadas, com links internos e FAQ especifica.
   - Validacao: `npm run lint`, `npm run build`, revisao pt-BR.
-  - Registro de execucao:
+  - Registro de execucao: pendente; depende de aprovacao/revisao do piloto F1-004 e pesquisa SERP/PAA por rota antes de publicar o lote.
 
 - [ ] F1-009 - Produzir lote Marketing, Tech e Sistemas
   - Objetivo: criar as 4 rotas de landing pages e sistemas sob medida.
@@ -284,7 +284,7 @@ Solucoes sob medida:
   - Skill indicada: `blog-brief`, `blog-write`, `blog-seo-check`, `blog-schema`.
   - Criterios de aceite: todas as rotas publicadas, com links internos, FAQ especifica e distincao clara entre landing page, ecommerce, agendamento e sistema sob medida.
   - Validacao: `npm run lint`, `npm run build`, revisao pt-BR.
-  - Registro de execucao:
+  - Registro de execucao: pendente; depende de aprovacao/revisao do piloto F1-004 e pesquisa SERP/PAA por rota antes de publicar o lote.
 
 ## Fase 2 - Blog e autoridade
 
@@ -563,6 +563,110 @@ Objetivo: garantir que crescimento organico venha acompanhado de performance rea
   - Validacao: primeira medicao registrada apos 30 dias.
   - Registro de execucao:
 
+## Fase 7 - Matriz, template e pendencias das money pages
+
+Objetivo: manter dentro do roadmap a arquitetura consolidada das money pages, a matriz das 19 rotas e as pendencias necessarias antes de publicar os lotes F1-005 a F1-009.
+
+### Template comum
+
+As money pages usam JSON versionado em `content/money-pages/*.json`, leitura em build por `src/lib/content.js` e renderizacao pela rota dinamica `src/pages/[slug].jsx`.
+
+Estrutura padrao:
+
+1. Hero com H1 transacional, nicho, CTA de WhatsApp contextual e CTA secundario para planos.
+2. Dores do nicho, sem promessas absolutas de ranking, receita, cura ou agenda cheia.
+3. Solucao SoftLuna com arquitetura de pagina, canais de contato, SEO on-page e performance.
+4. Beneficios objetivos para busca, entendimento e contato.
+5. Processo de entrega.
+6. Planos recomendados usando `content/pricing/*.json` como fonte de verdade.
+7. Portfolio relacionado quando houver caso aderente.
+8. FAQ especifica da pagina.
+9. JSON-LD em `@graph` com Organization/LocalBusiness, Service, BreadcrumbList e FAQPage.
+
+### Dados estruturados
+
+O helper `src/lib/seoSchema.js` gera o schema das money pages com:
+
+- `Organization` + `LocalBusiness` para a SoftLuna.
+- `Service` para a oferta da pagina.
+- `BreadcrumbList` para a URL interna.
+- `FAQPage` quando a pagina tiver perguntas especificas.
+
+Validacao externa pendente antes de publicacao definitiva: Rich Results Test ou Schema Validator.
+
+### Pagina piloto
+
+Rota piloto implementada:
+
+- `/site-para-clinicas-medicas`
+
+Justificativa: valida o template no nicho mais sensivel da lista, exigindo copy sobria, FAQ, CTA especifico, cautela com LGPD/CFM e ausencia de promessa absoluta.
+
+Pesquisa rapida em 2026-06-19 indicou padroes recorrentes na SERP: agendamento online, WhatsApp, SEO local, paginas de especialidades/equipe, conteudo institucional e mencoes a LGPD/CFM. A copy da pagina piloto usa esses pontos como direcao editorial, sem depender de promessas de ranking.
+
+### Matriz de keywords e intencao
+
+As titles e metas abaixo sao provisorias. Antes de publicar cada rota em lote, revisar SERP/PAA atual e ajustar copy, FAQ e links internos.
+
+| Rota | Keyword primaria | Intencao | Oferta | H1 proposto | Title provisoria | Meta provisoria | CTA WhatsApp |
+|---|---|---|---|---|---|---|---|
+| `/site-para-clinicas-medicas` | site para clinicas medicas | Contratar site para clinica | Site institucional completo | Site para clinicas medicas com estrutura para receber pacientes | Site para Clinicas Medicas \| SoftLuna | Site para clinicas medicas com especialidades, SEO local, WhatsApp, agendamento e base tecnica cuidada. | Quero criar um site para clinica medica. |
+| `/site-para-dentistas-e-consultorios` | site para dentistas e consultorios | Contratar site odontologico | Site institucional completo | Site para dentistas e consultorios com agenda e autoridade local | Site para Dentistas e Consultorios \| SoftLuna | Site para dentistas com servicos, equipe, WhatsApp, SEO local e estrutura para novos conteudos. | Quero criar um site para consultorio odontologico. |
+| `/site-para-clinicas-de-estetica` | site para clinicas de estetica | Contratar site para estetica | Site institucional completo | Site para clinicas de estetica com servicos claros e contato direto | Site para Clinicas de Estetica \| SoftLuna | Site para clinica de estetica com catalogo de servicos, fotos, WhatsApp, SEO local e performance mobile. | Quero criar um site para clinica de estetica. |
+| `/site-para-psicologos` | site para psicologos | Contratar site profissional | Site institucional completo | Site para psicologos com apresentacao sobria e acolhedora | Site para Psicologos \| SoftLuna | Site para psicologos com abordagem profissional, pagina de atendimento, WhatsApp e estrutura para SEO local. | Quero criar um site para psicologia. |
+| `/site-para-barbearias` | site para barbearias | Contratar site local | Landing page ou site institucional | Site para barbearias com agenda, estilo e busca local | Site para Barbearias \| SoftLuna | Site para barbearia com servicos, barbeiros, unidade, WhatsApp, agendamento e SEO local. | Quero criar um site para barbearia. |
+| `/site-para-saloes-de-beleza` | site para saloes de beleza | Contratar site local | Site institucional completo | Site para saloes de beleza com servicos, equipe e agendamento | Site para Saloes de Beleza \| SoftLuna | Site para salao de beleza com servicos, equipe, fotos, WhatsApp, agendamento e SEO local. | Quero criar um site para salao de beleza. |
+| `/site-para-tatuadores-e-estudios` | site para tatuadores e estudios | Contratar portfolio/site | Site institucional completo | Site para tatuadores e estudios com portfolio e contato direto | Site para Tatuadores e Estudios \| SoftLuna | Site para tatuador com portfolio, estilos, agenda, WhatsApp, SEO local e visual sob medida. | Quero criar um site para estudio de tatuagem. |
+| `/site-para-advogados-e-escritorios` | site para advogados e escritorios | Contratar site juridico | Site institucional completo | Site para advogados e escritorios com autoridade e sobriedade | Site para Advogados e Escritorios \| SoftLuna | Site para escritorio de advocacia com areas de atuacao, perfil profissional, contato e SEO local. | Quero criar um site para escritorio de advocacia. |
+| `/site-para-contabilidade` | site para contabilidade | Contratar site contabilidade | Site institucional completo | Site para contabilidade com servicos e captacao organizada | Site para Contabilidade \| SoftLuna | Site para escritorio de contabilidade com servicos, segmentos atendidos, WhatsApp e SEO local. | Quero criar um site para contabilidade. |
+| `/site-para-arquitetos` | site para arquitetos | Contratar portfolio/site | Site institucional completo | Site para arquitetos com portfolio elegante e contato qualificado | Site para Arquitetos \| SoftLuna | Site para arquiteto com portfolio, servicos, processos, formulario, WhatsApp e performance mobile. | Quero criar um site para arquitetura. |
+| `/site-para-corretores-e-imobiliarias` | site para corretores e imobiliarias | Contratar site imobiliario | Projeto personalizado | Site para corretores e imobiliarias com imoveis e atendimento direto | Site para Corretores e Imobiliarias \| SoftLuna | Site para imobiliaria ou corretor com vitrine de imoveis, contato, SEO local e base para integracoes. | Quero criar um site imobiliario. |
+| `/site-para-lojas-de-varejo` | site para lojas de varejo | Contratar site comercial | Site institucional ou ecommerce | Site para lojas de varejo com catalogo, busca local e WhatsApp | Site para Lojas de Varejo \| SoftLuna | Site para loja de varejo com catalogo, endereco, WhatsApp, SEO local e caminho para ecommerce. | Quero criar um site para loja. |
+| `/site-para-oficinas-mecanicas` | site para oficinas mecanicas | Contratar site local | Site institucional completo | Site para oficinas mecanicas com servicos e orcamentos pelo WhatsApp | Site para Oficinas Mecanicas \| SoftLuna | Site para oficina mecanica com servicos, localizacao, WhatsApp, prova de confianca e SEO local. | Quero criar um site para oficina mecanica. |
+| `/site-para-restaurantes-e-deliveries` | site para restaurantes e deliveries | Contratar site restaurante | Site institucional ou landing page | Site para restaurantes e deliveries com cardapio e pedidos direcionados | Site para Restaurantes e Deliveries \| SoftLuna | Site para restaurante com cardapio, endereco, WhatsApp, delivery, SEO local e performance mobile. | Quero criar um site para restaurante. |
+| `/site-para-petshops-e-veterinarias` | site para petshops e veterinarias | Contratar site local | Site institucional completo | Site para petshops e veterinarias com servicos e atendimento local | Site para Petshops e Veterinarias \| SoftLuna | Site para petshop ou veterinaria com servicos, equipe, unidade, WhatsApp e SEO local. | Quero criar um site para petshop ou veterinaria. |
+| `/landing-page-para-gestores-de-trafego` | landing page para gestores de trafego | Contratar pagina para campanha | Landing page de conversao | Landing page para gestores de trafego com estrutura para campanhas | Landing Page para Gestores de Trafego \| SoftLuna | Landing page para campanhas com copy, velocidade, WhatsApp, eventos de conversao e SEO basico. | Quero uma landing page para campanha. |
+| `/landing-page-para-infoprodutos` | landing page para infoprodutos | Contratar pagina de venda/captura | Landing page de conversao | Landing page para infoprodutos com oferta clara e checkout encaminhado | Landing Page para Infoprodutos \| SoftLuna | Landing page para infoproduto com narrativa de oferta, FAQ, prova social, CTA e performance mobile. | Quero uma landing page para infoproduto. |
+| `/criacao-de-lojas-virtuais-ecommerce` | criacao de lojas virtuais ecommerce | Contratar ecommerce | Projeto personalizado | Criacao de lojas virtuais ecommerce com vitrine e operacao planejada | Criacao de Lojas Virtuais Ecommerce \| SoftLuna | Criacao de ecommerce com catalogo, paginas comerciais, checkout encaminhado, SEO tecnico e suporte. | Quero criar uma loja virtual. |
+| `/sistemas-de-agendamento-online` | sistemas de agendamento online | Contratar sistema/agendamento | Projeto personalizado | Sistemas de agendamento online para organizar horarios e atendimentos | Sistemas de Agendamento Online \| SoftLuna | Sistema de agendamento online com fluxo sob medida, notificacoes, painel e integracoes quando necessario. | Quero criar um sistema de agendamento. |
+| `/desenvolvimento-de-sistemas-sob-medida` | desenvolvimento de sistemas sob medida | Contratar sistema customizado | Projeto personalizado | Desenvolvimento de sistemas sob medida para operacoes que precisam escalar | Desenvolvimento de Sistemas Sob Medida \| SoftLuna | Desenvolvimento de sistema sob medida com descoberta tecnica, interface, banco de dados e integracoes. | Quero desenvolver um sistema sob medida. |
+
+### Pendencias para lotes F1-005 a F1-009
+
+- Executar pesquisa SERP/PAA por rota antes de publicar o lote correspondente.
+- Criar JSON individual em `content/money-pages/`.
+- Revisar FAQ especifica e links internos de cada nicho.
+- Rodar `npm run lint`, `npm run build` e smoke mobile/desktop por lote.
+
+### Tarefas
+
+- [x] F7-001 - Consolidar template das money pages dentro do roadmap
+  - Objetivo: registrar no `ROADMAP-SEO.md` a estrutura comum das money pages.
+  - Arquivos provaveis: `ROADMAP-SEO.md`, `docs/business/softluna/money-pages-architecture.md`.
+  - Dependencias: F1-001.
+  - Skill indicada: nenhuma.
+  - Criterios de aceite: template disponivel no roadmap sem depender apenas do doc auxiliar.
+  - Validacao: revisao documental.
+  - Registro de execucao: executado em 2026-06-19.
+
+- [x] F7-002 - Consolidar matriz das 19 rotas dentro do roadmap
+  - Objetivo: registrar keyword primaria, intencao, oferta, H1, title, meta e CTA para todas as rotas.
+  - Arquivos provaveis: `ROADMAP-SEO.md`, `docs/business/softluna/money-pages-architecture.md`.
+  - Dependencias: F1-002.
+  - Skill indicada: nenhuma.
+  - Criterios de aceite: 19 rotas documentadas no roadmap.
+  - Validacao: revisao documental.
+  - Registro de execucao: executado em 2026-06-19.
+
+- [x] F7-003 - Consolidar pendencias dos lotes dentro do roadmap
+  - Objetivo: deixar claro que F1-005 a F1-009 exigem pesquisa SERP/PAA, JSON por rota, FAQ especifica, links internos e validacao tecnica.
+  - Arquivos provaveis: `ROADMAP-SEO.md`, `docs/business/softluna/money-pages-architecture.md`.
+  - Dependencias: F1-004.
+  - Skill indicada: nenhuma.
+  - Criterios de aceite: pendencias visiveis na Fase 7.
+  - Validacao: revisao documental.
+  - Registro de execucao: executado em 2026-06-19.
+
 ## Checklist de aceite deste plano mestre
 
 - [x] Contem checkboxes executaveis para todas as melhorias de `Melhorias SoftLuna.txt`.
@@ -574,7 +678,7 @@ Objetivo: garantir que crescimento organico venha acompanhado de performance rea
 
 ## Proxima execucao recomendada
 
-1. Executar F0-001 a F0-005.
-2. Depois executar F1-001 a F1-004 para criar uma money page piloto.
+1. Revisar/aprovar a money page piloto `/site-para-clinicas-medicas`.
+2. Depois executar F1-005 a F1-009 em lotes, sempre com pesquisa SERP/PAA atual por rota antes de publicar copy final.
 3. Em paralelo, executar F2-001 a F2-003 para preparar blog sem publicar artigos ainda.
-4. So entao iniciar lotes de paginas, artigos, FAQs e ajustes de homepage.
+4. So entao iniciar artigos, FAQs estrategicas, ajustes de homepage e rotina de metricas.

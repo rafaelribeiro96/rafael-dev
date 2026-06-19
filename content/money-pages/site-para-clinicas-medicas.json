@@ -1,0 +1,119 @@
+{
+  "id": "site-para-clinicas-medicas",
+  "order": 1,
+  "slug": "site-para-clinicas-medicas",
+  "status": "pilot",
+  "category": "Saude e bem-estar",
+  "primaryKeyword": "site para clinicas medicas",
+  "secondaryKeywords": [
+    "criacao de site para clinica medica",
+    "site medico profissional",
+    "site para consultorio medico",
+    "site com agendamento online para clinica",
+    "SEO local para clinica medica"
+  ],
+  "seo": {
+    "title": "Site para Clinicas Medicas | SoftLuna",
+    "description": "Site para clinicas medicas com paginas de especialidades, SEO local, WhatsApp, agendamento e base tecnica cuidada para crescer com seguranca.",
+    "canonical": "https://softluna.com.br/site-para-clinicas-medicas",
+    "ogImage": "/og-image.png"
+  },
+  "hero": {
+    "eyebrow": "Money page piloto",
+    "h1": "Site para clinicas medicas com estrutura para receber pacientes",
+    "lead": "A SoftLuna cria sites rapidos, elegantes e editaveis para clinicas que precisam apresentar especialidades, equipe, enderecos, convenios e canais de agendamento sem depender de um site lento ou improvisado.",
+    "primaryCta": "Quero um site para minha clinica",
+    "secondaryCta": "Ver planos",
+    "whatsappMessage": "Ola! Quero criar um site para clinica medica com a SoftLuna. Pode me ajudar a entender o melhor formato?"
+  },
+  "painPoints": [
+    "Pacientes procuram informacoes no Google, mas encontram perfis soltos, dados incompletos ou paginas antigas.",
+    "A equipe perde tempo respondendo perguntas repetidas sobre especialidades, horarios, localizacao e formas de contato.",
+    "O site atual nao deixa claro quem atende, quais servicos existem e qual e o proximo passo para agendar.",
+    "Conteudos sensiveis precisam ser publicados com sobriedade, sem promessa de resultado e com atencao a privacidade."
+  ],
+  "solution": {
+    "title": "Uma base digital sob medida para a rotina da clinica",
+    "description": "O projeto combina apresentacao institucional, paginas por especialidade, SEO local, carregamento rapido e caminhos claros para WhatsApp ou agendamento. A estrutura nasce preparada para evoluir com blog, novas unidades, novas especialidades e ajustes de conteudo sem refazer o site inteiro.",
+    "items": [
+      "Arquitetura de paginas para especialidades, equipe, unidades, FAQ e contato.",
+      "Copy clara para explicar servicos sem prometer cura, agenda cheia ou resultado garantido.",
+      "Integracao com WhatsApp, telefone, mapa, formulario ou ferramenta de agendamento.",
+      "Base tecnica com performance, canonical, Open Graph e dados estruturados."
+    ]
+  },
+  "benefits": [
+    {
+      "title": "Mais clareza para o paciente",
+      "description": "O visitante entende rapidamente o que a clinica oferece, onde atende e como iniciar o contato."
+    },
+    {
+      "title": "SEO local mais organizado",
+      "description": "A pagina e preparada para buscas por servicos, especialidades e localidade, com links internos e metadados coerentes."
+    },
+    {
+      "title": "Conteudo editavel",
+      "description": "Textos, planos de expansao e perguntas frequentes podem evoluir sem depender de uma pilha pesada de plugins."
+    },
+    {
+      "title": "Base responsiva e rapida",
+      "description": "O site prioriza mobile, carregamento limpo e uma jornada direta ate o canal de atendimento."
+    }
+  ],
+  "process": [
+    {
+      "title": "Diagnostico",
+      "description": "Mapeamos especialidades, equipe, unidades, canais de agendamento e conteudos que exigem cuidado editorial."
+    },
+    {
+      "title": "Estrutura",
+      "description": "Definimos paginas, secoes, links internos, CTAs e a primeira versao de SEO on-page."
+    },
+    {
+      "title": "Design e implementacao",
+      "description": "Construimos uma interface alinhada a identidade da clinica, com performance e responsividade desde o inicio."
+    },
+    {
+      "title": "Publicacao assistida",
+      "description": "Validamos title, meta, schema, links, WhatsApp, formularios e pontos de privacidade antes da publicacao."
+    }
+  ],
+  "recommendedPlanIds": ["site-institucional", "projetos-personalizados"],
+  "portfolioIds": [],
+  "faqs": [
+    {
+      "question": "Quanto custa um site para clinica medica?",
+      "answer": "A SoftLuna usa os planos publicados como ponto de partida. Um site institucional parte de R$ 1.299,00 de implantacao e R$ 75,00 por mes; projetos com agendamento, areas extras ou integracoes entram em escopo personalizado."
+    },
+    {
+      "question": "O site pode ter agendamento online?",
+      "answer": "Sim. O projeto pode direcionar para WhatsApp, formulario, telefone ou uma ferramenta de agendamento. Quando houver coleta de dados sensiveis, a implementacao deve considerar consentimento, politica de privacidade e revisao juridica adequada."
+    },
+    {
+      "question": "A SoftLuna garante primeira posicao no Google?",
+      "answer": "Nao. A SoftLuna estrutura a pagina com boas praticas de SEO tecnico, performance, conteudo claro e dados estruturados, mas nenhum fornecedor serio deve prometer ranking garantido."
+    },
+    {
+      "question": "O conteudo medico precisa seguir regras especificas?",
+      "answer": "Sim. A copy deve ser sobria, verdadeira e revisada pelo responsavel da clinica. O site evita promessa de cura, resultado financeiro ou agenda cheia, e pode ser ajustado para orientacoes do conselho profissional aplicavel."
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "Planos da SoftLuna",
+      "href": "/#planos"
+    },
+    {
+      "label": "Processo de criacao",
+      "href": "/#processo"
+    },
+    {
+      "label": "Perguntas frequentes",
+      "href": "/#faq"
+    }
+  ],
+  "researchNotes": [
+    "SERP revisada em 2026-06-19: concorrentes destacam agendamento online, SEO local, WhatsApp, paginas de servicos/equipe e conformidade LGPD/CFM.",
+    "Copy evita promessa de ranking, cura, agenda cheia ou resultado financeiro."
+  ]
+}

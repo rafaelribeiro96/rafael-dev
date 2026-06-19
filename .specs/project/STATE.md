@@ -1,7 +1,7 @@
 # State
 
 **Last Updated:** 2026-06-19
-**Current Work:** SEO roadmap foundation
+**Current Work:** SEO money page pilot
 
 ---
 
@@ -41,6 +41,13 @@
 **Reason:** The repository already has Vercel metadata and analytics; changing hosting is not required to ship money pages, blog architecture or conversion events.
 **Trade-off:** Cloudflare Pages remains strategic context rather than current implementation.
 **Impact:** Tracking work should start from the current analytics stack, while hosting migration stays a separate decision.
+
+### AD-006: Validate money pages through a pilot before publishing all 19 routes (2026-06-19)
+
+**Decision:** F1 created the shared money page architecture, keyword matrix and `/site-para-clinicas-medicas` pilot first; the remaining lotes stay pending until the pilot is reviewed and each route gets current SERP/PAA research.
+**Reason:** The roadmap explicitly requires final copy research before publication and the lotes depend on the approved pilot.
+**Trade-off:** Only one money page is live in the first implementation pass, but the template and matrix are ready for batch expansion.
+**Impact:** Future F1 work should create one JSON per remaining route under `content/money-pages/` using the documented matrix and the existing dynamic route.
 
 ---
 
@@ -94,4 +101,5 @@
 
 - [ ] Decide whether to migrate live pricing JSON to the strategic prices later.
 - [ ] Decide long-term hosting defaults for SoftLuna and client projects.
+- [ ] Review and approve the `/site-para-clinicas-medicas` pilot before publishing the remaining money page batches.
 - [ ] Replace default admin password fallback before production launch.
