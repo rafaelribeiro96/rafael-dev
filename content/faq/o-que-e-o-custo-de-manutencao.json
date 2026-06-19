@@ -1,6 +1,6 @@
 {
   "id": "o-que-e-o-custo-de-manutencao",
-  "order": 6,
+  "order": 9,
   "question": "O que é o custo de manutenção mensal?",
   "answer": "A manutenção é o valor para manter o site publicado, estável e acompanhado depois da entrega.\n\nEla cobre hospedagem, SSL, monitoramento básico, suporte técnico, backup do projeto e pequenos ajustes operacionais conforme o plano contratado.\n\nNa prática, é o que mantém o site no ar com segurança, sem você precisar lidar com servidor, configuração técnica ou problemas de infraestrutura."
 }

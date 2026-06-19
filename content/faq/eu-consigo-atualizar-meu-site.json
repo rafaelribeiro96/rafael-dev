@@ -1,0 +1,6 @@
+{
+  "id": "eu-consigo-atualizar-meu-site",
+  "order": 4,
+  "question": "Eu mesmo vou conseguir atualizar meu site?",
+  "answer": "Sim. A estrutura da SoftLuna separa conteúdo de layout para que você consiga atualizar textos, fotos, planos, portfólio e FAQ sem mexer no código.\n\nA edição é controlada para preservar o visual aprovado e evitar que uma alteração simples quebre a página."
+}

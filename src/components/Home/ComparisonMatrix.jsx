@@ -2,29 +2,29 @@ import React from 'react';
 
 const rows = [
   [
-    'Performance',
-    'Sites lentos por excesso de plugins e temas pesados',
-    'Next.js/Astro estático, CDN global e foco em nota alta no PageSpeed'
+    'Velocidade que impacta contato',
+    'Tema pesado, plugins e scripts deixam o site lento no celular',
+    'Base estática, CDN e validação por PageSpeed sem prometer nota artificial'
   ],
   [
-    'SEO & Google',
-    'SEO depende de extensões e configurações manuais',
-    'Estrutura semântica, SEO local e dados prontos para Google e IAs'
+    'Busca local',
+    'Páginas genéricas não explicam cidade, serviços e diferenciais',
+    'Arquitetura semântica, FAQ, dados estruturados e conteúdo por intenção'
   ],
   [
-    'Segurança',
-    'Mais plugins, atualizações constantes e maior superfície de ataque',
-    'Menos dependências, deploy versionado e infraestrutura mais simples'
+    'Manutenção',
+    'Atualizações quebram layout e viram custo recorrente sem clareza',
+    'Deploy versionado, menos dependências e manutenção focada no que importa'
   ],
   [
-    'Edição',
-    'Painel inchado, confuso e fácil de quebrar o layout',
-    'Git-CMS simples para editar textos, fotos, planos, FAQ e portfólio'
+    'Edição do conteúdo',
+    'Painel inchado facilita erro visual e prende o negócio ao fornecedor',
+    'Git-CMS controlado para textos, fotos, planos, FAQ e portfólio'
   ],
   [
-    'Design',
-    'Limitado por templates, blocos prontos e aparência repetida',
-    'Interface exclusiva, alinhada à marca, conversão e posicionamento'
+    'Conversão',
+    'O visitante olha, não entende o próximo passo e volta para o Google',
+    'Copy, prova visual e CTAs claros para levar o lead ao WhatsApp'
   ]
 ];
 
@@ -38,16 +38,17 @@ const ComparisonMatrix = () => {
         <div className="mb-10 flex flex-col justify-between gap-5 md:mb-12 md:flex-row md:items-end">
           <div data-aos="fade-up">
             <span className="mb-3 block font-label-md text-[13px] uppercase tracking-[0.05em] text-primary">
-              O fim das limitações
+              Menos peso, mais clareza
             </span>
             <h2 className="font-headline-lg text-[30px] leading-[38px] text-on-surface sm:text-headline-lg">
-              Por que engenharia web supera template pesado.
+              Site profissional não é só aparência: é velocidade, confiança e
+              caminho de contato.
             </h2>
           </div>
           <p className="max-w-md font-body-md text-[16px] leading-[26px] text-secondary">
-            A SoftLuna cria ativos digitais leves, editáveis e preparados para
-            busca local. A diferença aparece no carregamento, no painel e na
-            conversão.
+            A SoftLuna troca improviso por uma base leve, editável e preparada
+            para busca local. A diferença aparece no carregamento, na autonomia
+            e na qualidade dos contatos.
           </p>
         </div>
 

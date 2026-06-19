@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { trackWhatsAppClick } from 'src/lib/analytics';
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -87,6 +88,13 @@ const Footer = () => {
                 href={ctaLink}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() =>
+                  trackWhatsAppClick({
+                    source: 'footer_contact',
+                    label: 'Chamar no WhatsApp',
+                    messageContext: 'global_footer'
+                  })
+                }
                 className="transition-colors hover:text-primary"
               >
                 Chamar no WhatsApp
@@ -115,7 +123,17 @@ const Footer = () => {
           <Link href="/blog" className="transition-colors hover:text-primary">
             Blog
           </Link>
-          <a href={ctaLink} className="transition-colors hover:text-primary">
+          <a
+            href={ctaLink}
+            onClick={() =>
+              trackWhatsAppClick({
+                source: 'footer_bottom',
+                label: 'WhatsApp',
+                messageContext: 'global_footer'
+              })
+            }
+            className="transition-colors hover:text-primary"
+          >
             WhatsApp
           </a>
         </div>

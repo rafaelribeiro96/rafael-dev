@@ -9,6 +9,7 @@ This document turns the business model into reusable operating checklists for fu
 - Brand/style guide: `docs/brand/softluna/*`
 - Current site content: `content/*`
 - Current CMS architecture: `GIT-CMS.md` and `.specs/codebase/*`
+- SEO operations, publication checklist and metrics: `docs/business/softluna/seo-operations.md`
 
 ## Lead Qualification
 

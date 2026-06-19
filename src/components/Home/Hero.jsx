@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import { trackWhatsAppClick } from 'src/lib/analytics';
 
 const Hero = ({ ctaLink, heroContent = {} }) => {
   const headline =
@@ -28,6 +29,13 @@ const Hero = ({ ctaLink, heroContent = {} }) => {
               href={ctaLink}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() =>
+                trackWhatsAppClick({
+                  source: 'home_hero',
+                  label: ctaText,
+                  messageContext: 'homepage_primary'
+                })
+              }
               className="rt-button rt-button-primary rt-button-lg rt-button-full sm:w-auto"
             >
               {ctaText}

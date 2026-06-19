@@ -1,4 +1,5 @@
 import React from 'react';
+import { trackWhatsAppClick } from 'src/lib/analytics';
 
 const FloatingButton = () => {
   const whatsappUrl =
@@ -11,6 +12,13 @@ const FloatingButton = () => {
         target="_blank"
         rel="noopener noreferrer"
         title="Falar no WhatsApp"
+        onClick={() =>
+          trackWhatsAppClick({
+            source: 'floating_button',
+            label: 'Falar no WhatsApp',
+            messageContext: 'global_floating'
+          })
+        }
         className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#25D366] flex items-center justify-center text-white shadow-[0_4px_20px_rgba(37,211,102,0.4)] hover:shadow-[0_4px_30px_rgba(37,211,102,0.6)] hover:scale-105 transition-all duration-300 relative group animate-bounce"
         style={{ animationDuration: '3s' }}
       >

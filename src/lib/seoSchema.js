@@ -5,12 +5,108 @@ function absoluteUrl(path = '/') {
   return `${SITE_URL}${path.startsWith('/') ? path : `/${path}`}`;
 }
 
+function buildSoftLunaIdentity({ globalData = {}, priceRange } = {}) {
+  const seo = globalData?.seo || {};
+
+  return {
+    '@type': ['Organization', 'LocalBusiness'],
+    '@id': `${SITE_URL}#organization`,
+    name: seo.businessName || 'SoftLuna',
+    url: SITE_URL,
+    telephone: seo.businessPhone || undefined,
+    email: seo.businessEmail || undefined,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: seo.businessCity || 'Belo Horizonte',
+      addressRegion: seo.businessState || 'MG',
+      addressCountry: 'BR'
+    },
+    areaServed: ['Belo Horizonte', 'Minas Gerais', 'Brasil'],
+    priceRange,
+    sameAs: ['https://www.instagram.com/softlunadigital/'],
+    knowsAbout: [
+      'Sites profissionais',
+      'Landing pages',
+      'SEO local',
+      'Performance web',
+      'Git-CMS',
+      'Conversao por WhatsApp'
+    ]
+  };
+}
+
+function buildFaqSchema({ id, faqs = [] }) {
+  if (!faqs.length) return undefined;
+
+  return {
+    '@type': 'FAQPage',
+    '@id': id,
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer
+      }
+    }))
+  };
+}
+
+export function buildHomePageSchema({
+  globalData = {},
+  faqItems = [],
+  pricingTiers = []
+}) {
+  const seo = globalData?.seo || {};
+  const activePrices = pricingTiers
+    .filter((tier) => tier.active !== false)
+    .map((tier) => Number(tier.setupPrice || 0))
+    .filter(Boolean);
+  const minPrice = activePrices.length ? Math.min(...activePrices) : undefined;
+  const maxPrice = activePrices.length ? Math.max(...activePrices) : undefined;
+  const priceRange =
+    minPrice && maxPrice ? `R$ ${minPrice} - R$ ${maxPrice}+` : undefined;
+  const organizationId = `${SITE_URL}#organization`;
+  const websiteId = `${SITE_URL}#website`;
+  const faqId = `${SITE_URL}#faq`;
+
+  const graph = [
+    buildSoftLunaIdentity({ globalData, priceRange }),
+    {
+      '@type': 'WebSite',
+      '@id': websiteId,
+      name: seo.businessName || 'SoftLuna',
+      url: SITE_URL,
+      publisher: { '@id': organizationId },
+      inLanguage: 'pt-BR',
+      description: seo.metaDescription
+    },
+    {
+      '@type': 'WebPage',
+      '@id': `${SITE_URL}#webpage`,
+      url: SITE_URL,
+      name: seo.metaTitle || 'SoftLuna',
+      description: seo.metaDescription,
+      isPartOf: { '@id': websiteId },
+      about: { '@id': organizationId },
+      inLanguage: 'pt-BR'
+    }
+  ];
+
+  const faqSchema = buildFaqSchema({ id: faqId, faqs: faqItems });
+  if (faqSchema) graph.push(faqSchema);
+
+  return {
+    '@context': 'https://schema.org',
+    '@graph': graph
+  };
+}
+
 export function buildMoneyPageSchema({
   page,
   pricingTiers = [],
   globalData = {}
 }) {
-  const seo = globalData?.seo || {};
   const pageUrl = absoluteUrl(`/${page.slug}`);
   const organizationId = `${SITE_URL}#organization`;
   const serviceId = `${pageUrl}#service`;
@@ -24,22 +120,10 @@ export function buildMoneyPageSchema({
     : undefined;
 
   const graph = [
-    {
-      '@type': ['Organization', 'LocalBusiness'],
-      '@id': organizationId,
-      name: seo.businessName || 'SoftLuna',
-      url: SITE_URL,
-      telephone: seo.businessPhone || undefined,
-      email: seo.businessEmail || undefined,
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: seo.businessCity || 'Belo Horizonte',
-        addressRegion: seo.businessState || 'MG',
-        addressCountry: 'BR'
-      },
-      areaServed: ['Belo Horizonte', 'Minas Gerais', 'Brasil'],
+    buildSoftLunaIdentity({
+      globalData,
       priceRange: minPrice ? `A partir de R$ ${minPrice}` : undefined
-    },
+    }),
     {
       '@type': 'Service',
       '@id': serviceId,
@@ -80,18 +164,7 @@ export function buildMoneyPageSchema({
   ];
 
   if (page.faqs?.length) {
-    graph.push({
-      '@type': 'FAQPage',
-      '@id': faqId,
-      mainEntity: page.faqs.map((faq) => ({
-        '@type': 'Question',
-        name: faq.question,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: faq.answer
-        }
-      }))
-    });
+    graph.push(buildFaqSchema({ id: faqId, faqs: page.faqs }));
   }
 
   return {
@@ -101,7 +174,6 @@ export function buildMoneyPageSchema({
 }
 
 export function buildBlogPostSchema({ post, globalData = {} }) {
-  const seo = globalData?.seo || {};
   const postUrl = absoluteUrl(`/blog/${post.slug}`);
   const blogUrl = absoluteUrl('/blog');
   const organizationId = `${SITE_URL}#organization`;
@@ -113,21 +185,7 @@ export function buildBlogPostSchema({ post, globalData = {} }) {
     .replace(/[^a-z0-9]+/g, '-')}`;
 
   const graph = [
-    {
-      '@type': ['Organization', 'LocalBusiness'],
-      '@id': organizationId,
-      name: seo.businessName || 'SoftLuna',
-      url: SITE_URL,
-      telephone: seo.businessPhone || undefined,
-      email: seo.businessEmail || undefined,
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: seo.businessCity || 'Belo Horizonte',
-        addressRegion: seo.businessState || 'MG',
-        addressCountry: 'BR'
-      },
-      areaServed: ['Belo Horizonte', 'Minas Gerais', 'Brasil']
-    },
+    buildSoftLunaIdentity({ globalData }),
     {
       '@type': 'Person',
       '@id': authorId,
@@ -178,18 +236,7 @@ export function buildBlogPostSchema({ post, globalData = {} }) {
   ];
 
   if (post.faqs?.length) {
-    graph.push({
-      '@type': 'FAQPage',
-      '@id': faqId,
-      mainEntity: post.faqs.map((faq) => ({
-        '@type': 'Question',
-        name: faq.question,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: faq.answer
-        }
-      }))
-    });
+    graph.push(buildFaqSchema({ id: faqId, faqs: post.faqs }));
   }
 
   return {

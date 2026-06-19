@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
+import { trackEvent } from 'src/lib/analytics';
 
 const WHATSAPP_BASE = 'https://wa.me/5531991869943';
 
@@ -129,6 +130,14 @@ const Portfolio = ({ ctaLink, items = [] }) => {
                         href={hasLiveUrl ? project.liveUrl : ctaLink}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={() =>
+                          trackEvent('portfolio_live_click', {
+                            projectId: project.id,
+                            projectTitle: project.title,
+                            category: project.category,
+                            liveUrl: hasLiveUrl ? project.liveUrl : undefined
+                          })
+                        }
                         className="rt-button rt-button-primary flex-1"
                       >
                         {hasLiveUrl ? 'Visitar site' : 'Ver modelo'}
@@ -137,9 +146,16 @@ const Portfolio = ({ ctaLink, items = [] }) => {
                         href={whatsappLink}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={() =>
+                          trackEvent('portfolio_whatsapp_click', {
+                            projectId: project.id,
+                            projectTitle: project.title,
+                            category: project.category
+                          })
+                        }
                         className="rt-button rt-button-secondary-inverse flex-1"
                       >
-                        Quero um assim
+                        Quero um site parecido
                       </a>
                     </div>
                   </div>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { trackWhatsAppClick } from 'src/lib/analytics';
 
 const navItems = [
   { label: 'Diferencial', href: '/#diferenciais', targetId: 'diferenciais' },
@@ -73,6 +74,13 @@ const Header = () => {
             href={ctaLink}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() =>
+              trackWhatsAppClick({
+                source: 'header_desktop',
+                label: 'Quero meu site',
+                messageContext: 'global_header'
+              })
+            }
             className="rt-button rt-button-primary"
           >
             Quero meu site
@@ -83,6 +91,13 @@ const Header = () => {
           href={ctaLink}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() =>
+            trackWhatsAppClick({
+              source: 'header_mobile_shortcut',
+              label: 'Quero meu site',
+              messageContext: 'global_header'
+            })
+          }
           className="ml-auto inline-flex min-h-10 shrink-0 items-center justify-center rounded-lg border border-primary bg-primary px-3 font-label-md text-[11px] uppercase tracking-[0.04em] text-white transition-colors hover:border-accent-hover hover:bg-accent-hover min-[380px]:px-4 md:hidden"
         >
           Quero meu site
@@ -118,6 +133,13 @@ const Header = () => {
               href={ctaLink}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() =>
+                trackWhatsAppClick({
+                  source: 'header_mobile_menu',
+                  label: 'Quero meu site',
+                  messageContext: 'global_header'
+                })
+              }
               className="rt-button rt-button-primary rt-button-full mt-4"
             >
               Quero meu site

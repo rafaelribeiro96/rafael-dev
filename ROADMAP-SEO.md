@@ -395,7 +395,7 @@ Cluster 3: Nichados e Especificos
 
 Objetivo: ajustar a homepage para comunicar resultado, velocidade, facilidade de edicao, SEO local e conversao sem jargoes desnecessarios.
 
-- [ ] F3-001 - Atualizar proposta de hero
+- [x] F3-001 - Atualizar proposta de hero
   - Objetivo: revisar H1, subtitulo e CTA principal da primeira dobra.
   - Arquivos provaveis: `src/components/Home/Hero.jsx`, `content/global/site.json` se o texto for editavel.
   - Dependencias: F0-004, F0-001.
@@ -403,8 +403,9 @@ Objetivo: ajustar a homepage para comunicar resultado, velocidade, facilidade de
   - Criterios de aceite: hero comunica negocio, velocidade, escopo nacional e edicao simples; CTA visivel no primeiro viewport.
   - Validacao: `npm run lint`, `npm run build`, smoke mobile/desktop.
   - Registro de execucao:
+    - 2026-06-19: Hero atualizado em `content/global/site.json` para comunicar site rapido, editavel, SEO local, performance mobile e WhatsApp sem promessa absoluta de ranking. CTA principal revisado para "Quero um site profissional".
 
-- [ ] F3-002 - Reposicionar comparativo "site tradicional vs SoftLuna"
+- [x] F3-002 - Reposicionar comparativo "site tradicional vs SoftLuna"
   - Objetivo: trocar foco tecnico puro por dores comerciais reais.
   - Arquivos provaveis: `src/components/Home/ComparisonMatrix.jsx` ou secao equivalente.
   - Dependencias: F0-004.
@@ -412,8 +413,9 @@ Objetivo: ajustar a homepage para comunicar resultado, velocidade, facilidade de
   - Criterios de aceite: comparar lentidao, plugins, vulnerabilidade, custo de anuncios e manutencao vs performance, seguranca estatica, PageSpeed e autonomia controlada.
   - Validacao: `npm run lint`, `npm run build`, revisao para evitar promessas absolutas.
   - Registro de execucao:
+    - 2026-06-19: Comparativo reescrito em `src/components/Home/ComparisonMatrix.jsx` com dores comerciais reais: lentidao mobile, busca local fraca, manutencao, edicao e conversao.
 
-- [ ] F3-003 - Adicionar CTA "Quero um site parecido"
+- [x] F3-003 - Adicionar CTA "Quero um site parecido"
   - Objetivo: incluir CTA direto em cada item de portfolio.
   - Arquivos provaveis: `src/components/Home/Portfolio.jsx`, `content/portfolio/*.json`, possivel admin se CTA for editavel.
   - Dependencias: F0-004, F0-005.
@@ -421,8 +423,9 @@ Objetivo: ajustar a homepage para comunicar resultado, velocidade, facilidade de
   - Criterios de aceite: cada projeto exposto tem botao "Quero um site parecido com este para minha empresa" ou variante curta equivalente; mensagem WhatsApp identifica o projeto.
   - Validacao: `npm run lint`, `npm run build`, testar clique/URL de WhatsApp.
   - Registro de execucao:
+    - 2026-06-19: CTA de portfolio ajustado para "Quero um site parecido" em `src/components/Home/Portfolio.jsx`, preservando mensagem WhatsApp por projeto e adicionando evento `portfolio_whatsapp_click`.
 
-- [ ] F3-004 - Reorganizar apresentacao dos planos
+- [x] F3-004 - Reorganizar apresentacao dos planos
   - Objetivo: deixar claros os tres tiers: Landing Pages, Site Institucional e Projetos Personalizados.
   - Arquivos provaveis: `src/components/Home/Pricing.jsx`, `content/pricing/*.json`.
   - Dependencias: F0-001.
@@ -430,8 +433,9 @@ Objetivo: ajustar a homepage para comunicar resultado, velocidade, facilidade de
   - Criterios de aceite: cada plano tem foco, caso de uso, preco conforme fonte de verdade e CTA claro.
   - Validacao: `npm run lint`, `npm run build`, revisar coerencia com business model.
   - Registro de execucao:
+    - 2026-06-19: Apresentacao dos planos revisada em `src/components/Home/Pricing.jsx` e `content/pricing/*.json`, mantendo os precos publicados como fonte de verdade e diferenciando landing page, site completo e projeto sob medida.
 
-- [ ] F3-005 - Revisar consistencia de tom Lunar Day
+- [x] F3-005 - Revisar consistencia de tom Lunar Day
   - Objetivo: garantir que a copy final pareca premium, direta e tecnica sem ficar generica.
   - Arquivos provaveis: `src/components/Home/*`, `content/*`.
   - Dependencias: F3-001, F3-002, F3-003, F3-004.
@@ -439,6 +443,7 @@ Objetivo: ajustar a homepage para comunicar resultado, velocidade, facilidade de
   - Criterios de aceite: copy revisada contra `docs/brand/softluna/*`; sem "transforme sua presenca digital" generico; sem promessa garantida de topo do Google.
   - Validacao: revisao manual pt-BR; smoke visual.
   - Registro de execucao:
+    - 2026-06-19: Copy revisada contra direcao Lunar Day: tom premium, direto e tecnico; removida promessa forte de "dominar o Google"; validado com `npm run lint`, `npm run build` e smoke HTTP.
 
 ## Fase 4 - FAQs estrategicas de conversao
 
@@ -454,7 +459,7 @@ Objetivo: quebrar objecoes comuns antes do contato comercial e melhorar FAQ sche
 
 ### Tarefas
 
-- [ ] F4-001 - Auditar FAQs existentes
+- [x] F4-001 - Auditar FAQs existentes
   - Objetivo: comparar `content/faq/*.json` com as novas objecoes.
   - Arquivos provaveis: `content/faq/*.json`, `src/components/Home/FAQ.jsx`, `src/components/Admin/FAQSection.jsx`.
   - Dependencias: F0-004.
@@ -462,8 +467,9 @@ Objetivo: quebrar objecoes comuns antes do contato comercial e melhorar FAQ sche
   - Criterios de aceite: lista do que manter, substituir, adicionar ou reordenar.
   - Validacao: leitura de conteudo atual; sem editar antes da decisao.
   - Registro de execucao:
+    - 2026-06-19: Auditoria identificou cobertura parcial: preco, prazo, processo, manutencao, tipos de empresa e diferenca landing/site ja existiam; faltavam atendimento remoto, Instagram vs site e autonomia de edicao.
 
-- [ ] F4-002 - Adicionar FAQs estrategicas no CMS atual
+- [x] F4-002 - Adicionar FAQs estrategicas no CMS atual
   - Objetivo: criar ou atualizar entradas de FAQ preservando o Git-CMS.
   - Arquivos provaveis: `content/faq/*.json`.
   - Dependencias: F4-001.
@@ -471,8 +477,9 @@ Objetivo: quebrar objecoes comuns antes do contato comercial e melhorar FAQ sche
   - Criterios de aceite: 5 perguntas publicadas, com respostas claras, pt-BR revisado e ordem comercial coerente.
   - Validacao: `npm run build`, conferir homepage e admin se aplicavel.
   - Registro de execucao:
+    - 2026-06-19: Publicadas novas FAQs em `content/faq/` para atendimento fora da cidade, Instagram vs site e edicao pelo cliente; FAQs antigas normalizadas em pt-BR e reordenadas.
 
-- [ ] F4-003 - Validar FAQ schema
+- [x] F4-003 - Validar FAQ schema
   - Objetivo: garantir que as novas perguntas alimentem JSON-LD corretamente.
   - Arquivos provaveis: `src/pages/index.jsx`, componente/helper de schema se existir ou for criado.
   - Dependencias: F4-002, F5-001.
@@ -480,12 +487,13 @@ Objetivo: quebrar objecoes comuns antes do contato comercial e melhorar FAQ sche
   - Criterios de aceite: FAQPage schema valido para homepage e/ou paginas especificas.
   - Validacao: Schema Validator/Rich Results Test; `npm run build`.
   - Registro de execucao:
+    - 2026-06-19: Homepage passou a gerar FAQPage via `buildHomePageSchema`; smoke HTTP confirmou `FAQPage` na home e `npm run build` passou. Validacao externa em Rich Results Test fica para pos-deploy.
 
 ## Fase 5 - SEO estrutural e AEO
 
 Objetivo: melhorar compreensao semantica por Google, AI Overviews, ChatGPT Search, Perplexity e outros mecanismos de resposta.
 
-- [ ] F5-001 - Mapear schemas atuais
+- [x] F5-001 - Mapear schemas atuais
   - Objetivo: identificar JSON-LD ja existente e lacunas.
   - Arquivos provaveis: `src/pages/index.jsx`, `src/components`, `src/lib`.
   - Dependencias: F0-004.
@@ -493,8 +501,9 @@ Objetivo: melhorar compreensao semantica por Google, AI Overviews, ChatGPT Searc
   - Criterios de aceite: inventario de schemas atuais, campos faltantes e paginas sem schema.
   - Validacao: leitura de codigo e teste de pagina renderizada se necessario.
   - Registro de execucao:
+    - 2026-06-19: Inventario consolidado em `docs/business/softluna/seo-operations.md`: homepage, money pages, blog posts e blog index.
 
-- [ ] F5-002 - Implementar Organization/LocalBusiness base
+- [x] F5-002 - Implementar Organization/LocalBusiness base
   - Objetivo: definir entidade SoftLuna com nome, URL, area atendida, servicos, preco/faixa e canais.
   - Arquivos provaveis: `src/pages/index.jsx`, `content/global/site.json`, helper em `src/lib`.
   - Dependencias: F5-001, F0-001.
@@ -502,8 +511,9 @@ Objetivo: melhorar compreensao semantica por Google, AI Overviews, ChatGPT Searc
   - Criterios de aceite: JSON-LD valido, sem dados inventados, com area de atendimento Brasil quando confirmado.
   - Validacao: `npm run lint`, `npm run build`, Schema Validator.
   - Registro de execucao:
+    - 2026-06-19: `src/lib/seoSchema.js` passou a centralizar a entidade SoftLuna como Organization/LocalBusiness para homepage, blog e money pages; `_document.js` deixou de injetar canonical/schema globais.
 
-- [ ] F5-003 - Implementar BreadcrumbList para paginas internas
+- [x] F5-003 - Implementar BreadcrumbList para paginas internas
   - Objetivo: padronizar breadcrumbs em blog e money pages.
   - Arquivos provaveis: definidos em F1/F2.
   - Dependencias: F1-001, F2-001.
@@ -511,8 +521,9 @@ Objetivo: melhorar compreensao semantica por Google, AI Overviews, ChatGPT Searc
   - Criterios de aceite: cada pagina interna indexavel tem breadcrumb coerente.
   - Validacao: `npm run build`, Schema Validator.
   - Registro de execucao:
+    - 2026-06-19: BreadcrumbList validado por smoke em `/blog/quanto-custa-site-profissional-empresas-brasil-2026` e `/site-para-clinicas-medicas`; os templates internos ja usam `src/lib/seoSchema.js`.
 
-- [ ] F5-004 - Criar regras de conteudo citavel para AEO/GEO
+- [x] F5-004 - Criar regras de conteudo citavel para AEO/GEO
   - Objetivo: documentar padrao de resposta direta, definicoes claras e blocos citaveis.
   - Arquivos provaveis: `ROADMAP-SEO.md` ou docs de negocio/editorial.
   - Dependencias: F2-001.
@@ -520,8 +531,9 @@ Objetivo: melhorar compreensao semantica por Google, AI Overviews, ChatGPT Searc
   - Criterios de aceite: todo artigo/pagina futura deve ter respostas diretas, perguntas H2/H3 quando fizer sentido, FAQ e entidades consistentes.
   - Validacao: aplicar regra em pelo menos um post/pagina piloto.
   - Registro de execucao:
+    - 2026-06-19: Regras AEO/GEO documentadas em `docs/business/softluna/seo-operations.md`; aplicacao piloto ja existe nos artigos com `answerFirst`, FAQ e links internos da Fase 2.
 
-- [ ] F5-005 - Criar checklist Google Business Profile
+- [x] F5-005 - Criar checklist Google Business Profile
   - Objetivo: orientar SoftLuna e futuros clientes a alinhar site, GBP e SEO local.
   - Arquivos provaveis: `docs/business/softluna/operating-system.md` ou doc auxiliar.
   - Dependencias: nenhuma.
@@ -529,12 +541,13 @@ Objetivo: melhorar compreensao semantica por Google, AI Overviews, ChatGPT Searc
   - Criterios de aceite: checklist cobre nome, categoria, servicos, area atendida, telefone, site, UTM, fotos, posts, reviews e consistencia NAP.
   - Validacao: revisar contra documentacao atual do Google antes de publicar recomendacoes finais.
   - Registro de execucao:
+    - 2026-06-19: Checklist GBP criado em `docs/business/softluna/seo-operations.md`, revisado contra documentacao oficial do Google sobre relevancia, distancia e proeminencia.
 
 ## Fase 6 - Performance, mensuracao e validacao
 
 Objetivo: garantir que crescimento organico venha acompanhado de performance real, rastreamento e validacao tecnica.
 
-- [ ] F6-001 - Definir baseline de performance
+- [x] F6-001 - Definir baseline de performance
   - Objetivo: medir estado atual antes das mudancas.
   - Arquivos provaveis: nenhum obrigatorio; relatorio pode ir para docs.
   - Dependencias: site local/producao acessivel.
@@ -542,8 +555,9 @@ Objetivo: garantir que crescimento organico venha acompanhado de performance rea
   - Criterios de aceite: registrar Lighthouse/PageSpeed mobile e desktop, LCP, CLS, INP/TBT quando disponivel e data da medicao.
   - Validacao: usar PageSpeed Insights/Lighthouse; nao alterar codigo.
   - Registro de execucao:
+    - 2026-06-19: Baseline local registrado em `docs/business/softluna/seo-operations.md` com Lighthouse 12.8.2 em `http://localhost:3000`: desktop 93, mobile 63, LCP desktop 1.3s, LCP mobile 6.7s, CLS 0.002/0 e TBT 0ms.
 
-- [ ] F6-002 - Implementar tracking de conversoes
+- [x] F6-002 - Implementar tracking de conversoes
   - Objetivo: medir cliques em WhatsApp, CTAs de portfolio, money pages e blog.
   - Arquivos provaveis: `src/components`, `src/pages`, analytics existente.
   - Dependencias: F0-005.
@@ -551,8 +565,9 @@ Objetivo: garantir que crescimento organico venha acompanhado de performance rea
   - Criterios de aceite: eventos padronizados, sem duplicidade obvia e com parametros de origem.
   - Validacao: `npm run lint`, `npm run build`, smoke de cliques em dev.
   - Registro de execucao:
+    - 2026-06-19: `@vercel/analytics` atualizado para `^2.0.1`; helper `src/lib/analytics.js` criado; eventos adicionados para WhatsApp global, portfolio, planos, money pages e blog.
 
-- [ ] F6-003 - Criar checklist de publicacao SEO
+- [x] F6-003 - Criar checklist de publicacao SEO
   - Objetivo: padronizar validacao antes de publicar pagina ou artigo.
   - Arquivos provaveis: `ROADMAP-SEO.md` ou docs de negocio.
   - Dependencias: F1-004, F2-001.
@@ -560,8 +575,9 @@ Objetivo: garantir que crescimento organico venha acompanhado de performance rea
   - Criterios de aceite: checklist inclui title, meta, canonical, OG, schema, links internos, CTA, imagens, performance, revisao pt-BR e build.
   - Validacao: aplicar no piloto de money page e no primeiro artigo.
   - Registro de execucao:
+    - 2026-06-19: Checklist de publicacao SEO criado em `docs/business/softluna/seo-operations.md` com title, meta, canonical, OG, schema, links internos, CTA, imagens, performance, revisao pt-BR, lint/build e smoke.
 
-- [ ] F6-004 - Criar rotina mensal de metricas
+- [x] F6-004 - Criar rotina mensal de metricas
   - Objetivo: acompanhar impacto de SEO e conteudo.
   - Arquivos provaveis: docs de negocio ou planilha futura.
   - Dependencias: F6-002.
@@ -569,6 +585,7 @@ Objetivo: garantir que crescimento organico venha acompanhado de performance rea
   - Criterios de aceite: definir metricas de trafego organico, leads WhatsApp, paginas indexadas, queries, CTR, posicao media, conversoes e mencoes por IA quando mensuravel.
   - Validacao: primeira medicao registrada apos 30 dias.
   - Registro de execucao:
+    - 2026-06-19: Rotina mensal de metricas consolidada em `docs/business/softluna/seo-operations.md`, cobrindo Vercel Analytics, Search Console, money pages, blog, Core Web Vitals e Google Business Profile.
 
 ## Fase 7 - Matriz, template e pendencias das money pages
 
@@ -654,7 +671,7 @@ As titles e metas abaixo sao provisorias. Antes de publicar cada rota em lote, r
   - Skill indicada: nenhuma.
   - Criterios de aceite: template disponivel no roadmap sem depender apenas do doc auxiliar.
   - Validacao: revisao documental.
-  - Registro de execucao: executado em 2026-06-19.
+  - Registro de execucao: executado em 2026-06-19; revalidado em 2026-06-19 durante fechamento das Fases 3 a 7.
 
 - [x] F7-002 - Consolidar matriz das 19 rotas dentro do roadmap
   - Objetivo: registrar keyword primaria, intencao, oferta, H1, title, meta e CTA para todas as rotas.
@@ -663,7 +680,7 @@ As titles e metas abaixo sao provisorias. Antes de publicar cada rota em lote, r
   - Skill indicada: nenhuma.
   - Criterios de aceite: 19 rotas documentadas no roadmap.
   - Validacao: revisao documental.
-  - Registro de execucao: executado em 2026-06-19.
+  - Registro de execucao: executado em 2026-06-19; revalidado em 2026-06-19 durante fechamento das Fases 3 a 7.
 
 - [x] F7-003 - Consolidar pendencias dos lotes dentro do roadmap
   - Objetivo: deixar claro que F1-005 a F1-009 exigem pesquisa SERP/PAA, JSON por rota, FAQ especifica, links internos e validacao tecnica.
@@ -672,7 +689,7 @@ As titles e metas abaixo sao provisorias. Antes de publicar cada rota em lote, r
   - Skill indicada: nenhuma.
   - Criterios de aceite: pendencias visiveis na Fase 7.
   - Validacao: revisao documental.
-  - Registro de execucao: executado em 2026-06-19.
+  - Registro de execucao: executado em 2026-06-19; revalidado em 2026-06-19 durante fechamento das Fases 3 a 7.
 
 ## Checklist de aceite deste plano mestre
 
@@ -687,5 +704,7 @@ As titles e metas abaixo sao provisorias. Antes de publicar cada rota em lote, r
 
 1. Revisar/aprovar a money page piloto `/site-para-clinicas-medicas`.
 2. Depois executar F1-005 a F1-009 em lotes, sempre com pesquisa SERP/PAA atual por rota antes de publicar copy final.
-3. Revisar em navegacao real os 9 artigos publicados na Fase 2 e expandir conteudo onde houver prioridade comercial.
+3. Validar em producao os schemas com Rich Results Test/Schema Validator apos deploy.
+4. Revisar em navegacao real os 9 artigos publicados na Fase 2 e expandir conteudo onde houver prioridade comercial.
+5. Acompanhar por 30 dias os eventos de conversao e a rotina mensal definida em `docs/business/softluna/seo-operations.md`.
 4. Iniciar FAQs estrategicas, ajustes de homepage e rotina de metricas/tracking.

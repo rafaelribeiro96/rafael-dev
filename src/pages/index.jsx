@@ -19,19 +19,20 @@ import {
   getPortfolioItems,
   getFAQItems
 } from 'src/lib/content';
+import { buildHomePageSchema } from 'src/lib/seoSchema';
 
 /* eslint-disable react/prop-types */
 const Main = ({ globalData, pricingTiers, portfolioItems, faqItems }) => {
   const ctaLink =
     'https://wa.me/5531991869943?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista%20da%20SoftLuna%20para%20alavancar%20minha%20presen%C3%A7a%20digital.';
   const seo = globalData?.seo || {};
-  const businessName = seo.businessName || 'SoftLuna';
   const metaTitle =
     seo.metaTitle ||
     'SoftLuna | Sites Profissionais de Alta Performance para Empresas';
   const metaDescription =
     seo.metaDescription ||
     'SoftLuna cria sites profissionais e landing pages de alta performance para empresas em Belo Horizonte e todo o Brasil.';
+  const schema = buildHomePageSchema({ globalData, faqItems, pricingTiers });
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-bg-primary text-on-surface font-body-md">
@@ -39,28 +40,17 @@ const Main = ({ globalData, pricingTiers, portfolioItems, faqItems }) => {
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="canonical" href="https://softluna.com.br" />
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDescription} />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://softluna.com.br" />
         <meta property="og:image" content="/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'ProfessionalService',
-              name: businessName,
-              description: metaDescription,
-              telephone: seo.businessPhone,
-              email: seo.businessEmail || undefined,
-              address: {
-                '@type': 'PostalAddress',
-                addressLocality: seo.businessCity || 'Belo Horizonte',
-                addressRegion: seo.businessState || 'MG',
-                addressCountry: 'BR'
-              }
-            })
+            __html: JSON.stringify(schema)
           }}
         />
       </Head>

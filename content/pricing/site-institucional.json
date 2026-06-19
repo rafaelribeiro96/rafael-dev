@@ -2,11 +2,12 @@
   "id": "site-institucional",
   "order": 2,
   "title": "Site Institucional Completo",
-  "description": "Para empresas que precisam apresentar serviços, autoridade e estrutura local completa no Google.",
+  "description": "Para empresas que precisam apresentar serviços, autoridade, FAQ, portfólio e estrutura local completa no Google.",
   "setupPrice": 1299,
   "maintenancePrice": 75,
   "highlighted": true,
   "badge": "Mais Popular",
+  "ctaText": "Quero um site completo",
   "features": [
     "Até 5 páginas estratégicas",
     "SEO local e dados estruturados",

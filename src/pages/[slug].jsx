@@ -11,6 +11,7 @@ import {
   getPricingTiers,
   getPortfolioItems
 } from 'src/lib/content';
+import { trackEvent } from 'src/lib/analytics';
 import { buildMoneyPageSchema } from 'src/lib/seoSchema';
 
 const WHATSAPP_BASE = 'https://wa.me/5531991869943';
@@ -129,6 +130,14 @@ const MoneyPage = ({
                   href={ctaLink}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() =>
+                    trackEvent('money_page_whatsapp_click', {
+                      slug: page.slug,
+                      niche: page.niche,
+                      primaryKeyword: page.primaryKeyword,
+                      ctaPosition: 'hero'
+                    })
+                  }
                 >
                   {page.hero.primaryCta}
                 </a>
@@ -372,6 +381,14 @@ const MoneyPage = ({
               href={ctaLink}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() =>
+                trackEvent('money_page_whatsapp_click', {
+                  slug: page.slug,
+                  niche: page.niche,
+                  primaryKeyword: page.primaryKeyword,
+                  ctaPosition: 'final'
+                })
+              }
             >
               Conversar no WhatsApp
             </a>

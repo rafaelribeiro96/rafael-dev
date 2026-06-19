@@ -9,6 +9,7 @@ import {
   getBlogPosts,
   getGlobalSite
 } from 'src/lib/content';
+import { trackEvent } from 'src/lib/analytics';
 import { buildBlogPostSchema } from 'src/lib/seoSchema';
 
 const WHATSAPP_BASE = 'https://wa.me/5531991869943';
@@ -139,6 +140,14 @@ const BlogPostPage = ({ post, globalData, relatedPosts }) => {
                   href={ctaLink}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() =>
+                    trackEvent('blog_whatsapp_click', {
+                      slug: post.slug,
+                      cluster: post.cluster,
+                      primaryKeyword: post.primaryKeyword,
+                      ctaPosition: 'article_body'
+                    })
+                  }
                   className="rt-button rt-button-primary rt-button-lg mt-6"
                 >
                   {post.cta.label}

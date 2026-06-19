@@ -1,7 +1,7 @@
 # State
 
 **Last Updated:** 2026-06-19
-**Current Work:** SEO blog authority implementation
+**Current Work:** SEO roadmap phases 3-7 completed locally
 
 ---
 
@@ -55,6 +55,13 @@
 **Reason:** This removes dependence on the legacy `NEXT_PUBLIC_API_URL` blog service and gives money pages/homepage future internal-link support.
 **Trade-off:** The new blog collection is not editable in the admin yet; article updates remain file-based until a Git-CMS expansion is approved.
 **Impact:** Future blog work should update `content/blog/*.json` and `docs/business/softluna/blog-authority-plan.md`, then run lint/build before publication.
+
+### AD-008: Centralize SEO schema and conversion tracking helpers (2026-06-19)
+
+**Decision:** Use `src/lib/seoSchema.js` as the shared JSON-LD source for homepage, blog and money pages, and use `src/lib/analytics.js` for Vercel Analytics conversion events.
+**Reason:** Fases 3-6 require homepage FAQ schema, reusable Organization/LocalBusiness, canonical cleanup and CTA measurement without duplicating event names.
+**Trade-off:** Custom events depend on the Vercel Analytics plan supporting them and on `@vercel/analytics` remaining current enough for `track()`.
+**Impact:** Future CTAs should call the shared analytics helper with source-specific parameters instead of creating ad hoc event names.
 
 ---
 
@@ -111,3 +118,5 @@
 - [ ] Review and approve the `/site-para-clinicas-medicas` pilot before publishing the remaining money page batches.
 - [ ] Decide whether the admin/Git-CMS should manage `content/blog/` and `content/money-pages/`.
 - [ ] Replace default admin password fallback before production launch.
+- [ ] Validate new homepage/blog/money page schemas in Rich Results Test or Schema Validator after deploy.
+- [ ] Re-run PageSpeed Insights on production after deploy and compare with the local Lighthouse baseline in `docs/business/softluna/seo-operations.md`.

@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import { trackEvent } from 'src/lib/analytics';
 
 const formatCurrency = (value) =>
   Number(value || 0).toLocaleString('pt-BR', {
@@ -138,6 +139,14 @@ const PricingCard = ({ tier, ctaLink, variant = 'default' }) => {
           href={ctaLink}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() =>
+            trackEvent('pricing_cta_click', {
+              planId: id,
+              planTitle: title,
+              setupPrice,
+              maintenancePrice
+            })
+          }
           className={`rt-button rt-button-full mt-7 ${
             highlighted ? 'rt-button-primary' : 'rt-button-secondary'
           } ${isHorizontal ? 'lg:max-w-[300px]' : ''}`}
@@ -171,12 +180,13 @@ const Pricing = ({ ctaLink, tiers = [] }) => {
             Investimento
           </h2>
           <p className="mx-auto mt-4 max-w-2xl font-body-md text-[17px] leading-[27px] text-secondary">
-            Dois pontos de partida claros para colocar sua presença digital no
-            ar com performance, design e painel editavel.
+            Três formatos para sair do improviso: campanha pontual, presença
+            institucional completa ou projeto sob medida com integração.
           </p>
           <p className="mx-auto mt-3 max-w-2xl font-body-md text-[15px] leading-6 text-secondary">
-            Projetos com regras de negócio, automações ou integrações entram em
-            escopo personalizado, com briefing técnico antes do orçamento final.
+            Os valores abaixo seguem o conteúdo publicado do site. Projetos com
+            automações, e-commerce ou sistemas passam por briefing técnico antes
+            do orçamento final.
           </p>
         </div>
 
