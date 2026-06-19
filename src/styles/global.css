@@ -168,7 +168,7 @@ select:focus-visible {
 }
 
 .portfolio-marquee {
-  animation: portfolio-marquee 34s linear infinite;
+  animation: portfolio-marquee 28s linear infinite;
 }
 
 .portfolio-marquee:hover {

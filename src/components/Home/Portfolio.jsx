@@ -15,11 +15,11 @@ const Portfolio = ({ ctaLink, items = [] }) => {
 
   return (
     <section
-      className="bg-[#1a1a1a] px-margin-page py-28 text-white md:py-32"
+      className="bg-[#1a1a1a] px-margin-page py-20 text-white md:py-24"
       id="portfolio"
     >
       <div className="mx-auto max-w-container-max">
-        <div className="mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+        <div className="mb-10 flex flex-col justify-between gap-5 md:flex-row md:items-end">
           <div data-aos="fade-up">
             <span className="mb-3 block font-label-md text-[13px] uppercase tracking-[0.05em] text-primary-container">
               Projetos reais
@@ -28,9 +28,9 @@ const Portfolio = ({ ctaLink, items = [] }) => {
               Galeria de projetos
             </h2>
           </div>
-          <p className="max-w-md font-body-md text-[17px] leading-[27px] text-white/65">
-            Sites entregues, online e construidos para unir estetica premium,
-            velocidade e autonomia de conteudo.
+          <p className="max-w-md font-body-md text-[16px] leading-[26px] text-white/65">
+            Projetos reais com visual sob medida, carregamento rapido e caminho
+            direto para o lead pedir algo parecido.
           </p>
         </div>
 
@@ -49,7 +49,7 @@ const Portfolio = ({ ctaLink, items = [] }) => {
               return (
                 <article
                   key={`${project.id}-${index}`}
-                  className="group w-[82vw] max-w-[560px] shrink-0 overflow-hidden rounded-[24px] border border-white/10 bg-white/[0.04] sm:w-[520px]"
+                  className="group w-[78vw] max-w-[420px] shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] sm:w-[390px] lg:w-[410px]"
                   aria-hidden={index >= projects.length}
                 >
                   <div className="relative aspect-[16/10] overflow-hidden bg-black">
@@ -61,15 +61,15 @@ const Portfolio = ({ ctaLink, items = [] }) => {
                       className="object-cover object-top grayscale transition-all duration-700 group-hover:scale-[1.03] group-hover:grayscale-0"
                     />
                   </div>
-                  <div className="flex flex-col gap-6 p-7 md:p-8">
+                  <div className="flex flex-col gap-5 p-5 md:p-6">
                     <div>
                       <p className="font-body-md text-[14px] leading-5 text-white/60">
                         {project.category}
                       </p>
-                      <h3 className="mt-2 font-headline-md text-[26px] leading-9 text-white">
+                      <h3 className="mt-2 font-headline-md text-[22px] leading-8 text-white">
                         {project.title}
                       </h3>
-                      <p className="mt-4 font-body-md text-[15px] leading-6 text-white/66">
+                      <p className="mt-3 font-body-md text-[14px] leading-6 text-white/66">
                         {project.description}
                       </p>
                     </div>

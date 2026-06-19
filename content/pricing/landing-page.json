@@ -1,19 +1,19 @@
 {
   "id": "landing-page",
   "order": 1,
-  "title": "Landing Page de Conversão",
-  "description": "Ideal para profissionais e empresas que querem gerar leads e vendas com uma página focada em conversão.",
+  "title": "Landing Page de Convers\u00e3o",
+  "description": "Pagina unica para campanha, trafego pago ou validacao de oferta, com copy, WhatsApp e SEO basico.",
   "setupPrice": 749,
   "maintenancePrice": 40,
   "highlighted": false,
   "badge": null,
   "features": [
-    "Design Exclusivo e Focado em Conversão",
-    "Copywriting Persuasivo",
-    "Integração CRM / WhatsApp",
-    "Otimizado para Alta Performance",
-    "Gestor de Conteúdo (CMS)",
-    "Domínio Grátis por 1 Ano"
+    "Design exclusivo focado em conversao",
+    "Copy baseada na oferta e no publico",
+    "Integracao WhatsApp / CRM",
+    "SEO on-page e Open Graph",
+    "Painel simples para conteudo",
+    "Performance mobile prioritaria"
   ],
-  "maintenanceNote": "Inclui hospedagem edge e atualizações de segurança automáticas."
+  "maintenanceNote": "Inclui hospedagem edge, SSL, monitoramento basico e suporte para manter a pagina no ar com seguranca."
 }

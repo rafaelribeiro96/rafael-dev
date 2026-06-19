@@ -3,19 +3,19 @@ import React from 'react';
 
 const Hero = ({ ctaLink, heroContent = {} }) => {
   const headline =
-    heroContent?.headline || 'Sites que vendem. Presenca que domina.';
+    heroContent?.headline || 'Sites rapidos, elegantes e prontos para vender.';
   const subheadline =
     heroContent?.subheadline ||
-    'Desenvolvemos sites profissionais e landing pages de alta performance para empresas em BH e todo o Brasil. Tecnologia de ponta, com ROI mensuravel.';
+    'A SoftLuna cria landing pages, sites institucionais e solucoes digitais com performance edge, SEO local e painel simples para voce editar sem depender de plugins.';
   const ctaText = heroContent?.ctaText || 'Quero meu site agora';
 
   return (
-    <section className="overflow-hidden bg-white px-margin-page pb-24 pt-36 md:pt-40">
+    <section className="overflow-hidden bg-white px-margin-page pb-20 pt-32 md:pb-24 md:pt-36">
       <div className="mx-auto flex w-full max-w-container-max flex-col items-center text-center">
         <span className="mb-6 font-label-md text-[11px] uppercase tracking-[0.2em] text-primary">
-          Engineering Luxury
+          Estudio de engenharia web
         </span>
-        <h1 className="mx-auto w-full max-w-[330px] whitespace-pre-line break-words font-headline-xl text-[30px] font-bold leading-[38px] tracking-normal text-on-surface sm:max-w-[880px] sm:text-[48px] sm:leading-[58px]">
+        <h1 className="mx-auto w-full max-w-[330px] whitespace-pre-line break-words font-headline-xl text-[30px] font-bold leading-[38px] tracking-normal text-on-surface sm:max-w-[880px] sm:text-[46px] sm:leading-[56px]">
           {headline}
         </h1>
         <p className="mx-auto mt-8 w-full max-w-[330px] font-body-lg text-[16px] leading-[27px] text-secondary sm:max-w-2xl sm:text-[18px] sm:leading-[30px]">

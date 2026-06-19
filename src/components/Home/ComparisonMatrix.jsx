@@ -3,56 +3,60 @@ import React from 'react';
 const rows = [
   [
     'Performance',
-    'Lento com plugins e temas pesados',
-    'Next.js otimizado e entrega edge-first'
+    'Sites lentos por excesso de plugins e temas pesados',
+    'Next.js/Astro estatico, CDN global e foco em nota alta no PageSpeed'
   ],
   [
     'SEO & Google',
-    'Dependente de ajustes manuais e extensoes',
-    'Arquitetura pensada para indexacao desde o inicio'
+    'SEO depende de extensoes e configuracoes manuais',
+    'Estrutura semantica, SEO local e dados prontos para Google e IAs'
   ],
   [
     'Seguranca',
-    'Superficie maior de ataques e atualizacoes',
-    'Menos dependencias, deploy versionado e codigo controlado'
+    'Mais plugins, atualizacoes constantes e maior superficie de ataque',
+    'Menos dependencias, deploy versionado e infraestrutura mais simples'
   ],
   [
     'Edicao',
-    'Painel inchado e dificil para o cliente',
-    'Git-CMS simples para textos, planos, FAQ e portfolio'
+    'Painel inchado, confuso e facil de quebrar o layout',
+    'Git-CMS simples para editar textos, fotos, planos, FAQ e portfolio'
   ],
   [
     'Design',
-    'Limitado por templates e blocos prontos',
-    'Interface exclusiva alinhada a marca e conversao'
+    'Limitado por templates, blocos prontos e aparencia repetida',
+    'Interface exclusiva, alinhada a marca, conversao e posicionamento'
   ]
 ];
 
 const ComparisonMatrix = () => {
   return (
-    <section className="bg-white px-margin-page py-24" id="arquitetura">
+    <section
+      className="bg-white px-margin-page py-20 md:py-24"
+      id="arquitetura"
+    >
       <div className="mx-auto max-w-container-max">
-        <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+        <div className="mb-10 flex flex-col justify-between gap-5 md:mb-12 md:flex-row md:items-end">
           <div data-aos="fade-up">
             <span className="mb-3 block font-label-md text-[13px] uppercase tracking-[0.05em] text-primary">
               O fim das limitacoes
             </span>
-            <h2 className="font-headline-lg text-[34px] leading-[44px] text-on-surface sm:text-headline-lg">
-              Por que engenharia web supera qualquer solucao de template.
+            <h2 className="font-headline-lg text-[30px] leading-[38px] text-on-surface sm:text-headline-lg">
+              Por que engenharia web supera template pesado.
             </h2>
           </div>
-          <p className="max-w-md font-body-md text-[17px] leading-[27px] text-secondary">
-            Cada decisao tecnica afeta velocidade, SEO, autonomia e conversao. A
-            diferenca aparece no codigo e no resultado.
+          <p className="max-w-md font-body-md text-[16px] leading-[26px] text-secondary">
+            A SoftLuna cria ativos digitais leves, editaveis e preparados para
+            busca local. A diferenca aparece no carregamento, no painel e na
+            conversao.
           </p>
         </div>
 
         <div
-          className="overflow-hidden rounded-[24px] border border-border-thin bg-white"
+          className="hidden overflow-hidden rounded-[24px] border border-border-thin bg-white md:block"
           data-aos="fade-up"
         >
-          <div className="grid grid-cols-1 md:grid-cols-[0.8fr_1fr_1fr]">
-            <div className="hidden bg-bg-secondary p-6 font-label-md text-[13px] uppercase tracking-[0.05em] text-text-secondary md:block">
+          <div className="grid grid-cols-[0.8fr_1fr_1fr]">
+            <div className="bg-bg-secondary p-6 font-label-md text-[13px] uppercase tracking-[0.05em] text-text-secondary">
               Criterio
             </div>
             <div className="bg-bg-secondary p-6 font-label-md text-[13px] uppercase tracking-[0.05em] text-text-secondary">
@@ -82,6 +86,39 @@ const ComparisonMatrix = () => {
               </React.Fragment>
             ))}
           </div>
+        </div>
+
+        <div className="space-y-4 md:hidden" data-aos="fade-up">
+          {rows.map(([criterion, template, engineering]) => (
+            <article
+              key={criterion}
+              className="overflow-hidden rounded-2xl border border-border-thin bg-white"
+            >
+              <div className="bg-bg-secondary px-5 py-4">
+                <h3 className="font-headline-md text-[19px] leading-7 text-on-surface">
+                  {criterion}
+                </h3>
+              </div>
+              <div className="space-y-3 p-5">
+                <div className="rounded-xl border border-error-container/70 bg-error-container/20 p-4">
+                  <p className="mb-2 font-label-md text-[11px] uppercase tracking-[0.08em] text-error">
+                    Template / WordPress pesado
+                  </p>
+                  <p className="font-body-md text-[14px] leading-6 text-secondary">
+                    {template}
+                  </p>
+                </div>
+                <div className="rounded-xl border border-primary-container/70 bg-surface-container-lowest p-4">
+                  <p className="mb-2 font-label-md text-[11px] uppercase tracking-[0.08em] text-primary">
+                    SoftLuna Engineering
+                  </p>
+                  <p className="font-body-md text-[14px] leading-6 text-on-surface">
+                    {engineering}
+                  </p>
+                </div>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>
