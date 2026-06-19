@@ -20,7 +20,7 @@ function formatDate(date) {
   }).format(new Date(date));
 }
 
-const BlogPage = ({ posts }) => {
+const BlogPage = ({ posts, schema }) => {
   const featuredPost = posts[0];
   const clusters = Object.entries(clusterLabels).map(([key, label]) => ({
     key,
@@ -51,6 +51,27 @@ const BlogPage = ({ posts }) => {
           property="og:image"
           content="https://softluna.com.br/og-image.png"
         />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Blog SoftLuna | Sites, SEO Local e Performance"
+        />
+        <meta
+          name="twitter:description"
+          content="Guias praticos da SoftLuna sobre custo de sites, performance, SEO local e presenca digital para negocios de servico."
+        />
+        <meta
+          name="twitter:image"
+          content="https://softluna.com.br/og-image.png"
+        />
+        {schema && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+          />
+        )}
       </Head>
 
       <Header />
@@ -156,9 +177,46 @@ const BlogPage = ({ posts }) => {
 export async function getStaticProps() {
   const posts = await getBlogPosts();
 
+  const SITE_URL = 'https://softluna.com.br';
+  const blogUrl = `${SITE_URL}/blog`;
+  const schema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'CollectionPage',
+        '@id': `${blogUrl}#collectionpage`,
+        name: 'Blog SoftLuna | Sites, SEO Local e Performance',
+        description:
+          'Guias praticos da SoftLuna sobre custo de sites, performance, SEO local e presenca digital para negocios de servico.',
+        url: blogUrl,
+        inLanguage: 'pt-BR',
+        publisher: { '@id': `${SITE_URL}#organization` }
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${blogUrl}#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Inicio',
+            item: SITE_URL
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Blog',
+            item: blogUrl
+          }
+        ]
+      }
+    ]
+  };
+
   return {
     props: {
-      posts
+      posts,
+      schema
     }
   };
 }

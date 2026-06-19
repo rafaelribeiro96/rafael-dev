@@ -45,8 +45,19 @@ const Main = ({ globalData, pricingTiers, portfolioItems, faqItems }) => {
         <meta property="og:description" content={metaDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://softluna.com.br" />
-        <meta property="og:image" content="/og-image.png" />
+        <meta
+          property="og:image"
+          content="https://softluna.com.br/og-image.png"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={metaTitle} />
+        <meta name="twitter:description" content={metaDescription} />
+        <meta
+          name="twitter:image"
+          content="https://softluna.com.br/og-image.png"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

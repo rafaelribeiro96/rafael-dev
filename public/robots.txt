@@ -14,4 +14,4 @@ User-agent: SemrushBot
 Crawl-delay: 10
 
 # Sitemap
-Sitemap: https://www.softluna.com.br/sitemap.xml
+Sitemap: https://softluna.com.br/sitemap.xml
