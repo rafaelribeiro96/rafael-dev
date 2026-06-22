@@ -9,7 +9,11 @@ import {
   getBlogPosts,
   getGlobalSite
 } from 'src/lib/content';
-import { trackEvent } from 'src/lib/analytics';
+import {
+  ANALYTICS_EVENTS,
+  trackEvent,
+  trackFAQToggle
+} from 'src/lib/analytics';
 import { buildBlogPostSchema } from 'src/lib/seoSchema';
 
 const WHATSAPP_BASE = 'https://wa.me/5531991869943';
@@ -96,6 +100,14 @@ const BlogPostPage = ({ post, globalData, relatedPosts }) => {
             <div className="mx-auto max-w-4xl">
               <Link
                 href="/blog"
+                onClick={() =>
+                  trackEvent(ANALYTICS_EVENTS.BLOG_INTERNAL_LINK_CLICK, {
+                    source: 'blog_post_back_link',
+                    slug: post.slug,
+                    target: '/blog',
+                    label: 'Blog SoftLuna'
+                  })
+                }
                 className="mb-8 inline-flex items-center gap-2 font-label-md text-[12px] uppercase tracking-[0.08em] text-primary"
               >
                 <span className="material-symbols-outlined text-[18px]">
@@ -140,7 +152,7 @@ const BlogPostPage = ({ post, globalData, relatedPosts }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() =>
-                    trackEvent('blog_whatsapp_click', {
+                    trackEvent(ANALYTICS_EVENTS.BLOG_WHATSAPP_CLICK, {
                       slug: post.slug,
                       cluster: post.cluster,
                       primaryKeyword: post.primaryKeyword,
@@ -161,6 +173,14 @@ const BlogPostPage = ({ post, globalData, relatedPosts }) => {
                   {post.faqs.map((faq) => (
                     <details
                       key={faq.question}
+                      onToggle={(event) =>
+                        trackFAQToggle({
+                          source: 'blog_post_faq',
+                          slug: post.slug,
+                          question: faq.question,
+                          action: event.currentTarget.open ? 'open' : 'close'
+                        })
+                      }
                       className="rounded-lg border border-border-thin bg-white p-5"
                     >
                       <summary className="cursor-pointer font-headline-md text-[18px] leading-7">
@@ -197,6 +217,17 @@ const BlogPostPage = ({ post, globalData, relatedPosts }) => {
                     <li key={item.href}>
                       <Link
                         href={item.href}
+                        onClick={() =>
+                          trackEvent(
+                            ANALYTICS_EVENTS.BLOG_INTERNAL_LINK_CLICK,
+                            {
+                              source: 'blog_post_internal_links',
+                              slug: post.slug,
+                              target: item.href,
+                              label: item.label
+                            }
+                          )
+                        }
                         className="font-body-md text-[14px] leading-6 text-primary hover:underline"
                       >
                         {item.label}
@@ -216,6 +247,18 @@ const BlogPostPage = ({ post, globalData, relatedPosts }) => {
                       <Link
                         key={item.slug}
                         href={`/blog/${item.slug}`}
+                        onClick={() =>
+                          trackEvent(
+                            ANALYTICS_EVENTS.BLOG_INTERNAL_LINK_CLICK,
+                            {
+                              source: 'blog_post_related_posts',
+                              slug: post.slug,
+                              target: `/blog/${item.slug}`,
+                              label: item.title,
+                              relatedSlug: item.slug
+                            }
+                          )
+                        }
                         className="block font-body-md text-[14px] leading-6 text-on-surface hover:text-primary"
                       >
                         {item.title}
@@ -236,6 +279,13 @@ const BlogPostPage = ({ post, globalData, relatedPosts }) => {
                         href={source.url}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={() =>
+                          trackEvent(ANALYTICS_EVENTS.BLOG_SOURCE_CLICK, {
+                            slug: post.slug,
+                            sourceLabel: source.label,
+                            sourceUrl: source.url
+                          })
+                        }
                         className="font-body-md text-[13px] leading-5 text-secondary hover:text-primary"
                       >
                         {source.label}

@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import { trackEvent } from 'src/lib/analytics';
+import { ANALYTICS_EVENTS, trackEvent } from 'src/lib/analytics';
 
 const WHATSAPP_BASE = 'https://wa.me/5531991869943';
 
@@ -49,6 +49,12 @@ const Portfolio = ({ ctaLink, items = [] }) => {
 
   const handleManualNavigation = (direction) => {
     if (projects.length <= 1) return;
+
+    trackEvent(ANALYTICS_EVENTS.PORTFOLIO_CAROUSEL_CONTROL_CLICK, {
+      direction,
+      currentIndex: activeIndex + 1,
+      totalProjects: projects.length
+    });
 
     setIsPaused(true);
     setActiveIndex((current) => {
@@ -131,7 +137,7 @@ const Portfolio = ({ ctaLink, items = [] }) => {
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={() =>
-                          trackEvent('portfolio_live_click', {
+                          trackEvent(ANALYTICS_EVENTS.PORTFOLIO_LIVE_CLICK, {
                             projectId: project.id,
                             projectTitle: project.title,
                             category: project.category,
@@ -147,11 +153,14 @@ const Portfolio = ({ ctaLink, items = [] }) => {
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={() =>
-                          trackEvent('portfolio_whatsapp_click', {
-                            projectId: project.id,
-                            projectTitle: project.title,
-                            category: project.category
-                          })
+                          trackEvent(
+                            ANALYTICS_EVENTS.PORTFOLIO_WHATSAPP_CLICK,
+                            {
+                              projectId: project.id,
+                              projectTitle: project.title,
+                              category: project.category
+                            }
+                          )
                         }
                         className="rt-button rt-button-secondary-inverse flex-1"
                       >

@@ -11,7 +11,11 @@ import {
   getPricingTiers,
   getPortfolioItems
 } from 'src/lib/content';
-import { trackEvent } from 'src/lib/analytics';
+import {
+  ANALYTICS_EVENTS,
+  trackEvent,
+  trackFAQToggle
+} from 'src/lib/analytics';
 import { buildMoneyPageSchema } from 'src/lib/seoSchema';
 
 const WHATSAPP_BASE = 'https://wa.me/5531991869943';
@@ -133,7 +137,7 @@ const MoneyPage = ({
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() =>
-                    trackEvent('money_page_whatsapp_click', {
+                    trackEvent(ANALYTICS_EVENTS.MONEY_PAGE_WHATSAPP_CLICK, {
                       slug: page.slug,
                       niche: page.niche,
                       primaryKeyword: page.primaryKeyword,
@@ -146,6 +150,18 @@ const MoneyPage = ({
                 <Link
                   className="rt-button rt-button-secondary rt-button-lg"
                   href="/#planos"
+                  onClick={() =>
+                    trackEvent(
+                      ANALYTICS_EVENTS.MONEY_PAGE_SECONDARY_CTA_CLICK,
+                      {
+                        slug: page.slug,
+                        niche: page.niche,
+                        primaryKeyword: page.primaryKeyword,
+                        target: '/#planos',
+                        ctaPosition: 'hero'
+                      }
+                    )
+                  }
                 >
                   {page.hero.secondaryCta}
                 </Link>
@@ -326,13 +342,16 @@ const MoneyPage = ({
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() =>
-                        trackEvent('money_page_plan_whatsapp_click', {
-                          slug: page.slug,
-                          planId: plan.id,
-                          niche: page.category || '',
-                          primaryKeyword: page.primaryKeyword || '',
-                          ctaPosition: 'pricing_plan_card'
-                        })
+                        trackEvent(
+                          ANALYTICS_EVENTS.MONEY_PAGE_PLAN_WHATSAPP_CLICK,
+                          {
+                            slug: page.slug,
+                            planId: plan.id,
+                            niche: page.category || '',
+                            primaryKeyword: page.primaryKeyword || '',
+                            ctaPosition: 'pricing_plan_card'
+                          }
+                        )
                       }
                     >
                       Quero este plano
@@ -384,6 +403,14 @@ const MoneyPage = ({
               {page.faqs.map((faq) => (
                 <details
                   key={faq.question}
+                  onToggle={(event) =>
+                    trackFAQToggle({
+                      source: 'money_page_faq',
+                      slug: page.slug,
+                      question: faq.question,
+                      action: event.currentTarget.open ? 'open' : 'close'
+                    })
+                  }
                   className="rounded-lg border border-border-thin bg-white p-5"
                 >
                   <summary className="cursor-pointer font-headline-md text-[18px] leading-7 text-on-surface">
@@ -414,7 +441,7 @@ const MoneyPage = ({
               target="_blank"
               rel="noopener noreferrer"
               onClick={() =>
-                trackEvent('money_page_whatsapp_click', {
+                trackEvent(ANALYTICS_EVENTS.MONEY_PAGE_WHATSAPP_CLICK, {
                   slug: page.slug,
                   niche: page.niche,
                   primaryKeyword: page.primaryKeyword,

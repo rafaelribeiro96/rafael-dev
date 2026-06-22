@@ -1,6 +1,10 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { trackWhatsAppClick } from 'src/lib/analytics';
+import {
+  ANALYTICS_EVENTS,
+  trackEvent,
+  trackWhatsAppClick
+} from 'src/lib/analytics';
 
 const Hero = ({ ctaLink, heroContent = {} }) => {
   const headline =
@@ -45,6 +49,11 @@ const Hero = ({ ctaLink, heroContent = {} }) => {
             href="#portfolio"
             onClick={(event) => {
               event.preventDefault();
+              trackEvent(ANALYTICS_EVENTS.HERO_SECONDARY_CTA_CLICK, {
+                source: 'home_hero',
+                label: 'Ver portfolio',
+                target: '#portfolio'
+              });
               document
                 .getElementById('portfolio')
                 ?.scrollIntoView({ behavior: 'smooth' });

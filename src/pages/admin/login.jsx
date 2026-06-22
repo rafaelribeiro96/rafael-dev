@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import { ANALYTICS_EVENTS, trackEvent } from 'src/lib/analytics';
 
 const T = {
   bg: '#09101f',
@@ -28,6 +29,9 @@ export default function LoginPage() {
 
     setStatus('submitting');
     setErrorMsg('');
+    trackEvent(ANALYTICS_EVENTS.ADMIN_LOGIN_ATTEMPT, {
+      source: 'admin_login'
+    });
 
     try {
       const res = await fetch('/api/admin/login', {
@@ -39,10 +43,17 @@ export default function LoginPage() {
       const data = await res.json();
 
       if (res.ok && data.success) {
+        trackEvent(ANALYTICS_EVENTS.ADMIN_LOGIN_SUCCESS, {
+          source: 'admin_login'
+        });
         router.replace('/admin');
       } else {
         setStatus('error');
         setErrorMsg(data.error || 'Senha incorreta.');
+        trackEvent(ANALYTICS_EVENTS.ADMIN_LOGIN_ERROR, {
+          source: 'admin_login',
+          reason: data.error || 'invalid_password'
+        });
       }
     } catch (err) {
       console.error(err);

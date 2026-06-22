@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { trackWhatsAppClick } from 'src/lib/analytics';
+import { trackNavigationClick, trackWhatsAppClick } from 'src/lib/analytics';
 
 const navItems = [
   { label: 'Diferencial', href: '/#diferenciais', targetId: 'diferenciais' },
@@ -23,12 +23,21 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleNavClick = (event, targetId) => {
+  const handleNavClick = (event, item, source) => {
+    trackNavigationClick({
+      source,
+      label: item.label,
+      target: item.href,
+      targetId: item.targetId
+    });
+
     if (router.pathname !== '/') return;
 
     event.preventDefault();
     setIsMenuOpen(false);
-    document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
+    document
+      .getElementById(item.targetId)
+      ?.scrollIntoView({ behavior: 'smooth' });
   };
 
   const ctaLink =
@@ -61,7 +70,7 @@ const Header = () => {
             <Link
               key={item.targetId}
               href={item.href}
-              onClick={(event) => handleNavClick(event, item.targetId)}
+              onClick={(event) => handleNavClick(event, item, 'header_desktop')}
               className="font-body-md text-[13px] leading-5 text-secondary transition-colors hover:text-on-surface"
             >
               {item.label}
@@ -108,7 +117,14 @@ const Header = () => {
           className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-border-thin bg-white text-on-surface md:hidden"
           aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
           aria-expanded={isMenuOpen}
-          onClick={() => setIsMenuOpen((open) => !open)}
+          onClick={() => {
+            setIsMenuOpen((open) => !open);
+            trackNavigationClick({
+              source: 'header_mobile_menu_toggle',
+              label: isMenuOpen ? 'Fechar menu' : 'Abrir menu',
+              target: 'mobile_menu'
+            });
+          }}
         >
           <span className="material-symbols-outlined text-[22px]">
             {isMenuOpen ? 'close' : 'menu'}
@@ -123,7 +139,9 @@ const Header = () => {
               <Link
                 key={item.targetId}
                 href={item.href}
-                onClick={(event) => handleNavClick(event, item.targetId)}
+                onClick={(event) =>
+                  handleNavClick(event, item, 'header_mobile_menu')
+                }
                 className="rounded-lg px-2 py-3 font-body-md text-[16px] text-secondary transition-colors hover:bg-bg-secondary hover:text-on-surface"
               >
                 {item.label}

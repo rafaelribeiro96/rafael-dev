@@ -1,4 +1,5 @@
 import React from 'react';
+import { ANALYTICS_EVENTS, trackEvent } from 'src/lib/analytics';
 
 const servicesList = [
   {
@@ -59,6 +60,10 @@ const Services = () => {
               href="#planos"
               onClick={(event) => {
                 event.preventDefault();
+                trackEvent(ANALYTICS_EVENTS.SERVICE_CARD_CLICK, {
+                  serviceTitle: service.title,
+                  target: '#planos'
+                });
                 document
                   .getElementById('planos')
                   ?.scrollIntoView({ behavior: 'smooth' });

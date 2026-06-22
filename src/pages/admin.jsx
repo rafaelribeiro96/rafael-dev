@@ -10,6 +10,7 @@ import CarouselImagesSection from '../components/Admin/CarouselImagesSection';
 import FAQSection from '../components/Admin/FAQSection';
 import BlogSection from '../components/Admin/BlogSection';
 import MoneyPagesSection from '../components/Admin/MoneyPagesSection';
+import { ANALYTICS_EVENTS, trackEvent } from 'src/lib/analytics';
 
 export default function AdminPage({
   globalData,
@@ -23,8 +24,19 @@ export default function AdminPage({
   const [active, setActive] = useState('seo');
   const [pubStatus, setPubStatus] = useState('idle');
 
+  const handleSectionSelect = (section) => {
+    setActive(section);
+    trackEvent(ANALYTICS_EVENTS.ADMIN_SECTION_CHANGE, {
+      section
+    });
+  };
+
   const publish = async () => {
     setPubStatus('publishing');
+    trackEvent(ANALYTICS_EVENTS.ADMIN_PUBLISH_ATTEMPT, {
+      source: 'admin_sidebar'
+    });
+
     try {
       const res = await fetch('/api/content/publish', {
         method: 'POST',
@@ -37,9 +49,15 @@ export default function AdminPage({
       });
       if (!res.ok) throw new Error('Publish failed');
       setPubStatus('published');
+      trackEvent(ANALYTICS_EVENTS.ADMIN_PUBLISH_SUCCESS, {
+        source: 'admin_sidebar'
+      });
     } catch (e) {
       console.error(e);
       setPubStatus('error');
+      trackEvent(ANALYTICS_EVENTS.ADMIN_PUBLISH_ERROR, {
+        source: 'admin_sidebar'
+      });
     }
     setTimeout(() => setPubStatus('idle'), 4500);
   };
@@ -79,7 +97,7 @@ export default function AdminPage({
       >
         <Sidebar
           active={active}
-          onSelect={setActive}
+          onSelect={handleSectionSelect}
           pubStatus={pubStatus}
           onPublish={publish}
         />

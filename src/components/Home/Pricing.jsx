@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { trackEvent } from 'src/lib/analytics';
+import { ANALYTICS_EVENTS, trackEvent } from 'src/lib/analytics';
 
 const formatCurrency = (value) =>
   Number(value || 0).toLocaleString('pt-BR', {
@@ -140,7 +140,7 @@ const PricingCard = ({ tier, ctaLink, variant = 'default' }) => {
           target="_blank"
           rel="noopener noreferrer"
           onClick={() =>
-            trackEvent('pricing_cta_click', {
+            trackEvent(ANALYTICS_EVENTS.PRICING_CTA_CLICK, {
               planId: id,
               planTitle: title,
               setupPrice,

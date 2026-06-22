@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
+import { trackFAQToggle } from 'src/lib/analytics';
 
 const defaultFaqItems = [
   {
@@ -66,7 +67,15 @@ const FAQ = ({ items = [] }) => {
               <article key={item.id || item.question} data-aos="fade-up">
                 <button
                   type="button"
-                  onClick={() => setOpenIndex(isOpen ? null : index)}
+                  onClick={() => {
+                    setOpenIndex(isOpen ? null : index);
+                    trackFAQToggle({
+                      source: 'home_faq',
+                      question: item.question,
+                      action: isOpen ? 'close' : 'open',
+                      faqIndex: index + 1
+                    });
+                  }}
                   className="flex w-full items-center justify-between gap-6 py-7 text-left"
                   aria-expanded={isOpen}
                 >

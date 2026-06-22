@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { trackWhatsAppClick } from 'src/lib/analytics';
+import { trackNavigationClick, trackWhatsAppClick } from 'src/lib/analytics';
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -46,6 +46,13 @@ const Footer = () => {
             <li>
               <Link
                 href="/#diferenciais"
+                onClick={() =>
+                  trackNavigationClick({
+                    source: 'footer_company',
+                    label: 'Diferencial',
+                    target: '/#diferenciais'
+                  })
+                }
                 className="transition-colors hover:text-primary"
               >
                 Diferencial
@@ -54,6 +61,13 @@ const Footer = () => {
             <li>
               <Link
                 href="/#servicos"
+                onClick={() =>
+                  trackNavigationClick({
+                    source: 'footer_company',
+                    label: 'Servicos',
+                    target: '/#servicos'
+                  })
+                }
                 className="transition-colors hover:text-primary"
               >
                 Serviços
@@ -62,6 +76,13 @@ const Footer = () => {
             <li>
               <Link
                 href="/#portfolio"
+                onClick={() =>
+                  trackNavigationClick({
+                    source: 'footer_company',
+                    label: 'Portfolio',
+                    target: '/#portfolio'
+                  })
+                }
                 className="transition-colors hover:text-primary"
               >
                 Portfólio
@@ -70,6 +91,13 @@ const Footer = () => {
             <li>
               <Link
                 href="/blog"
+                onClick={() =>
+                  trackNavigationClick({
+                    source: 'footer_company',
+                    label: 'Blog',
+                    target: '/blog'
+                  })
+                }
                 className="transition-colors hover:text-primary"
               >
                 Blog
@@ -120,7 +148,17 @@ const Footer = () => {
       <div className="mx-auto flex max-w-container-wide flex-col items-center justify-between gap-5 border-t border-border-thin pt-6 font-label-md text-[10px] uppercase tracking-[0.08em] text-secondary/70 md:flex-row">
         <p>&copy; {year} SoftLuna. Todos os direitos reservados.</p>
         <div className="flex gap-8">
-          <Link href="/blog" className="transition-colors hover:text-primary">
+          <Link
+            href="/blog"
+            onClick={() =>
+              trackNavigationClick({
+                source: 'footer_bottom',
+                label: 'Blog',
+                target: '/blog'
+              })
+            }
+            className="transition-colors hover:text-primary"
+          >
             Blog
           </Link>
           <a

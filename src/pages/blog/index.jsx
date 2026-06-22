@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Header from 'src/components/Header/Header';
 import Footer from 'src/components/Footer/Footer';
 import { getBlogPosts } from 'src/lib/content';
+import { ANALYTICS_EVENTS, trackEvent } from 'src/lib/analytics';
 
 const clusterLabels = {
   custos: 'Custos e investimentos',
@@ -95,6 +96,15 @@ const BlogPage = ({ posts, schema }) => {
             {featuredPost && (
               <Link
                 href={`/blog/${featuredPost.slug}`}
+                onClick={() =>
+                  trackEvent(ANALYTICS_EVENTS.BLOG_CARD_CLICK, {
+                    source: 'blog_featured',
+                    slug: featuredPost.slug,
+                    title: featuredPost.title,
+                    cluster: featuredPost.cluster,
+                    position: 1
+                  })
+                }
                 className="rounded-lg border border-border-thin bg-white p-6 shadow-[0_20px_70px_rgba(30,27,23,0.08)] transition-colors hover:border-primary-container"
               >
                 <p className="font-label-md text-[11px] uppercase tracking-[0.08em] text-primary">
@@ -145,6 +155,15 @@ const BlogPage = ({ posts, schema }) => {
                       <Link
                         key={post.slug}
                         href={`/blog/${post.slug}`}
+                        onClick={() =>
+                          trackEvent(ANALYTICS_EVENTS.BLOG_CARD_CLICK, {
+                            source: 'blog_cluster_grid',
+                            slug: post.slug,
+                            title: post.title,
+                            cluster: cluster.key,
+                            position: cluster.posts.indexOf(post) + 1
+                          })
+                        }
                         className="flex h-full flex-col rounded-lg border border-border-thin bg-white p-5 transition-colors hover:border-primary-container"
                       >
                         <p className="font-label-md text-[11px] uppercase tracking-[0.08em] text-text-secondary">
