@@ -1,8 +1,13 @@
 /* eslint-disable react/prop-types */
 import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
+import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/react';
 import { AuthProvider } from 'src/context/AuthContext';
+import {
+  GA_MEASUREMENT_ID,
+  trackGoogleAnalyticsPageview
+} from 'src/lib/analytics';
 import Lenis from 'lenis';
 import FloatingButton from 'src/components/botaoContato/FloatingButton';
 import '../components/botaoContato/FloatingButton.css';
@@ -15,6 +20,18 @@ import '../styles/global.css';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
+
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      trackGoogleAnalyticsPageview(url);
+    };
+
+    router.events.on('routeChangeComplete', handleRouteChange);
+
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router.events]);
 
   useEffect(() => {
     // Disable Lenis on admin paths to prevent scrolling conflicts inside scrollable panels
@@ -42,6 +59,21 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <AuthProvider>
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          window.gtag = gtag;
+          gtag('js', new Date());
+          gtag('config', '${GA_MEASUREMENT_ID}', {
+            page_path: window.location.pathname
+          });
+        `}
+      </Script>
       <Component {...pageProps} />
       <FloatingButton />
       <Analytics />
