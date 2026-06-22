@@ -219,9 +219,9 @@ Solucoes sob medida:
   - Arquivos provaveis: `ROADMAP-SEO.md` ou doc auxiliar em `docs/business/softluna/`.
   - Dependencias: lista base de rotas.
   - Skill indicada: `blog-strategy`, `modern-web-guidance`.
-  - Criterios de aceite: todas as 19 rotas com H1 proposto, title provisoria, meta description provisoria e mensagem de WhatsApp.
+  - Criterios de aceite: todas as 20 rotas com H1 proposto, title provisoria, meta description provisoria e mensagem de WhatsApp.
   - Validacao: pesquisa atual de SERP/PAA antes de considerar final.
-  - Registro de execucao: executado em 2026-06-19 em `docs/business/softluna/money-pages-architecture.md`; todas as 19 rotas possuem keyword primaria, intencao, oferta, H1, title, meta e CTA provisoria.
+  - Registro de execucao: executado em 2026-06-19 em `docs/business/softluna/money-pages-architecture.md`; todas as 20 rotas possuem keyword primaria, intencao, oferta, H1, title, meta e CTA provisoria.
 
 - [x] F1-003 - Planejar dados estruturados das money pages
   - Objetivo: definir schema por tipo de pagina.
@@ -589,7 +589,7 @@ Objetivo: garantir que crescimento organico venha acompanhado de performance rea
 
 ## Fase 7 - Matriz, template e pendencias das money pages
 
-Objetivo: manter dentro do roadmap a arquitetura consolidada das money pages, a matriz das 19 rotas e as pendencias necessarias antes de publicar os lotes F1-005 a F1-009.
+Objetivo: manter dentro do roadmap a arquitetura consolidada das money pages, a matriz das 20 rotas e as validacoes necessarias apos a publicacao dos lotes F1-005 a F1-009.
 
 ### Template comum
 
@@ -616,7 +616,7 @@ O helper `src/lib/seoSchema.js` gera o schema das money pages com:
 - `BreadcrumbList` para a URL interna.
 - `FAQPage` quando a pagina tiver perguntas especificas.
 
-Validacao externa pendente antes de publicacao definitiva: Rich Results Test ou Schema Validator.
+Validacao externa de producao: Rich Results Test ou Schema Validator apos deploy, mais PageSpeed Insights para acompanhar performance publica.
 
 ### Pagina piloto
 
@@ -630,7 +630,7 @@ Pesquisa rapida em 2026-06-19 indicou padroes recorrentes na SERP: agendamento o
 
 ### Matriz de keywords e intencao
 
-As titles e metas abaixo sao provisorias. Antes de publicar cada rota em lote, revisar SERP/PAA atual e ajustar copy, FAQ e links internos.
+As titles e metas abaixo documentam a matriz publicada. Em futuras revisoes editoriais, revalidar SERP/PAA atual e ajustar copy, FAQ e links internos quando houver mudanca de intencao ou prioridade comercial.
 
 | Rota | Keyword primaria | Intencao | Oferta | H1 proposto | Title provisoria | Meta provisoria | CTA WhatsApp |
 |---|---|---|---|---|---|---|---|
@@ -655,12 +655,13 @@ As titles e metas abaixo sao provisorias. Antes de publicar cada rota em lote, r
 | `/sistemas-de-agendamento-online` | sistemas de agendamento online | Contratar sistema/agendamento | Projeto personalizado | Sistemas de agendamento online para organizar horarios e atendimentos | Sistemas de Agendamento Online \| SoftLuna | Sistema de agendamento online com fluxo sob medida, notificacoes, painel e integracoes quando necessario. | Quero criar um sistema de agendamento. |
 | `/desenvolvimento-de-sistemas-sob-medida` | desenvolvimento de sistemas sob medida | Contratar sistema customizado | Projeto personalizado | Desenvolvimento de sistemas sob medida para operacoes que precisam escalar | Desenvolvimento de Sistemas Sob Medida \| SoftLuna | Desenvolvimento de sistema sob medida com descoberta tecnica, interface, banco de dados e integracoes. | Quero desenvolver um sistema sob medida. |
 
-### Pendencias para lotes F1-005 a F1-009
+### Fechamento dos lotes F1-005 a F1-009
 
-- Executar pesquisa SERP/PAA por rota antes de publicar o lote correspondente.
-- Criar JSON individual em `content/money-pages/`.
-- Revisar FAQ especifica e links internos de cada nicho.
-- Rodar `npm run lint`, `npm run build` e smoke mobile/desktop por lote.
+- Pesquisa SERP/PAA por rota registrada nas notas de pesquisa dos JSONs publicados.
+- JSON individual criado em `content/money-pages/` para as 20 rotas.
+- FAQ especifica e links internos revisados dentro de cada nicho.
+- Validacao tecnica consolidada por `npm run lint`, `npm run build` e `npm run validate:seo`.
+- Validacoes externas de producao ficam registradas em `docs/business/softluna/seo-operations.md`.
 
 ### Tarefas
 
@@ -673,23 +674,23 @@ As titles e metas abaixo sao provisorias. Antes de publicar cada rota em lote, r
   - Validacao: revisao documental.
   - Registro de execucao: executado em 2026-06-19; revalidado em 2026-06-19 durante fechamento das Fases 3 a 7.
 
-- [x] F7-002 - Consolidar matriz das 19 rotas dentro do roadmap
+- [x] F7-002 - Consolidar matriz das 20 rotas dentro do roadmap
   - Objetivo: registrar keyword primaria, intencao, oferta, H1, title, meta e CTA para todas as rotas.
   - Arquivos provaveis: `ROADMAP-SEO.md`, `docs/business/softluna/money-pages-architecture.md`.
   - Dependencias: F1-002.
   - Skill indicada: nenhuma.
-  - Criterios de aceite: 19 rotas documentadas no roadmap.
+  - Criterios de aceite: 20 rotas documentadas no roadmap.
   - Validacao: revisao documental.
-  - Registro de execucao: executado em 2026-06-19; revalidado em 2026-06-19 durante fechamento das Fases 3 a 7.
+  - Registro de execucao: executado em 2026-06-19; revalidado em 2026-06-22 durante fechamento das pendencias SEO.
 
 - [x] F7-003 - Consolidar pendencias dos lotes dentro do roadmap
-  - Objetivo: deixar claro que F1-005 a F1-009 exigem pesquisa SERP/PAA, JSON por rota, FAQ especifica, links internos e validacao tecnica.
+  - Objetivo: deixar claro que F1-005 a F1-009 exigiram pesquisa SERP/PAA, JSON por rota, FAQ especifica, links internos e validacao tecnica.
   - Arquivos provaveis: `ROADMAP-SEO.md`, `docs/business/softluna/money-pages-architecture.md`.
   - Dependencias: F1-004.
   - Skill indicada: nenhuma.
   - Criterios de aceite: pendencias visiveis na Fase 7.
   - Validacao: revisao documental.
-  - Registro de execucao: executado em 2026-06-19; revalidado em 2026-06-19 durante fechamento das Fases 3 a 7.
+  - Registro de execucao: executado em 2026-06-19; revalidado em 2026-06-22 durante fechamento das pendencias SEO.
 
 ## Checklist de aceite deste plano mestre
 
@@ -702,9 +703,8 @@ As titles e metas abaixo sao provisorias. Antes de publicar cada rota em lote, r
 
 ## Proxima execucao recomendada
 
-1. Revisar/aprovar a money page piloto `/site-para-clinicas-medicas`.
-2. Depois executar F1-005 a F1-009 em lotes, sempre com pesquisa SERP/PAA atual por rota antes de publicar copy final.
-3. Validar em producao os schemas com Rich Results Test/Schema Validator apos deploy.
-4. Revisar em navegacao real os 9 artigos publicados na Fase 2 e expandir conteudo onde houver prioridade comercial.
-5. Acompanhar por 30 dias os eventos de conversao e a rotina mensal definida em `docs/business/softluna/seo-operations.md`.
-4. Iniciar FAQs estrategicas, ajustes de homepage e rotina de metricas/tracking.
+1. Fazer deploy da revisao atual contendo money pages, blog, schema, `robots.txt` e ajustes sociais.
+2. Revalidar em producao uma amostra de homepage, blog, artigo e money pages com Rich Results Test ou Schema Validator quando houver novo deploy.
+3. Reexecutar PageSpeed Insights publico apos cada rodada relevante e registrar o resultado em `docs/business/softluna/seo-operations.md`.
+4. Acompanhar por 30 dias os eventos de conversao e a rotina mensal definida em `docs/business/softluna/seo-operations.md`.
+5. Priorizar novas revisoes editoriais usando Search Console, Vercel Analytics e oportunidades comerciais reais.

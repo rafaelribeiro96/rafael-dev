@@ -154,13 +154,13 @@ const MoneyPage = ({
 
             <aside className="rounded-lg border border-border-thin bg-white p-6 shadow-[0_20px_70px_rgba(30,27,23,0.08)]">
               <p className="font-label-md text-[12px] uppercase tracking-[0.08em] text-text-secondary">
-                Estrutura da pagina
+                Arquitetura de conversao
               </p>
               <ul className="mt-5 space-y-3">
                 {[
-                  'Especialidades e servicos',
-                  'Equipe, unidades e canais',
-                  'SEO local e schema',
+                  'Oferta, diferenciais e conversao',
+                  'Prova social, canais e proximos passos',
+                  'SEO, performance e schema',
                   'FAQ e caminhos de contato'
                 ].map((item) => (
                   <li
@@ -182,7 +182,7 @@ const MoneyPage = ({
           <div className="mx-auto max-w-container-max">
             <SectionHeading
               eyebrow="Problemas que a pagina resolve"
-              title="Quando o site da clinica nao organiza a decisao do paciente"
+              title="Quando a presenca digital nao transforma busca em contato"
             />
             <div className="grid gap-4 md:grid-cols-2">
               {page.painPoints.map((point) => (
@@ -405,7 +405,7 @@ const MoneyPage = ({
                 Proximo passo
               </p>
               <h2 className="mt-2 font-headline-md text-[28px] leading-9">
-                Vamos estruturar a pagina da sua clinica?
+                Vamos estruturar a solucao certa para o seu negocio?
               </h2>
             </div>
             <a

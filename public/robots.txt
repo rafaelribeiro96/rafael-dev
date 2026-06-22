@@ -1,10 +1,9 @@
 # robots.txt — SoftLuna
-# https://www.softluna.com.br
+# https://softluna.com.br
 
 User-agent: *
 Allow: /
 Disallow: /api/
-Disallow: /_next/
 
 # Crawl-delay para bots agressivos
 User-agent: AhrefsBot

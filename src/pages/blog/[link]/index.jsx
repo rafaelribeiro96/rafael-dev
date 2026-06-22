@@ -63,6 +63,9 @@ const BlogPostPage = ({ post, globalData, relatedPosts }) => {
   const canonical = `https://softluna.com.br/blog/${post.slug}`;
   const schema = buildBlogPostSchema({ post, globalData });
   const ctaLink = buildWhatsappLink(post.cta.whatsappMessage);
+  const socialImage = `https://softluna.com.br${
+    post.heroImage || '/og-image.png'
+  }`;
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-bg-primary text-on-surface font-body-md">
@@ -74,15 +77,11 @@ const BlogPostPage = ({ post, globalData, relatedPosts }) => {
         <meta property="og:description" content={post.metaDescription} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={canonical} />
-        <meta
-          property="og:image"
-          content={`https://softluna.com.br${
-            post.heroImage || '/og-image.png'
-          }`}
-        />
+        <meta property="og:image" content={socialImage} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={post.seoTitle} />
         <meta name="twitter:description" content={post.metaDescription} />
+        <meta name="twitter:image" content={socialImage} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}

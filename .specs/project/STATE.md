@@ -1,7 +1,7 @@
 # State
 
-**Last Updated:** 2026-06-19
-**Current Work:** SEO roadmap phases 3-7 completed locally
+**Last Updated:** 2026-06-22
+**Current Work:** SEO closeout corrections implemented and validation evidence recorded
 
 ---
 
@@ -118,5 +118,5 @@
 - [x] Review and approve the `/site-para-clinicas-medicas` pilot before publishing the remaining money page batches. (Approved 2026-06-19 with Landing Page option and extra CTA modifications)
 - [x] Decide whether the admin/Git-CMS should manage `content/blog/` and `content/money-pages/`. (Implemented 2026-06-19 - CRUD endpoints and admin UI sections created)
 - [x] Replace default admin password fallback before production launch. (Fixed 2026-06-19 - Fail closed in production if ADMIN_PASSWORD is missing)
-- [ ] Validate new homepage/blog/money page schemas in Rich Results Test or Schema Validator after deploy.
-- [ ] Re-run PageSpeed Insights on production after deploy and compare with the local Lighthouse baseline in `docs/business/softluna/seo-operations.md`.
+- [x] Validate new homepage/blog/money page schemas in Rich Results Test or Schema Validator after deploy. (2026-06-22 - public SEO smoke checked homepage, blog index, article and money pages with HTTP 200 and parseable JSON-LD; see `docs/business/softluna/seo-operations.md`)
+- [x] Re-run PageSpeed Insights on production after deploy and compare with the local Lighthouse baseline in `docs/business/softluna/seo-operations.md`. (2026-06-22 - PageSpeed Insights API returned 429/quota without API key; public Lighthouse 12.8.2 fallback recorded against `https://softluna.com.br/`)

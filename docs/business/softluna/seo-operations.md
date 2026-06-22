@@ -94,5 +94,22 @@ Medição local registrada depois da implementação desta rodada, usando `next 
 | Data | URL | Ferramenta | Mobile | Desktop | LCP | CLS | INP/TBT | Observacao |
 | --- | --- | --- | ---: | ---: | --- | --- | --- | --- |
 | 2026-06-19 | `/` local | Lighthouse local | 63 | 93 | Mobile 6.7s / Desktop 1.3s | Mobile 0 / Desktop 0.002 | TBT 0ms | Baseline local; validar PageSpeed publico apos deploy/indexacao |
+| 2026-06-22 | `https://softluna.com.br/` | Lighthouse 12.8.2 publico | 83 | 98 | Mobile 3.5s / Desktop 0.9s | Mobile 0.003 / Desktop 0.001 | Mobile TBT 180ms / Desktop TBT 0ms | PageSpeed Insights API publica retornou 429/quota sem chave; Lighthouse publico usado como fallback reproduzivel |
 
 Para baseline publico definitivo, usar PageSpeed Insights ou Search Console quando `https://softluna.com.br` estiver indexado e com dados reais suficientes.
+
+## Validacao publica de SEO tecnico
+
+Execucao: 2026-06-22.
+
+Comando usado: `npm run check:seo-public`.
+
+| URL | HTTP | JSON-LD | Canonical | OG image | Twitter image | Observacao |
+| --- | ---: | ---: | --- | --- | --- | --- |
+| `https://softluna.com.br/` | 200 | 1 | OK | OK | OK | Homepage publica com schema parseavel. |
+| `https://softluna.com.br/blog` | 200 | 1 | OK | OK | OK | Index do blog publico com metadados sociais. |
+| `https://softluna.com.br/blog/quanto-custa-site-profissional-empresas-brasil-2026` | 200 | 1 | OK | OK | Pendente no deploy atual | Corrigido localmente em `src/pages/blog/[link]/index.jsx`; publicar para refletir em producao. |
+| `https://softluna.com.br/site-para-clinicas-medicas` | 200 | 1 | OK | OK | OK | Money page publica com schema parseavel. |
+| `https://softluna.com.br/desenvolvimento-de-sistemas-sob-medida` | 200 | 1 | OK | OK | OK | Money page fora de saude validada como amostra. |
+
+Observacao: Google recomenda Rich Results Test para elegibilidade de rich results e Schema Markup Validator para validacao generica de Schema.org. Como essas ferramentas oficiais sao orientadas a uso web e a API publica do PageSpeed retornou quota 429 neste ambiente, a validacao automatizada do repositorio cobre HTTP publico, canonical, imagens sociais e parse de JSON-LD; apos deploy, repetir a amostra no validador web quando for necessaria uma confirmacao visual/manual.
