@@ -113,6 +113,16 @@ export default function GlobalSEOSection({ initialData }) {
             maxLength={160}
           />
         </Field>
+        <Field
+          label="Google Site Verification"
+          hint="Código de verificação do Google Search Console (ex: google-site-verification=...)"
+        >
+          <Input
+            value={data.seo?.googleSiteVerification || ''}
+            onChange={(e) => s('googleSiteVerification')(e.target.value)}
+            placeholder="H9uwBwmBFHdkbyx45FxIUFfIuZYFYajpHX56naP05y0"
+          />
+        </Field>
         <div
           style={{
             display: 'grid',

@@ -34,12 +34,22 @@ const Main = ({ globalData, pricingTiers, portfolioItems, faqItems }) => {
     'SoftLuna cria sites profissionais e landing pages de alta performance para empresas em Belo Horizonte e todo o Brasil.';
   const schema = buildHomePageSchema({ globalData, faqItems, pricingTiers });
 
+  const googleVerificationToken = seo.googleSiteVerification?.includes('=')
+    ? seo.googleSiteVerification.split('=')[1]
+    : seo.googleSiteVerification;
+
   return (
     <div className="min-h-screen overflow-x-hidden bg-bg-primary text-on-surface font-body-md">
       <Head>
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {googleVerificationToken && (
+          <meta
+            name="google-site-verification"
+            content={googleVerificationToken}
+          />
+        )}
         <link rel="canonical" href="https://softluna.com.br" />
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDescription} />
